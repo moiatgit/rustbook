@@ -1,4 +1,4 @@
-## Test Organization
+## 〜 Test Organization
 
 As mentioned at the start of the chapter, testing is a complex discipline, and
 different people use different terminology and organization. The Rust community
@@ -249,7 +249,7 @@ If the important functionality works, the small amount of code in the
 *src/main.rs* file will work as well, and that small amount of code doesn’t
 need to be tested.
 
-## Summary
+## 〜 Summary
 
 Rust’s testing features provide a way to specify how code should function to
 ensure it continues to work as you expect, even as you make changes. Unit tests

@@ -1,4 +1,4 @@
-## Shared-State Concurrency
+## 〜 Shared-State Concurrency
 
 Message passing is a fine way of handling concurrency, but it’s not the only
 one. Another method would be for multiple threads to access the same shared

@@ -1,4 +1,4 @@
-## Building a Single-Threaded Web Server
+## 〜 Building a Single-Threaded Web Server
 
 We’ll start by getting a single-threaded web server working. Before we begin,
 let’s look at a quick overview of the protocols involved in building web

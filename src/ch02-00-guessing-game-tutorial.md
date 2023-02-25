@@ -1,4 +1,4 @@
-# Programming a Guessing Game
+# 〜 Programming a Guessing Game
 
 Let’s jump into Rust by working through a hands-on project together! This
 chapter introduces you to a few common Rust concepts by showing you how to use
@@ -13,7 +13,7 @@ will then prompt the player to enter a guess. After a guess is entered, the
 program will indicate whether the guess is too low or too high. If the guess is
 correct, the game will print a congratulatory message and exit.
 
-## Setting Up a New Project
+## 〜 Setting Up a New Project
 
 To set up a new project, go to the *projects* directory that you created in
 Chapter 1 and make a new project using Cargo, like so:
@@ -66,7 +66,7 @@ the next one.
 
 Reopen the *src/main.rs* file. You’ll be writing all the code in this file.
 
-## Processing a Guess
+## 〜 Processing a Guess
 
 The first part of the guessing game program will ask for user input, process
 that input, and check that the input is in the expected form. To start, we’ll
@@ -317,7 +317,7 @@ You guessed: 6
 At this point, the first part of the game is done: we’re getting input from the
 keyboard and then printing it.
 
-## Generating a Secret Number
+## 〜 Generating a Secret Number
 
 Next, we need to generate a secret number that the user will try to guess. The
 secret number should be different every time so the game is fun to play more
@@ -579,7 +579,7 @@ You guessed: 5
 You should get different random numbers, and they should all be numbers between
 1 and 100. Great job!
 
-## Comparing the Guess to the Secret Number
+## 〜 Comparing the Guess to the Secret Number
 
 Now that we have user input and a random number, we can compare them. That step
 is shown in Listing 2-4. Note that this code won’t compile just yet, as we will
@@ -745,7 +745,7 @@ guess a number that is too high, and guess a number that is too low.
 We have most of the game working now, but the user can make only one guess.
 Let’s change that by adding a loop!
 
-## Allowing Multiple Guesses with Looping
+## 〜 Allowing Multiple Guesses with Looping
 
 The `loop` keyword creates an infinite loop. We’ll add a loop to give users
 more chances at guessing the number:
@@ -907,7 +907,7 @@ secret number. Listing 2-6 shows the final code.
 
 At this point, you’ve successfully built the guessing game. Congratulations!
 
-## Summary
+## 〜 Summary
 
 This project was a hands-on way to introduce you to many new Rust concepts:
 `let`, `match`, functions, the use of external crates, and more. In the next

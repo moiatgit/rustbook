@@ -1,4 +1,4 @@
-## Processing a Series of Items with Iterators
+## 〜 Processing a Series of Items with Iterators
 
 The iterator pattern allows you to perform some task on a sequence of items in
 turn. An iterator is responsible for the logic of iterating over each item and

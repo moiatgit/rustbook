@@ -1,4 +1,4 @@
-## Graceful Shutdown and Cleanup
+## 〜 Graceful Shutdown and Cleanup
 
 The code in Listing 20-20 is responding to requests asynchronously through the
 use of a thread pool, as we intended. We get some warnings about the `workers`,
@@ -236,7 +236,7 @@ some ideas:
   similar web server using the crate instead. Then compare its API and
   robustness to the thread pool we implemented.
 
-## Summary
+## 〜 Summary
 
 Well done! You’ve made it to the end of the book! We want to thank you for
 joining us on this tour of Rust. You’re now ready to implement your own Rust

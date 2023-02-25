@@ -1,4 +1,4 @@
-## Treating Smart Pointers Like Regular References with the `Deref` Trait
+## 〜 Treating Smart Pointers Like Regular References with the `Deref` Trait
 
 Implementing the `Deref` trait allows you to customize the behavior of the
 *dereference operator* `*` (not to be confused with the multiplication or glob

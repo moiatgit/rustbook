@@ -1,4 +1,4 @@
-## Traits: Defining Shared Behavior
+## 〜 Traits: Defining Shared Behavior
 
 A *trait* defines functionality a particular type has and can share with other
 types. We can use traits to define shared behavior in an abstract way. We can

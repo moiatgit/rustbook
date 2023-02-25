@@ -1,4 +1,4 @@
-## Advanced Traits
+## 〜 Advanced Traits
 
 We first covered traits in the [“Traits: Defining Shared
 Behavior”][traits-defining-shared-behavior]<!-- ignore --> section of Chapter

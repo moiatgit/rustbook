@@ -1,4 +1,4 @@
-## Control Flow
+## 〜 Control Flow
 
 The ability to run some code depending on whether a condition is `true` and to
 run some code repeatedly while a condition is `true` are basic building blocks
@@ -370,7 +370,7 @@ we’ve not yet talked about, `rev`, to reverse the range:
 
 This code is a bit nicer, isn’t it?
 
-## Summary
+## 〜 Summary
 
 You made it! This was a sizable chapter: you learned about variables, scalar
 and compound data types, functions, comments, `if` expressions, and loops! To

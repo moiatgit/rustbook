@@ -1,6 +1,6 @@
 <!-- Old heading. Do not remove or links may break. -->
 <a id="the-match-control-flow-operator"></a>
-## The `match` Control Flow Construct
+## 〜 The `match` Control Flow Construct
 
 Rust has an extremely powerful control flow construct called `match` that
 allows you to compare a value against a series of patterns and then execute

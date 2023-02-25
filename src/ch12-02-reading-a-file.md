@@ -1,4 +1,4 @@
-## Reading a File
+## 〜 Reading a File
 
 Now we’ll add functionality to read the file specified in the `file_path`
 argument. First, we need a sample file to test it with: we’ll use a file with a

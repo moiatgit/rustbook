@@ -1,4 +1,4 @@
-## Reference Cycles Can Leak Memory
+## 〜 Reference Cycles Can Leak Memory
 
 Rust’s memory safety guarantees make it difficult, but not impossible, to
 accidentally create memory that is never cleaned up (known as a *memory leak*).
@@ -295,7 +295,7 @@ specifying that the relationship from a child to its parent should be a
 nodes point to child nodes and vice versa without creating a reference cycle
 and memory leaks.
 
-## Summary
+## 〜 Summary
 
 This chapter covered how to use smart pointers to make different guarantees and
 trade-offs from those Rust makes by default with regular references. The

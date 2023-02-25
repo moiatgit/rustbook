@@ -14,17 +14,17 @@ mateix!
 > en oferir un gran suport als IDEs via `rust-analyzer`. Mira 
 > [Appendix D][devtools]<!-- ignore --> per més detalls.
 
-### Creant un directori de projecte
+### Creem un directori de projecte
 
-You’ll start by making a directory to store your Rust code. It doesn’t matter
-to Rust where your code lives, but for the exercises and projects in this book,
-we suggest making a *projects* directory in your home directory and keeping all
-your projects there.
+Començarem creant un directori en el que guardarem el nostre codi Rust. A Rust
+tant li fa on guardes el teu codi, però pels exercicis i projectes d'aquest
+llibre, et recomanem que creis la carpeta *projects* en el directori *home* i deixar
+allà tots els nostres projectes.
 
-Open a terminal and enter the following commands to make a *projects* directory
-and a directory for the “Hello, world!” project within the *projects* directory.
+Obre un terminal i introdueix les següents comandes per crear el directori
+*projects*, i un altre directori pel projecte "Hola Món!" dins de *projects*.
 
-For Linux, macOS, and PowerShell on Windows, enter this:
+Per Linux, macOS i PowerShell a Windows, tecleja el següent:
 
 ```console
 $ mkdir ~/projects
@@ -33,7 +33,7 @@ $ mkdir hello_world
 $ cd hello_world
 ```
 
-For Windows CMD, enter this:
+Per Windows CMD, tecleja:
 
 ```cmd
 > mkdir "%USERPROFILE%\projects"
@@ -42,55 +42,57 @@ For Windows CMD, enter this:
 > cd hello_world
 ```
 
-### Writing and Running a Rust Program
+### Escrivim i executem un programa Rust
 
-Next, make a new source file and call it *main.rs*. Rust files always end with
-the *.rs* extension. If you’re using more than one word in your filename, the
-convention is to use an underscore to separate them. For example, use
-*hello_world.rs* rather than *helloworld.rs*.
+A continuació, crearem un nou fitxer font anomenat *main.rs*. Els fitxers de
+Rust sempre finalitzen amb l'extensió *.rs*. Si el nom del fitxer inclou més
+d'una paraula, la convenció és fer servir un guió baix per separar-les. Per
+exemple, és preferible fer servir *hola_mon.rs* que *holamon.rs*.
 
-Now open the *main.rs* file you just created and enter the code in Listing 1-1.
+Ara, obre el fitxer
+*main.rs* que acabes de crear i copia-hi el codi del llistat 1-1.
 
 <span class="filename">Filename: main.rs</span>
 
 ```rust
 fn main() {
-    println!("Hello, world!");
+    println!("Hola Món!");
 }
 ```
 
-<span class="caption">Listing 1-1: A program that prints `Hello, world!`</span>
+<span class="caption">Llistat 1-1: Un programa que escriu `Hola Món!`</span>
 
-Save the file and go back to your terminal window in the
-*~/projects/hello_world* directory. On Linux or macOS, enter the following
-commands to compile and run the file:
+Guarda el fitxer i torna al terminal dins la carpeta 
+*~/projects/hello_world*. A Linux o macOS, tecleja les següents comandes per
+compilar i executar el fitxer:
 
 ```console
 $ rustc main.rs
 $ ./main
-Hello, world!
+Hola Món!
 ```
 
-On Windows, enter the command `.\main.exe` instead of `./main`:
+A Windows tecleja la comanda `.\main.exe` en comptes de `./main`:
 
 ```powershell
 > rustc main.rs
 > .\main.exe
-Hello, world!
+Hola Món!
 ```
 
-Regardless of your operating system, the string `Hello, world!` should print to
-the terminal. If you don’t see this output, refer back to the
-[“Troubleshooting”][troubleshooting]<!-- ignore --> part of the Installation
-section for ways to get help.
+Independentment del teu sistema operatiu, la cadena `Hola Món!` ha d'aparèixer
+escrita al terminal. Si no veus aquesta sortida, revisa la secció
+d'instal·lació a [“Troubleshooting”][troubleshooting]<!-- ignore --> per trobar
+ajuda.
 
-If `Hello, world!` did print, congratulations! You’ve officially written a Rust
-program. That makes you a Rust programmer—welcome!
+Si si que hi veus `Hola Món!`, felicitats! Acabes d'escriure oficialment un
+programa en Rust. Això et converteix en un programador/programadora Rust.
+Benvinguda/benvingut!
 
-### Anatomy of a Rust Program
+### Anatomia d'un programa en Rust
 
-Let’s review this “Hello, world!” program in detail. Here’s the first piece of
-the puzzle:
+Revisem el nostre programa
+“Hola Món!” en detall. La primera peça del puzle és:
 
 ```rust
 fn main() {
@@ -98,106 +100,93 @@ fn main() {
 }
 ```
 
-These lines define a function named `main`. The `main` function is special: it
-is always the first code that runs in every executable Rust program. Here, the
-first line declares a function named `main` that has no parameters and returns
-nothing. If there were parameters, they would go inside the parentheses `()`.
+Aquestes línies defineixen una funció anomenada `main`. La funció `main` és
+especial: és sempre el primer codi que s'executa a tot programa Rust. Aquí, la
+primera línia declara una funció `main` que no té paràmetres ni retorna res. Si
+hi hagueren paràmetres, hi anirien entre els parèntesis `()`.
 
-The function body is wrapped in `{}`. Rust requires curly brackets around all
-function bodies. It’s good style to place the opening curly bracket on the same
-line as the function declaration, adding one space in between.
+El codi de la funció està envoltat entre `{}`. Rust requereix claudàtors
+envoltant el cos de les funcions. Es considera bon estil obrir claudàtor a la
+mateixa línia en que es declara la funció, tot separant-lo amb un espai.
 
-> Note: If you want to stick to a standard style across Rust projects, you can
-> use an automatic formatter tool called `rustfmt` to format your code in a
-> particular style (more on `rustfmt` in
-> [Appendix D][devtools]<!-- ignore -->). The Rust team has included this tool
-> with the standard Rust distribution, as `rustc` is, so it should already be
-> installed on your computer!
+> Nota: Si vols mantenir el codi dels teus projectes dins de l'estil estàndard,
+> fes servir l'eina de formatat automàtic anomenada `rustfmt`, que donarà
+> format al teu codi (més a `rustfmt` en [Appendix D][devtools]<!-- ignore
+> -->). L'equip de Rust ha inclòs aquesta eina dins la distribució estandard de
+> Rust, de la mateixa manera que amb `rustc`. Per tant, hauria d'estar ja
+> instal·lada al teu equip!
 
-The body of the `main` function holds the following code:
+El cos de la funció `main` conté el següent codi:
 
 ```rust
-    println!("Hello, world!");
+    println!("Hola Món!");
 ```
 
-This line does all the work in this little program: it prints text to the
-screen. There are four important details to notice here.
+Aquesta línia fa tota la feina d'aquest petit programa: escriu el text a pantalla.
+Hi ha quatre detalls rellevants aquí:
 
-First, Rust style is to indent with four spaces, not a tab.
+En primer lloc, l'estil de Rust és indentar amb quatre espais (res de tabulador).
 
-Second, `println!` calls a Rust macro. If it had called a function instead, it
-would be entered as `println` (without the `!`). We’ll discuss Rust macros in
-more detail in Chapter 19. For now, you just need to know that using a `!`
-means that you’re calling a macro instead of a normal function and that macros
-don’t always follow the same rules as functions.
+En segon lloc, `println!` crida una macro de Rust. Si es tractés d'una funció,
+hauríem escrit `println` (sense `!`). Tractarem les macros de Rust en més
+detall al capítol 19. De moment només ens cal saber que fent servir `!` estem
+cridant a una macro en comptes d'una funció regular, i que les macros no sempre
+segueixen les mateixes regles que les funcions.
 
-Third, you see the `"Hello, world!"` string. We pass this string as an argument
-to `println!`, and the string is printed to the screen.
+En tercer lloc trobem el text `"Hola Món!"`. Passem aquesta cadena a `println!`
+com a argument, i el text és escrit a la pantalla.
 
-Fourth, we end the line with a semicolon (`;`), which indicates that this
-expression is over and the next one is ready to begin. Most lines of Rust code
-end with a semicolon.
+I en quart lloc, finalitzem la línia amb un punt i coma (`:`) que indica que
+l'expressió ha finalitzat i la següent ja pot començar. La majoria de les
+línies de codi en Rust, finalitzen amb punt i coma.
 
-### Compiling and Running Are Separate Steps
+### La compilació i l'execució són passes separades
 
-You’ve just run a newly created program, so let’s examine each step in the
-process.
+Examinem cada passa que hem realitzat per crear i executar un programa.
 
-Before running a Rust program, you must compile it using the Rust compiler by
-entering the `rustc` command and passing it the name of your source file, like
-this:
+Abans d'executar un programa en Rust, hem de compilar-ho fent servir el compilador de Rust `rustc`, tot passant-li el nom del fitxer amb el codi font:
 
 ```console
 $ rustc main.rs
 ```
 
-If you have a C or C++ background, you’ll notice that this is similar to `gcc`
-or `clang`. After compiling successfully, Rust outputs a binary executable.
+Si coneixes C o C++, te n'hauràs adonat que és semblant a `gcc` o `clang`. Un cop compilat correctament, Rust genera un executable binari.
 
-On Linux, macOS, and PowerShell on Windows, you can see the executable by
-entering the `ls` command in your shell:
+A Linux, macOS i PowerShell, es pot veure l'executable introduint la comanda `ls` al terminal:
 
 ```console
 $ ls
 main  main.rs
 ```
 
-On Linux and macOS, you’ll see two files. With PowerShell on Windows, you’ll
-see the same three files that you would see using CMD. With CMD on Windows, you
-would enter the following:
+En Linux i macOS veurem dos fitxers. Amb PowerShell a Windows, veurem els mateixos tres fitxers que veuríem des de CMD. Amb CMD, des de Windows, escriuríem el següent:
 
 ```cmd
-> dir /B %= the /B option says to only show the file names =%
+> dir /B %= l'opció /B indica que només es mostrin els noms dels fitxers =%
 main.exe
 main.pdb
 main.rs
 ```
 
-This shows the source code file with the *.rs* extension, the executable file
-(*main.exe* on Windows, but *main* on all other platforms), and, when using
-Windows, a file containing debugging information with the *.pdb* extension.
-From here, you run the *main* or *main.exe* file, like this:
+Hi trobem el fitxer amb el codi font amb l'extensió *.rs*, el fitxer executable
+(*main.exe* a Windows, i *main* a la resta de plataformes), i, quan som a
+Windows, un fitxer que conté informació de depuració, amb l'extensió *.pdb*. A
+partir d'aquí, executarem el fitxer *main* o *main.exe* de la següent manera:
 
 ```console
-$ ./main # or .\main.exe on Windows
+$ ./main # o bé .\main.exe des de Windows
 ```
 
-If your *main.rs* is your “Hello, world!” program, this line prints `Hello,
-world!` to your terminal.
+Si el *main.rs* és el teu programa “Hola Món!”, la línia anterior fa escriure `Hola Món!`
+al teu terminal.
 
-If you’re more familiar with a dynamic language, such as Ruby, Python, or
-JavaScript, you might not be used to compiling and running a program as
-separate steps. Rust is an *ahead-of-time compiled* language, meaning you can
-compile a program and give the executable to someone else, and they can run it
-even without having Rust installed. If you give someone a *.rb*, *.py*, or
-*.js* file, they need to have a Ruby, Python, or JavaScript implementation
-installed (respectively). But in those languages, you only need one command to
-compile and run your program. Everything is a trade-off in language design.
+Si tens més familiaritat amb algun llenguatge dinàmic com ara Ruby, Python o JavaScript, no t'hauràs trobat amb la necessitat d'haver de compilar abans d'executar un programa. 
+Rust és un llenguatge compilat, el que significa que pots compilar el teu codi i lliurar l'executable a altres, de manera que el puguin executar sense haver de tenir Rust instal·lat.
+Quan lliures algú un fitxer *.rb*, *.py* o *.js*, li caldrà tenir Ruby, Python o JavaScript (respectivament) instal·lat. Per contra, en aquests llenguatges només cal fer una comanda per compilar i executar el programa. En el disseny de llenguatges, tot té pros i contres.
 
-Just compiling with `rustc` is fine for simple programs, but as your project
-grows, you’ll want to manage all the options and make it easy to share your
-code. Next, we’ll introduce you to the Cargo tool, which will help you write
-real-world Rust programs.
+Fer servir 
+`rustc` per compilar programes senzills, està bé. A mida que els nostres projectes es fan més grans, però, voldrem gestionar totes les opcions i facilitar-nos la compartició del nostre codi.
+A continuació coneixerem l'eina Cargo, que ens ajudarà a escriure programes reals en Rust.
 
 [troubleshooting]: ch01-01-installation.html#troubleshooting
 [devtools]: appendix-04-useful-development-tools.md

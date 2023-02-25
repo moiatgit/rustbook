@@ -1,4 +1,4 @@
-## Using Trait Objects That Allow for Values of Different Types
+## 〜 Using Trait Objects That Allow for Values of Different Types
 
 In Chapter 8, we mentioned that one limitation of vectors is that they can
 store elements of only one type. We created a workaround in Listing 8-9 where

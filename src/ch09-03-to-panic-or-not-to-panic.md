@@ -1,4 +1,4 @@
-## To `panic!` or Not to `panic!`
+## 〜 To `panic!` or Not to `panic!`
 
 So how do you decide when you should call `panic!` and when you should return
 `Result`? When code panics, there’s no way to recover. You could call `panic!`
@@ -205,7 +205,7 @@ A function that has a parameter or returns only numbers between 1 and 100 could
 then declare in its signature that it takes or returns a `Guess` rather than an
 `i32` and wouldn’t need to do any additional checks in its body.
 
-## Summary
+## 〜 Summary
 
 Rust’s error handling features are designed to help you write more robust code.
 The `panic!` macro signals that your program is in a state it can’t handle and

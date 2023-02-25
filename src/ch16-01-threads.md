@@ -1,4 +1,4 @@
-## Using Threads to Run Code Simultaneously
+## 〜 Using Threads to Run Code Simultaneously
 
 In most current operating systems, an executed program’s code is run in a
 *process*, and the operating system will manage multiple processes at once.

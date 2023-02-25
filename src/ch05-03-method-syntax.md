@@ -1,4 +1,4 @@
-## Method Syntax
+## 〜 Method Syntax
 
 *Methods* are similar to functions: we declare them with the `fn` keyword and a
 name, they can have parameters and a return value, and they contain some code
@@ -237,7 +237,7 @@ There’s no reason to separate these methods into multiple `impl` blocks here,
 but this is valid syntax. We’ll see a case in which multiple `impl` blocks are
 useful in Chapter 10, where we discuss generic types and traits.
 
-## Summary
+## 〜 Summary
 
 Structs let you create custom types that are meaningful for your domain. By
 using structs, you can keep associated pieces of data connected to each other

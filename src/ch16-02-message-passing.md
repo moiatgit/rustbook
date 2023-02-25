@@ -1,4 +1,4 @@
-## Using Message Passing to Transfer Data Between Threads
+## 〜 Using Message Passing to Transfer Data Between Threads
 
 One increasingly popular approach to ensuring safe concurrency is *message
 passing*, where threads or actors communicate by sending each other messages

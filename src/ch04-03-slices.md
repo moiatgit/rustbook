@@ -1,4 +1,4 @@
-## The Slice Type
+## 〜 The Slice Type
 
 *Slices* let you reference a contiguous sequence of elements in a collection
 rather than the whole collection. A slice is a kind of reference, so it does
@@ -304,7 +304,7 @@ storing a reference to the first element and a length. You’ll use this kind of
 slice for all sorts of other collections. We’ll discuss these collections in
 detail when we talk about vectors in Chapter 8.
 
-## Summary
+## 〜 Summary
 
 The concepts of ownership, borrowing, and slices ensure memory safety in Rust
 programs at compile time. The Rust language gives you control over your memory

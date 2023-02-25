@@ -1,4 +1,4 @@
-## Refactoring to Improve Modularity and Error Handling
+## 〜 Refactoring to Improve Modularity and Error Handling
 
 To improve our program, we’ll fix four problems that have to do with the
 program’s structure and how it’s handling potential errors. First, our `main`

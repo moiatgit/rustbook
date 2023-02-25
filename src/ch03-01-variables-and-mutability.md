@@ -1,4 +1,4 @@
-## Variables and Mutability
+## 〜 Variables and Mutability
 
 As mentioned in the [“Storing Values with
 Variables”][storing-values-with-variables]<!-- ignore --> section, by default,

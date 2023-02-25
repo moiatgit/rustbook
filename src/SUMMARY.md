@@ -1,10 +1,10 @@
-# The Rust Programming Language
+# 〜 The Rust Programming Language
 
 [The Rust Programming Language](title-page.md)
 [Foreword](foreword.md)
 [Introduction](ch00-00-introduction.md)
 
-## Getting started
+## 〜 Getting started
 
 - [Getting Started](ch01-00-getting-started.md)
     - [Installation](ch01-01-installation.md)
@@ -35,7 +35,7 @@
     - [The `match` Control Flow Construct](ch06-02-match.md)
     - [Concise Control Flow with `if let`](ch06-03-if-let.md)
 
-## Basic Rust Literacy
+## 〜 Basic Rust Literacy
 
 - [Managing Growing Projects with Packages, Crates, and Modules](ch07-00-managing-growing-projects-with-packages-crates-and-modules.md)
     - [Packages and Crates](ch07-01-packages-and-crates.md)
@@ -72,7 +72,7 @@
     - [Working with Environment Variables](ch12-05-working-with-environment-variables.md)
     - [Writing Error Messages to Standard Error Instead of Standard Output](ch12-06-writing-to-stderr-instead-of-stdout.md)
 
-## Thinking in Rust
+## 〜 Thinking in Rust
 
 - [Functional Language Features: Iterators and Closures](ch13-00-functional-features.md)
     - [Closures: Anonymous Functions that Capture Their Environment](ch13-01-closures.md)
@@ -106,7 +106,7 @@
     - [Using Trait Objects That Allow for Values of Different Types](ch17-02-trait-objects.md)
     - [Implementing an Object-Oriented Design Pattern](ch17-03-oo-design-patterns.md)
 
-## Advanced Topics
+## 〜 Advanced Topics
 
 - [Patterns and Matching](ch18-00-patterns.md)
     - [All the Places Patterns Can Be Used](ch18-01-all-the-places-for-patterns.md)

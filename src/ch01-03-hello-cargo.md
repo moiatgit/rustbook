@@ -1,4 +1,4 @@
-## Hello, Cargo!
+## 〜 Hello, Cargo!
 
 Cargo is Rust’s build system and package manager. Most Rustaceans use this tool
 to manage their Rust projects because Cargo handles a lot of tasks for you,
@@ -66,7 +66,7 @@ name = "hello_cargo"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# 〜 See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 ```
@@ -238,7 +238,7 @@ $ cargo build
 
 For more information about Cargo, check out [its documentation][cargo].
 
-## Summary
+## 〜 Summary
 
 You’re already off to a great start on your Rust journey! In this chapter,
 you’ve learned how to:

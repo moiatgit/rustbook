@@ -1,4 +1,4 @@
-## Controlling How Tests Are Run
+## 〜 Controlling How Tests Are Run
 
 Just as `cargo run` compiles your code and then runs the resulting binary,
 `cargo test` compiles your code in test mode and runs the resulting test

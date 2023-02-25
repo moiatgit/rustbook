@@ -1,4 +1,4 @@
-## Defining an Enum
+## 〜 Defining an Enum
 
 Where structs give you a way of grouping together related fields and data, like
 a `Rectangle` with its `width` and `height`, enums give you a way of saying a

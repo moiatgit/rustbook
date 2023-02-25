@@ -1,4 +1,4 @@
-## Validating References with Lifetimes
+## 〜 Validating References with Lifetimes
 
 Lifetimes are another kind of generic that we’ve already been using. Rather
 than ensuring that a type has the behavior we want, lifetimes ensure that
@@ -579,7 +579,7 @@ suggesting the `'static` lifetime results from attempting to create a dangling
 reference or a mismatch of the available lifetimes. In such cases, the solution
 is fixing those problems, not specifying the `'static` lifetime.
 
-## Generic Type Parameters, Trait Bounds, and Lifetimes Together
+## 〜 Generic Type Parameters, Trait Bounds, and Lifetimes Together
 
 Let’s briefly look at the syntax of specifying generic type parameters, trait
 bounds, and lifetimes all in one function!
@@ -597,7 +597,7 @@ lifetimes are a type of generic, the declarations of the lifetime parameter
 `'a` and the generic type parameter `T` go in the same list inside the angle
 brackets after the function name.
 
-## Summary
+## 〜 Summary
 
 We covered a lot in this chapter! Now that you know about generic type
 parameters, traits and trait bounds, and generic lifetime parameters, you’re
