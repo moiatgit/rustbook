@@ -1,18 +1,20 @@
-## Hello, World!
+## Hola Món!
 
-Now that you’ve installed Rust, it’s time to write your first Rust program.
-It’s traditional when learning a new language to write a little program that
-prints the text `Hello, world!` to the screen, so we’ll do the same here!
+Ara que tenim instal·lat Rust, és el moment d'escriure el nostre primer
+programa. Quan aprenem un nou llenguatge, és tradicional escriure un petit
+programa que mostri el text `Hola Món!` a la pantalla. Això és el que farem ara
+mateix!
 
-> Note: This book assumes basic familiarity with the command line. Rust makes
-> no specific demands about your editing or tooling or where your code lives, so
-> if you prefer to use an integrated development environment (IDE) instead of
-> the command line, feel free to use your favorite IDE. Many IDEs now have some
-> degree of Rust support; check the IDE’s documentation for details. The Rust
-> team has been focusing on enabling great IDE support via `rust-analyzer`. See
-> [Appendix D][devtools]<!-- ignore --> for more details.
+> Nota: Aquest llibre presuposa una certa familiaritat amb la línia de comandes.
+> Rust no té cap requeriment respecte editors o altres eines, ni tampoc on es
+> trobarà el nostre codi, per tant, si t'estimes més fer servir un entorn
+> integrat de desenvolupament (IDE) en comptes de la línia de comandes,
+> endavant. Hi ha molts IDEs que ofereixen un cert suport a Rust. Fes una
+> ullada a la documentació del teu IDE pels detalls. L'equip Rust s'ha enfocat
+> en oferir un gran suport als IDEs via `rust-analyzer`. Mira 
+> [Appendix D][devtools]<!-- ignore --> per més detalls.
 
-### Creating a Project Directory
+### Creant un directori de projecte
 
 You’ll start by making a directory to store your Rust code. It doesn’t matter
 to Rust where your code lives, but for the exercises and projects in this book,
