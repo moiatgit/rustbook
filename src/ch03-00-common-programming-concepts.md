@@ -1,23 +1,26 @@
-# 〜 Common Programming Concepts
+# Conceptes comuns de programació
 
-This chapter covers concepts that appear in almost every programming language
-and how they work in Rust. Many programming languages have much in common at
-their core. None of the concepts presented in this chapter are unique to Rust,
-but we’ll discuss them in the context of Rust and explain the conventions
-around using these concepts.
+Aquest capítol tracta de conceptes que apareixen en la majoria dels llenguatges
+de programació i de com funcionen a Rust. Molts llenguatges de programació
+comparteixen molts element. Si bé, cap dels conceptes que presentarem en aquest
+capítol són exclusius de Rust, els explicarem segons la perspectiva i
+convencions de Rust.
 
-Specifically, you’ll learn about variables, basic types, functions, comments,
-and control flow. These foundations will be in every Rust program, and learning
-them early will give you a strong core to start from.
+En concret, aprendrem sobre variables, tipus de dades bàsics, funcions,
+comentaris i control de flux. Els trobarem en tots els programes Rust i
+aprenent-los aviat, tindrem una bona base a partir de la que començar.
 
-> #### Keywords
->
-> The Rust language has a set of *keywords* that are reserved for use by the
-> language only, much as in other languages. Keep in mind that you cannot use
-> these words as names of variables or functions. Most of the keywords have
-> special meanings, and you’ll be using them to do various tasks in your Rust
-> programs; a few have no current functionality associated with them but have
-> been reserved for functionality that might be added to Rust in the future. You
-> can find a list of the keywords in [Appendix A][appendix_a]<!-- ignore -->.
+#### Paraules clau
+
+> El llenguatge Rust disposa d'un conjunt de paraules clau (*keywords*) que
+> estan reservades per a ser usades únicament pel llenguatge, de la mateixa
+> manerea que passa en molts altres llenguatges. Cal tenir en comptes que no es
+> podrà fer servir aquestes paraules com a nom de variables o funcions. La
+> majoria de les paraules clau tenen un significat especial i les farem servir
+> per realitzar diferents tasques en els nostres programes en Rust. N'hi ha
+> algunes que en aquests moments no tenen cap funcionalitat associada però que
+> han estat reservades per funcionalitats que podrien estar afegides a Rust en
+> el futur. La llista de paraules reservades es pot consultar a [Appendix
+> A][appendix_a]<!-- ignore -->.
 
 [appendix_a]: appendix-01-keywords.md
