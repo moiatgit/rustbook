@@ -21,71 +21,76 @@ característiques que fan de Rust, un llenguatge únic. En aquest capítol
 aprendrem el concepte tot treballant amb exemples focalitzats en una estructura
 de dades ben comuna: les cadenes de text o *strings*.
 
-> ### 〜 The Stack and the Heap
+> ### 〜 La pila i el monticle
 >
-> Many programming languages don’t require you to think about the stack and the
-> heap very often. But in a systems programming language like Rust, whether a
-> value is on the stack or the heap affects how the language behaves and why
-> you have to make certain decisions. Parts of ownership will be described in
-> relation to the stack and the heap later in this chapter, so here is a brief
-> explanation in preparation.
+> Molts llenguatges de programació no ens requereixen pensar massa sovint sobre
+> la pila (*stack*) i el monticle (*heap*) Però en un llenguatge de sistemes
+> com ara Rust, que un valor estigui a la pila o al monticle afecta en com el
+> llenguatge es comporta i en perquè hem de prendre determinades decisions. Més
+> tard en aquest capítol es descriurà una part del concepte de propietat serà
+> descrita en relació amb la pila i el monticle. Per aquesta raó, a continuació
+> passarem a fer-ne una breu explicació.
 >
-> Both the stack and the heap are parts of memory available to your code to use
-> at runtime, but they are structured in different ways. The stack stores
-> values in the order it gets them and removes the values in the opposite
-> order. This is referred to as *last in, first out*. Think of a stack of
-> plates: when you add more plates, you put them on top of the pile, and when
-> you need a plate, you take one off the top. Adding or removing plates from
-> the middle or bottom wouldn’t work as well! Adding data is called *pushing
-> onto the stack*, and removing data is called *popping off the stack*. All
-> data stored on the stack must have a known, fixed size. Data with an unknown
-> size at compile time or a size that might change must be stored on the heap
-> instead.
+> Tant la pila com el monticle són parts de la memòria disponible per que el
+> nostre codi la faci servir en temps d'execució. Són estructurades, però, de
+> manera diferent. La pila emmagatzema els valors en l'ordre en que els obté i
+> els elimina en ordre invers. Aquesta estructura es descriu com *l'últim que
+> entra és el primer que surt* i en anglès es sol coneixer com (*LIFO* - last
+> in, first out). Pensem en una pila de plats. Quan hi afegim més plats, els
+> col·loquem a dalt de tot de la pila, i quan en traiem, els agafem també del
+> cim. Afegir i eliminar plats del mig o la base de la pila no funcionaria tan
+> bé! Afegir dades a una pila es coneix com *push*, mentre que de treure'n en
+> diem *pop*. Tots els elements que guardem en la pila han de tenir una mida
+> coneguda en temps de compilació. Aquelles dades que puguin canviar de midda,
+> no podran anar a la pila i caldrà guardar-les al monticle.
 >
-> The heap is less organized: when you put data on the heap, you request a
-> certain amount of space. The memory allocator finds an empty spot in the heap
-> that is big enough, marks it as being in use, and returns a *pointer*, which
-> is the address of that location. This process is called *allocating on the
-> heap* and is sometimes abbreviated as just *allocating* (pushing values onto
-> the stack is not considered allocating). Because the pointer to the heap is a
-> known, fixed size, you can store the pointer on the stack, but when you want
-> the actual data, you must follow the pointer. Think of being seated at a
-> restaurant. When you enter, you state the number of people in your group, and
-> the host finds an empty table that fits everyone and leads you there. If
-> someone in your group comes late, they can ask where you’ve been seated to
-> find you.
+> El monticle és menys organitzat. Quan hi afegim dades, hem de demanar una
+> certa quantitat d'espai. L'assignador de memòria troba un espai lliure en el
+> monticle que sigui prou gran, el marca que està en ús, i retorna un *punter*
+> que correspon a l'adreça de memòria d'aquella posició. Aquest procés es
+> coneix com *assignar al monticle* i, de vegades s'abrevia amb simplement
+> *assignar* (afegir valors a la pila no es considera assignar). Donat que el
+> punter al monticle té una mida fixa coneguda, podem emmagatzemar-lo a la
+> pila, però quan volem aconseguir el valor al que apunta, hem de *seguir* el
+> punter. Pensem en com aconseguim lloc a un restaurant. En entrar, demanem
+> lloc pel nombre de persones que composa el nostre grup. Llavors el cambrer
+> ens troba una taula buida amb prou espai per seure tot el grup. Finalment, el
+> cambrer ens dirigeix a la taula trobada. Si algú del grup arriba tard, podrà
+> preguntar on trobar-nos.
 >
-> Pushing to the stack is faster than allocating on the heap because the
-> allocator never has to search for a place to store new data; that location is
-> always at the top of the stack. Comparatively, allocating space on the heap
-> requires more work because the allocator must first find a big enough space
-> to hold the data and then perform bookkeeping to prepare for the next
-> allocation.
 >
-> Accessing data in the heap is slower than accessing data on the stack because
-> you have to follow a pointer to get there. Contemporary processors are faster
-> if they jump around less in memory. Continuing the analogy, consider a server
-> at a restaurant taking orders from many tables. It’s most efficient to get
-> all the orders at one table before moving on to the next table. Taking an
-> order from table A, then an order from table B, then one from A again, and
-> then one from B again would be a much slower process. By the same token, a
-> processor can do its job better if it works on data that’s close to other
-> data (as it is on the stack) rather than farther away (as it can be on the
-> heap).
+> Afegir a la pila és més ràpid que assignar al munticle, ja que no cal cercar
+> per saber on col·locar-hi el nou valor. La nova posició és sempre el cim de
+> la pila. En canvi, assignar espai al monticle requereix més feina ja que
+> l'assignador ha de cercar un espai prou gran on guardar el valor i ha de
+> registrar que està ocupat per posteriors assignacions.
 >
-> When your code calls a function, the values passed into the function
-> (including, potentially, pointers to data on the heap) and the function’s
-> local variables get pushed onto the stack. When the function is over, those
-> values get popped off the stack.
+> L'accés a les dades en el monticle també és més lent que en la pila, donat
+> que cal seguir un punter per arribar-hi. Els processadors actuals van més
+> ràpids quan no els cal saltar tant en memòria. Continuant l'analogia,
+> considerem que el cambrer del restaurant ha d'agafar comandes de moltes
+> taules. És més eficient apuntar totes les comandes d'una taula abans de
+> moure's a la següent. Agafar primer una comanda de la taula A, passar a la B
+> per una altra i tornar a la A un altre cop per una altra, seria un procés
+> molt més lent. Per la mateixa raó, el processador fa millor la seva feina si
+> treballa amb dades que es troben a prop d'altres dades, com ara a la pila, en
+> comptes de més lluny, com passa al monticle.
 >
-> Keeping track of what parts of code are using what data on the heap,
-> minimizing the amount of duplicate data on the heap, and cleaning up unused
-> data on the heap so you don’t run out of space are all problems that ownership
-> addresses. Once you understand ownership, you won’t need to think about the
-> stack and the heap very often, but knowing that the main purpose of ownership
-> is to manage heap data can help explain why it works the way it does.
+> Quan el nostre codi crida una funció, els valors que es passen a aquesta
+> funció, incloent potencialment punters a dades al monticle, i les variables
+> locals de la funció, són afegits al cim de la pila. Quan la funció ha
+> finalitzat, aquests valors són eliminats de la pila.
+>
+> El mecanisme de *ownership* se n'encarrega de portar la comptabilitat de
+> quines parts del codi fan servir quines dades al monticle, minimitzant la
+> quantitat de dades duplicades al monticle i alliberant-hi espai que ja no es
+> fa servir, de manera que no ens quedem sense espai. Un cop entenguem el
+> mecanisme de propietat, no ens caldrà pensar en la pila ni el monticle tant
+> sovint. Saber, però, que el principal objectiu del *ownership* és gestionar
+> les dades del monticle, ens ajuda a explicar perquè funciona de la manera que
+> ho fa.
 
-### Ownership Rules
+### 〜 Ownership Rules
 
 First, let’s take a look at the ownership rules. Keep these rules in mind as we
 work through the examples that illustrate them:
