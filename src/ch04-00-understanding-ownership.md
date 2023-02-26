@@ -1,7 +1,13 @@
-# 〜 Understanding Ownership
+# Comprenem *Ownership*
 
-Ownership is Rust’s most unique feature and has deep implications for the rest
-of the language. It enables Rust to make memory safety guarantees without
-needing a garbage collector, so it’s important to understand how ownership
-works. In this chapter, we’ll talk about ownership as well as several related
-features: borrowing, slices, and how Rust lays data out in memory.
+Rust inclou una funcionalitat original anomenada propietat (*ownership*), que
+té profundes implicacions en la resta del llenguatge. *Ownership* permet a Rust
+garantir la seguretat de la memòria sense necessitat d'un recol·lector
+d'escombraries (*garbage collector*). Així, és important que entenguem bé com
+funciona *Ownership*. En aquest capítol tractarem el tema de la propietat i
+d'altres característiques relacionades com ara préstec (*borrowing*), seccions
+(*slices*) i com Rust guarda les dades a memòria.
+
+> Nota del traductor: per facilitar la comprensió de conceptes tan importants
+> com el de propietat (*ownership*), préstec (*borrowing*) i seccions
+> (*slices*), faré servir sovint els mots originals.

@@ -1,25 +1,27 @@
-## 〜 What Is Ownership?
+## Què és *Ownership*?
 
-*Ownership* is a set of rules that govern how a Rust program manages memory.
-All programs have to manage the way they use a computer’s memory while running.
-Some languages have garbage collection that regularly looks for no-longer-used
-memory as the program runs; in other languages, the programmer must explicitly
-allocate and free the memory. Rust uses a third approach: memory is managed
-through a system of ownership with a set of rules that the compiler checks. If
-any of the rules are violated, the program won’t compile. None of the features
-of ownership will slow down your program while it’s running.
+*Ownership* és un conjunt de regles que governen com un programa en Rust
+gestiona la memòria. Tots els programes han de manegar la manera en que fan
+servir la memòria de l'ordinador quan s'executen. Alguns llenguatges disposen
+de recol·lector d'escombraries (*garbage collector*) que se n'encarrega de
+gestionar memòria que ja no està en ús per part del programa. En altres
+llenguatges, són els programadors els que han de reservar i alliberar memòria
+explícitament. Rust fa servir una tercera opció: la memòria es gestionada per
+un sistema de propietat, amb un conjunt de regles que comprova el compilador.
+Quan troba que el programa viola una de les regles, no el compila. Cap de les
+funcionalitats de *ownership* rellenteix l'execució del programa.
 
-Because ownership is a new concept for many programmers, it does take some time
-to get used to. The good news is that the more experienced you become with Rust
-and the rules of the ownership system, the easier you’ll find it to naturally
-develop code that is safe and efficient. Keep at it!
+Donat que el concepte de *ownership* és nou per molts desenvolupadors, sol
+costar una mica acostumar-se'n. La bona notícia és que, a mida que guanyem
+experiència amb Rust i les regles del sistema de propietat, anirem trobant més
+natural desenvolupar codi segur i eficient. Tingués paciència.
 
-When you understand ownership, you’ll have a solid foundation for understanding
-the features that make Rust unique. In this chapter, you’ll learn ownership by
-working through some examples that focus on a very common data structure:
-strings.
+Un cop entenguem el *ownership*, disposarem d'una base sòlida per entendre les
+característiques que fan de Rust, un llenguatge únic. En aquest capítol
+aprendrem el concepte tot treballant amb exemples focalitzats en una estructura
+de dades ben comuna: les cadenes de text o *strings*.
 
-> ### The Stack and the Heap
+> ### 〜 The Stack and the Heap
 >
 > Many programming languages don’t require you to think about the stack and the
 > heap very often. But in a systems programming language like Rust, whether a
