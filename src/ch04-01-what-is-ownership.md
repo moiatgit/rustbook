@@ -1,19 +1,20 @@
 ## Què és *Ownership*?
 
-*Ownership* és un conjunt de regles que governen com un programa en Rust
-gestiona la memòria. Tots els programes han de manegar la manera en que fan
-servir la memòria de l'ordinador quan s'executen. Alguns llenguatges disposen
-de recol·lector d'escombraries (*garbage collector*) que se n'encarrega de
-gestionar memòria que ja no està en ús per part del programa. En altres
-llenguatges, són els programadors els que han de reservar i alliberar memòria
-explícitament. Rust fa servir una tercera opció: la memòria es gestionada per
-un sistema de propietat, amb un conjunt de regles que comprova el compilador.
-Quan troba que el programa viola una de les regles, no el compila. Cap de les
-funcionalitats de *ownership* rellenteix l'execució del programa.
+El mecanisme de pertinença o *Ownership* és un conjunt de regles que governen
+com un programa en Rust gestiona la memòria. Tots els programes han de manegar
+la manera en que fan servir la memòria de l'ordinador quan s'executen. Alguns
+llenguatges disposen de recol·lector d'escombraries (*garbage collector*) que
+se n'encarrega de gestionar memòria que ja no està en ús per part del programa.
+En altres llenguatges, són els programadors els que han de reservar i alliberar
+memòria explícitament. Rust fa servir una tercera opció: la memòria es
+gestionada per un sistema de pertinença, amb un conjunt de regles que comprova
+el compilador. Quan troba que el programa viola una de les regles, no el
+compila. Cap de les funcionalitats de *ownership* rellenteix l'execució del
+programa.
 
 Donat que el concepte de *ownership* és nou per molts desenvolupadors, sol
 costar una mica acostumar-se'n. La bona notícia és que, a mida que guanyem
-experiència amb Rust i les regles del sistema de propietat, anirem trobant més
+experiència amb Rust i les regles del sistema de pertinença, anirem trobant més
 natural desenvolupar codi segur i eficient. Tingués paciència.
 
 Un cop entenguem el *ownership*, disposarem d'una base sòlida per entendre les
@@ -27,9 +28,9 @@ de dades ben comuna: les cadenes de text o *strings*.
 > la pila (*stack*) i el monticle (*heap*) Però en un llenguatge de sistemes
 > com ara Rust, que un valor estigui a la pila o al monticle afecta en com el
 > llenguatge es comporta i en perquè hem de prendre determinades decisions. Més
-> tard en aquest capítol es descriurà una part del concepte de propietat serà
-> descrita en relació amb la pila i el monticle. Per aquesta raó, a continuació
-> passarem a fer-ne una breu explicació.
+> tard en aquest capítol es descriurà una part del concepte de pertinença, en
+> relació amb la pila i el monticle. Per aquesta raó, a continuació passarem a
+> fer-ne una breu explicació.
 >
 > Tant la pila com el monticle són parts de la memòria disponible per que el
 > nostre codi la faci servir en temps d'execució. Són estructurades, però, de
@@ -58,7 +59,6 @@ de dades ben comuna: les cadenes de text o *strings*.
 > cambrer ens dirigeix a la taula trobada. Si algú del grup arriba tard, podrà
 > preguntar on trobar-nos.
 >
->
 > Afegir a la pila és més ràpid que assignar al munticle, ja que no cal cercar
 > per saber on col·locar-hi el nou valor. La nova posició és sempre el cim de
 > la pila. En canvi, assignar espai al monticle requereix més feina ja que
@@ -85,21 +85,21 @@ de dades ben comuna: les cadenes de text o *strings*.
 > quines parts del codi fan servir quines dades al monticle, minimitzant la
 > quantitat de dades duplicades al monticle i alliberant-hi espai que ja no es
 > fa servir, de manera que no ens quedem sense espai. Un cop entenguem el
-> mecanisme de propietat, no ens caldrà pensar en la pila ni el monticle tant
+> mecanisme de pertinença, no ens caldrà pensar en la pila ni el monticle tant
 > sovint. Saber, però, que el principal objectiu del *ownership* és gestionar
 > les dades del monticle, ens ajuda a explicar perquè funciona de la manera que
 > ho fa.
 
-### 〜 Ownership Rules
+### Les regles de pertinença
 
-First, let’s take a look at the ownership rules. Keep these rules in mind as we
-work through the examples that illustrate them:
+En primer lloc, fem una ullada a les regles de pertinença. Mantinguem aquestes
+regles al cap així anem passant pels diferents exemples que vindran:
 
-* Each value in Rust has an *owner*.
-* There can only be one owner at a time.
-* When the owner goes out of scope, the value will be dropped.
+* Cada valor en Rust té un *propietari* (*owner*).
+* Només pot haver un propietari a cada moment.
+* Quan el propietari mor (queda fora de l'àmbit), el valor serà eliminat.
 
-### Variable Scope
+### 〜 Variable Scope
 
 Now that we’re past basic Rust syntax, we won’t include all the `fn main() {`
 code in examples, so if you’re following along, make sure to put the following
