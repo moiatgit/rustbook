@@ -22,7 +22,7 @@ característiques que fan de Rust, un llenguatge únic. En aquest capítol
 aprendrem el concepte tot treballant amb exemples focalitzats en una estructura
 de dades ben comuna: les cadenes de text o *strings*.
 
-> ### 〜 La pila i el monticle
+> ### La pila i el monticle
 >
 > Molts llenguatges de programació no ens requereixen pensar massa sovint sobre
 > la pila (*stack*) i el monticle (*heap*) Però en un llenguatge de sistemes
@@ -101,24 +101,23 @@ regles al cap així anem passant pels diferents exemples que vindran:
 
 ### 〜 Variable Scope
 
-Now that we’re past basic Rust syntax, we won’t include all the `fn main() {`
-code in examples, so if you’re following along, make sure to put the following
-examples inside a `main` function manually. As a result, our examples will be a
-bit more concise, letting us focus on the actual details rather than
-boilerplate code.
+A partir d'ara, com que ja hem vist la sintaxi bàsica d'un programa en Rust, a
+partir d'ara ometrem el `fn main() {` dels exemples de codi. Així, si vas
+provant-los, recorda afegir-los el `main`. Així els exemples apareixeran una
+mica més concisos, permetent-nos focalitzar en els detalls de l'exemple.
 
-As a first example of ownership, we’ll look at the *scope* of some variables. A
-scope is the range within a program for which an item is valid. Take the
-following variable:
+Com a primer exemple de pertinença, considerarem l'*àmbit* (en anglès *scope*) d'algunes variables.
+L'àmbit és l'interval dins del programa en que un element és vàlid. Per exemple:
 
 ```rust
 let s = "hello";
 ```
 
-The variable `s` refers to a string literal, where the value of the string is
-hardcoded into the text of our program. The variable is valid from the point at
-which it’s declared until the end of the current *scope*. Listing 4-1 shows a
-program with comments annotating where the variable `s` would be valid.
+La variable `s` fa referència a un literal de text. És a dir, el valor de la
+cadena de text estarà codificat directament en el codi del nostre programa. La
+variable és vàlida des del moment en que està declarada fins que finalitza
+l'àmbit actual. El llistat 4-1 mostra un programa amb comentaris indicant on
+serà vàlida la variable `s`.
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}
