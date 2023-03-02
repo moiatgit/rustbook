@@ -28,7 +28,7 @@ Yellow team starts with 50.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-20/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-20: Creating a new hash map and inserting some
+<span class="caption">Llistat 8-20: Creating a new hash map and inserting some
 keys and values</span>
 
 Note that we need to first `use` the `HashMap` from the collections portion of
@@ -51,7 +51,7 @@ method, as shown in Listing 8-21.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-21/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-21: Accessing the score for the Blue team
+<span class="caption">Llistat 8-21: Accessing the score for the Blue team
 stored in the hash map</span>
 
 Here, `score` will have the value that’s associated with the Blue team, and the
@@ -85,7 +85,7 @@ the hash map will be the owner of those values, as demonstrated in Listing 8-22.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-22/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-22: Showing that keys and values are owned by
+<span class="caption">Llistat 8-22: Showing that keys and values are owned by
 the hash map once they’re inserted</span>
 
 We aren’t able to use the variables `field_name` and `field_value` after
@@ -124,7 +124,7 @@ team’s key both times.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-23/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-23: Replacing a value stored with a particular
+<span class="caption">Llistat 8-23: Replacing a value stored with a particular
 key</span>
 
 This code will print `{"Blue": 25}`. The original value of `10` has been
@@ -151,7 +151,7 @@ Blue team. Using the `entry` API, the code looks like Listing 8-24.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-24/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-24: Using the `entry` method to only insert if
+<span class="caption">Llistat 8-24: Using the `entry` method to only insert if
 the key does not already have a value</span>
 
 The `or_insert` method on `Entry` is defined to return a mutable reference to
@@ -179,7 +179,7 @@ the value 0.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-25/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-25: Counting occurrences of words using a hash
+<span class="caption">Llistat 8-25: Counting occurrences of words using a hash
 map that stores words and counts</span>
 
 This code will print `{"world": 2, "hello": 1, "wonderful": 1}`. You might see

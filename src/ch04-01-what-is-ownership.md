@@ -123,7 +123,7 @@ serà vàlida la variable `s`.
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 4-1: A variable and the scope in which it is
+<span class="caption">Llistat 4-1: A variable and the scope in which it is
 valid</span>
 
 In other words, there are two important points in time here:
@@ -249,7 +249,7 @@ Let’s look at an example using an integer in Listing 4-2.
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-02/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 4-2: Assigning the integer value of variable `x`
+<span class="caption">Llistat 4-2: Assigning the integer value of variable `x`
 to `y`</span>
 
 We can probably guess what this is doing: “bind the value `5` to `x`; then make
@@ -441,7 +441,7 @@ showing where variables go into and out of scope.
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}
 ```
 
-<span class="caption">Listing 4-3: Functions with ownership and scope
+<span class="caption">Llistat 4-3: Functions with ownership and scope
 annotated</span>
 
 If we tried to use `s` after the call to `takes_ownership`, Rust would throw a
@@ -461,7 +461,7 @@ function that returns some value, with similar annotations as those in Listing
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-04/src/main.rs}}
 ```
 
-<span class="caption">Listing 4-4: Transferring ownership of return
+<span class="caption">Llistat 4-4: Transferring ownership of return
 values</span>
 
 The ownership of a variable follows the same pattern every time: assigning a
@@ -483,7 +483,7 @@ Rust does let us return multiple values using a tuple, as shown in Listing 4-5.
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-05/src/main.rs}}
 ```
 
-<span class="caption">Listing 4-5: Returning ownership of parameters</span>
+<span class="caption">Llistat 4-5: Returning ownership of parameters</span>
 
 But this is too much ceremony and a lot of work for a concept that should be
 common. Luckily for us, Rust has a feature for using a value without

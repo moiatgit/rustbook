@@ -41,7 +41,7 @@ the query. Listing 12-15 shows this test, which won’t compile yet.
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-15/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 12-15: Creating a failing test for the `search`
+<span class="caption">Llistat 12-15: Creating a failing test for the `search`
 function we wish we had</span>
 
 This test searches for the string `"duct"`. The text we’re searching is three
@@ -64,7 +64,7 @@ fast, productive."`
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-16/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 12-16: Defining just enough of the `search`
+<span class="caption">Llistat 12-16: Defining just enough of the `search`
 function so our test will compile</span>
 
 Notice that we need to define an explicit lifetime `'a` in the signature of
@@ -134,7 +134,7 @@ won’t compile yet.
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-17/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 12-17: Iterating through each line in `contents`
+<span class="caption">Llistat 12-17: Iterating through each line in `contents`
 </span>
 
 The `lines` method returns an iterator. We’ll talk about iterators in depth in
@@ -155,7 +155,7 @@ Listing 12-18. Note this still won’t compile yet.
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-18/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 12-18: Adding functionality to see whether the
+<span class="caption">Llistat 12-18: Adding functionality to see whether the
 line contains the string in `query`</span>
 
 At the moment, we’re building up functionality. To get it to compile, we need
@@ -175,7 +175,7 @@ we return the vector, as shown in Listing 12-19.
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-19/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 12-19: Storing the lines that match so we can
+<span class="caption">Llistat 12-19: Storing the lines that match so we can
 return them</span>
 
 Now the `search` function should return only the lines that contain `query`,

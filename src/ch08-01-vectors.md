@@ -15,7 +15,7 @@ Listing 8-1.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-01/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-1: Creating a new, empty vector to hold values
+<span class="caption">Llistat 8-1: Creating a new, empty vector to hold values
 of type `i32`</span>
 
 Note that we added a type annotation here. Because we aren’t inserting any
@@ -39,7 +39,7 @@ Types”][data-types]<!-- ignore --> section of Chapter 3.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-02/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-2: Creating a new vector containing
+<span class="caption">Llistat 8-2: Creating a new vector containing
 values</span>
 
 Because we’ve given initial `i32` values, Rust can infer that the type of `v`
@@ -55,7 +55,7 @@ as shown in Listing 8-3.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-03/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-3: Using the `push` method to add values to a
+<span class="caption">Llistat 8-3: Using the `push` method to add values to a
 vector</span>
 
 As with any variable, if we want to be able to change its value, we need to
@@ -76,7 +76,7 @@ syntax and the `get` method.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-04/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-4: Using indexing syntax or the `get` method to
+<span class="caption">Llistat 8-4: Using indexing syntax or the `get` method to
 access an item in a vector</span>
 
 Note a few details here. We use the index value of `2` to get the third element
@@ -95,7 +95,7 @@ with each technique, as shown in Listing 8-5.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-05/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-5: Attempting to access the element at index
+<span class="caption">Llistat 8-5: Attempting to access the element at index
 100 in a vector containing five elements</span>
 
 When we run this code, the first `[]` method will cause the program to panic
@@ -128,7 +128,7 @@ function:
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-06/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-6: Attempting to add an element to a vector
+<span class="caption">Llistat 8-6: Attempting to add an element to a vector
 while holding a reference to an item</span>
 
 Compiling this code will result in this error:
@@ -162,7 +162,7 @@ to use a `for` loop to get immutable references to each element in a vector of
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-07/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-7: Printing each element in a vector by
+<span class="caption">Llistat 8-7: Printing each element in a vector by
 iterating over the elements using a `for` loop</span>
 
 We can also iterate over mutable references to each element in a mutable vector
@@ -173,7 +173,7 @@ will add `50` to each element.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-08/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-8: Iterating over mutable references to
+<span class="caption">Llistat 8-8: Iterating over mutable references to
 elements in a vector</span>
 
 To change the value that the mutable reference refers to, we have to use the
@@ -208,7 +208,7 @@ holds different types. We’ve demonstrated this in Listing 8-9.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-09/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-9: Defining an `enum` to store values of
+<span class="caption">Llistat 8-9: Defining an `enum` to store values of
 different types in one vector</span>
 
 Rust needs to know what types will be in the vector at compile time so it knows
@@ -237,7 +237,7 @@ annotated in Listing 8-10.
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-10/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 8-10: Showing where the vector and its elements
+<span class="caption">Llistat 8-10: Showing where the vector and its elements
 are dropped</span>
 
 When the vector gets dropped, all of its contents are also dropped, meaning the

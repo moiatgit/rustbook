@@ -35,7 +35,7 @@ fail. In Listing 9-3 we try to open a file.
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-03/src/main.rs}}
 ```
 
-<span class="caption">Listing 9-3: Opening a file</span>
+<span class="caption">Llistat 9-3: Opening a file</span>
 
 The return type of `File::open` is a `Result<T, E>`. The generic parameter `T`
 has been filled in by the implementation of `File::open` with the type of the
@@ -65,7 +65,7 @@ Chapter 6.
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-04/src/main.rs}}
 ```
 
-<span class="caption">Listing 9-4: Using a `match` expression to handle the
+<span class="caption">Llistat 9-4: Using a `match` expression to handle the
 `Result` variants that might be returned</span>
 
 Note that, like the `Option` enum, the `Result` enum and its variants have been
@@ -107,7 +107,7 @@ tests to fail lol -->
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-05/src/main.rs}}
 ```
 
-<span class="caption">Listing 9-5: Handling different kinds of errors in
+<span class="caption">Llistat 9-5: Handling different kinds of errors in
 different ways</span>
 
 The type of the value that `File::open` returns inside the `Err` variant is
@@ -249,7 +249,7 @@ don't want to include it for rustdoc testing purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-06/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 9-6: A function that returns errors to the
+<span class="caption">Llistat 9-6: A function that returns errors to the
 calling code using `match`</span>
 
 This function can be written in a much shorter way, but we’re going to start by
@@ -319,7 +319,7 @@ don't want to include it for rustdoc testing purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-07/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 9-7: A function that returns errors to the
+<span class="caption">Llistat 9-7: A function that returns errors to the
 calling code using the `?` operator</span>
 
 The `?` placed after a `Result` value is defined to work in almost the same way
@@ -367,7 +367,7 @@ don't want to include it for rustdoc testing purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-08/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 9-8: Chaining method calls after the `?`
+<span class="caption">Llistat 9-8: Chaining method calls after the `?`
 operator</span>
 
 We’ve moved the creation of the new `String` in `username` to the beginning of
@@ -391,7 +391,7 @@ don't want to include it for rustdoc testing purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-09/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 9-9: Using `fs::read_to_string` instead of
+<span class="caption">Llistat 9-9: Using `fs::read_to_string` instead of
 opening and then reading the file</span>
 
 Reading a file into a string is a fairly common operation, so the standard
@@ -421,7 +421,7 @@ we use `?` on:
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-10/src/main.rs}}
 ```
 
-<span class="caption">Listing 9-10: Attempting to use the `?` in the `main`
+<span class="caption">Llistat 9-10: Attempting to use the `?` in the `main`
 function that returns `()` won’t compile</span>
 
 This code opens a file, which might fail. The `?` operator follows the `Result`
@@ -457,7 +457,7 @@ given text:
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-11/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 9-11: Using the `?` operator on an `Option<T>`
+<span class="caption">Llistat 9-11: Using the `?` operator on an `Option<T>`
 value</span>
 
 This function returns `Option<char>` because it’s possible that there is a
@@ -502,7 +502,7 @@ code will now compile:
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-12/src/main.rs}}
 ```
 
-<span class="caption">Listing 9-12: Changing `main` to return `Result<(), E>`
+<span class="caption">Llistat 9-12: Changing `main` to return `Result<(), E>`
 allows the use of the `?` operator on `Result` values</span>
 
 The `Box<dyn Error>` type is a *trait object*, which we’ll talk about in the

@@ -148,7 +148,7 @@ function to call the `add_one` function, as in Listing 14-7.
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-07/add/adder/src/main.rs}}
 ```
 
-<span class="caption">Listing 14-7: Using the `add_one` library crate from the
+<span class="caption">Llistat 14-7: Using the `add_one` library crate from the
  `adder` crate</span>
 
 Let’s build the workspace by running `cargo build` in the top-level *add*

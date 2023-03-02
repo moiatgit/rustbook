@@ -64,7 +64,7 @@ Consider the code in Listing 11-12 with the private function `internal_adder`.
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-12/src/lib.rs}}
 ```
 
-<span class="caption">Listing 11-12: Testing a private function</span>
+<span class="caption">Llistat 11-12: Testing a private function</span>
 
 Note that the `internal_adder` function is not marked as `pub`. Tests are just
 Rust code, and the `tests` module is just another module. As we discussed in
@@ -114,7 +114,7 @@ Enter the code in Listing 11-13 into the *tests/integration_test.rs* file:
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-13/tests/integration_test.rs}}
 ```
 
-<span class="caption">Listing 11-13: An integration test of a function in the
+<span class="caption">Llistat 11-13: An integration test of a function in the
 `adder` crate</span>
 
 Each file in the `tests` directory is a separate crate, so we need to bring our

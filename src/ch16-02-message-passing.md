@@ -39,7 +39,7 @@ want to send over the channel.
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-06/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-6: Creating a channel and assigning the two
+<span class="caption">Llistat 16-6: Creating a channel and assigning the two
 halves to `tx` and `rx`</span>
 
 We create a new channel using the `mpsc::channel` function; `mpsc` stands for
@@ -72,7 +72,7 @@ sending a chat message from one thread to another.
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-07/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-7: Moving `tx` to a spawned thread and sending
+<span class="caption">Llistat 16-7: Moving `tx` to a spawned thread and sending
 “hi”</span>
 
 Again, we’re using `thread::spawn` to create a new thread and then using `move`
@@ -95,7 +95,7 @@ receiving a chat message.
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-08/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-8: Receiving the value “hi” in the main thread
+<span class="caption">Llistat 16-8: Receiving the value “hi” in the main thread
 and printing it</span>
 
 The receiver has two useful methods: `recv` and `try_recv`. We’re using `recv`,
@@ -145,7 +145,7 @@ this code isn’t allowed:
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-09/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-9: Attempting to use `val` after we’ve sent it
+<span class="caption">Llistat 16-9: Attempting to use `val` after we’ve sent it
 down the channel</span>
 
 Here, we try to print `val` after we’ve sent it down the channel via `tx.send`.
@@ -178,7 +178,7 @@ pause for a second between each message.
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-10/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-10: Sending multiple messages and pausing
+<span class="caption">Llistat 16-10: Sending multiple messages and pausing
 between each</span>
 
 This time, the spawned thread has a vector of strings that we want to send to
@@ -221,7 +221,7 @@ so by cloning the transmitter, as shown in Listing 16-11:
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-11/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 16-11: Sending multiple messages from multiple
+<span class="caption">Llistat 16-11: Sending multiple messages from multiple
 producers</span>
 
 This time, before we create the first spawned thread, we call `clone` on the

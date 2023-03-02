@@ -69,7 +69,7 @@ input.
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-01/src/main.rs}}
 ```
 
-<span class="caption">Listing 18-1: Mixing `if let`, `else if`, `else if let`,
+<span class="caption">Llistat 18-1: Mixing `if let`, `else if`, `else if let`,
 and `else`</span>
 
 If the user specifies a favorite color, that color is used as the background.
@@ -107,7 +107,7 @@ values in the vector in the opposite order in which they were pushed.
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-02/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 18-2: Using a `while let` loop to print values
+<span class="caption">Llistat 18-2: Using a `while let` loop to print values
 for as long as `stack.pop()` returns `Some`</span>
 
 This example prints 3, 2, and then 1. The `pop` method takes the last element
@@ -127,7 +127,7 @@ apart, a tuple as part of the `for` loop.
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-03/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 18-3: Using a pattern in a `for` loop to
+<span class="caption">Llistat 18-3: Using a pattern in a `for` loop to
 destructure a tuple</span>
 
 The code in Listing 18-3 will print the following:
@@ -175,7 +175,7 @@ To see the pattern matching aspect of `let` more clearly, consider Listing
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-04/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 18-4: Using a pattern to destructure a tuple and
+<span class="caption">Llistat 18-4: Using a pattern to destructure a tuple and
 create three variables at once</span>
 
 Here, we match a tuple against a pattern. Rust compares the value `(1, 2, 3)`
@@ -192,7 +192,7 @@ elements into two variables, which won’t work.
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-05/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 18-5: Incorrectly constructing a pattern whose
+<span class="caption">Llistat 18-5: Incorrectly constructing a pattern whose
 variables don’t match the number of elements in the tuple</span>
 
 Attempting to compile this code results in this type error:
@@ -218,7 +218,7 @@ declares a function named `foo` that takes one parameter named `x` of type
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-06/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 18-6: A function signature uses patterns in the
+<span class="caption">Llistat 18-6: A function signature uses patterns in the
 parameters</span>
 
 The `x` part is a pattern! As we did with `let`, we could match a tuple in a
@@ -231,7 +231,7 @@ as we pass it to a function.
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-07/src/main.rs}}
 ```
 
-<span class="caption">Listing 18-7: A function with parameters that destructure
+<span class="caption">Llistat 18-7: A function with parameters that destructure
 a tuple</span>
 
 This code prints `Current location: (3, 5)`. The values `&(3, 5)` match the

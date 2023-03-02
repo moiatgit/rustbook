@@ -28,7 +28,7 @@ results together. The `main` function calls `do_twice` with the arguments
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-27/src/main.rs}}
 ```
 
-<span class="caption">Listing 19-27: Using the `fn` type to accept a function
+<span class="caption">Llistat 19-27: Using the `fn` type to accept a function
 pointer as an argument</span>
 
 This code prints `The answer is: 12`. We specify that the parameter `f` in

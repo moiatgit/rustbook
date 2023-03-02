@@ -171,7 +171,7 @@ purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-13/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 9-13: A `Guess` type that will only continue with
+<span class="caption">Llistat 9-13: A `Guess` type that will only continue with
 values between 1 and 100</span>
 
 First, we define a struct named `Guess` that has a field named `value` that

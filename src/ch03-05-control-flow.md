@@ -126,7 +126,7 @@ statement to assign the outcome to a variable, as in Listing 3-2.
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-02/src/main.rs}}
 ```
 
-<span class="caption">Listing 3-2: Assigning the result of an `if` expression
+<span class="caption">Llistat 3-2: Assigning the result of an `if` expression
 to a variable</span>
 
 The `number` variable will be bound to a value based on the outcome of the `if`
@@ -288,7 +288,7 @@ time, and then, after the loop, print a message and exit.
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-03/src/main.rs}}
 ```
 
-<span class="caption">Listing 3-3: Using a `while` loop to run code while a
+<span class="caption">Llistat 3-3: Using a `while` loop to run code while a
 condition holds true</span>
 
 This construct eliminates a lot of nesting that would be necessary if you used
@@ -307,7 +307,7 @@ element in the array `a`.
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-04/src/main.rs}}
 ```
 
-<span class="caption">Listing 3-4: Looping through each element of a collection
+<span class="caption">Llistat 3-4: Looping through each element of a collection
 using a `while` loop</span>
 
 Here, the code counts up through the elements in the array. It starts at index
@@ -339,7 +339,7 @@ for each item in a collection. A `for` loop looks like the code in Listing 3-5.
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-05/src/main.rs}}
 ```
 
-<span class="caption">Listing 3-5: Looping through each element of a collection
+<span class="caption">Llistat 3-5: Looping through each element of a collection
 using a `for` loop</span>
 
 When we run this code, we’ll see the same output as in Listing 3-4. More

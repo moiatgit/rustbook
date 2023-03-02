@@ -33,7 +33,7 @@ shows the definition of a public `Summary` trait that expresses this behavior.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-12/src/lib.rs}}
 ```
 
-<span class="caption">Listing 10-12: A `Summary` trait that consists of the
+<span class="caption">Llistat 10-12: A `Summary` trait that consists of the
 behavior provided by a `summarize` method</span>
 
 Here, we declare a trait using the `trait` keyword and then the trait’s name,
@@ -68,7 +68,7 @@ already limited to 280 characters.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-13/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 10-13: Implementing the `Summary` trait on the
+<span class="caption">Llistat 10-13: Implementing the `Summary` trait on the
 `NewsArticle` and `Tweet` types</span>
 
 Implementing a trait on a type is similar to implementing regular methods. The
@@ -130,7 +130,7 @@ Listing 10-12.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-14/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 10-14: Defining a `Summary` trait with a default
+<span class="caption">Llistat 10-14: Defining a `Summary` trait with a default
 implementation of the `summarize` method</span>
 
 To use a default implementation to summarize instances of `NewsArticle`, we
@@ -344,7 +344,7 @@ that enables comparison *and* the `Display` trait that enables printing.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-15/src/lib.rs}}
 ```
 
-<span class="caption">Listing 10-15: Conditionally implementing methods on a
+<span class="caption">Llistat 10-15: Conditionally implementing methods on a
 generic type depending on trait bounds</span>
 
 We can also conditionally implement a trait for any type that implements

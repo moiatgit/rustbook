@@ -59,7 +59,7 @@ cd ../../..
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-01/src/lib.rs}}
 ```
 
-<span class="caption">Listing 11-1: The test module and function generated
+<span class="caption">Llistat 11-1: The test module and function generated
 automatically by `cargo new`</span>
 
 For now, let’s ignore the top two lines and focus on the function. Note the
@@ -80,7 +80,7 @@ The `cargo test` command runs all tests in our project, as shown in Listing
 {{#include ../listings/ch11-writing-automated-tests/listing-11-01/output.txt}}
 ```
 
-<span class="caption">Listing 11-2: The output from running the automatically
+<span class="caption">Llistat 11-2: The output from running the automatically
 generated test</span>
 
 Cargo compiled and ran the test. We see the line `running 1 test`. The next
@@ -139,7 +139,7 @@ is to call the `panic!` macro. Enter the new test as a function named
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-03/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 11-3: Adding a second test that will fail because
+<span class="caption">Llistat 11-3: Adding a second test that will fail because
 we call the `panic!` macro</span>
 
 Run the tests again using `cargo test`. The output should look like Listing
@@ -149,7 +149,7 @@ Run the tests again using `cargo test`. The output should look like Listing
 {{#include ../listings/ch11-writing-automated-tests/listing-11-03/output.txt}}
 ```
 
-<span class="caption">Listing 11-4: Test results when one test passes and one
+<span class="caption">Llistat 11-4: Test results when one test passes and one
 test fails</span>
 
 Instead of `ok`, the line `test tests::another` shows `FAILED`. Two new
@@ -188,7 +188,7 @@ method, which are repeated here in Listing 11-5. Let’s put this code in the
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-05/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 11-5: Using the `Rectangle` struct and its
+<span class="caption">Llistat 11-5: Using the `Rectangle` struct and its
 `can_hold` method from Chapter 5</span>
 
 The `can_hold` method returns a Boolean, which means it’s a perfect use case
@@ -203,7 +203,7 @@ has a width of 5 and a height of 1.
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-06/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 11-6: A test for `can_hold` that checks whether a
+<span class="caption">Llistat 11-6: A test for `can_hold` that checks whether a
 larger rectangle can indeed hold a smaller rectangle</span>
 
 Note that we’ve added a new line inside the `tests` module: `use super::*;`.
@@ -282,7 +282,7 @@ parameter, then we test this function using the `assert_eq!` macro.
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-07/src/lib.rs}}
 ```
 
-<span class="caption">Listing 11-7: Testing the function `add_two` using the
+<span class="caption">Llistat 11-7: Testing the function `add_two` using the
 `assert_eq!` macro</span>
 
 Let’s check that it passes!
@@ -427,7 +427,7 @@ happen when we expect them to.
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-08/src/lib.rs}}
 ```
 
-<span class="caption">Listing 11-8: Testing that a condition will cause a
+<span class="caption">Llistat 11-8: Testing that a condition will cause a
 `panic!`</span>
 
 We place the `#[should_panic]` attribute after the `#[test]` attribute and
@@ -470,7 +470,7 @@ too large.
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-09/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 11-9: Testing for a `panic!` with a panic message
+<span class="caption">Llistat 11-9: Testing for a `panic!` with a panic message
 containing a specified substring</span>
 
 This test will pass because the value we put in the `should_panic` attribute’s

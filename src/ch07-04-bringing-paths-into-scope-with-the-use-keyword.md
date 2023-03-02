@@ -18,7 +18,7 @@ scope of the `eat_at_restaurant` function so we only have to specify
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-11/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-11: Bringing a module into scope with
+<span class="caption">Llistat 7-11: Bringing a module into scope with
 `use`</span>
 
 Adding `use` and a path in a scope is similar to creating a symbolic link in
@@ -38,7 +38,7 @@ statement, so the function body won’t compile:
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-12/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-12: A `use` statement only applies in the scope
+<span class="caption">Llistat 7-12: A `use` statement only applies in the scope
 it’s in</span>
 
 The compiler error shows that the shortcut no longer applies within the
@@ -66,7 +66,7 @@ the `add_to_waitlist` function to achieve the same result, as in Listing 7-13.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-13/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-13: Bringing the `add_to_waitlist` function
+<span class="caption">Llistat 7-13: Bringing the `add_to_waitlist` function
 into scope with `use`, which is unidiomatic</span>
 
 Although both Listing 7-11 and 7-13 accomplish the same task, Listing 7-11 is
@@ -88,7 +88,7 @@ crate.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-14/src/main.rs}}
 ```
 
-<span class="caption">Listing 7-14: Bringing `HashMap` into scope in an
+<span class="caption">Llistat 7-14: Bringing `HashMap` into scope in an
 idiomatic way</span>
 
 There’s no strong reason behind this idiom: it’s just the convention that has
@@ -105,7 +105,7 @@ different parent modules and how to refer to them.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-15/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 7-15: Bringing two types with the same name into
+<span class="caption">Llistat 7-15: Bringing two types with the same name into
 the same scope requires using their parent modules.</span>
 
 As you can see, using the parent modules distinguishes the two `Result` types.
@@ -126,7 +126,7 @@ the code in Listing 7-15 by renaming one of the two `Result` types using `as`.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-16/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 7-16: Renaming a type when it’s brought into
+<span class="caption">Llistat 7-16: Renaming a type when it’s brought into
 scope with the `as` keyword</span>
 
 In the second `use` statement, we chose the new name `IoResult` for the
@@ -152,7 +152,7 @@ changed to `pub use`.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-17/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-17: Making a name available for any code to use
+<span class="caption">Llistat 7-17: Making a name available for any code to use
 from a new scope with `pub use`</span>
 
 Before this change, external code would have to call the `add_to_waitlist`
@@ -247,7 +247,7 @@ differ, as shown in Listing 7-18.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-18/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 7-18: Specifying a nested path to bring multiple
+<span class="caption">Llistat 7-18: Specifying a nested path to bring multiple
 items with the same prefix into scope</span>
 
 In bigger programs, bringing many items into scope from the same crate or
@@ -265,7 +265,7 @@ two `use` statements that share a subpath. For example, Listing 7-19 shows two
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-19/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-19: Two `use` statements where one is a subpath
+<span class="caption">Llistat 7-19: Two `use` statements where one is a subpath
 of the other</span>
 
 The common part of these two paths is `std::io`, and that’s the complete first
@@ -278,7 +278,7 @@ the nested path, as shown in Listing 7-20.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-20/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-20: Combining the paths in Listing 7-19 into
+<span class="caption">Llistat 7-20: Combining the paths in Listing 7-19 into
 one `use` statement</span>
 
 This line brings `std::io` and `std::io::Write` into scope.

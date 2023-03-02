@@ -10,7 +10,7 @@ variant.
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-06/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 6-6: A `match` that only cares about executing
+<span class="caption">Llistat 6-6: A `match` that only cares about executing
 code when the value is `Some`</span>
 
 If the value is `Some`, we print out the value in the `Some` variant by binding

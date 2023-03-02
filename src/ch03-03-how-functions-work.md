@@ -122,7 +122,7 @@ assigning a value to it with the `let` keyword is a statement. In Listing 3-1,
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-01/src/main.rs}}
 ```
 
-<span class="caption">Listing 3-1: A `main` function declaration containing one statement</span>
+<span class="caption">Llistat 3-1: A `main` function declaration containing one statement</span>
 
 Function definitions are also statements; the entire preceding example is a
 statement in itself.

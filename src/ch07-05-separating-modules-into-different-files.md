@@ -22,7 +22,7 @@ shown in Listing 7-21. Note that this won’t compile until we create the
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-21-and-22/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-21: Declaring the `front_of_house` module whose
+<span class="caption">Llistat 7-21: Declaring the `front_of_house` module whose
 body will be in *src/front_of_house.rs*</span>
 
 Next, place the code that was in the curly brackets into a new file named
@@ -36,7 +36,7 @@ with the name `front_of_house`.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-21-and-22/src/front_of_house.rs}}
 ```
 
-<span class="caption">Listing 7-22: Definitions inside the `front_of_house`
+<span class="caption">Llistat 7-22: Definitions inside the `front_of_house`
 module in *src/front_of_house.rs*</span>
 
 Note that you only need to load a file using a `mod` declaration *once* in your

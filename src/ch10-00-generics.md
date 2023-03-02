@@ -48,7 +48,7 @@ in a list.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-01/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 10-1: Finding the largest number in a list of
+<span class="caption">Llistat 10-1: Finding the largest number in a list of
 numbers</span>
 
 We store a list of integers in the variable `number_list` and place a reference
@@ -70,7 +70,7 @@ the same logic at two different places in the program, as shown in Listing 10-2.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-02/src/main.rs}}
 ```
 
-<span class="caption">Listing 10-2: Code to find the largest number in *two*
+<span class="caption">Llistat 10-2: Code to find the largest number in *two*
 lists of numbers</span>
 
 Although this code works, duplicating code is tedious and error prone. We also
@@ -93,7 +93,7 @@ list of `i32` values we might have in the future.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-03/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 10-3: Abstracted code to find the largest number
+<span class="caption">Llistat 10-3: Abstracted code to find the largest number
 in two lists</span>
 
 The `largest` function has a parameter called `list`, which represents any

@@ -19,7 +19,7 @@ in Listing 12-23:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-12-23-reproduced/src/lib.rs:ch13}}
 ```
 
-<span class="caption">Listing 13-17: Reproduction of the `Config::build`
+<span class="caption">Llistat 13-17: Reproduction of the `Config::build`
 function from Listing 12-23</span>
 
 At the time, we said not to worry about the inefficient `clone` calls because
@@ -60,7 +60,7 @@ won’t compile until we update `Config::build` as well.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-18/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 13-18: Passing the return value of `env::args` to
+<span class="caption">Llistat 13-18: Passing the return value of `env::args` to
 `Config::build`</span>
 
 The `env::args` function returns an iterator! Rather than collecting the
@@ -79,7 +79,7 @@ function body.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-19/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 13-19: Updating the signature of `Config::build`
+<span class="caption">Llistat 13-19: Updating the signature of `Config::build`
 to expect an iterator</span>
 
 The standard library documentation for the `env::args` function shows that the
@@ -109,7 +109,7 @@ updates the code from Listing 12-23 to use the `next` method:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-20/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 13-20: Changing the body of `Config::build` to use
+<span class="caption">Llistat 13-20: Changing the body of `Config::build` to use
 iterator methods</span>
 
 Remember that the first value in the return value of `env::args` is the name of
@@ -131,7 +131,7 @@ project, which is reproduced here in Listing 13-21 as it was in Listing 12-19:
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-19/src/lib.rs:ch13}}
 ```
 
-<span class="caption">Listing 13-21: The implementation of the `search`
+<span class="caption">Llistat 13-21: The implementation of the `search`
 function from Listing 12-19</span>
 
 We can write this code in a more concise way using iterator adaptor methods.
@@ -147,7 +147,7 @@ concurrent access to the `results` vector. Listing 13-22 shows this change:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-22/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 13-22: Using iterator adaptor methods in the
+<span class="caption">Llistat 13-22: Using iterator adaptor methods in the
 implementation of the `search` function</span>
 
 Recall that the purpose of the `search` function is to return all lines in

@@ -28,7 +28,7 @@ quite work yet.
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-22/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 20-22: Joining each thread when the thread pool
+<span class="caption">Llistat 20-22: Joining each thread when the thread pool
 goes out of scope</span>
 
 First, we loop through each of the thread pool `workers`. We use `&mut` for
@@ -121,7 +121,7 @@ of `ThreadPool`:
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-23/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 20-23: Explicitly drop `sender` before joining
+<span class="caption">Llistat 20-23: Explicitly drop `sender` before joining
 the worker threads</span>
 
 Dropping `sender` closes the channel, which indicates no more messages will be
@@ -136,7 +136,7 @@ finish when the `ThreadPool` `drop` implementation calls `join` on them.
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-24/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 20-24: Explicitly break out of the loop when
+<span class="caption">Llistat 20-24: Explicitly break out of the loop when
 `recv` returns an error</span>
 
 To see this code in action, let’s modify `main` to accept only two requests
@@ -148,7 +148,7 @@ before gracefully shutting down the server, as shown in Listing 20-25.
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-25/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 20-25: Shut down the server after serving two
+<span class="caption">Llistat 20-25: Shut down the server after serving two
 requests by exiting the loop</span>
 
 You wouldn’t want a real-world web server to shut down after serving only two

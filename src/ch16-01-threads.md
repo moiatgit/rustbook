@@ -45,7 +45,7 @@ thread and other text from a new thread:
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-01/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-1: Creating a new thread to print one thing
+<span class="caption">Llistat 16-1: Creating a new thread to print one thing
 while the main thread prints something else</span>
 
 Note that when the main thread of a Rust program completes, all spawned threads
@@ -101,7 +101,7 @@ call `join` to make sure the spawned thread finishes before `main` exits:
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-02/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-2: Saving a `JoinHandle` from `thread::spawn`
+<span class="caption">Llistat 16-2: Saving a `JoinHandle` from `thread::spawn`
 to guarantee the thread is run to completion</span>
 
 Calling `join` on the handle blocks the thread currently running until the
@@ -190,7 +190,7 @@ thread. However, this won’t yet work, as you’ll see in a moment.
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-03/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-3: Attempting to use a vector created by the
+<span class="caption">Llistat 16-3: Attempting to use a vector created by the
 main thread in another thread</span>
 
 The closure uses `v`, so it will capture `v` and make it part of the closure’s
@@ -216,7 +216,7 @@ that won’t be valid:
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-04/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-4: A thread with a closure that attempts to
+<span class="caption">Llistat 16-4: A thread with a closure that attempts to
 capture a reference to `v` from a main thread that drops `v`</span>
 
 If Rust allowed us to run this code, there’s a possibility the spawned thread
@@ -251,7 +251,7 @@ should borrow the values. The modification to Listing 16-3 shown in Listing
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-05/src/main.rs}}
 ```
 
-<span class="caption">Listing 16-5: Using the `move` keyword to force a closure
+<span class="caption">Llistat 16-5: Using the `move` keyword to force a closure
 to take ownership of the values it uses</span>
 
 We might be tempted to try the same thing to fix the code in Listing 16-4 where

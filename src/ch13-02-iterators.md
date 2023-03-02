@@ -15,7 +15,7 @@ useful.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-10/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 13-10: Creating an iterator</span>
+<span class="caption">Llistat 13-10: Creating an iterator</span>
 
 The iterator is stored in the `v1_iter` variable. Once we’ve created an
 iterator, we can use it in a variety of ways. In Listing 3-5 in Chapter 3, we
@@ -32,7 +32,7 @@ iteration of the loop, which prints out each value.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-11/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 13-11: Using an iterator in a `for` loop</span>
+<span class="caption">Llistat 13-11: Using an iterator in a `for` loop</span>
 
 In languages that don’t have iterators provided by their standard libraries,
 you would likely write this same functionality by starting a variable at index
@@ -82,7 +82,7 @@ from the vector.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-12/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 13-12: Calling the `next` method on an
+<span class="caption">Llistat 13-12: Calling the `next` method on an
 iterator</span>
 
 Note that we needed to make `v1_iter` mutable: calling the `next` method on an
@@ -121,7 +121,7 @@ test illustrating a use of the `sum` method:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-13/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 13-13: Calling the `sum` method to get the total
+<span class="caption">Llistat 13-13: Calling the `sum` method to get the total
 of all items in the iterator</span>
 
 We aren’t allowed to use `v1_iter` after the call to `sum` because `sum` takes
@@ -145,7 +145,7 @@ incremented by 1:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-14/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 13-14: Calling the iterator adaptor `map` to
+<span class="caption">Llistat 13-14: Calling the iterator adaptor `map` to
 create a new iterator</span>
 
 However, this code produces a warning:
@@ -173,7 +173,7 @@ containing each item from the original vector incremented by 1.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-15/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 13-15: Calling the `map` method to create a new
+<span class="caption">Llistat 13-15: Calling the `map` method to create a new
 iterator and then calling the `collect` method to consume the new iterator and
 create a vector</span>
 
@@ -207,7 +207,7 @@ instances. It will return only shoes that are the specified size.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-16/src/lib.rs}}
 ```
 
-<span class="caption">Listing 13-16: Using the `filter` method with a closure
+<span class="caption">Llistat 13-16: Using the `filter` method with a closure
 that captures `shoe_size`</span>
 
 The `shoes_in_size` function takes ownership of a vector of shoes and a shoe

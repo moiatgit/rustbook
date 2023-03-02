@@ -122,7 +122,7 @@ define some modules and function signatures. Here’s the front of house section
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-01/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-1: A `front_of_house` module containing other
+<span class="caption">Llistat 7-1: A `front_of_house` module containing other
 modules that then contain functions</span>
 
 We define a module with the `mod` keyword followed by the name of the module
@@ -157,7 +157,7 @@ crate
          └── take_payment
 ```
 
-<span class="caption">Listing 7-2: The module tree for the code in Listing
+<span class="caption">Llistat 7-2: The module tree for the code in Listing
 7-1</span>
 
 This tree shows how some of the modules nest inside one another; for example,

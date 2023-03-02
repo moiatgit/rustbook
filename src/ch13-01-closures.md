@@ -41,7 +41,7 @@ person will get. This setup is shown in Listing 13-1:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-01/src/main.rs}}
 ```
 
-<span class="caption">Listing 13-1: Shirt company giveaway situation</span>
+<span class="caption">Llistat 13-1: Shirt company giveaway situation</span>
 
 The `store` defined in `main` has two blue shirts and one red shirt remaining
 to distribute for this limited-edition promotion. We call the `giveaway` method
@@ -111,7 +111,7 @@ argument as we did in Listing 13-1.
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-02/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 13-2: Adding optional type annotations of the
+<span class="caption">Llistat 13-2: Adding optional type annotations of the
 parameter and return value types in the closure</span>
 
 With type annotations added, the syntax of closures looks more similar to the
@@ -153,7 +153,7 @@ which we’ve done here with `String` the first time. If we then try to call
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-03/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 13-3: Attempting to call a closure whose types
+<span class="caption">Llistat 13-3: Attempting to call a closure whose types
 are inferred with two different types</span>
 
 The compiler gives us this error:
@@ -185,7 +185,7 @@ the value:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-04/src/main.rs}}
 ```
 
-<span class="caption">Listing 13-4: Defining and calling a closure that
+<span class="caption">Llistat 13-4: Defining and calling a closure that
 captures an immutable reference</span>
 
 This example also illustrates that a variable can bind to a closure definition,
@@ -210,7 +210,7 @@ the `list` vector. The closure now captures a mutable reference:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-05/src/main.rs}}
 ```
 
-<span class="caption">Listing 13-5: Defining and calling a closure that
+<span class="caption">Llistat 13-5: Defining and calling a closure that
 captures a mutable reference</span>
 
 This code compiles, runs, and prints:
@@ -244,7 +244,7 @@ to print the vector in a new thread rather than in the main thread:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-06/src/main.rs}}
 ```
 
-<span class="caption">Listing 13-6: Using `move` to force the closure for the
+<span class="caption">Llistat 13-6: Using `move` to force the closure for the
 thread to take ownership of `list`</span>
 
 We spawn a new thread, giving the thread a closure to run as an argument. The
@@ -354,7 +354,7 @@ to order them by their `width` attribute from low to high:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-07/src/main.rs}}
 ```
 
-<span class="caption">Listing 13-7: Using `sort_by_key` to order rectangles by
+<span class="caption">Llistat 13-7: Using `sort_by_key` to order rectangles by
 width</span>
 
 This code prints:
@@ -378,7 +378,7 @@ compiler won’t let us use this closure with `sort_by_key`:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-08/src/main.rs}}
 ```
 
-<span class="caption">Listing 13-8: Attempting to use an `FnOnce` closure with
+<span class="caption">Llistat 13-8: Attempting to use an `FnOnce` closure with
 `sort_by_key`</span>
 
 This is a contrived, convoluted way (that doesn’t work) to try and count the
@@ -412,7 +412,7 @@ than once:
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-09/src/main.rs}}
 ```
 
-<span class="caption">Listing 13-9: Using an `FnMut` closure with `sort_by_key`
+<span class="caption">Llistat 13-9: Using an `FnMut` closure with `sort_by_key`
 is allowed</span>
 
 The `Fn` traits are important when defining or using functions or types that

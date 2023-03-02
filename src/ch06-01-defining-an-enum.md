@@ -63,7 +63,7 @@ Listing 6-1.
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-01/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 6-1: Storing the data and `IpAddrKind` variant of
+<span class="caption">Llistat 6-1: Storing the data and `IpAddrKind` variant of
 an IP address using a `struct`</span>
 
 Here, we’ve defined a struct `IpAddr` that has two fields: a `kind` field that
@@ -144,7 +144,7 @@ variety of types embedded in its variants.
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-02/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 6-2: A `Message` enum whose variants each store
+<span class="caption">Llistat 6-2: A `Message` enum whose variants each store
 different amounts and types of values</span>
 
 This enum has four variants with different types:

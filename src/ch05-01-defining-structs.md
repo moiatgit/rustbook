@@ -19,7 +19,7 @@ struct that stores information about a user account.
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-01/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 5-1: A `User` struct definition</span>
+<span class="caption">Llistat 5-1: A `User` struct definition</span>
 
 To use a struct after we’ve defined it, we create an *instance* of that struct
 by specifying concrete values for each of the fields. We create an instance by
@@ -37,7 +37,7 @@ example, we can declare a particular user as shown in Listing 5-2.
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-02/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 5-2: Creating an instance of the `User`
+<span class="caption">Llistat 5-2: Creating an instance of the `User`
 struct</span>
 
 To get a specific value from a struct, we use dot notation. For example, to
@@ -52,7 +52,7 @@ field of a mutable `User` instance.
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-03/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 5-3: Changing the value in the `email` field of a
+<span class="caption">Llistat 5-3: Changing the value in the `email` field of a
 `User` instance</span>
 
 Note that the entire instance must be mutable; Rust doesn’t allow us to mark
@@ -70,7 +70,7 @@ the `sign_in_count` gets a value of `1`.
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-04/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 5-4: A `build_user` function that takes an email
+<span class="caption">Llistat 5-4: A `build_user` function that takes an email
 and username and returns a `User` instance</span>
 
 It makes sense to name the function parameters with the same name as the struct
@@ -94,7 +94,7 @@ Listing 5-4, we can use the *field init shorthand* syntax to rewrite
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-05/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 5-5: A `build_user` function that uses field init
+<span class="caption">Llistat 5-5: A `build_user` function that uses field init
 shorthand because the `username` and `email` parameters have the same name as
 struct fields</span>
 
@@ -120,7 +120,7 @@ otherwise use the same values from `user1` that we created in Listing 5-2.
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-06/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 5-6: Creating a new `User` instance using one of
+<span class="caption">Llistat 5-6: Creating a new `User` instance using one of
 the values from `user1`</span>
 
 Using struct update syntax, we can achieve the same effect with less code, as
@@ -133,7 +133,7 @@ explicitly set should have the same value as the fields in the given instance.
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-07/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 5-7: Using struct update syntax to set a new
+<span class="caption">Llistat 5-7: Using struct update syntax to set a new
 `email` value for a `User` instance but to use the rest of the values from
 `user1`</span>
 

@@ -30,7 +30,7 @@ scope.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-16/src/main.rs}}
 ```
 
-<span class="caption">Listing 10-16: An attempt to use a reference whose value
+<span class="caption">Llistat 10-16: An attempt to use a reference whose value
 has gone out of scope</span>
 
 > Note: The examples in Listings 10-16, 10-17, and 10-23 declare variables
@@ -69,7 +69,7 @@ whether all borrows are valid. Listing 10-17 shows the same code as Listing
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-17/src/main.rs}}
 ```
 
-<span class="caption">Listing 10-17: Annotations of the lifetimes of `r` and
+<span class="caption">Llistat 10-17: Annotations of the lifetimes of `r` and
 `x`, named `'a` and `'b`, respectively</span>
 
 Here, we’ve annotated the lifetime of `r` with `'a` and the lifetime of `x`
@@ -86,7 +86,7 @@ compiles without any errors.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-18/src/main.rs}}
 ```
 
-<span class="caption">Listing 10-18: A valid reference because the data has a
+<span class="caption">Llistat 10-18: A valid reference because the data has a
 longer lifetime than the reference</span>
 
 Here, `x` has the lifetime `'b`, which in this case is larger than `'a`. This
@@ -110,7 +110,7 @@ print `The longest string is abcd`.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-19/src/main.rs}}
 ```
 
-<span class="caption">Listing 10-19: A `main` function that calls the `longest`
+<span class="caption">Llistat 10-19: A `main` function that calls the `longest`
 function to find the longer of two string slices</span>
 
 Note that we want the function to take string slices, which are references,
@@ -129,7 +129,7 @@ won’t compile.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-20/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 10-20: An implementation of the `longest`
+<span class="caption">Llistat 10-20: An implementation of the `longest`
 function that returns the longer of two string slices but does not yet
 compile</span>
 
@@ -203,7 +203,7 @@ name the lifetime `'a` and then add it to each reference, as shown in Listing
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-21/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 10-21: The `longest` function definition
+<span class="caption">Llistat 10-21: The `longest` function definition
 specifying that all the references in the signature must have the same lifetime
 `'a`</span>
 
@@ -255,7 +255,7 @@ a straightforward example.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-22/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 10-22: Using the `longest` function with
+<span class="caption">Llistat 10-22: Using the `longest` function with
 references to `String` values that have different concrete lifetimes</span>
 
 In this example, `string1` is valid until the end of the outer scope, `string2`
@@ -278,7 +278,7 @@ not compile.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-23/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 10-23: Attempting to use `result` after `string2`
+<span class="caption">Llistat 10-23: Attempting to use `result` after `string2`
 has gone out of scope</span>
 
 When we try to compile this code, we get this error:
@@ -373,7 +373,7 @@ every reference in the struct’s definition. Listing 10-24 has a struct named
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-24/src/main.rs}}
 ```
 
-<span class="caption">Listing 10-24: A struct that holds a reference, requiring
+<span class="caption">Llistat 10-24: A struct that holds a reference, requiring
 a lifetime annotation</span>
 
 This struct has the single field `part` that holds a string slice, which is a
@@ -403,7 +403,7 @@ compiled without lifetime annotations.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-25/src/main.rs:here}}
 ```
 
-<span class="caption">Listing 10-25: A function we defined in Listing 4-9 that
+<span class="caption">Llistat 10-25: A function we defined in Listing 4-9 that
 compiled without lifetime annotations, even though the parameter and return
 type are references</span>
 

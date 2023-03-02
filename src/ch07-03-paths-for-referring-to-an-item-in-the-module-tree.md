@@ -35,7 +35,7 @@ Keyword”][pub]<!-- ignore --> section, we’ll go into more detail about `pub`
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-03/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-3: Calling the `add_to_waitlist` function using
+<span class="caption">Llistat 7-3: Calling the `add_to_waitlist` function using
 absolute and relative paths</span>
 
 The first time we call the `add_to_waitlist` function in `eat_at_restaurant`,
@@ -73,7 +73,7 @@ error we get is shown in Listing 7-4.
 {{#include ../listings/ch07-managing-growing-projects/listing-07-03/output.txt}}
 ```
 
-<span class="caption">Listing 7-4: Compiler errors from building the code in
+<span class="caption">Llistat 7-4: Compiler errors from building the code in
 Listing 7-3</span>
 
 The error messages say that module `hosting` is private. In other words, we
@@ -110,7 +110,7 @@ access to the `add_to_waitlist` function in the child module, so we mark the
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-05/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-5: Declaring the `hosting` module as `pub` to
+<span class="caption">Llistat 7-5: Declaring the `hosting` module as `pub` to
 use it from `eat_at_restaurant`</span>
 
 Unfortunately, the code in Listing 7-5 still results in an error, as shown in
@@ -120,7 +120,7 @@ Listing 7-6.
 {{#include ../listings/ch07-managing-growing-projects/listing-07-05/output.txt}}
 ```
 
-<span class="caption">Listing 7-6: Compiler errors from building the code in
+<span class="caption">Llistat 7-6: Compiler errors from building the code in
 Listing 7-5</span>
 
 What happened? Adding the `pub` keyword in front of `mod hosting` makes the
@@ -145,7 +145,7 @@ keyword before its definition, as in Listing 7-7.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-07/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-7: Adding the `pub` keyword to `mod hosting`
+<span class="caption">Llistat 7-7: Adding the `pub` keyword to `mod hosting`
 and `fn add_to_waitlist` lets us call the function from
 `eat_at_restaurant`</span>
 
@@ -221,7 +221,7 @@ function `deliver_order` defined in the parent module by specifying the path to
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-08/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-8: Calling a function using a relative path
+<span class="caption">Llistat 7-8: Calling a function using a relative path
 starting with `super`</span>
 
 The `fix_incorrect_order` function is in the `back_of_house` module, so we can
@@ -252,7 +252,7 @@ customers can’t choose the fruit or even see which fruit they’ll get.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-09/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-9: A struct with some public fields and some
+<span class="caption">Llistat 7-9: A struct with some public fields and some
 private fields</span>
 
 Because the `toast` field in the `back_of_house::Breakfast` struct is public,
@@ -277,7 +277,7 @@ only need the `pub` before the `enum` keyword, as shown in Listing 7-10.
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-10/src/lib.rs}}
 ```
 
-<span class="caption">Listing 7-10: Designating an enum as public makes all its
+<span class="caption">Llistat 7-10: Designating an enum as public makes all its
 variants public</span>
 
 Because we made the `Appetizer` enum public, we can use the `Soup` and `Salad`

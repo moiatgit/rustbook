@@ -46,7 +46,7 @@ because we haven’t implemented the `blog` crate.
 {{#rustdoc_include ../listings/ch17-oop/listing-17-11/src/main.rs:all}}
 ```
 
-<span class="caption">Listing 17-11: Code that demonstrates the desired
+<span class="caption">Llistat 17-11: Code that demonstrates the desired
 behavior we want our `blog` crate to have</span>
 
 We want to allow the user to create a new draft blog post with `Post::new`. We
@@ -90,7 +90,7 @@ in a private field named `state` to hold the state object. You’ll see why the
 {{#rustdoc_include ../listings/ch17-oop/listing-17-12/src/lib.rs}}
 ```
 
-<span class="caption">Listing 17-12: Definition of a `Post` struct and a `new`
+<span class="caption">Llistat 17-12: Definition of a `Post` struct and a `new`
 function that creates a new `Post` instance, a `State` trait, and a `Draft`
 struct</span>
 
@@ -123,7 +123,7 @@ Post` block:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-13/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 17-13: Implementing the `add_text` method to add
+<span class="caption">Llistat 17-13: Implementing the `add_text` method to add
 text to a post’s `content`</span>
 
 The `add_text` method takes a mutable reference to `self`, because we’re
@@ -151,7 +151,7 @@ be empty. Listing 17-14 shows this placeholder implementation:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-14/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 17-14: Adding a placeholder implementation for
+<span class="caption">Llistat 17-14: Adding a placeholder implementation for
 the `content` method on `Post` that always returns an empty string slice</span>
 
 With this added `content` method, everything in Listing 17-11 up to line 7
@@ -168,7 +168,7 @@ change its state from `Draft` to `PendingReview`. Listing 17-15 shows this code:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-15/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 17-15: Implementing `request_review` methods on
+<span class="caption">Llistat 17-15: Implementing `request_review` methods on
 `Post` and the `State` trait</span>
 
 We give `Post` a public method named `request_review` that will take a mutable
@@ -228,7 +228,7 @@ state is approved, as shown in Listing 17-16:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-16/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 17-16: Implementing the `approve` method on
+<span class="caption">Llistat 17-16: Implementing the `approve` method on
 `Post` and the `State` trait</span>
 
 We add the `approve` method to the `State` trait and add a new struct that
@@ -253,7 +253,7 @@ as shown in Listing 17-17:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-17/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 17-17: Updating the `content` method on `Post` to
+<span class="caption">Llistat 17-17: Updating the `content` method on `Post` to
 delegate to a `content` method on `State`</span>
 
 Because the goal is to keep all these rules inside the structs that implement
@@ -288,7 +288,7 @@ have, as shown in Listing 17-18:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-18/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 17-18: Adding the `content` method to the `State`
+<span class="caption">Llistat 17-18: Adding the `content` method to the `State`
 trait</span>
 
 We add a default implementation for the `content` method that returns an empty
@@ -405,7 +405,7 @@ as well as methods on each:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-19/src/lib.rs}}
 ```
 
-<span class="caption">Listing 17-19: A `Post` with a `content` method and a
+<span class="caption">Llistat 17-19: A `Post` with a `content` method and a
 `DraftPost` without a `content` method</span>
 
 Both the `Post` and `DraftPost` structs have a private `content` field that
@@ -441,7 +441,7 @@ shown in Listing 17-20:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-20/src/lib.rs:here}}
 ```
 
-<span class="caption">Listing 17-20: A `PendingReviewPost` that gets created by
+<span class="caption">Llistat 17-20: A `PendingReviewPost` that gets created by
 calling `request_review` on `DraftPost` and an `approve` method that turns a
 `PendingReviewPost` into a published `Post`</span>
 
@@ -471,7 +471,7 @@ The updated code in `main` is shown in Listing 17-21:
 {{#rustdoc_include ../listings/ch17-oop/listing-17-21/src/main.rs}}
 ```
 
-<span class="caption">Listing 17-21: Modifications to `main` to use the new
+<span class="caption">Llistat 17-21: Modifications to `main` to use the new
 implementation of the blog post workflow</span>
 
 The changes we needed to make to `main` to reassign `post` mean that this
