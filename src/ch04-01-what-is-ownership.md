@@ -22,7 +22,7 @@ característiques que fan de Rust, un llenguatge únic. En aquest capítol
 aprendrem el concepte tot treballant amb exemples focalitzats en una estructura
 de dades ben comuna: les cadenes de text o *strings*.
 
-> ### La pila i el monticle
+> ### Pila i monticle
 >
 > Molts llenguatges de programació no ens requereixen pensar massa sovint sobre
 > la pila (*stack*) i el monticle (*heap*) Però en un llenguatge de sistemes
@@ -90,7 +90,7 @@ de dades ben comuna: les cadenes de text o *strings*.
 > les dades del monticle, ens ajuda a explicar perquè funciona de la manera que
 > ho fa.
 
-### Les regles de pertinença
+### Regles de pertinença
 
 En primer lloc, fem una ullada a les regles de pertinença. Mantinguem aquestes
 regles al cap així anem passant pels diferents exemples que vindran:
@@ -99,7 +99,7 @@ regles al cap així anem passant pels diferents exemples que vindran:
 * Només pot haver un propietari a cada moment.
 * Quan el propietari mor (queda fora de l'àmbit), el valor serà eliminat.
 
-### 〜 Variable Scope
+### Àmbit de les variables
 
 A partir d'ara, com que ja hem vist la sintaxi bàsica d'un programa en Rust, a
 partir d'ara ometrem el `fn main() {` dels exemples de codi. Així, si vas
@@ -110,7 +110,7 @@ Com a primer exemple de pertinença, considerarem l'*àmbit* (en anglès *scope*
 L'àmbit és l'interval dins del programa en que un element és vàlid. Per exemple:
 
 ```rust
-let s = "hello";
+let s = "hola";
 ```
 
 La variable `s` fa referència a un literal de text. És a dir, el valor de la
@@ -123,19 +123,16 @@ serà vàlida la variable `s`.
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 4-1: A variable and the scope in which it is
-valid</span>
+<span class="caption">Llistat 4-1: Una variable i l'àmbit en què és vàlida</span>
 
-In other words, there are two important points in time here:
+En altres paraules, hi ha dos punts de temps importants a considerar:
 
-* When `s` comes *into* scope, it is valid.
-* It remains valid until it goes *out of* scope.
+* Quan `s` *entra* en l'àmbit, és vàlida.
+* Es manté vàlida fins que *surt* de l'àmbit.
 
-At this point, the relationship between scopes and when variables are valid is
-similar to that in other programming languages. Now we’ll build on top of this
-understanding by introducing the `String` type.
+Ara per ara, la relació entre àmbits i la validesa de les variables és similar a la d'altres llenguatges de programació. Basant-nos en aquest coneixement, continuarem aprofundint en el concepte amb la introducció del tipus `String`.
 
-### The `String` Type
+### 〜 The `String` Type
 
 To illustrate the rules of ownership, we need a data type that is more complex
 than those we covered in the [“Data Types”][data-types]<!-- ignore --> section
