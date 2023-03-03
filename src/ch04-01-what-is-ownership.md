@@ -185,66 +185,74 @@ Així, quina és la diferència? Per què podem modificar un valor de tipus
 `String` però no de literal de text? La diferència rau en com aquests dos tipus
 són gestionats en memòria.
 
-### 〜 Memory and Allocation
+### Memòria i assignació
 
-In the case of a string literal, we know the contents at compile time, so the
-text is hardcoded directly into the final executable. This is why string
-literals are fast and efficient. But these properties only come from the string
-literal’s immutability. Unfortunately, we can’t put a blob of memory into the
-binary for each piece of text whose size is unknown at compile time and whose
-size might change while running the program.
+Coneixem els continguts d'un literal de text en temps de compilació. Per
+aquesta raó, el text pot ser inclós directament a l'executable final. Per
+aquesta raó els literals són ràpids i eficients. Aquestes característiques
+tenen com a preu que els literals han de ser immutables. Malauradament no podem
+reservar un espai indeterminat de memòria dins l'executable, per cada peça de
+text de la que no coneixem la mida en temps d'execució i, a sobre, quan aquesta
+pot canviar durant l'execució del programa.
 
-With the `String` type, in order to support a mutable, growable piece of text,
-we need to allocate an amount of memory on the heap, unknown at compile time,
-to hold the contents. This means:
+〜
 
-* The memory must be requested from the memory allocator at runtime.
-* We need a way of returning this memory to the allocator when we’re done with
-  our `String`.
+Per a poder oferir la possibilitat de modificar i ampliar una peça de test, el
+valor del tipus `String` ha de ser guardat al monticle, durant l'execució. Això
+implica:
 
-That first part is done by us: when we call `String::from`, its implementation
-requests the memory it needs. This is pretty much universal in programming
-languages.
+* L'assignador de memòria ha de reservar l'espai en temps d'execució.
+* Necessitem alguna manera de retornar aquesta memòria a l'assignador, un cop
+  ja no ens cal el nostre `String`.
 
-However, the second part is different. In languages with a *garbage collector
-(GC)*, the GC keeps track of and cleans up memory that isn’t being used
-anymore, and we don’t need to think about it. In most languages without a GC,
-it’s our responsibility to identify when memory is no longer being used and to
-call code to explicitly free it, just as we did to request it. Doing this
-correctly has historically been a difficult programming problem. If we forget,
-we’ll waste memory. If we do it too early, we’ll have an invalid variable. If
-we do it twice, that’s a bug too. We need to pair exactly one `allocate` with
-exactly one `free`.
+La primera part la realitzem nosaltres quan cridem a `String::from`. La seva
+implementació reserva la memòria necessària. Tot plegat és quelcom força
+universal en els llenguatges de programació.
 
-Rust takes a different path: the memory is automatically returned once the
-variable that owns it goes out of scope. Here’s a version of our scope example
-from Listing 4-1 using a `String` instead of a string literal:
+La segona part, però, és diferent. En llenguatges amb un recol·lector
+d'escombraries (*Garbage Collector* o *GC*), el GC va enregistrant i alliberant
+la memòria, així deixa de ser usada, de manera que els programadors no ens
+n'hem de preocupar. A la majoria dels llenguatges sense GC, un cop sabem que no
+necessitem una variable, ens cal alliberar el seu espai explícitament, cosa que
+històricament representa un problema complicat si es vol fer bé. Si oblidem
+alliberar, estem malbaratant memòria. Si ho fem massa d'hora, tenim una
+variable invàlida. Si ho fem més d'un cop sobre la mateixa memòria, també
+suposa un error. Per fer-ho bé, ens cal alliberar exactament una vegada cada
+espai que reservem.
+
+Rust ho resol d'una altra manera: la memòria és automàticament retornada un cop
+la variable a qui pertany, surt fora d'àmbit. A continuació veurem una versió
+de l'exemple del llistat 4-1, tot usant un `String` en comptes d'un literal de
+text.
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-02-string-scope/src/main.rs:here}}
 ```
 
-There is a natural point at which we can return the memory our `String` needs
-to the allocator: when `s` goes out of scope. When a variable goes out of
-scope, Rust calls a special function for us. This function is called
-[`drop`][drop]<!-- ignore -->, and it’s where the author of `String` can put
-the code to return the memory. Rust calls `drop` automatically at the closing
-curly bracket.
+Hi ha un moment natural en el que podem retornar la memòria del nostre
+`String`: quan `s` surt de l'àmbit. Quan una variable surt d'àmbit, Rust crida
+una funció especial per nosaltres. Aquesta funció s'anomena [`drop`][drop]<!--
+ignore -->, i és el lloc on l'autor de `String` pot col·locar el codi per
+retornar l'espai de memòria. Rust crida `drop` automàticament en el moment que
+es tanca el claudàtor.
 
-> Note: In C++, this pattern of deallocating resources at the end of an item’s
-> lifetime is sometimes called *Resource Acquisition Is Initialization (RAII)*.
-> The `drop` function in Rust will be familiar to you if you’ve used RAII
-> patterns.
+> Nota: En C++, aquest patró d'alliberament de recursos al final del temps de
+> vida d'un element, és de vegades anomenat *l'adquisició del recurs és la
+> inicialització* o, en anglès *Resource Acquisition Is Initialization* (RAII).
+> La funció `drop` a Rust resultarà familiar a hom que hagi fet servir el patró RAII.
 
-This pattern has a profound impact on the way Rust code is written. It may seem
-simple right now, but the behavior of code can be unexpected in more
-complicated situations when we want to have multiple variables use the data
-we’ve allocated on the heap. Let’s explore some of those situations now.
+Aquest patró suposa un impacte profund en la manera en que escrivim codi en
+Rust. Pot semblar simple ara mateix, però el comportament del codi pot ser
+inesperat en situacions més complexes quan vulguem disposar de múltiples
+variables usant les dades que hem reservat al monticle. Ara explorarem algunes
+d'aquestes situacions.
 
 <!-- Old heading. Do not remove or links may break. -->
 <a id="ways-variables-and-data-interact-move"></a>
 
-#### Variables and Data Interacting with Move
+#### Variables i dades interaccionant amb *Move*
+
+〜
 
 Multiple variables can interact with the same data in different ways in Rust.
 Let’s look at an example using an integer in Listing 4-2.

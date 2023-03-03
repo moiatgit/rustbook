@@ -1,10 +1,9 @@
 fn main() {
     // ANCHOR: here
     {
-        let s = String::from("hello"); // s is valid from this point forward
-
-        // do stuff with s
-    }                                  // this scope is now over, and s is no
-                                       // longer valid
+        let s = String::from("hola");  // s és vàlida a partir d'aquest moment
+        // ometem codi que fa servir s
+    }                                  // aquest àmbit ha finalitzat i a partir
+                                       // d'aquí s ja no és vàlida
     // ANCHOR_END: here
 }
