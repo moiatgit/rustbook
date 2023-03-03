@@ -106,8 +106,9 @@ partir d'ara ometrem el `fn main() {` dels exemples de codi. Així, si vas
 provant-los, recorda afegir-los el `main`. Així els exemples apareixeran una
 mica més concisos, permetent-nos focalitzar en els detalls de l'exemple.
 
-Com a primer exemple de pertinença, considerarem l'*àmbit* (en anglès *scope*) d'algunes variables.
-L'àmbit és l'interval dins del programa en que un element és vàlid. Per exemple:
+Com a primer exemple de pertinença, considerarem l'*àmbit* (en anglès *scope*)
+d'algunes variables. L'àmbit és l'interval dins del programa en que un element
+és vàlid. Per exemple:
 
 ```rust
 let s = "hola";
@@ -130,55 +131,61 @@ En altres paraules, hi ha dos punts de temps importants a considerar:
 * Quan `s` *entra* en l'àmbit, és vàlida.
 * Es manté vàlida fins que *surt* de l'àmbit.
 
-Ara per ara, la relació entre àmbits i la validesa de les variables és similar a la d'altres llenguatges de programació. Basant-nos en aquest coneixement, continuarem aprofundint en el concepte amb la introducció del tipus `String`.
+Ara per ara, la relació entre àmbits i la validesa de les variables és similar
+a la d'altres llenguatges de programació. Basant-nos en aquest coneixement,
+continuarem aprofundint en el concepte amb la introducció del tipus `String`.
 
-### 〜 The `String` Type
+### El tipus `String`
 
-To illustrate the rules of ownership, we need a data type that is more complex
-than those we covered in the [“Data Types”][data-types]<!-- ignore --> section
-of Chapter 3. The types covered previously are of a known size, can be stored
-on the stack and popped off the stack when their scope is over, and can be
-quickly and trivially copied to make a new, independent instance if another
-part of code needs to use the same value in a different scope. But we want to
-look at data that is stored on the heap and explore how Rust knows when to
-clean up that data, and the `String` type is a great example.
+Com a exemple d'aplicació de les regles de pertinença, necessitem un tipus de
+dades que sigui més complex que aquells que hem vist a la secció [“Tipus de
+dades”][data-types]<!-- ignore --> al capítol 3. Els tipus que hem vist fins
+ara tenen mida coneguda, poden ser emmagatzemats a la pila i eliminats
+d'aquesta quan finalitza el seu àmbit. També poden ser copiats de manera
+trivial per crear-ne una nova instància independent de l'anterior, si una altra
+part del codi requereix fer servir el mateix valor en un altre àmbit. Ara volem
+considerar un tipus de dades que sigui emmagatzemat al montícle i, així,
+explorar com sap Rust quan alliberar aquestes dades, `String` és genial per
+aquest objectiu.
 
-We’ll concentrate on the parts of `String` that relate to ownership. These
-aspects also apply to other complex data types, whether they are provided by
-the standard library or created by you. We’ll discuss `String` in more depth in
-[Chapter 8][ch8]<!-- ignore -->.
+De moment ens concentrarem en les parts de `String` relacionades amb la
+pertinença Aquests aspectes també són vàlids per altres tipus de dades
+complexos, ja siguin inclosos a la llibreria estàndard o creats per nosaltres.
+Tractarem el tipus `String` en més profunditat al [Capítol 8][ch8]<!-- ignore
+-->.
 
-We’ve already seen string literals, where a string value is hardcoded into our
-program. String literals are convenient, but they aren’t suitable for every
-situation in which we may want to use text. One reason is that they’re
-immutable. Another is that not every string value can be known when we write
-our code: for example, what if we want to take user input and store it? For
-these situations, Rust has a second string type, `String`. This type manages
-data allocated on the heap and as such is able to store an amount of text that
-is unknown to us at compile time. You can create a `String` from a string
-literal using the `from` function, like so:
+Ja hem conegut els literals de text, en els que un valor de tipus String apareix codificat directament al nostre programa.
+Els literals de text són convenients però no són adequats per totes les situacions en les que podem voler usar text.
+Una de les raons és que són immutables. Una altra és que no tots els valors de
+tipus string poden conèixer quan escrivim el nostre codi. Per exemple, què
+passaria si volguessim obtenir l'entrada dels nostres usuaris i
+emmagarzemar-la?
+Per situacions com aquesta, Rust disposa d'un segon tipus de cadenes de text, anomenat `String`. 
+Aquest tipus gestiona les dades assignades al montícle i, com a tal, és capaç d'emmagatzemar una cadena de text de llargària desconeguida en temps de compilació.
+És possible crear un `String` a partir d'un literal de text, fent servir la funció `from`, de la següent manera:
 
 ```rust
-let s = String::from("hello");
+let s = String::from("hola");
 ```
 
-The double colon `::` operator allows us to namespace this particular `from`
-function under the `String` type rather than using some sort of name like
-`string_from`. We’ll discuss this syntax more in the [“Method
-Syntax”][method-syntax]<!-- ignore --> section of Chapter 5, and when we talk
-about namespacing with modules in [“Paths for Referring to an Item in the
-Module Tree”][paths-module-tree]<!-- ignore --> in Chapter 7.
+Els dos punts dobles `::` és un operador que ens permet gestionar l'espai de
+noms a partir de la cadena de text, en comptes de requerir-nos alguna funció
+especial com ara `string_from`. Tractarem aquesta sintaxi més endavant, a la
+secció [“Síntaxi del mètode”][method-syntax]<!-- ignore --> del capítol, així
+com de l'ús d'espais de noms a [“Camins per referir-nos a un element en l'arbre
+de mòduls”][paths-module-tree]<!-- ignore --> al capítol 7.
 
-This kind of string *can* be mutated:
+Aquesta classe de text **és** mutable:
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-01-can-mutate-string/src/main.rs:here}}
 ```
 
-So, what’s the difference here? Why can `String` be mutated but literals
-cannot? The difference is in how these two types deal with memory.
+Així, quina és la diferència? Per què podem modificar un valor de tipus
+`String` però no de literal de text? La diferència rau en com aquests dos tipus
+són gestionats en memòria.
 
-### Memory and Allocation
+### 〜 Memory and Allocation
 
 In the case of a string literal, we know the contents at compile time, so the
 text is hardcoded directly into the final executable. This is why string

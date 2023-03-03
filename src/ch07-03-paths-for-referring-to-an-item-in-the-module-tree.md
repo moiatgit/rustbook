@@ -1,4 +1,4 @@
-## 〜 Paths for Referring to an Item in the Module Tree
+## 〜 Camins per referir-nos a un element en l'arbre de mòduls 
 
 To show Rust where to find an item in a module tree, we use a path in the same
 way we use a path when navigating a filesystem. To call a function, we need to
