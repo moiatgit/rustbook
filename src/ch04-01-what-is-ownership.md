@@ -252,48 +252,51 @@ d'aquestes situacions.
 
 #### Variables i dades interaccionant amb *Move*
 
-〜
-
-Multiple variables can interact with the same data in different ways in Rust.
-Let’s look at an example using an integer in Listing 4-2.
+Hi ha diferents maneres en Rust en que múltiples variables interaccionen amb la mateixa dada.
+Considerem el següent exemple, fent servir un enter, al llistat 4-2.
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-02/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 4-2: Assigning the integer value of variable `x`
-to `y`</span>
+<span class="caption">Llistat 4-2: Assignació del valor enter de la variable `x`
+a `y`</span>
 
-We can probably guess what this is doing: “bind the value `5` to `x`; then make
-a copy of the value in `x` and bind it to `y`.” We now have two variables, `x`
-and `y`, and both equal `5`. This is indeed what is happening, because integers
-are simple values with a known, fixed size, and these two `5` values are pushed
-onto the stack.
+Probablement pots deduir què passa en aquest exemple: primer associa el valor
+`5` a `x`, després fa una còpia del valor de `x` i l'associa a `y`. En
+finalitzar, disposem de dues variables `x` i `y` que valen `5`. Això és així
+perquè els enters són valors simples, de mida fixa i coneguda. Tots dos `5` són
+afegits a la pila.
 
-Now let’s look at the `String` version:
+
+Què passarà amb variables de tipus `String`?
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-03-string-move/src/main.rs:here}}
 ```
 
-This looks very similar, so we might assume that the way it works would be the
-same: that is, the second line would make a copy of the value in `s1` and bind
-it to `s2`. But this isn’t quite what happens.
+Com que es veu molt similar a l'exemple amb enters, podríem assumir que
+funciona de la mateixa manera. És a dir, que la segona línia farà una còpia del
+valor de `s1` i l'associarà amb `s2`. Però no és ben bé així com va.
 
-Take a look at Figure 4-1 to see what is happening to `String` under the
-covers. A `String` is made up of three parts, shown on the left: a pointer to
-the memory that holds the contents of the string, a length, and a capacity.
-This group of data is stored on the stack. On the right is the memory on the
-heap that holds the contents.
+La figura 4-1 ens representa què passa realment amb els valors de tipus
+`String`. Un `String` està format per tres parts, que la figura mostra a
+l'esquerra: un punter a la posició de memòria que conté el valor de la cadena
+de text, la seva longitud i la seva capacitat. Aquestes tres dades es guarden
+en la pila. A la dreta de la figura, hi trobem la memòria al monticle, on es
+guarden els continguts.
 
-<img alt="Two tables: the first table contains the representation of s1 on the
-stack, consisting of its length (5), capacity (5), and a pointer to the first
-value in the second table. The second table contains the representation of the
-string data on the heap, byte by byte." src="img/trpl04-01.svg" class="center"
-style="width: 50%;" />
+<img alt="Dos taules: la primera conté la representació de s1 en la pila.
+Considteix en la seva longitud (4), capacitat (5) i punter al primer valor en
+la segona taula. La segona taula representa les dades de la cadena de text al
+monticle, byte a byte." src="img/trpl04-01.svg" class="center" style="width:
+50%;" />
 
-<span class="caption">Figure 4-1: Representation in memory of a `String`
-holding the value `"hello"` bound to `s1`</span>
+<span class="caption">Figura 4-1: Representació en memòria de la variable `s1` de tipus `String` 
+amb el valor `"hola"`</span>
+
+〜
+
 
 The length is how much memory, in bytes, the contents of the `String` are
 currently using. The capacity is the total amount of memory, in bytes, that the
