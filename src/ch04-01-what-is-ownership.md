@@ -292,8 +292,8 @@ la segona taula. La segona taula representa les dades de la cadena de text al
 monticle, byte a byte." src="img/trpl04-01.svg" class="center" style="width:
 50%;" />
 
-<span class="caption">Figura 4-1: Representació en memòria de la variable `s1` de tipus `String` 
-amb el valor `"hola"`</span>
+<span class="caption">Figura 4-1: Representació en memòria de la variable `s1`
+de tipus `String` amb el valor `"hola"`</span>
 
 〜
 
