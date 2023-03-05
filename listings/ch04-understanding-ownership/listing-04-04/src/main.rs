@@ -1,29 +1,26 @@
 fn main() {
-    let s1 = gives_ownership();         // gives_ownership moves its return
-                                        // value into s1
+    let s1 = dona_pertinenca();         // dona_pertinenca mou el seu
+                                        // valor de retorn a s1
 
-    let s2 = String::from("hello");     // s2 comes into scope
+    let s2 = String::from("hola");      // s2 entra en àmbit
 
-    let s3 = takes_and_gives_back(s2);  // s2 is moved into
-                                        // takes_and_gives_back, which also
-                                        // moves its return value into s3
-} // Here, s3 goes out of scope and is dropped. s2 was moved, so nothing
-  // happens. s1 goes out of scope and is dropped.
+    let s3 = pren_i_retorna(s2);        // s2 es mogut a pren_i_retorna(),
+                                        // que a la seva vegada mou
+                                        // el seu valor de retorn a s3
+} // Aquí, s3 surt d'àmbit i és alliberat. s2 va ser mogut, així que no
+  // se'n fa res. s1 surt d'àmbit i és alliberat.
 
-fn gives_ownership() -> String {             // gives_ownership will move its
-                                             // return value into the function
-                                             // that calls it
+fn dona_pertinenca() -> String {        // dona_pertinenca() mourà el seu
+                                        // valor de retorn a la funció
+                                        // que fa la crida
 
-    let some_string = String::from("yours"); // some_string comes into scope
+    let un_string = String::from("tot teu"); // un_string entra en àmbit
 
-    some_string                              // some_string is returned and
-                                             // moves out to the calling
-                                             // function
+    un_string                           // un_string és retornat i mogut a
+                                        // la funció que fa la crida
 }
 
-// This function takes a String and returns one
-fn takes_and_gives_back(a_string: String) -> String { // a_string comes into
-                                                      // scope
-
-    a_string  // a_string is returned and moves out to the calling function
+// Aquesta funció obté un String i el retorna
+fn pren_i_retorna(altre_string: String) -> String { // altre_string entra en àmbit
+    altre_string  // altre_string és retornat i es mou a la funció que fa la crida
 }

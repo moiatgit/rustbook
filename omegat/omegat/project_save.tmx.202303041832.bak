@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-4.3.3" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As such, they cannot be used as identifiers (except
+as raw identifiers as we’ll discuss in the “&lt;g1&gt;Raw
+Identifiers&lt;/g1&gt;&lt;g2&gt;&lt;/g2&gt;&lt;e4/&gt;&lt;x3/&gt;” section).</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172323Z" creationid="moises" creationdate="20230304T172323Z">
+        <seg>Per aquesta raó, no poden ser usades com a identificadors, a excepció d'identificadors sense processar com discutirem a la secció “&lt;g1&gt;Identificadors sense processar&lt;/g1&gt;&lt;g2&gt;&lt;/g2&gt;&lt;e4/&gt;&lt;x3/&gt;”).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>De moment ens concentrarem en les parts de &lt;g1&gt;String&lt;/g1&gt; relacionades amb la
+pertinença Aquests aspectes també són vàlids per altres tipus de dades
+complexos, ja siguin inclosos a la llibreria estàndard o creats per nosaltres.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172750Z" creationid="moises" creationdate="20230304T172750Z">
+        <seg>De moment ens concentrarem en les parts de &lt;g1&gt;String&lt;/g1&gt; relacionades amb la
+pertinença Aquests aspectes també són vàlids per altres tipus de dades
+complexos, siguin inclosos a la llibreria estàndard o bé creats per nosaltres.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Els literals de text són convenients però no són adequats per totes les situacions en les que podem voler usar text.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T173124Z" creationid="moises" creationdate="20230304T173124Z">
+        <seg>Els literals de text són convenients però no són adequats per totes aquelles situacions que voldrem usar text.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Només pot haver un propietari a cada moment.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172601Z" creationid="moises" creationdate="20230304T172601Z">
+        <seg>Només hi pot haver un propietari a cada moment.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following list contains keywords that are reserved for current or future
+use by the Rust language.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172153Z" creationid="moises" creationdate="20230304T172153Z">
+        <seg>La següent llista conté paraules clau reservades per ser usades pel llenguatge Rust, ara o en un futur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following sections contain reference material you may find useful in your
+Rust journey.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T171019Z" creationid="moises" creationdate="20230304T171019Z">
+        <seg>Les següents seccions contenen material de referència que et podria ser d'utilitat en la teva aventura amb Rust.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>〜 Appendix</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T171655Z" creationid="moises" creationdate="20230304T170918Z">
+        <seg>Apèndix</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>〜 Appendix A: Keywords</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172100Z" creationid="moises" creationdate="20230304T171348Z">
+        <seg>Apèndix A: Paraules clau</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>

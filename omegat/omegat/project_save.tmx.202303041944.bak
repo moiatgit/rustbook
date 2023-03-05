@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-4.3.3" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;x1/&gt;Figure 4-2: Representation in memory of the variable &lt;g2&gt;s2&lt;/g2&gt;
+that has a copy of the pointer, length, and capacity of &lt;g3&gt;s1&lt;/g3&gt;&lt;x4/&gt;</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T175106Z" creationid="moises" creationdate="20230304T175106Z">
+        <seg>&lt;x1/&gt;Figura 4-2: Representació en memòria de la variable &lt;g2&gt;s2&lt;/g2&gt;
+que té una còpia del punter, la longitud i la capacitat de &lt;g3&gt;s1&lt;/g3&gt;&lt;x4/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;x1/&gt;Figure 4-3: Another possibility for what &lt;g2&gt;s2 = s1&lt;/g2&gt; might
+do if Rust copied the heap data as well&lt;x3/&gt;</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T175716Z" creationid="moises" creationdate="20230304T175716Z">
+        <seg>&lt;x1/&gt;Figura 4-3: Com es veuria si per &lt;g2&gt;s2 = s1&lt;/g2&gt; Rust copiès també les dades del monticle.&lt;x3/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;x1/&gt;Figure 4-4: Representation in memory after &lt;g2&gt;s1&lt;/g2&gt; has been
+invalidated&lt;x3/&gt;</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T184044Z" creationid="moises" creationdate="20230304T184044Z">
+        <seg>&lt;x1/&gt;Figura 4-4: Representació en memòria un cop &lt;g2&gt;s1&lt;/g2&gt; ha estat invalidada&lt;x3/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As such, they cannot be used as identifiers (except
+as raw identifiers as we’ll discuss in the “&lt;g1&gt;Raw
+Identifiers&lt;/g1&gt;&lt;g2&gt;&lt;/g2&gt;&lt;e4/&gt;&lt;x3/&gt;” section).</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172323Z" creationid="moises" creationdate="20230304T172323Z">
+        <seg>Per aquesta raó, no poden ser usades com a identificadors, a excepció d'identificadors sense processar com discutirem a la secció “&lt;g1&gt;Identificadors sense processar&lt;/g1&gt;&lt;g2&gt;&lt;/g2&gt;&lt;e4/&gt;&lt;x3/&gt;”).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But
+Figure 4-2 shows both data pointers pointing to the same location.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T180110Z" creationid="moises" creationdate="20230304T180013Z">
+        <seg>Però la figura 4-2 mostra com els dos punters fan referència a la mateixa posició.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But
+because Rust also invalidates the first variable, instead of being called a
+shallow copy, it’s known as a &lt;g3&gt;move&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T183855Z" creationid="moises" creationdate="20230304T183855Z">
+        <seg>Però, com que Rust també invalida la primera variable, en comptes d'anomenar-la una còpia superficial, li diem *moure* (&lt;g3&gt;move&lt;/g3&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Check out what happens when you try to use &lt;g4&gt;s1&lt;/g4&gt; after &lt;g5&gt;s2&lt;/g5&gt; is
+created; it won’t work:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T183234Z" creationid="moises" creationdate="20230304T183234Z">
+        <seg>Comprova què passa quan intentem fer servir &lt;g4&gt;s1&lt;/g4&gt; després que hagi estat creada &lt;g5&gt;s2&lt;/g5&gt;. No funcionarà:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>De moment ens concentrarem en les parts de &lt;g1&gt;String&lt;/g1&gt; relacionades amb la
+pertinença Aquests aspectes també són vàlids per altres tipus de dades
+complexos, ja siguin inclosos a la llibreria estàndard o creats per nosaltres.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172750Z" creationid="moises" creationdate="20230304T172750Z">
+        <seg>De moment ens concentrarem en les parts de &lt;g1&gt;String&lt;/g1&gt; relacionades amb la
+pertinença Aquests aspectes també són vàlids per altres tipus de dades
+complexos, siguin inclosos a la llibreria estàndard o bé creats per nosaltres.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Earlier, we said that when a variable goes out of scope, Rust automatically
+calls the &lt;g1&gt;drop&lt;/g1&gt; function and cleans up the heap memory for that variable.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T175822Z" creationid="moises" creationdate="20230304T175822Z">
+        <seg>Abans hem comentat que quan una variable surt de l'àmbit, Rust automàticament crida la funció &lt;g1&gt;drop&lt;/g1&gt; i allibera l'espai assignat del monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Els literals de text són convenients però no són adequats per totes les situacions en les que podem voler usar text.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T173124Z" creationid="moises" creationdate="20230304T173124Z">
+        <seg>Els literals de text són convenients però no són adequats per totes aquelles situacions que voldrem usar text.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>En primer lloc, fem una ullada a les regles de pertinença.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174228Z" creationid="moises" creationdate="20230304T174228Z">
+        <seg>En primer lloc, farem una ullada a les regles de pertinença.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Four tables: two tables representing the stack data for s1 and s2,
+and each points to its own copy of string data on the heap.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T175453Z" creationid="moises" creationdate="20230304T175453Z">
+        <seg>Dues taules: dues taules que representen les dades de la pila per s1 i s2, i cadascuna apunta a la seva còpia de la cadena de text al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Freeing memory twice can lead to memory
+corruption, which can potentially lead to security vulnerabilities.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T180601Z" creationid="moises" creationdate="20230304T180601Z">
+        <seg>L'alliberament per duplicat de memòria pot portar a corrupció de la memòria, el que pot portar a vulnerabilitats en la seguretat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If Rust did this, the
+operation &lt;g2&gt;s2 = s1&lt;/g2&gt; could be very expensive in terms of runtime performance if
+the data on the heap were large.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T175352Z" creationid="moises" creationdate="20230304T175352Z">
+        <seg>Si Rust fes això, l'operació &lt;g2&gt;s2 = s1&lt;/g2&gt; seria molt cara en termes d'eficiència en temps d'execució, especialment quan les dades al monticle són voluminoses.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you’ve heard the terms &lt;g1&gt;shallow copy&lt;/g1&gt; and &lt;g2&gt;deep copy&lt;/g2&gt; while working with
+other languages, the concept of copying the pointer, length, and capacity
+without copying the data probably sounds like making a shallow copy.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T183759Z" creationid="moises" creationdate="20230304T183635Z">
+        <seg>Si has sentit els termes *còpia superficial* (&lt;g1&gt;shallow copy&lt;/g1&gt;) i *còpia profunda* (&lt;g2&gt;deep copy&lt;/g2&gt;) treballant amb altres llenguatges de programació, el concepte de copiar el punter, la longitud i la capacitat, sense copiar el text apuntat, probablement et sonarà com realitzar una còpia superficial.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In addition, there’s a design choice that’s implied by this: Rust will never
+automatically create “deep” copies of your data.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T184311Z" creationid="moises" creationdate="20230304T184311Z">
+        <seg>Hi ha una decisió de disseny implícita darrera d'això: Rust mai no farà còpies "profundes" de les nostres dades.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In other words, the data
+representation in memory looks like Figure 4-2.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174845Z" creationid="moises" creationdate="20230304T174845Z">
+        <seg>En altres paraules, la representació de les dades en memòria té l'aspecte indicat a la figura 4-2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this example, we would say that &lt;g4&gt;s1&lt;/g4&gt;
+was &lt;g5&gt;moved&lt;/g5&gt; into &lt;g6&gt;s2&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T183948Z" creationid="moises" creationdate="20230304T183948Z">
+        <seg>En aquest exemple direm que &lt;g4&gt;s1&lt;/g4&gt; ha estat 
+&lt;g5&gt;moguda&lt;/g5&gt; a &lt;g6&gt;s2&lt;/g6&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Mantinguem aquestes
+regles al cap així anem passant pels diferents exemples que vindran:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174156Z" creationid="moises" creationdate="20230304T174156Z">
+        <seg>Les tindrem presents, així anem passant pels diferents exemples que vindran:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Només pot haver un propietari a cada moment.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172601Z" creationid="moises" creationdate="20230304T172601Z">
+        <seg>Només hi pot haver un propietari a cada moment.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So, what actually happens is shown in Figure 4-4.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T184010Z" creationid="moises" creationdate="20230304T184010Z">
+        <seg>La figura 4-4 mostra el que en realitat passa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Table s1 is grayed out be-cause s1 is no longer valid; only s2 can be used to
+access the heap data.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T183121Z" creationid="moises" creationdate="20230304T183121Z">
+        <seg>Taula s1 està marcada en gris perquè ja no és vàlida. Només s2 pot accedir les dades al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>That solves our problem!</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T184053Z" creationid="moises" creationdate="20230304T184053Z">
+        <seg>Això resol el nostre problema!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The capacity is the total amount of memory, in bytes, that the
+&lt;g2&gt;String&lt;/g2&gt; has received from the allocator.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174515Z" creationid="moises" creationdate="20230304T174515Z">
+        <seg>La capacitat és la quantitat total de memòria, també en bytes, que s'ha reservat al &lt;g2&gt;String&lt;/g2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The difference between length and
+capacity matters, but not in this context, so for now, it’s fine to ignore the
+capacity.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174612Z" creationid="moises" creationdate="20230304T174612Z">
+        <seg>La diferència entre longitud i capacitat és important, però no en aquest moment. Així, de moment està bé si ignorem la capacitat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following list contains keywords that are reserved for current or future
+use by the Rust language.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172153Z" creationid="moises" creationdate="20230304T172153Z">
+        <seg>La següent llista conté paraules clau reservades per ser usades pel llenguatge Rust, ara o en un futur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following sections contain reference material you may find useful in your
+Rust journey.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T171019Z" creationid="moises" creationdate="20230304T171019Z">
+        <seg>Les següents seccions contenen material de referència que et podria ser d'utilitat en la teva aventura amb Rust.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The length is how much memory, in bytes, the contents of the &lt;g1&gt;String&lt;/g1&gt; are
+currently using.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174436Z" creationid="moises" creationdate="20230304T174436Z">
+        <seg>La longitud indica quanta memòria, en bytes, usen els continguts del &lt;g1&gt;String&lt;/g1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The representation does &lt;g1&gt;not&lt;/g1&gt; look like Figure 4-3, which is what memory would
+look like if Rust instead copied the heap data as well.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T175221Z" creationid="moises" creationdate="20230304T175221Z">
+        <seg>La representació &lt;g1&gt;no&lt;/g1&gt; s'assembla a la de la figura 4-3, que és com es veuria si Rust copies també les dades del monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Therefore, Rust doesn’t need to free anything when &lt;g3&gt;s1&lt;/g3&gt; goes
+out of scope.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T180731Z" creationid="moises" creationdate="20230304T180731Z">
+        <seg>Per tant, Rust no necessita alliberar res quan &lt;g3&gt;s1&lt;/g3&gt; surt de l'àmbit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Therefore, any &lt;g1&gt;automatic&lt;/g1&gt;
+copying can be assumed to be inexpensive in terms of runtime performance.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T184404Z" creationid="moises" creationdate="20230304T184404Z">
+        <seg>Per tant, tota còpia &lt;g1&gt;automàtica&lt;/g1&gt;
+es pot suposar que serà econòmica en temps d'execució.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a
+problem: when &lt;g2&gt;s2&lt;/g2&gt; and &lt;g3&gt;s1&lt;/g3&gt; go out of scope, they will both try to free the
+same memory.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T180332Z" creationid="moises" creationdate="20230304T180332Z">
+        <seg>Això representa un problema: quan &lt;g2&gt;s2&lt;/g2&gt; i &lt;g3&gt;s1&lt;/g3&gt; surten del seu àmbit, Rust hauria d'alliberar la mateixa memòria dues vegades.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is known as a &lt;g4&gt;double free&lt;/g4&gt; error and is one of the memory
+safety bugs we mentioned previously.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T180456Z" creationid="moises" creationdate="20230304T180456Z">
+        <seg>És el que es coneix com a error de &lt;g4&gt;doble alliberament&lt;/g4&gt; i és un dels errors de seguretat de memòria dels que hem parlat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Three tables: tables s1 and s2 representing those strings on the
+stack, respectively, and both pointing to the same string data on the heap.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T175004Z" creationid="moises" creationdate="20230304T175004Z">
+        <seg>Tres taules: taules s1 i s2 representen els Strings en la pila, respectivament, i ambdues apunten a la mateixa dada al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To ensure memory safety, after the line &lt;g1&gt;let s2 = s1;&lt;/g1&gt;, Rust considers &lt;g2&gt;s1&lt;/g2&gt; as
+no longer valid.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T180656Z" creationid="moises" creationdate="20230304T180656Z">
+        <seg>Per assegurar la seguretat de la memòria, un cop executada la línia &lt;g1&gt;let s2 = s1;&lt;/g1&gt;, Rust considera que la variable &lt;g2&gt;s1&lt;/g2&gt; ja no és vàlida.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Variables and Data Interacting with Clone</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T184422Z" creationid="moises" creationdate="20230304T184422Z">
+        <seg>Variables i dades interaccionant amb *Clone*</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We do not copy the
+data on the heap that the pointer refers to.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174812Z" creationid="moises" creationdate="20230304T174812Z">
+        <seg>No es copien les dades del monticle a les que el punter fa referència.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When we assign &lt;g1&gt;s1&lt;/g1&gt; to &lt;g2&gt;s2&lt;/g2&gt;, the &lt;g3&gt;String&lt;/g3&gt; data is copied, meaning we copy the
+pointer, the length, and the capacity that are on the stack.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T174740Z" creationid="moises" creationdate="20230304T174740Z">
+        <seg>Un cop assignem &lt;g1&gt;s1&lt;/g1&gt; a &lt;g2&gt;s2&lt;/g2&gt;, el valor del &lt;g3&gt;String&lt;/g3&gt; és copiat. És a dir, copiem els valors del punter, la longitud i la capacitat que es troben a la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With only &lt;g1&gt;s2&lt;/g1&gt; valid, when it goes out of scope it
+alone will free the memory, and we’re done.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T184157Z" creationid="moises" creationdate="20230304T184157Z">
+        <seg>Ara que només és vàlida &lt;g1&gt;s2&lt;/g1&gt;, quan surti del seu àmbit només serà alliberada la memòria per aquesta variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You’ll get an error like this because Rust prevents you from using the
+invalidated reference:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T183319Z" creationid="moises" creationdate="20230304T183319Z">
+        <seg>Obtenim el següent error perquè Rust evitarà que fem servir una referència invalidada:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>〜 Appendix</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T171655Z" creationid="moises" creationdate="20230304T170918Z">
+        <seg>Apèndix</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>〜 Appendix A: Keywords</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230304T172100Z" creationid="moises" creationdate="20230304T171348Z">
+        <seg>Apèndix A: Paraules clau</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>

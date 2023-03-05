@@ -1,23 +1,23 @@
 fn main() {
-    let s = String::from("hello");  // s comes into scope
+    let s = String::from("hola");   // s entra en àmbit
 
-    takes_ownership(s);             // s's value moves into the function...
-                                    // ... and so is no longer valid here
+    mou(s);                         // el valor de s es mou a la funció i, ...
+                                    // ... per tant, s deixa de ser vàlida aquí
 
-    let x = 5;                      // x comes into scope
+    let x = 5;                      // x entra en àmbit
 
-    makes_copy(x);                  // x would move into the function,
-                                    // but i32 is Copy, so it's okay to still
-                                    // use x afterward
+    copia(x);                       // el valor de x es mou a la funció, però
+                                    // com que i32 implementa Copy, x segueix
+                                    // sent vàlid
 
-} // Here, x goes out of scope, then s. But because s's value was moved, nothing
-  // special happens.
+} // Aquí x surt d'àmbit i després s. Com que el valor de s va ser mogut,
+  // no passa res especial.
 
-fn takes_ownership(some_string: String) { // some_string comes into scope
-    println!("{}", some_string);
-} // Here, some_string goes out of scope and `drop` is called. The backing
-  // memory is freed.
+fn mou(un_string: String) {         // un_string entra en àmbit
+    println!("{}", un_string);
+} // Aquí un_string surt d'àmbit i es crida el mètode `drop` amb el que la
+  // memòria és alliberada.
 
-fn makes_copy(some_integer: i32) { // some_integer comes into scope
-    println!("{}", some_integer);
-} // Here, some_integer goes out of scope. Nothing special happens.
+fn copia(un_enter: i32) {           // un_enter entra en àmbit
+    println!("{}", un_enter);
+} // Aquí, un_enter surt d'àmbit. No passa res especial.

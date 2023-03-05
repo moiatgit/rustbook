@@ -1,0 +1,10 @@
+04/03/23 19:21
+                    	Segments	Paraules	Caràcters (sense espais)	Caràcters (amb espais)	
+Repeticions:        	     763	    1914	                   15684	                 16624	
+Coincidència exacta:	      28	     527	                    2651	                  3117	
+95%-100%:           	       0	       0	                       0	                     0	
+85%-94%:            	       0	       0	                       0	                     0	
+75%-84%:            	       0	       0	                       0	                     0	
+50%-74%:            	       6	      67	                     292	                   354	
+Cap coincidència:   	    9816	  164043	                  899044	               1034645	
+Total:              	   10613	  166551	                  917671	               1054740	
