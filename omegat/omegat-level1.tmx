@@ -52,6 +52,16 @@ invalidated</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Figure 4-5: A diagram of &amp;String s pointing at String
+s1</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193427Z" creationid="moises" creationdate="20230321T193427Z">
+        <seg>Figura 4-5: Un diagrama de &amp;String s apuntant a String
+s1</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Filename: src/main.rs</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T190628Z" creationid="moises" creationdate="20230305T190628Z">
@@ -99,6 +109,15 @@ values</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T193609Z" creationid="moises" creationdate="20230305T193609Z">
         <seg>Llistat 4-5: Retornant la pertinença dels paràmetres</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A reference is like a pointer in that it’s an address we can follow to access
+the data stored at that address; that data is owned by some other variable.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T173712Z" creationid="moises" creationdate="20230321T173712Z">
+        <seg>Una referència iés una mena d'apuntador a una posició de memòria, que podem seguir per arribar al valor emmagatzemat en aquesta adreça, i que pertany a una altra variable.</seg>
       </tuv>
     </tu>
     <tu>
@@ -766,12 +785,29 @@ n'hem de preocupar.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Figure 4-5 depicts this concept.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193037Z" creationid="moises" creationdate="20230321T193037Z">
+        <seg>La figura 4-5 il·lustra aquest concepte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Finalment, el
 cambrer ens dirigeix a la taula trobada.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T184540Z" creationid="moises" creationdate="20230305T184540Z">
         <seg>Finalment, el
 cambrer ens dirigeix a la taula trobada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>First, notice that all the tuple code in the variable declaration and the
+function return value is gone.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T190951Z" creationid="moises" creationdate="20230321T190951Z">
+        <seg>En primer lloc, fixat que tant el codi de la tupla en la declaració de la variable i en el valor de retorn de la funció, han desaparegut.</seg>
       </tuv>
     </tu>
     <tu>
@@ -808,6 +844,15 @@ implement Copy:</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T190032Z" creationid="moises" creationdate="20230305T190032Z">
         <seg>A continuació, veiem alguns dels tipus que implementen Copy:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here is how you would define and use a calculate_length function that has a
+reference to an object as a parameter instead of taking ownership of the value:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T190010Z">
+        <seg>A continuació es mostra com definirem i usarem la funció calcula_longitud que té un paràmetre que fa referència a un objecte en comptes de prendre possessió del valor:</seg>
       </tuv>
     </tu>
     <tu>
@@ -920,6 +965,14 @@ was moved into s2.</seg>
       <tuv lang="CA" changeid="moises" changedate="20230304T183948Z" creationid="moises" creationdate="20230304T183948Z">
         <seg>En aquest exemple direm que s1 ha estat 
 moguda a s2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Instead, we can provide a reference to the String value.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T173540Z" creationid="moises" creationdate="20230321T173540Z">
+        <seg>En comptes d'això, podem oferir una referència al valor del String.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1218,6 +1271,15 @@ inicialització o, en anglès Resource Acquisition Is Initialization (RAII).</se
         <seg>Nota: En C++, aquest patró d'alliberament de recursos al final del temps de
 vida d'un element s'anomena de vegades l'adquisició del recurs és la
 inicialització o, en anglès Resource Acquisition Is Initialization (RAII).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: The opposite of referencing by using &amp; is dereferencing, which is
+accomplished with the dereference operator, *.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193608Z" creationid="moises" creationdate="20230321T193608Z">
+        <seg>Nota: L'oposat a referenciar amb &amp; és dereferenciar. Cosa que s'aconsegueix amb l'operador de derreferenciació,  *.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1581,6 +1643,18 @@ ho fa.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Second, note that we pass &amp;s1 into
+calculate_length and, in its definition, we take &amp;String rather than
+String.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T191112Z">
+        <seg>En segon lloc, nota que passem &amp;s1 a
+calcula_longitud() i, en la seva definició, obtenim un &amp;String en comptes d'un 
+String.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Si algú del grup arriba tard, podrà
 preguntar on trobar-nos.</seg>
       </tuv>
@@ -1744,6 +1818,19 @@ use by the Rust language.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The issue with the tuple code in Listing 4-5 is that we have to return the
+String to the calling function so we can still use the String after the
+call to calculate_length, because the String was moved into
+calculate_length.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T153058Z">
+        <seg>El problema amb l'ús de tuples al codi del llistat 4-5 és que ens veiem forçats a retornar el
+String a la funció que crida, de manera que aquesta pugui continuar utilitzant-lo un cop cridat calcula_longitud(), ja que el String ha estat mogut a
+calcula_longitud().</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The length is how much memory, in bytes, the contents of the String are
 currently using.</seg>
       </tuv>
@@ -1790,6 +1877,15 @@ look like if Rust instead copied the heap data as well.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The table for s1 contains the stack data for s1 and points to the
+string data on the heap.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193159Z" creationid="moises" creationdate="20230321T193159Z">
+        <seg>La taula per s1 conté la data de la pila per s1 i apunta al string en el monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Therefore, Rust doesn’t need to free anything when s1 goes
 out of scope.</seg>
       </tuv>
@@ -1813,6 +1909,15 @@ es pot suposar que serà econòmica en temps d'execució.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T182200Z" creationid="moises" creationdate="20230305T182200Z">
         <seg>Hi ha una altra consideració que no hem tractat encara.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These ampersands represent references, and they allow you to refer
+to some value without taking ownership of it.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193019Z" creationid="moises" creationdate="20230321T193019Z">
+        <seg>Els ampersands representen referències, i permeten referir-nos a un valor sense prendre'n possessió.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1869,6 +1974,15 @@ stack, respectively, and both pointing to the same string data on the heap.</seg
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T175004Z" creationid="moises" creationdate="20230304T175004Z">
         <seg>Tres taules: taules s1 i s2 representen els Strings en la pila, respectivament, i ambdues apunten a la mateixa dada al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Three tables: the table for s contains only a pointer to the table
+for s1.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193112Z" creationid="moises" creationdate="20230321T193112Z">
+        <seg>Tres taules: la taula per s conté només un punter a la taula per s1.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2035,6 +2149,15 @@ tipus string poden conèixer quan escrivim el nostre codi.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T184906Z" creationid="moises" creationdate="20230305T184906Z">
         <seg>Una de les raons és que són immutables.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Unlike a pointer, a reference is guaranteed to point to a valid value of a
+particular type for the life of that reference.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T173817Z" creationid="moises" creationdate="20230321T173817Z">
+        <seg>A diferència dels punters, està garantit que les referències apunten un valor vàlid d'un tipus determinat durant la vida de la referència.</seg>
       </tuv>
     </tu>
     <tu>

@@ -52,6 +52,16 @@ invalidated<ph x="3">&lt;x3/&gt;</ph></seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figure 4-5: A diagram of <bpt i="2" x="2">&lt;g2&gt;</bpt>&amp;String s<ept i="2">&lt;/g2&gt;</ept> pointing at <bpt i="3" x="3">&lt;g3&gt;</bpt>String
+s1<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193427Z" creationid="moises" creationdate="20230321T193427Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figura 4-5: Un diagrama de <bpt i="2" x="2">&lt;g2&gt;</bpt>&amp;String s<ept i="2">&lt;/g2&gt;</ept> apuntant a <bpt i="3" x="3">&lt;g3&gt;</bpt>String
+s1<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><ph x="1">&lt;x1/&gt;</ph>Filename: src/main.rs<ph x="2">&lt;x2/&gt;</ph></seg>
       </tuv>
       <tuv xml:lang="CA" changeid="moises" changedate="20230305T190628Z" creationid="moises" creationdate="20230305T190628Z">
@@ -99,6 +109,15 @@ values<ph x="2">&lt;x2/&gt;</ph></seg>
       </tuv>
       <tuv xml:lang="CA" changeid="moises" changedate="20230305T193609Z" creationid="moises" creationdate="20230305T193609Z">
         <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-5: Retornant la pertinença dels paràmetres<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A <bpt i="7" x="7">&lt;g7&gt;</bpt>reference<ept i="7">&lt;/g7&gt;</ept> is like a pointer in that it’s an address we can follow to access
+the data stored at that address; that data is owned by some other variable.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T173712Z" creationid="moises" creationdate="20230321T173712Z">
+        <seg>Una <bpt i="7" x="7">&lt;g7&gt;</bpt>referència<ept i="7">&lt;/g7&gt;</ept> iés una mena d'apuntador a una posició de memòria, que podem seguir per arribar al valor emmagatzemat en aquesta adreça, i que pertany a una altra variable.</seg>
       </tuv>
     </tu>
     <tu>
@@ -766,12 +785,29 @@ n'hem de preocupar.</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Figure 4-5 depicts this concept.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193037Z" creationid="moises" creationdate="20230321T193037Z">
+        <seg>La figura 4-5 il·lustra aquest concepte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Finalment, el
 cambrer ens dirigeix a la taula trobada.</seg>
       </tuv>
       <tuv xml:lang="CA" changeid="moises" changedate="20230305T184540Z" creationid="moises" creationdate="20230305T184540Z">
         <seg>Finalment, el
 cambrer ens dirigeix a la taula trobada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>First, notice that all the tuple code in the variable declaration and the
+function return value is gone.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T190951Z" creationid="moises" creationdate="20230321T190951Z">
+        <seg>En primer lloc, fixat que tant el codi de la tupla en la declaració de la variable i en el valor de retorn de la funció, han desaparegut.</seg>
       </tuv>
     </tu>
     <tu>
@@ -808,6 +844,15 @@ implement <bpt i="4" x="4">&lt;g4&gt;</bpt>Copy<ept i="4">&lt;/g4&gt;</ept>:</se
       </tuv>
       <tuv xml:lang="CA" changeid="moises" changedate="20230305T190032Z" creationid="moises" creationdate="20230305T190032Z">
         <seg>A continuació, veiem alguns dels tipus que implementen <bpt i="4" x="4">&lt;g4&gt;</bpt>Copy<ept i="4">&lt;/g4&gt;</ept>:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Here is how you would define and use a <bpt i="1" x="1">&lt;g1&gt;</bpt>calculate_length<ept i="1">&lt;/g1&gt;</ept> function that has a
+reference to an object as a parameter instead of taking ownership of the value:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T190010Z">
+        <seg>A continuació es mostra com definirem i usarem la funció <bpt i="1" x="1">&lt;g1&gt;</bpt>calcula_longitud<ept i="1">&lt;/g1&gt;</ept> que té un paràmetre que fa referència a un objecte en comptes de prendre possessió del valor:</seg>
       </tuv>
     </tu>
     <tu>
@@ -920,6 +965,14 @@ was <bpt i="5" x="5">&lt;g5&gt;</bpt>moved<ept i="5">&lt;/g5&gt;</ept> into <bpt
       <tuv xml:lang="CA" changeid="moises" changedate="20230304T183948Z" creationid="moises" creationdate="20230304T183948Z">
         <seg>En aquest exemple direm que <bpt i="4" x="4">&lt;g4&gt;</bpt>s1<ept i="4">&lt;/g4&gt;</ept> ha estat 
 <bpt i="5" x="5">&lt;g5&gt;</bpt>moguda<ept i="5">&lt;/g5&gt;</ept> a <bpt i="6" x="6">&lt;g6&gt;</bpt>s2<ept i="6">&lt;/g6&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Instead, we can provide a reference to the <bpt i="6" x="6">&lt;g6&gt;</bpt>String<ept i="6">&lt;/g6&gt;</ept> value.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T173540Z" creationid="moises" creationdate="20230321T173540Z">
+        <seg>En comptes d'això, podem oferir una referència al valor del <bpt i="6" x="6">&lt;g6&gt;</bpt>String<ept i="6">&lt;/g6&gt;</ept>.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1218,6 +1271,15 @@ inicialització<ept i="1">&lt;/g1&gt;</ept> o, en anglès <bpt i="2" x="2">&lt;g
         <seg>Nota: En C++, aquest patró d'alliberament de recursos al final del temps de
 vida d'un element s'anomena de vegades <bpt i="1" x="1">&lt;g1&gt;</bpt>l'adquisició del recurs és la
 inicialització<ept i="1">&lt;/g1&gt;</ept> o, en anglès <bpt i="2" x="2">&lt;g2&gt;</bpt>Resource Acquisition Is Initialization<ept i="2">&lt;/g2&gt;</ept> (RAII).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Note: The opposite of referencing by using <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;<ept i="1">&lt;/g1&gt;</ept> is <bpt i="2" x="2">&lt;g2&gt;</bpt>dereferencing<ept i="2">&lt;/g2&gt;</ept>, which is
+accomplished with the dereference operator, <bpt i="3" x="3">&lt;g3&gt;</bpt>*<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193608Z" creationid="moises" creationdate="20230321T193608Z">
+        <seg>Nota: L'oposat a referenciar amb <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;<ept i="1">&lt;/g1&gt;</ept> és <bpt i="2" x="2">&lt;g2&gt;</bpt>dereferenciar<ept i="2">&lt;/g2&gt;</ept>. Cosa que s'aconsegueix amb l'operador de derreferenciació,  <bpt i="3" x="3">&lt;g3&gt;</bpt>*<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1581,6 +1643,18 @@ ho fa.</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Second, note that we pass <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;s1<ept i="1">&lt;/g1&gt;</ept> into
+<bpt i="2" x="2">&lt;g2&gt;</bpt>calculate_length<ept i="2">&lt;/g2&gt;</ept> and, in its definition, we take <bpt i="3" x="3">&lt;g3&gt;</bpt>&amp;String<ept i="3">&lt;/g3&gt;</ept> rather than
+<bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T191112Z">
+        <seg>En segon lloc, nota que passem <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;s1<ept i="1">&lt;/g1&gt;</ept> a
+<bpt i="2" x="2">&lt;g2&gt;</bpt>calcula_longitud()<ept i="2">&lt;/g2&gt;</ept> i, en la seva definició, obtenim un <bpt i="3" x="3">&lt;g3&gt;</bpt>&amp;String<ept i="3">&lt;/g3&gt;</ept> en comptes d'un 
+<bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Si algú del grup arriba tard, podrà
 preguntar on trobar-nos.</seg>
       </tuv>
@@ -1744,6 +1818,19 @@ use by the Rust language.</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>The issue with the tuple code in Listing 4-5 is that we have to return the
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> to the calling function so we can still use the <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> after the
+call to <bpt i="3" x="3">&lt;g3&gt;</bpt>calculate_length<ept i="3">&lt;/g3&gt;</ept>, because the <bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept> was moved into
+<bpt i="5" x="5">&lt;g5&gt;</bpt>calculate_length<ept i="5">&lt;/g5&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T153058Z">
+        <seg>El problema amb l'ús de tuples al codi del llistat 4-5 és que ens veiem forçats a retornar el
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> a la funció que crida, de manera que aquesta pugui continuar utilitzant-lo un cop cridat <bpt i="3" x="3">&lt;g3&gt;</bpt>calcula_longitud()<ept i="3">&lt;/g3&gt;</ept>, ja que el <bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept> ha estat mogut a
+<bpt i="5" x="5">&lt;g5&gt;</bpt>calcula_longitud()<ept i="5">&lt;/g5&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>The length is how much memory, in bytes, the contents of the <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> are
 currently using.</seg>
       </tuv>
@@ -1790,6 +1877,15 @@ look like if Rust instead copied the heap data as well.</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>The table for s1 contains the stack data for s1 and points to the
+string data on the heap.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193159Z" creationid="moises" creationdate="20230321T193159Z">
+        <seg>La taula per s1 conté la data de la pila per s1 i apunta al string en el monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Therefore, Rust doesn’t need to free anything when <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept> goes
 out of scope.</seg>
       </tuv>
@@ -1813,6 +1909,15 @@ es pot suposar que serà econòmica en temps d'execució.</seg>
       </tuv>
       <tuv xml:lang="CA" changeid="moises" changedate="20230305T182200Z" creationid="moises" creationdate="20230305T182200Z">
         <seg>Hi ha una altra consideració que no hem tractat encara.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>These ampersands represent <bpt i="5" x="5">&lt;g5&gt;</bpt>references<ept i="5">&lt;/g5&gt;</ept>, and they allow you to refer
+to some value without taking ownership of it.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193019Z" creationid="moises" creationdate="20230321T193019Z">
+        <seg>Els ampersands representen <bpt i="5" x="5">&lt;g5&gt;</bpt>referències<ept i="5">&lt;/g5&gt;</ept>, i permeten referir-nos a un valor sense prendre'n possessió.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1869,6 +1974,15 @@ stack, respectively, and both pointing to the same string data on the heap.</seg
       </tuv>
       <tuv xml:lang="CA" changeid="moises" changedate="20230304T175004Z" creationid="moises" creationdate="20230304T175004Z">
         <seg>Tres taules: taules s1 i s2 representen els Strings en la pila, respectivament, i ambdues apunten a la mateixa dada al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Three tables: the table for s contains only a pointer to the table
+for s1.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193112Z" creationid="moises" creationdate="20230321T193112Z">
+        <seg>Tres taules: la taula per s conté només un punter a la taula per s1.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2035,6 +2149,15 @@ tipus string poden conèixer quan escrivim el nostre codi.</seg>
       </tuv>
       <tuv xml:lang="CA" changeid="moises" changedate="20230305T184906Z" creationid="moises" creationdate="20230305T184906Z">
         <seg>Una de les raons és que són immutables.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Unlike a pointer, a reference is guaranteed to point to a valid value of a
+particular type for the life of that reference.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T173817Z" creationid="moises" creationdate="20230321T173817Z">
+        <seg>A diferència dels punters, està garantit que les referències apunten un valor vàlid d'un tipus determinat durant la vida de la referència.</seg>
       </tuv>
     </tu>
     <tu>
