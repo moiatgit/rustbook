@@ -1753,6 +1753,19 @@ Rust journey.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The issue with the tuple code in Listing 4-5 is that we have to return the
+&lt;g1&gt;String&lt;/g1&gt; to the calling function so we can still use the &lt;g2&gt;String&lt;/g2&gt; after the
+call to &lt;g3&gt;calculate_length&lt;/g3&gt;, because the &lt;g4&gt;String&lt;/g4&gt; was moved into
+&lt;g5&gt;calculate_length&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T153058Z" creationid="moises" creationdate="20230321T153058Z">
+        <seg>El problema amb l'ús de tuples al codi del llistat 4-5 és que ens veiem forçats a retornar el
+&lt;g1&gt;String&lt;/g1&gt; a la funció que crida, de manera que aquesta pugui continuar utilitzant-lo un cop cridat &lt;g3&gt;calculate_length()&lt;/g3&gt;, ja que el &lt;g4&gt;String&lt;/g4&gt; ha estat mogut a
+&lt;g5&gt;calculate_length()&lt;/g5&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The length is how much memory, in bytes, the contents of the &lt;g1&gt;String&lt;/g1&gt; are
 currently using.</seg>
       </tuv>
