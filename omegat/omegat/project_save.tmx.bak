@@ -52,6 +52,16 @@ invalidated&lt;x3/&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;x1/&gt;Figure 4-5: A diagram of &lt;g2&gt;&amp;String s&lt;/g2&gt; pointing at &lt;g3&gt;String
+s1&lt;/g3&gt;&lt;x4/&gt;</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193427Z" creationid="moises" creationdate="20230321T193427Z">
+        <seg>&lt;x1/&gt;Figura 4-5: Un diagrama de &lt;g2&gt;&amp;String s&lt;/g2&gt; apuntant a &lt;g3&gt;String
+s1&lt;/g3&gt;&lt;x4/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;x1/&gt;Filename: src/main.rs&lt;x2/&gt;</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T190628Z" creationid="moises" creationdate="20230305T190628Z">
@@ -1261,6 +1271,15 @@ inicialització&lt;/g1&gt; o, en anglès &lt;g2&gt;Resource Acquisition Is Initi
         <seg>Nota: En C++, aquest patró d'alliberament de recursos al final del temps de
 vida d'un element s'anomena de vegades &lt;g1&gt;l'adquisició del recurs és la
 inicialització&lt;/g1&gt; o, en anglès &lt;g2&gt;Resource Acquisition Is Initialization&lt;/g2&gt; (RAII).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: The opposite of referencing by using &lt;g1&gt;&amp;&lt;/g1&gt; is &lt;g2&gt;dereferencing&lt;/g2&gt;, which is
+accomplished with the dereference operator, &lt;g3&gt;*&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230321T193608Z" creationid="moises" creationdate="20230321T193608Z">
+        <seg>Nota: L'oposat a referenciar amb &lt;g1&gt;&amp;&lt;/g1&gt; és &lt;g2&gt;dereferenciar&lt;/g2&gt;. Cosa que s'aconsegueix amb l'operador de derreferenciació,  &lt;g3&gt;*&lt;/g3&gt;.</seg>
       </tuv>
     </tu>
     <tu>

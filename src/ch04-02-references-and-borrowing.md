@@ -1,4 +1,4 @@
-## 〜 References and Borrowing
+## References and Borrowing
 
 The issue with the tuple code in Listing 4-5 is that we have to return the
 `String` to the calling function so we can still use the `String` after the

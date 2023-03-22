@@ -1,4 +1,4 @@
-## Referències i prèstec
+## Referències i prestec
 
 El problema amb l'ús de tuples al codi del llistat 4-5 és que ens veiem forçats a retornar el
 `String` a la funció que crida, de manera que aquesta pugui continuar utilitzant-lo un cop cridat `calcula_longitud()`, ja que el `String` ha estat mogut a
