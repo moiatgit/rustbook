@@ -31,12 +31,10 @@ Fixem-nos amb més detall a la crida en la funció:
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:here}}
 ```
 
-The `&s1` syntax lets us create a reference that *refers* to the value of `s1`
-but does not own it. Because it does not own it, the value it points to will
-not be dropped when the reference stops being used.
+La sintaxi `&s1` ens permet crear una referència que *apunta* al valor de `s1`
+però que no pren la propietat. Donat que el valor no li pertany, no serà eliminat quan la referencia deixi de ser usada.
 
-Likewise, the signature of the function uses `&` to indicate that the type of
-the parameter `s` is a reference. Let’s add some explanatory annotations:
+De la mateixa manera, la signatura de la funció fa servir `&` per indicar que el tipus del paràmetre `s`  és una referència. Afegim-hi algunes anotacions explicatives:
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-08-reference-with-annotations/src/main.rs:here}}

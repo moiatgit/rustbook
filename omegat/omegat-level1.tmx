@@ -422,6 +422,15 @@ continuarem aprofundint en el concepte amb la introducció del tipus String.</se
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Because it does not own it, the value it points to will
+not be dropped when the reference stops being used.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230322T202726Z" creationid="moises" creationdate="20230322T202726Z">
+        <seg>Donat que el valor no li pertany, no serà eliminat quan la referencia deixi de ser usada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But
 Figure 4-2 shows both data pointers pointing to the same location.</seg>
       </tuv>
@@ -1150,10 +1159,27 @@ implementació reserva la memòria necessària.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Let’s add some explanatory annotations:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230322T202832Z" creationid="moises" creationdate="20230322T202832Z">
+        <seg>Afegim-hi algunes anotacions explicatives:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Let’s take a closer look at the function call here:</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230322T141335Z" creationid="moises" creationdate="20230322T141335Z">
         <seg>Fixem-nos amb més detall a la crida en la funció:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Likewise, the signature of the function uses &amp; to indicate that the type of
+the parameter s is a reference.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230322T202809Z" creationid="moises" creationdate="20230322T202809Z">
+        <seg>De la mateixa manera, la signatura de la funció fa servir &amp; per indicar que el tipus del paràmetre s  és una referència.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1786,6 +1812,16 @@ valid after we create the variable y.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T184053Z" creationid="moises" creationdate="20230304T184053Z">
         <seg>Això resol el nostre problema!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &amp;s1 syntax lets us create a reference that refers to the value of s1
+but does not own it.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230322T202654Z" creationid="moises" creationdate="20230322T202654Z">
+        <seg>La sintaxi &amp;s1 ens permet crear una referència que apunta al valor de s1
+però que no pren la propietat.</seg>
       </tuv>
     </tu>
     <tu>
