@@ -1,4 +1,4 @@
-21/03/23 20:39
+22/03/23 15:00
 Estadístiques del projecte
 
                	Segments	Paraules	Caràcters (sense espais)	Caràcters (amb espais)	#Files	

@@ -1,6 +1,8 @@
 [book]
 title = "El llenguatge de programació Rust"
 authors = ["Steve Klabnik", "Carol Nichols", "Amb la col·laboració de la Comunitat Rust"]
+language = "ca"
+src = "translation"
 
 [output.html]
 additional-css = ["ferris.css", "theme/2018-edition.css"]

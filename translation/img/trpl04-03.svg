@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 987.50787 1258.3434" version="1.1" id="svg197" sodipodi:docname="trpl04-03.svg" width="987.50787" height="1258.3434" inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+  <metadata id="metadata203">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs201"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1882" inkscape:window-height="1376" id="namedview199" showgrid="false" inkscape:zoom="0.38769231" inkscape:cx="1081.4367" inkscape:cy="777.0245" inkscape:window-x="678" inkscape:window-y="27" inkscape:window-maximized="0" inkscape:current-layer="svg197"/>
+  <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-298 233,-298 233,4 " id="polygon4" transform="matrix(4.1667,0,0,4.1667,16.6668,1241.6766)"/>
+  <g id="edge1" class="edge" transform="matrix(4.1667,0,0,4.1667,16.6668,1241.6766)">
+    <title id="title94">table0:c-&gt;table1:pointee</title>
+    <path fill="none" stroke="#000000" d="m 78,-94 c 0,0 31.3406,0 60.3797,0" id="path96"></path>
+    <polygon fill="#000000" stroke="#000000" points="148.5,-94 138.5,-90.5001 138.5,-97.5001 " id="polygon98"/>
+  </g>
+  <g id="edge2" class="edge" transform="matrix(4.1667,0,0,4.1667,16.6668,1241.6766)">
+    <title id="title189">table3:c-&gt;table4:pointee</title>
+    <path fill="none" stroke="#000000" d="m 78,-240 c 0,0 31.3406,0 60.3797,0" id="path191"></path>
+    <polygon fill="#000000" stroke="#000000" points="148.5,-240 138.5,-236.5001 138.5,-243.5001 " id="polygon193"/>
+  </g>
+  <g id="node1-0" class="node" transform="matrix(4.1667,0,0,4.1667,-0.1449932,635.9833)">
+    <title id="title6-3">table0</title>
+    <polyline fill="none" stroke="#000000" points="8,-124 96,-124 " id="polyline8-0"/>
+    <text text-anchor="start" x="45.775902" y="-129.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text10-4">s1</text>
+    <polygon fill="none" stroke="#000000" points="8,-104 8,-124 60,-124 60,-104 " id="polygon12-4"/>
+    <text text-anchor="start" x="22.393749" y="-110.84521" font-family="Times, serif" font-size="14px" fill="#000000" id="text14-4">nom</text>
+    <polygon fill="none" stroke="#000000" points="60,-104 60,-124 96,-124 96,-104 " id="polygon16-4"/>
+    <text text-anchor="start" x="62.841301" y="-109.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text18-7">valor</text>
+    <polygon fill="none" stroke="#000000" points="8,-84 8,-104 60,-104 60,-84 " id="polygon20-6"/>
+    <text text-anchor="start" x="26.2241" y="-89.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text22-3">ptr</text>
+    <polygon fill="none" stroke="#000000" points="60,-84 60,-104 96,-104 96,-84 " id="polygon24-1"/>
+    <polygon fill="none" stroke="#000000" points="8,-64 8,-84 60,-84 60,-64 " id="polygon26-7"/>
+    <text text-anchor="start" x="22.08823" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text28-5">long</text>
+    <polygon fill="none" stroke="#000000" points="60,-64 60,-84 96,-84 96,-64 " id="polygon30-9"/>
+    <text text-anchor="start" x="74.5" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text32-6">4</text>
+    <polygon fill="none" stroke="#000000" points="8,-44 8,-64 60,-64 60,-44 " id="polygon34-2"/>
+    <text text-anchor="start" x="8.8411541" y="-50.056091" font-family="Times, serif" font-size="14px" fill="#000000" id="text36-1">capacitat</text>
+    <polygon fill="none" stroke="#000000" points="60,-44 60,-64 96,-64 96,-44 " id="polygon38-7"/>
+    <text text-anchor="start" x="74.5" y="-49.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text40-8">4</text>
+  </g>
+  <g id="node1-0-5" class="node" transform="matrix(4.1667,0,0,4.1667,-0.1449932,1249.6289)">
+    <title id="title6-3-7">table0</title>
+    <polyline fill="none" stroke="#000000" points="8,-124 96,-124 " id="polyline8-0-4"/>
+    <text text-anchor="start" x="45.775902" y="-129.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text10-4-1">s2</text>
+    <polygon fill="none" stroke="#000000" points="60,-104 8,-104 8,-124 60,-124 " id="polygon12-4-8"/>
+    <text text-anchor="start" x="22.393749" y="-110.84521" font-family="Times, serif" font-size="14px" fill="#000000" id="text14-4-5">nom</text>
+    <polygon fill="none" stroke="#000000" points="96,-104 60,-104 60,-124 96,-124 " id="polygon16-4-9"/>
+    <text text-anchor="start" x="62.841301" y="-109.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text18-7-7">valor</text>
+    <polygon fill="none" stroke="#000000" points="60,-84 8,-84 8,-104 60,-104 " id="polygon20-6-5"/>
+    <text text-anchor="start" x="26.2241" y="-89.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text22-3-3">ptr</text>
+    <polygon fill="none" stroke="#000000" points="96,-84 60,-84 60,-104 96,-104 " id="polygon24-1-8"/>
+    <polygon fill="none" stroke="#000000" points="60,-64 8,-64 8,-84 60,-84 " id="polygon26-7-8"/>
+    <text text-anchor="start" x="22.08823" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text28-5-3">long</text>
+    <polygon fill="none" stroke="#000000" points="96,-64 60,-64 60,-84 96,-84 " id="polygon30-9-1"/>
+    <text text-anchor="start" x="74.5" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text32-6-8">4</text>
+    <polygon fill="none" stroke="#000000" points="60,-44 8,-44 8,-64 60,-64 " id="polygon34-2-9"/>
+    <text text-anchor="start" x="8.8411541" y="-50.056091" font-family="Times, serif" font-size="14px" fill="#000000" id="text36-1-6">capacitat</text>
+    <polygon fill="none" stroke="#000000" points="96,-44 60,-44 60,-64 96,-64 " id="polygon38-7-4"/>
+    <text text-anchor="start" x="74.5" y="-49.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text40-8-3">4</text>
+  </g>
+  <g id="node2-0" class="node" transform="matrix(4.1667,0,0,4.1667,22.776065,1238.3223)">
+    <title id="title43-3">table1</title>
+    <polygon fill="none" stroke="#000000" points="185.5,-124 185.5,-104 148.5,-104 148.5,-124 " id="polygon45-3"/>
+    <text text-anchor="start" x="151.4482" y="-109.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text47-8">índex</text>
+    <polygon fill="none" stroke="#000000" points="221.5,-124 221.5,-104 185.5,-104 185.5,-124 " id="polygon49-6"/>
+    <text text-anchor="start" x="188.34129" y="-109.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text51-0">valor</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-104 185.5,-84 148.5,-84 148.5,-104 " id="polygon53-4"/>
+    <text text-anchor="start" x="163.5" y="-89.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text55-8">0</text>
+    <polygon fill="none" stroke="#000000" points="221.5,-104 221.5,-84 185.5,-84 185.5,-104 " id="polygon57-8"/>
+    <text text-anchor="start" x="200" y="-89.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text59-8">h</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-84 185.5,-64 148.5,-64 148.5,-84 " id="polygon61-9"/>
+    <text text-anchor="start" x="163.5" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text63-7">1</text>
+    <polygon fill="none" stroke="#000000" points="221.5,-84 221.5,-64 185.5,-64 185.5,-84 " id="polygon65-7"/>
+    <text text-anchor="start" x="200.3931" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text67-6">o</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-64 185.5,-44 148.5,-44 148.5,-64 " id="polygon69-4"/>
+    <text text-anchor="start" x="163.5" y="-49.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text71-3">2</text>
+    <polygon fill="none" stroke="#000000" points="221.5,-64 221.5,-44 185.5,-44 185.5,-64 " id="polygon73-0"/>
+    <text text-anchor="start" x="201.55521" y="-49.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text75-3">l</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-44 185.5,-24 148.5,-24 148.5,-44 " id="polygon77-0"/>
+    <text text-anchor="start" x="163.5" y="-29.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text79-9">3</text>
+    <polygon fill="none" stroke="#000000" points="221.5,-44 221.5,-24 185.5,-24 185.5,-44 " id="polygon81-2"/>
+    <text text-anchor="start" x="201.55521" y="-29.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text83-5">a</text>
+  </g>
+  <g id="node2-0-3" class="node" transform="matrix(4.1667,0,0,4.1667,22.776065,634.22974)">
+    <title id="title43-3-6">table1</title>
+    <polygon fill="none" stroke="#000000" points="148.5,-124 185.5,-124 185.5,-104 148.5,-104 " id="polygon45-3-1"/>
+    <text text-anchor="start" x="151.4482" y="-109.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text47-8-0">índex</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-124 221.5,-124 221.5,-104 185.5,-104 " id="polygon49-6-6"/>
+    <text text-anchor="start" x="188.34129" y="-109.8" font-family="Times, serif" font-size="14px" fill="#000000" id="text51-0-3">valor</text>
+    <polygon fill="none" stroke="#000000" points="148.5,-104 185.5,-104 185.5,-84 148.5,-84 " id="polygon53-4-2"/>
+    <text text-anchor="start" x="163.5" y="-89.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text55-8-0">0</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-104 221.5,-104 221.5,-84 185.5,-84 " id="polygon57-8-6"/>
+    <text text-anchor="start" x="200" y="-89.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text59-8-1">h</text>
+    <polygon fill="none" stroke="#000000" points="148.5,-84 185.5,-84 185.5,-64 148.5,-64 " id="polygon61-9-5"/>
+    <text text-anchor="start" x="163.5" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text63-7-5">1</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-84 221.5,-84 221.5,-64 185.5,-64 " id="polygon65-7-4"/>
+    <text text-anchor="start" x="200.3931" y="-69.800003" font-family="Times, serif" font-size="14px" fill="#000000" id="text67-6-7">o</text>
+    <polygon fill="none" stroke="#000000" points="148.5,-64 185.5,-64 185.5,-44 148.5,-44 " id="polygon69-4-6"/>
+    <text text-anchor="start" x="163.5" y="-49.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text71-3-5">2</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-64 221.5,-64 221.5,-44 185.5,-44 " id="polygon73-0-6"/>
+    <text text-anchor="start" x="201.55521" y="-49.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text75-3-9">l</text>
+    <polygon fill="none" stroke="#000000" points="148.5,-44 185.5,-44 185.5,-24 148.5,-24 " id="polygon77-0-3"/>
+    <text text-anchor="start" x="163.5" y="-29.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text79-9-7">3</text>
+    <polygon fill="none" stroke="#000000" points="185.5,-44 221.5,-44 221.5,-24 185.5,-24 " id="polygon81-2-4"/>
+    <text text-anchor="start" x="201.55521" y="-29.799999" font-family="Times, serif" font-size="14px" fill="#000000" id="text83-5-5">a</text>
+  </g>
+</svg>
