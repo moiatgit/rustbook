@@ -1150,6 +1150,14 @@ implementació reserva la memòria necessària.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Let’s take a closer look at the function call here:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230322T141335Z" creationid="moises" creationdate="20230322T141335Z">
+        <seg>Fixem-nos amb més detall a la crida en la funció:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Listing 4-3 has an example with some annotations
 showing where variables go into and out of scope.</seg>
       </tuv>
@@ -2210,6 +2218,16 @@ programming languages, you’ve probably seen them before.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T181245Z" creationid="moises" creationdate="20230305T181245Z">
         <seg>Tractarem la sintaxi dels mètodes en el capítol 5, però donat que els mètodes són una característica comuna en molts llenguatges de programació, segurament ja els coneixes. </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We’ll see some uses of the
+dereference operator in Chapter 8 and discuss details of dereferencing in
+Chapter 15.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230322T141435Z" creationid="moises" creationdate="20230322T141435Z">
+        <seg>Veurem més usos de l'operador de dereferenciació al capítol 8, i discutirem els detalls de la referenciació al capítol 15.</seg>
       </tuv>
     </tu>
     <tu>

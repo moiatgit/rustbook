@@ -23,11 +23,9 @@ En primer lloc, fixat que tant el codi de la tupla en la declaració de la varia
 <span class="caption">Figura 4-5: Un diagrama de `&String s` apuntant a `String
 s1`</span>
 
-> Nota: L'oposat a referenciar amb `&` és *dereferenciar*. Cosa que s'aconsegueix amb l'operador de derreferenciació,  `*`. We’ll see some uses of the
-> dereference operator in Chapter 8 and discuss details of dereferencing in
-> Chapter 15.
+> Nota: L'oposat a referenciar amb `&` és *dereferenciar*. Cosa que s'aconsegueix amb l'operador de derreferenciació,  `*`. Veurem més usos de l'operador de dereferenciació al capítol 8, i discutirem els detalls de la referenciació al capítol 15.
 
-Let’s take a closer look at the function call here:
+Fixem-nos amb més detall a la crida en la funció:
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:here}}
