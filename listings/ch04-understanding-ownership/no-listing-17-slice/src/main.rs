@@ -1,8 +1,8 @@
 fn main() {
     // ANCHOR: here
-    let s = String::from("hello world");
+    let s = String::from("Hola Món");
 
-    let hello = &s[0..5];
-    let world = &s[6..11];
+    let hola = &s[0..4];
+    let mon = &s[5..8];
     // ANCHOR_END: here
 }

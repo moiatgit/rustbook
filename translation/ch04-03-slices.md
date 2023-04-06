@@ -51,7 +51,7 @@ Altrament retornem la longitud del string fent servir `s.len()`.
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:inside_for}}
 ```
 
-Ara tenim una manera de trobar l'índex del final de la primera paraula dins el string. Encara hi ha, però, un problema. Estem retornant un valor `usize` però aquest només té significat en el context de `&String`. En altres paraules, com que es tracta d'un valor separat del `String`, no hi ha cap garantia de que aquest encara sigui vàlid en el futur. Considerem el programa de lllistat 4-8 que fa servir la funció `primera_paraula` del llistat 4-7.
+Ara tenim una manera de trobar l'índex del final de la primera paraula dins el string. Encara hi ha, però, un problema. Estem retornant un valor `usize` que només té significat en el context de `&String`. En altres paraules, com que es tracta d'un valor separat del `String`, no hi ha cap garantia de que aquest encara sigui vàlid en el futur. Considerem el programa de lllistat 4-8 que fa servir la funció `primera_paraula` del llistat 4-7.
 
 <span class="filename">Fitxer: src/main.rs</span>
 
@@ -65,40 +65,31 @@ Ara tenim una manera de trobar l'índex del final de la primera paraula dins el 
 Aquest programa compila sense cap error i permetrà l'ús de `paraula` un cop cridat
 `s.clear()`. Donat que el valor de `paraula` no està connectat a l'estat de `s`, `paraual` encara conté el valor `4`. Podem fer servir el valor `4` amb la variable `s` per intentar obtenir la primera paraula, però això suposaria un error ja que el contingut de `s` ha canviat després d'assignar `4` a `paraula`.
 
-Having to worry about the index in `word` getting out of sync with the data in
-`s` is tedious and error prone! Managing these indices is even more brittle if
-we write a `second_word` function. Its signature would have to look like this:
+Haver-se de preocupar de si el valor de `paraula` es torna invalid quan canvia el contingut de
+`s` és tediós i és molt fàcil que ens equivoquem! Encara és més delicat gestionar aquests indexos si escrivim la funció `segona_paraula`. La seva signatura hauria de tenir el següent aspecte:
 
 ```rust,ignore
-fn second_word(s: &String) -> (usize, usize) {
+fn segona_paraula(s: &String) -> (usize, usize) {
 ```
 
-Now we’re tracking a starting *and* an ending index, and we have even more
-values that were calculated from data in a particular state but aren’t tied to
-that state at all. We have three unrelated variables floating around that need
-to be kept in sync.
+Ara estarem controlant l'índex d'inici *i* l'índex de final, i disposem de més valor encara que hem calculat de les dades en un determinat estat però que no estan associades a aquest estat. Disposem de tres variables no relacionades que cal que mantinguem sincronitzades.
 
-Luckily, Rust has a solution to this problem: string slices.
+Per sort, Rust ens ofereix una solució a aquest problema: seccions de string.
 
-### String Slices
+### Seccions de Strings
 
-A *string slice* is a reference to part of a `String`, and it looks like this:
+Una *secció de string* és una referència a part d'un `String`, i té el següent aspecte:
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-17-slice/src/main.rs:here}}
 ```
 
-Rather than a reference to the entire `String`, `hello` is a reference to a
-portion of the `String`, specified in the extra `[0..5]` bit. We create slices
-using a range within brackets by specifying `[starting_index..ending_index]`,
-where `starting_index` is the first position in the slice and `ending_index` is
-one more than the last position in the slice. Internally, the slice data
-structure stores the starting position and the length of the slice, which
-corresponds to `ending_index` minus `starting_index`. So, in the case of `let
-world = &s[6..11];`, `world` would be a slice that contains a pointer to the
-byte at index 6 of `s` with a length value of `5`.
+En comptes d'una referència a tot el `String`, `hola` és una referència a una porció d'aquest `String`, especificada en la part extra `[0..4]`. Per crear seccions, fem servir rangs entre claudàtors, tot especificant `[índex_inicial..índex_final]`,
+on `índex_inicial` és la primera posició en la secció i `índex_final` is
+és la posició després a la darrera de la secció. Internament, l'estructura de dades d'una secció emmagatzema la posició inicial i la longitud de la secció que es correspon amb `índex_final` menys `índex_inicial`. Així, en el cas de `let
+mon = &s[5..8];`, `mon` seria una secció que conté un punter al byte de la posició 5 de `s` amb una longitud de `3`.
 
-Figure 4-6 shows this in a diagram.
+La figura 4-6 ho mostra en forma de diagrama.
 
 <img alt="Three tables: a table representing the stack data of s, which points
 to the byte at index 0 in a table of the string data "hello world" on
@@ -168,21 +159,14 @@ Now when we call `primera_paraula`, we get back a single value that is tied to t
 underlying data. The value is made up of a reference to the starting point of
 the slice and the number of elements in the slice.
 
-Returning a slice would also work for a `second_word` function:
+Returning a slice would also work for a `segona_paraula` function:
 
 ```rust,ignore
-fn second_word(s: &String) -> &str {
+fn segona_paraula(s: &String) -> &str {
 ```
 
-We now have a straightforward API that’s much harder to mess up because the
-compiler will ensure the references into the `String` remain valid. Remember
-the bug in the program in Listing 4-8, when we got the index to the end of the
-first word but then cleared the string so our index was invalid? That code was
-logically incorrect but didn’t show any immediate errors. The problems would
-show up later if we kept trying to use the first word index with an emptied
-string. Slices make this bug impossible and let us know we have a problem with
-our code much sooner. Using the slice version of `primera_paraula` will throw a
-compile-time error:
+Disposem d'una utilitat molt més robusta ja que el compilador se n'encarregarà de garantir que les referències a `String` es mantinguin vàlides. Recordem l'error del programa al llistat
+4-8, en el que obteníem l'índex al final de la primera paraula però que tot seguit buidàvem el string de manera que el nostre índex era invàlid? Aquell codi era incorrecte des d'un punt de vista lògic però el compilador no mostrava cap error. El problema acavaria apareixen més tard quan intentèssim fer servir l'índex de la primera paraula en el string buidat. Les seccions fan que aquest tipus d'error sigui impossible i ens permeten saber molt abans que el nostre codi presenta aquest tipus de problemes. La versió de la funció `primera_paraula` que fa servir seccions, generarà un error de compilació:
 
 <span class="filename">Fitxer: src/main.rs</span>
 
@@ -190,7 +174,7 @@ compile-time error:
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-19-slice-error/src/main.rs:here}}
 ```
 
-Here’s the compiler error:
+Aquest és l'error de compilació:
 
 ```console
 {{#include ../listings/ch04-understanding-ownership/no-listing-19-slice-error/output.txt}}

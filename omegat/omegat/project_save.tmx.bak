@@ -175,6 +175,14 @@ a string slice for the type of the &lt;g3&gt;s&lt;/g3&gt; parameter&lt;x4/&gt;</
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A &lt;g1&gt;string slice&lt;/g1&gt; is a reference to part of a &lt;g2&gt;String&lt;/g2&gt;, and it looks like this:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T181441Z" creationid="moises" creationdate="20230406T181441Z">
+        <seg>Una &lt;g1&gt;secció de string&lt;/g1&gt; és una referència a part d'un &lt;g2&gt;String&lt;/g2&gt;, i té el següent aspecte:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A &lt;g7&gt;reference&lt;/g7&gt; is like a pointer in that it’s an address we can follow to access
 the data stored at that address; that data is owned by some other variable.</seg>
       </tuv>
@@ -984,6 +992,16 @@ corruption, which can potentially lead to security vulnerabilities.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Having to worry about the index in &lt;g1&gt;word&lt;/g1&gt; getting out of sync with the data in
+&lt;g2&gt;s&lt;/g2&gt; is tedious and error prone!</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T175713Z" creationid="moises" creationdate="20230406T175713Z">
+        <seg>Haver-se de preocupar de si el valor de &lt;g1&gt;paraula&lt;/g1&gt; es torna invalid quan canvia el contingut de 
+&lt;g2&gt;s&lt;/g2&gt; és tediós i és molt fàcil que ens equivoquem!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Here are some of the types that
 implement &lt;g4&gt;Copy&lt;/g4&gt;:</seg>
       </tuv>
@@ -1015,6 +1033,14 @@ words separated by spaces and returns the first word it finds in that string.</s
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T181409Z" creationid="moises" creationdate="20230305T181409Z">
         <seg>Veiem el mètode &lt;g1&gt;clone&lt;/g1&gt; en funcionament:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here’s the compiler error:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T180711Z" creationid="moises" creationdate="20230406T180711Z">
+        <seg>Aquest és l'error de compilació:</seg>
       </tuv>
     </tu>
     <tu>
@@ -1182,6 +1208,24 @@ using the byte literal syntax.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230321T173540Z" creationid="moises" creationdate="20230321T173540Z">
         <seg>En comptes d'això, podem oferir una referència al valor del &lt;g6&gt;String&lt;/g6&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Internally, the slice data
+structure stores the starting position and the length of the slice, which
+corresponds to &lt;g8&gt;ending_index&lt;/g8&gt; minus &lt;g9&gt;starting_index&lt;/g9&gt;.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T182120Z" creationid="moises" creationdate="20230406T182120Z">
+        <seg>Internament, l'estructura de dades d'una secció emmagatzema la posició inicial i la longitud de la secció que es correspon amb &lt;g8&gt;índex_final&lt;/g8&gt; menys &lt;g9&gt;índex_inicial&lt;/g9&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Its signature would have to look like this:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T175821Z" creationid="moises" creationdate="20230406T175821Z">
+        <seg>La seva signatura hauria de tenir el següent aspecte:</seg>
       </tuv>
     </tu>
     <tu>
@@ -1449,6 +1493,14 @@ transferring ownership, called &lt;g1&gt;references&lt;/g1&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Luckily, Rust has a solution to this problem: string slices.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T181404Z" creationid="moises" creationdate="20230406T181404Z">
+        <seg>Per sort, Rust ens ofereix una solució a aquest problema: seccions de string.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Malauradament no podem
 reservar un espai indeterminat de memòria dins l'executable, per cada peça de
 text de la que no coneixem la mida en temps d'execució i, a sobre, quan aquesta
@@ -1458,6 +1510,15 @@ pot canviar durant l'execució del programa.</seg>
         <seg>Malauradament no podem reservar un espai indeterminat de memòria dins l'executable, per cada peça de
 text de la que no coneixem la mida en temps d'execució i, a sobre, quan aquesta
 pot canviar durant l'execució del programa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Managing these indices is even more brittle if
+we write a &lt;g3&gt;second_word&lt;/g3&gt; function.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T175805Z" creationid="moises" creationdate="20230406T175805Z">
+        <seg>Encara és més delicat gestionar aquests indexos si escrivim la funció &lt;g3&gt;segona_paraula&lt;/g3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1549,6 +1610,16 @@ accomplished with the dereference operator, &lt;g3&gt;*&lt;/g3&gt;.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230321T193608Z" creationid="moises" creationdate="20230321T193608Z">
         <seg>Nota: L'oposat a referenciar amb &lt;g1&gt;&amp;&lt;/g1&gt; és &lt;g2&gt;dereferenciar&lt;/g2&gt;. Cosa que s'aconsegueix amb l'operador de derreferenciació,  &lt;g3&gt;*&lt;/g3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now we’re tracking a starting &lt;g1&gt;and&lt;/g1&gt; an ending index, and we have even more
+values that were calculated from data in a particular state but aren’t tied to
+that state at all.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T181306Z" creationid="moises" creationdate="20230406T181150Z">
+        <seg>Ara estarem controlant l'índex d'inici &lt;g1&gt;i&lt;/g1&gt; l'índex de final, i disposem de més valor encara que hem calculat de les dades en un determinat estat però que no estan associades a aquest estat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1834,6 +1905,15 @@ una funció especial per nosaltres.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Rather than a reference to the entire &lt;g1&gt;String&lt;/g1&gt;, &lt;g2&gt;hello&lt;/g2&gt; is a reference to a
+portion of the &lt;g3&gt;String&lt;/g3&gt;, specified in the extra &lt;g4&gt;[0..5]&lt;/g4&gt; bit.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T181805Z" creationid="moises" creationdate="20230406T181805Z">
+        <seg>En comptes d'una referència a tot el &lt;g1&gt;String&lt;/g1&gt;, &lt;g2&gt;hola&lt;/g2&gt; és una referència a una porció d'aquest &lt;g3&gt;String&lt;/g3&gt;, especificada en la part extra &lt;g4&gt;[0..4]&lt;/g4&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>References and Borrowing</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230322T140945Z" creationid="moises" creationdate="20230322T140945Z">
@@ -1850,10 +1930,29 @@ una funció especial per nosaltres.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Remember
+the bug in the program in Listing 4-8, when we got the index to the end of the
+first word but then cleared the string so our index was invalid?</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T180113Z" creationid="moises" creationdate="20230406T180113Z">
+        <seg>Recordem l'error del programa al llistat 
+4-8, en el que obteníem l'índex al final de la primera paraula però que tot seguit buidàvem el string de manera que el nostre índex era invàlid?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Return Values and Scope</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T191658Z" creationid="moises" creationdate="20230305T191658Z">
         <seg>Valors de retorn i àmbit</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returning a slice would also work for a &lt;g1&gt;second_word&lt;/g1&gt; function:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T175843Z" creationid="moises" creationdate="20230406T175843Z">
+        <seg>Returning a slice would also work for a &lt;g1&gt;segona_paraula&lt;/g1&gt; function:</seg>
       </tuv>
     </tu>
     <tu>
@@ -1987,6 +2086,15 @@ alliberar, estem malbaratant memòria.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Slices make this bug impossible and let us know we have a problem with
+our code much sooner.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T180344Z" creationid="moises" creationdate="20230406T180326Z">
+        <seg>Les seccions fan que aquest tipus d'error sigui impossible i ens permeten saber molt abans que el nostre codi presenta aquest tipus de problemes.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So, what actually happens is shown in Figure 4-4.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T184010Z" creationid="moises" creationdate="20230304T184010Z">
@@ -2007,6 +2115,14 @@ alliberar, estem malbaratant memòria.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T182035Z" creationid="moises" creationdate="20230305T182027Z">
         <seg>Dades només en la pila: Copy</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String Slices</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T181410Z" creationid="moises" creationdate="20230406T181410Z">
+        <seg>Seccions de Strings</seg>
       </tuv>
     </tu>
     <tu>
@@ -2048,6 +2164,15 @@ nostre codi la faci servir en temps d'execució.</seg>
       <tuv lang="CA" changeid="moises" changedate="20230305T184523Z" creationid="moises" creationdate="20230305T184523Z">
         <seg>Tant la pila com el monticle són parts de la memòria disponible per que el
 nostre codi la faci servir en temps d'execució.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>That code was
+logically incorrect but didn’t show any immediate errors.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T180156Z" creationid="moises" creationdate="20230406T180156Z">
+        <seg>Aquell codi era incorrecte des d'un punt de vista lògic però el compilador no mostrava cap error.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2186,6 +2311,16 @@ value to another variable moves it.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T192906Z" creationid="moises" creationdate="20230305T192906Z">
         <seg>La pertinença d'una variable segueix el mateix patró cada cop: assignar el valor a una altra variable el mou.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The problems would
+show up later if we kept trying to use the first word index with an emptied
+string.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T180239Z" creationid="moises" creationdate="20230406T180239Z">
+        <seg>El problema acavaria apareixen més tard quan intentèssim fer servir l'índex de la primera paraula en el string buidat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2515,9 +2650,8 @@ particular type for the life of that reference.</seg>
         <seg>Using the slice version of &lt;g2&gt;first_word&lt;/g2&gt; will throw a
 compile-time error:</seg>
       </tuv>
-      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
-        <seg>Using the slice version of &lt;g2&gt;primera_paraula&lt;/g2&gt; will throw a
-compile-time error:</seg>
+      <tuv lang="CA" changeid="moises" changedate="20230406T180655Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>La versió de la funció &lt;g2&gt;primera_paraula&lt;/g2&gt; que fa servir seccions, generarà un error de compilació:</seg>
       </tuv>
     </tu>
     <tu>
@@ -2548,6 +2682,19 @@ because the contents of &lt;g9&gt;s&lt;/g9&gt; have changed since we saved &lt;g
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>We create slices
+using a range within brackets by specifying &lt;g5&gt;[starting_index..ending_index]&lt;/g5&gt;,
+where &lt;g6&gt;starting_index&lt;/g6&gt; is the first position in the slice and &lt;g7&gt;ending_index&lt;/g7&gt; is
+one more than the last position in the slice.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T182010Z" creationid="moises" creationdate="20230406T182010Z">
+        <seg>Per crear seccions, fem servir rangs entre claudàtors, tot especificant &lt;g5&gt;[índex_inicial..índex_final]&lt;/g5&gt;,
+on &lt;g6&gt;índex_inicial&lt;/g6&gt; és la primera posició en la secció i &lt;g7&gt;índex_final&lt;/g7&gt; is
+és la posició després a la darrera de la secció.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>We do not copy the
 data on the heap that the pointer refers to.</seg>
       </tuv>
@@ -2571,6 +2718,24 @@ ownership, so this is fine.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230406T165202Z" creationid="moises" creationdate="20230406T165202Z">
         <seg>No volem adquirir la pertinença d'aquest string, així que amb la referència ja està bé.\</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We have three unrelated variables floating around that need
+to be kept in sync.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T181336Z" creationid="moises" creationdate="20230406T181336Z">
+        <seg>Disposem de tres variables no relacionades que cal que mantinguem sincronitzades.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We now have a straightforward API that’s much harder to mess up because the
+compiler will ensure the references into the &lt;g1&gt;String&lt;/g1&gt; remain valid.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T175958Z" creationid="moises" creationdate="20230406T175958Z">
+        <seg>Disposem d'una utilitat molt més robusta ja que el compilador se n'encarregarà de garantir que les referències a &lt;g1&gt;String&lt;/g1&gt; es mantinguin vàlides.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2637,8 +2802,8 @@ Chapter 15.</seg>
         <seg>We’re returning a &lt;g1&gt;usize&lt;/g1&gt; on its own, but it’s
 only a meaningful number in the context of the &lt;g2&gt;&amp;String&lt;/g2&gt;.</seg>
       </tuv>
-      <tuv lang="CA" changeid="moises" changedate="20230406T172938Z" creationid="moises" creationdate="20230406T172938Z">
-        <seg>Estem retornant un valor &lt;g1&gt;usize&lt;/g1&gt; però aquest només té significat en el context de &lt;g2&gt;&amp;String&lt;/g2&gt;.</seg>
+      <tuv lang="CA" changeid="moises" changedate="20230406T174848Z" creationid="moises" creationdate="20230406T172938Z">
+        <seg>Estem retornant un valor &lt;g1&gt;usize&lt;/g1&gt; que només té significat en el context de &lt;g2&gt;&amp;String&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2764,6 +2929,22 @@ invalidated reference:</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
         <seg>fn primera_paraula&lt;'a&gt;(s: &amp;'a str) -&gt; &amp;str {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>fn second_word(s: &amp;String) -&gt; &amp;str {</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T175844Z" creationid="moises" creationdate="20230406T175844Z">
+        <seg>fn segona_paraula(s: &amp;String) -&gt; &amp;str {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>fn second_word(s: &amp;String) -&gt; (usize, usize) {</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T175841Z" creationid="moises" creationdate="20230406T175841Z">
+        <seg>fn segona_paraula(s: &amp;String) -&gt; (usize, usize) {</seg>
       </tuv>
     </tu>
     <tu>

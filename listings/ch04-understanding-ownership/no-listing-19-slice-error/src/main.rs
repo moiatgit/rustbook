@@ -1,4 +1,4 @@
-fn first_word(s: &String) -> &str {
+fn primera_paraula(s: &String) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
@@ -12,12 +12,12 @@ fn first_word(s: &String) -> &str {
 
 // ANCHOR: here
 fn main() {
-    let mut s = String::from("hello world");
+    let mut s = String::from("Hola Món");
 
-    let word = first_word(&s);
+    let paraula = primera_paraula(&s);
 
     s.clear(); // error!
 
-    println!("the first word is: {}", word);
+    println!("La primera paraula és: {}", paraula);
 }
 // ANCHOR_END: here
