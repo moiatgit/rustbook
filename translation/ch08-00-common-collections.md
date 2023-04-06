@@ -1,4 +1,4 @@
-# 〜 Common Collections
+# Col·leccions comuns
 
 Rust’s standard library includes a number of very useful data structures called
 *collections*. Most other data types represent one specific value, but
