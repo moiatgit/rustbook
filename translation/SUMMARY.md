@@ -20,7 +20,7 @@
    - [Comments](ch03-04-comments.md)
    - [Control Flow](ch03-05-control-flow.md)
 
-- [Understanding Ownership](ch04-00-understanding-ownership.md)
+- [Comprenem l'Ownership](ch04-00-understanding-ownership.md)
    - [Què és Ownership?](ch04-01-what-is-ownership.md)
    - [Referències i prèstec](ch04-02-references-and-borrowing.md)
    - [El tipus Secció](ch04-03-slices.md)
