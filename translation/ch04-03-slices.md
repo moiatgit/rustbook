@@ -91,58 +91,56 @@ mon = &s[5..8];`, `mon` seria una secció que conté un punter al byte de la pos
 
 La figura 4-6 ho mostra en forma de diagrama.
 
-<img alt="Three tables: a table representing the stack data of s, which points
-to the byte at index 0 in a table of the string data "hello world" on
-the heap. The third table rep-resents the stack data of the slice world, which
-has a length value of 5 and points to byte 6 of the heap data table."
+<img alt="Tres taules: una taula que representa les dades de s, que apunta al byte a l'índex
+0 de la taula del contingut del string &quot;Hola&quot; Món al montícle.
+La tercera taula representa les dades de la secció mon, que té una longitud de 3 i apunta al byte en la posició 5 de la taula al monticle."
 src="img/trpl04-06.svg" class="center" style="width: 50%;" />
 
-<span class="caption">Figure 4-6: String slice referring to part of a
-`String`</span>
+<span class="caption">Figura 4-6: Secció de string que fa referència a una part d'un `String`</span>
 
-With Rust’s `..` range syntax, if you want to start at index 0, you can drop
-the value before the two periods. In other words, these are equal:
+Amb la sintaxi de rangs de Rust `..`, quan comencem per l'índex 0, podem estalviar-nos indicar-ho. En altres paraules, les següents seccions són iguals:
 
 ```rust
-let s = String::from("hello");
+let s = String::from("hola");
 
-let slice = &s[0..2];
-let slice = &s[..2];
+let seccio = &s[0..2];
+let seccio = &s[..2];
 ```
 
-By the same token, if your slice includes the last byte of the `String`, you
-can drop the trailing number. That means these are equal:
+De la mateixa manera, quan la secció ha d'incloure el darrer byte del 
+`String`, podem estalviar-nos indicar-ho:
 
 ```rust
-let s = String::from("hello");
+let s = String::from("hola");
 
-let len = s.len();
+let longitud = s.len();
 
-let slice = &s[3..len];
-let slice = &s[3..];
+let seccio = &s[3..longitud];
+let seccio = &s[3..];
 ```
 
-You can also drop both values to take a slice of the entire string. So these
-are equal:
+Fins i tot, podem no indicar cap dels dos indexos si volem una secció de tot el string:
 
 ```rust
-let s = String::from("hello");
+let s = String::from("hola");
 
-let len = s.len();
+let longitud = s.len();
 
-let slice = &s[0..len];
+let seccio = &s[0..longitud];
 let slice = &s[..];
 ```
 
-> Note: String slice range indices must occur at valid UTF-8 character
-> boundaries. If you attempt to create a string slice in the middle of a
-> multibyte character, your program will exit with an error. For the purposes
-> of introducing string slices, we are assuming ASCII only in this section; a
-> more thorough discussion of UTF-8 handling is in the [“Storing UTF-8 Encoded
-> Text with Strings”][strings]<!-- ignore --> section of Chapter 8.
+> Nota: Els indexos indicats a un rang d'una secció de string han d'apuntar a
+> un caràcter UTF-8 vàlid. Si intentem crear una secció en mig d'un caràcter
+> multibyte, el programa finalitzarà amb un error. Donat que és només una
+> introducció a les seccions, suposarem que el text del string està format
+> només per caràcters ASCII. Tractarem amb més detall la gestió de UTF-8 a la
+> secció [“Emmagatzemant texts en String codificats amb UTF-8”][strings]<!-- ignore -->
+> del capítol 8.
 
-With all this information in mind, let’s rewrite `primera_paraula` to return a
-slice. The type that signifies “string slice” is written as `&str`:
+Amb tota aquesta informació en ment, tornem a escriure 
+`primera_paraula` de manera que ara retorni una secció de string.
+El tipus que representa una “secció de string” s'escriu  `&str`:
 
 <span class="filename">Fitxer: src/main.rs</span>
 
@@ -150,23 +148,32 @@ slice. The type that signifies “string slice” is written as `&str`:
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-18-first-word-slice/src/main.rs:here}}
 ```
 
-We get the index for the end of the word the same way we did in Listing 4-7, by
-looking for the first occurrence of a space. When we find a space, we return a
-string slice using the start of the string and the index of the space as the
-starting and ending indices.
+Obtenim l'índex del final de la paraula de la mateixa manera que ho fèiem al llistat 
+4-7, tot cercant per la primera ocurrència d'un espai.
+Un cop trobat un espai, retornem una secció de string fent servir l'inici del string i l'índex de l'espai trobat, com a
+inici i final de la secció.
 
-Now when we call `primera_paraula`, we get back a single value that is tied to the
-underlying data. The value is made up of a reference to the starting point of
-the slice and the number of elements in the slice.
+Ara, en cridar 
+ `primera_paraula`, obtenim un valor que està associat al contingut del string.
+Aquest valor es composa d'una referència a l'inici de la secció i el nombre d'elements de la secció.
 
-Returning a slice would also work for a `segona_paraula` function:
+També funcionarà retornar una secció per la funció `segona_paraula`:
 
 ```rust,ignore
 fn segona_paraula(s: &String) -> &str {
 ```
 
-Disposem d'una utilitat molt més robusta ja que el compilador se n'encarregarà de garantir que les referències a `String` es mantinguin vàlides. Recordem l'error del programa al llistat
-4-8, en el que obteníem l'índex al final de la primera paraula però que tot seguit buidàvem el string de manera que el nostre índex era invàlid? Aquell codi era incorrecte des d'un punt de vista lògic però el compilador no mostrava cap error. El problema acavaria apareixen més tard quan intentèssim fer servir l'índex de la primera paraula en el string buidat. Les seccions fan que aquest tipus d'error sigui impossible i ens permeten saber molt abans que el nostre codi presenta aquest tipus de problemes. La versió de la funció `primera_paraula` que fa servir seccions, generarà un error de compilació:
+Així, disposem d'una utilitat molt més robusta ja que el compilador se
+n'encarregarà de garantir que les referències a `String` es mantinguin vàlides.
+Recordem l'error del programa al llistat 4-8, en el que obteníem l'índex al
+final de la primera paraula però que tot seguit buidàvem el string de manera
+que el nostre índex era invàlid? Aquell codi era incorrecte des d'un punt de
+vista lògic però el compilador no mostrava cap error. El problema acavaria
+apareixen més tard quan intentèssim fer servir l'índex de la primera paraula en
+el string buidat. Les seccions fan que aquest tipus d'error sigui impossible i
+ens permeten saber molt abans que el nostre codi presenta aquest tipus de
+problemes. La versió de la funció `primera_paraula` que fa servir seccions,
+generarà un error de compilació:
 
 <span class="filename">Fitxer: src/main.rs</span>
 
@@ -180,19 +187,28 @@ Aquest és l'error de compilació:
 {{#include ../listings/ch04-understanding-ownership/no-listing-19-slice-error/output.txt}}
 ```
 
-Recall from the borrowing rules that if we have an immutable reference to
-something, we cannot also take a mutable reference. Because `clear` needs to
-truncate the `String`, it needs to get a mutable reference. The `println!`
-after the call to `clear` uses the reference in `word`, so the immutable
-reference must still be active at that point. Rust disallows the mutable
-reference in `clear` and the immutable reference in `word` from existing at the
-same time, and compilation fails. Not only has Rust made our API easier to use,
-but it has also eliminated an entire class of errors at compile time!
+
+On diu `cannot borrow s as mutable because it is also borrowed as immutable`
+ens està dient exactament això, que no és possible fer un prèstec com a mutable
+ja que ja està sent prestat com a inmutable. El missatge d'error encara és més
+informatiu i ens indica que en quina part de la línia 16 s'està produïnt el
+prestec immutable, en quina de la 18 s'intenta el mutable i finalment en quina
+de la 20 s'està encara intentant fer ús del prèstec inmutable de la línia 16.
+
+Les regles de pertinença ens recorden que si tenim una referència immutable a
+alguna dada, no podem treure'n una referència mutable. Donat que `clear`
+necessita modificar el `String`, necessita obtenir-ne una referència mutable.
+`println!` un cop cridat a `clear` fa servir la referència a `paraula`, de
+manera que la referència inmutable ha de ser encara disponible en aquest punt.
+Rust no permet la referència mutable en `clear` i a l'hora la referència
+inmutable a `word` i, per tant, la compilació falla. Així, Rust no només ha fet
+que la nostra funció sigui més fàcil de fer servir, sinó que a més ha eliminat
+tota una família d'errors en temps de compilació!
 
 <!-- Old heading. Do not remove or links may break. -->
 <a id="string-literals-are-slices"></a>
 
-#### String Literals as Slices
+#### Els literals de string com a seccions
 
 Recall that we talked about string literals being stored inside the binary. Now
 that we know about slices, we can properly understand string literals:
@@ -207,32 +223,34 @@ immutable reference.
 
 #### String Slices as Parameters
 
-Knowing that you can take slices of literals and `String` values leads us to
-one more improvement on `primera_paraula`, and that’s its signature:
+Encara podem fer una millora més a `primera_paraula`, sabent que podem crear seccions tant de literals com de `String`.
+Recordem l'antiga signatura:
 
 ```rust,ignore
 fn primera_paraula(s: &String) -> &str {
 ```
 
-A more experienced Rustacean would write the signature shown in Listing 4-9
-instead because it allows us to use the same function on both `&String` values
-and `&str` values.
+Un Rustacean més experimentat hauria escrit aquesta signatura de la manera indicada al llistat 
+4-9 ja que així permetria usar la mateixa funció tant amb valors de tipus 
+ `&String` com amb `&str`.
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 4-9: Improving the `primera_paraula` function by using
-a string slice for the type of the `s` parameter</span>
+<span class="caption">Llistat 4-9: Millora de la funció `primera_paraula` fent
+servir una secció de string com a tipus del paràmetre `s`</span>
 
-If we have a string slice, we can pass that directly. If we have a `String`, we
-can pass a slice of the `String` or a reference to the `String`. This
-flexibility takes advantage of *deref coercions*, a feature we will cover in
-[“Implicit Deref Coercions with Functions and
-Methods”][deref-coercions]<!--ignore--> section of Chapter 15.
+Si tenim una secció de string, podem passar-la directament. Si tenim un 
+`String`, podem passar una secció del 
+`String` o bé una referència al `String`. Aquesta flexibilitat s'aprofita de 
+la *coerció deref* o 
+*deref coercions*, una característica que estudiarem a la secció 
+[“Coercions implícites Deref en funcions i mètodes”][deref-coercions]<!--ignore--> del capítol 15.
 
-Defining a function to take a string slice instead of a reference to a `String`
-makes our API more general and useful without losing any functionality:
+Fer que les nostres funcions prenguin una secció de string en comptes d'una referència a 
+`String`
+les fa més generals i usables, sense pèrdua de funcionalitat:
 
 <span class="filename">Fitxer: src/main.rs</span>
 
@@ -240,42 +258,43 @@ makes our API more general and useful without losing any functionality:
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:usage}}
 ```
 
-### Other Slices
+### Altres seccions
 
-String slices, as you might imagine, are specific to strings. But there’s a
-more general slice type too. Consider this array:
+Les seccions de strings són, com és evident, específiques dels strings. Hi ha, però, un tipus de secció més general. Considerem el següent array:
 
 ```rust
 let a = [1, 2, 3, 4, 5];
 ```
 
-Just as we might want to refer to part of a string, we might want to refer to
-part of an array. We’d do so like this:
+De la mateixa manera que podem voler referir-nos a part d'un string, també podem voler referir-nos a part d'un array.
+Ho podem fer de la següent manera:
 
 ```rust
 let a = [1, 2, 3, 4, 5];
 
-let slice = &a[1..3];
+let seccio = &a[1..3];
 
-assert_eq!(slice, &[2, 3]);
+assert_eq!(seccio, &[2, 3]);
 ```
 
-This slice has the type `&[i32]`. It works the same way as string slices do, by
-storing a reference to the first element and a length. You’ll use this kind of
-slice for all sorts of other collections. We’ll discuss these collections in
-detail when we talk about vectors in Chapter 8.
+Aquesta secció té com a tipus `&[i32]`. Funciona de la mateixa manera que les
+seccions de strings, tot guardant una referència al primer element i la
+longitud. Farem servir aquest tipus de segments per tot tipus de col·leccions,
+cosa que estudiarem més endavant quan parlem de vectors al capítol 8.
 
-## 〜 Summary
+## Conclusions
 
-The concepts of ownership, borrowing, and slices ensure memory safety in Rust
-programs at compile time. The Rust language gives you control over your memory
-usage in the same way as other systems programming languages, but having the
-owner of data automatically clean up that data when the owner goes out of scope
-means you don’t have to write and debug extra code to get this control.
+Els conceptes de pertinença (*ownership*), préstec (*borrowing*) i seccions
+(*slices*), garanteix la seguretat de memòria en temps de compilació als
+programes en Rust. El llenguatge Rust ens ofereix control sobre l'ús de memòria
+com ho fan altres llenguatges de programació, però disposar de propietari de
+les dades permet eliminar-les quan el propietari surt de l'abast del programa,
+de manera que no ens calgui escriure cap codi addicional per fer-ho nosaltres.
 
-Ownership affects how lots of other parts of Rust work, so we’ll talk about
-these concepts further throughout the rest of the book. Let’s move on to
-Chapter 5 and look at grouping pieces of data together in a `struct`.
+La pertinença afecta la manera en que funciona una gran part de Rust, per tant,
+seguirem parlant d'aquests conceptes en profunditat, durant la resta del
+llibre. Passem ara al capítol 5, i veiem com podem agrupar peces de dades
+juntes en una `struct`.
 
 [ch13]: ch13-02-iterators.html
 [ch6]: ch06-02-match.html#patterns-that-bind-to-values

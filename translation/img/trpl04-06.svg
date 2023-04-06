@@ -45,7 +45,7 @@
   <polygon fill="none" stroke="#000000" points="185.5,-84 185.5,-64 148.5,-64 148.5,-84 " id="polygon101" transform="matrix(4.1667,0,0,4.1667,16.6668,1145.8425)"/>
   <text text-anchor="start" x="697.92224" y="855.00684" font-family="Times, serif" font-size="58.3338px" fill="#000000" id="text103" style="stroke-width:4.1667">7</text>
   <polygon fill="none" stroke="#000000" points="221.5,-84 221.5,-64 185.5,-64 185.5,-84 " id="polygon105" transform="matrix(4.1667,0,0,4.1667,16.6668,1145.8425)"/>
-  <text text-anchor="start" x="849.08698" y="775.96539" font-family="Times, serif" font-size="58.3338px" fill="#000000" id="text107" style="stroke-width:4.1667">ó</text>
+  <text text-anchor="start" x="849.08698" y="775.96539" font-family="Times, serif" font-size="58.3338px" fill="#000000" id="text107" style="stroke-width:4.1667">o</text>
   <text text-anchor="start" x="849.02863" y="859.29938" font-family="Times, serif" font-size="58.3338px" fill="#000000" id="text115" style="stroke-width:4.1667">n</text>
   <g id="edge1" class="edge" transform="matrix(4.1667,0,0,4.1667,16.6668,1063.8425)">
     <title id="title134">table0:c-&gt;table4:pointee2</title>

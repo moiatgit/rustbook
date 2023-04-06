@@ -12,7 +12,7 @@ fn primera_paraula(s: &String) -> usize {
 
 // ANCHOR: here
 fn main() {
-    let mut s = String::from("Hola Món");
+    let mut s = String::from("Hola Mon");   // Món sense accents perquè sigui ASCII
 
     let paraula = primera_paraula(&s); // paraula rebrà el valor 4
 

@@ -1,5 +1,5 @@
 // ANCHOR: here
-fn first_word(s: &str) -> &str {
+fn primera_paraula(s: &str) -> &str {
     // ANCHOR_END: here
     let bytes = s.as_bytes();
 
@@ -14,23 +14,23 @@ fn first_word(s: &str) -> &str {
 
 // ANCHOR: usage
 fn main() {
-    let my_string = String::from("hello world");
+    let meu_string = String::from("Hola Mon");
 
-    // `first_word` works on slices of `String`s, whether partial or whole
-    let word = first_word(&my_string[0..6]);
-    let word = first_word(&my_string[..]);
-    // `first_word` also works on references to `String`s, which are equivalent
-    // to whole slices of `String`s
-    let word = first_word(&my_string);
+    // `primera_paraula` works on slices of `String`s, whether partial or whole
+    let paraula = primera_paraula(&meu_string[0..5]);
+    let paraula = primera_paraula(&meu_string[..]);
+    // `primera_paraula` també funciona amb referències a `String`s, 
+    // que són equivalents a seccions completes de `String`s
+    let paraula = primera_paraula(&meu_string);
 
-    let my_string_literal = "hello world";
+    let meu_string_literal = "hola mon";
 
-    // `first_word` works on slices of string literals, whether partial or whole
-    let word = first_word(&my_string_literal[0..6]);
-    let word = first_word(&my_string_literal[..]);
+    // `primera_paraula` funciona amb seccions de literals de strings, ja siguin parcials o totals
+    let paraula = primera_paraula(&meu_string_literal[0..5]);
+    let paraula = primera_paraula(&meu_string_literal[..]);
 
-    // Because string literals *are* string slices already,
-    // this works too, without the slice syntax!
-    let word = first_word(my_string_literal);
+    // Donat que els literals de string ja *són* seccions de string,
+    // això també funciona, sense necessitat de la notació de secció!
+    let paraula = primera_paraula(meu_string_literal);
 }
 // ANCHOR_END: usage
