@@ -202,7 +202,7 @@ TypeName!` where `TypeName` is the name of the type on which this trait has
 been defined. In other words, we’ll write a crate that enables another
 programmer to write code like Listing 19-30 using our crate.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-30/src/main.rs}}

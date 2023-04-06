@@ -66,7 +66,7 @@ backyard
 
 The crate root file in this case is *src/main.rs*, and it contains:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,noplayground,ignore
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/quick-reference-example/src/main.rs}}

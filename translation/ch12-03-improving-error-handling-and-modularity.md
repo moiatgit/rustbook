@@ -70,7 +70,7 @@ We’ll extract the functionality for parsing arguments into a function that
 *src/lib.rs*. Listing 12-5 shows the new start of `main` that calls a new
 function `parse_config`, which we’ll define in *src/main.rs* for the moment.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-05/src/main.rs:here}}
@@ -112,7 +112,7 @@ other and what their purpose is.
 
 Listing 12-6 shows the improvements to the `parse_config` function.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,should_panic,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-06/src/main.rs:here}}
@@ -179,7 +179,7 @@ changing `parse_config` into a `new` function associated with `Config`, we’ll
 be able to create instances of `Config` by calling `Config::new`. Listing 12-7
 shows the changes we need to make.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,should_panic,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-07/src/main.rs:here}}
@@ -214,7 +214,7 @@ In Listing 12-8, we add a check in the `new` function that will verify that the
 slice is long enough before accessing index 1 and 2. If the slice isn’t long
 enough, the program panics and displays a better error message.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-08/src/main.rs:here}}
@@ -265,7 +265,7 @@ function we’re now calling `Config::build` and the body of the function needed
 to return a `Result`. Note that this won’t compile until we update `main` as
 well, which we’ll do in the next listing.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-09/src/main.rs:here}}
@@ -299,7 +299,7 @@ tool with a nonzero error code away from `panic!` and instead implement it by
 hand. A nonzero exit status is a convention to signal to the process that
 called our program that the program exited with an error state.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-10/src/main.rs:here}}
@@ -350,7 +350,7 @@ Listing 12-11 shows the extracted `run` function. For now, we’re just making
 the small, incremental improvement of extracting the function. We’re still
 defining the function in *src/main.rs*.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-11/src/main.rs:here}}
@@ -373,7 +373,7 @@ us further consolidate the logic around handling errors into `main` in a
 user-friendly way. Listing 12-12 shows the changes we need to make to the
 signature and body of `run`.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-12/src/main.rs:here}}
@@ -424,7 +424,7 @@ have some error-handling code here! Let’s rectify that problem now.
 We’ll check for errors and handle them using a technique similar to one we used
 with `Config::build` in Listing 12-10, but with a slight difference:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/no-listing-01-handling-errors-in-main/src/main.rs:here}}
@@ -474,7 +474,7 @@ a public API we can test!
 Now we need to bring the code we moved to *src/lib.rs* into the scope of the
 binary crate in *src/main.rs*, as shown in Listing 12-14.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-14/src/main.rs:here}}

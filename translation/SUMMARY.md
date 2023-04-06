@@ -1,4 +1,4 @@
-# 〜 The Rust Programming Language
+# El llenguatge de programacio Rust
 
 [The Rust Programming Language](title-page.md)
 [Foreword](foreword.md)
@@ -21,9 +21,9 @@
    - [Control Flow](ch03-05-control-flow.md)
 
 - [Understanding Ownership](ch04-00-understanding-ownership.md)
-   - [What is Ownership?](ch04-01-what-is-ownership.md)
-   - [References and Borrowing](ch04-02-references-and-borrowing.md)
-   - [The Slice Type](ch04-03-slices.md)
+   - [Què és Ownership?](ch04-01-what-is-ownership.md)
+   - [Referències i prèstec](ch04-02-references-and-borrowing.md)
+   - [El tipus Secció](ch04-03-slices.md)
 
 - [Using Structs to Structure Related Data](ch05-00-structs.md)
    - [Defining and Instantiating Structs](ch05-01-defining-structs.md)

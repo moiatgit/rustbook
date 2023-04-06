@@ -15,7 +15,7 @@ our current server implementation. Listing 20-10 implements handling a request
 to */sleep* with a simulated slow response that will cause the server to sleep
 for 5 seconds before responding.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-10/src/main.rs:here}}
@@ -106,7 +106,7 @@ thread pool as an improvement, and contrasting the two solutions will be
 easier. Listing 20-11 shows the changes to make to `main` to spawn a new thread
 to handle each stream within the `for` loop.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-11/src/main.rs:here}}
@@ -132,7 +132,7 @@ threads to a thread pool doesn’t require large changes to the code that uses
 our API. Listing 20-12 shows the hypothetical interface for a `ThreadPool`
 struct we want to use instead of `thread::spawn`.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-12/src/main.rs:here}}
@@ -180,7 +180,7 @@ definition of a `ThreadPool` struct that we can have for now:
 Then edit *main.rs* file to bring `ThreadPool` into scope from the library
 crate by adding the following code to the top of *src/main.rs*:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-01-define-threadpool-struct/src/main.rs:here}}

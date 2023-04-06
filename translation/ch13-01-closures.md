@@ -35,7 +35,7 @@ The method `giveaway` defined on `Inventory` gets the optional shirt
 color preference of the free shirt winner, and returns the shirt color the
 person will get. This setup is shown in Listing 13-1:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-01/src/main.rs}}
@@ -105,7 +105,7 @@ shown in Listing 13-2. In this example, we’re defining a closure and storing i
 in a variable rather than defining the closure in the spot we pass it as an
 argument as we did in Listing 13-1.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-02/src/main.rs:here}}
@@ -147,7 +147,7 @@ Because there are no type annotations, we can call the closure with any type,
 which we’ve done here with `String` the first time. If we then try to call
 `example_closure` with an integer, we’ll get an error.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-03/src/main.rs:here}}
@@ -179,7 +179,7 @@ In Listing 13-4, we define a closure that captures an immutable reference to
 the vector named `list` because it only needs an immutable reference to print
 the value:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-04/src/main.rs}}
@@ -204,7 +204,7 @@ is called. This code compiles, runs, and prints:
 Next, in Listing 13-5, we change the closure body so that it adds an element to
 the `list` vector. The closure now captures a mutable reference:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-05/src/main.rs}}
@@ -238,7 +238,7 @@ concurrency, but for now, let’s briefly explore spawning a new thread using a
 closure that needs the `move` keyword. Listing 13-6 shows Listing 13-4 modified
 to print the vector in a new thread rather than in the main thread:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-06/src/main.rs}}
@@ -348,7 +348,7 @@ when you want to sort a slice by a particular attribute of each item. In
 Listing 13-7, we have a list of `Rectangle` instances and we use `sort_by_key`
 to order them by their `width` attribute from low to high:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-07/src/main.rs}}
@@ -372,7 +372,7 @@ In contrast, Listing 13-8 shows an example of a closure that implements just
 the `FnOnce` trait, because it moves a value out of the environment. The
 compiler won’t let us use this closure with `sort_by_key`:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-08/src/main.rs}}
@@ -406,7 +406,7 @@ in Listing 13-9 works with `sort_by_key` because it is only capturing a mutable
 reference to the `num_sort_operations` counter and can therefore be called more
 than once:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-09/src/main.rs}}

@@ -22,7 +22,7 @@ function `f` twice, passing it the `arg` value, then adds the two function call
 results together. The `main` function calls `do_twice` with the arguments
 `add_one` and `5`.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-27/src/main.rs}}

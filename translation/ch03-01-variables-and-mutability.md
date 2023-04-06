@@ -15,7 +15,7 @@ your *projects* directory by using `cargo new variables`.
 Then, in your new *variables* directory, open *src/main.rs* and replace its
 code with the following code, which won’t compile just yet:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-01-variables-are-immutable/src/main.rs}}
@@ -56,7 +56,7 @@ will be changing this variable’s value.
 
 For example, let’s change *src/main.rs* to the following:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-02-adding-mut/src/main.rs}}
@@ -131,7 +131,7 @@ variable name to itself until either it itself is shadowed or the scope ends.
 We can shadow a variable by using the same variable’s name and repeating the
 use of the `let` keyword as follows:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-03-shadowing/src/main.rs}}

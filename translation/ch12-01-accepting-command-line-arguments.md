@@ -39,7 +39,7 @@ the iterator produces.
 The code in Listing 12-1 allows your `minigrep` program to read any command
 line arguments passed to it and then collect the values into a vector.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-01/src/main.rs}}
@@ -101,7 +101,7 @@ arguments. Now we need to save the values of the two arguments in variables so
 we can use the values throughout the rest of the program. We do that in Listing
 12-2.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,should_panic,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-02/src/main.rs}}

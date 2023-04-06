@@ -98,7 +98,7 @@ example, in Listing 19-14 we overload the `+` operator to add two `Point`
 instances together. We do this by implementing the `Add` trait on a `Point`
 struct:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-14/src/main.rs}}
@@ -186,7 +186,7 @@ want to use. Consider the code in Listing 19-16 where we’ve defined two traits
 both traits on a type `Human` that already has a method named `fly` implemented
 on it. Each `fly` method does something different.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-16/src/main.rs:here}}
@@ -199,7 +199,7 @@ implemented on `Human` directly</span>
 When we call `fly` on an instance of `Human`, the compiler defaults to calling
 the method that is directly implemented on the type, as shown in Listing 19-17.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-17/src/main.rs:here}}
@@ -215,7 +215,7 @@ To call the `fly` methods from either the `Pilot` trait or the `Wizard` trait,
 we need to use more explicit syntax to specify which `fly` method we mean.
 Listing 19-18 demonstrates this syntax.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-18/src/main.rs:here}}
@@ -249,7 +249,7 @@ We make an `Animal` trait with an associated non-method function `baby_name`.
 The `Animal` trait is implemented for the struct `Dog`, on which we also
 provide an associated non-method function `baby_name` directly.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-19/src/main.rs}}
@@ -278,7 +278,7 @@ is part of the `Animal` trait that we implemented on `Dog` so the code prints
 we used in Listing 19-18 doesn’t help here; if we change `main` to the code in
 Listing 19-20, we’ll get a compilation error.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-20/src/main.rs:here}}
@@ -301,7 +301,7 @@ To disambiguate and tell Rust that we want to use the implementation of
 type, we need to use fully qualified syntax. Listing 19-21 demonstrates how to
 use fully qualified syntax.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-21/src/main.rs:here}}
@@ -365,7 +365,7 @@ trait definition by specifying `OutlinePrint: Display`. This technique is
 similar to adding a trait bound to the trait. Listing 19-22 shows an
 implementation of the `OutlinePrint` trait.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-22/src/main.rs:here}}
@@ -384,7 +384,7 @@ the current scope.
 Let’s see what happens when we try to implement `OutlinePrint` on a type that
 doesn’t implement `Display`, such as the `Point` struct:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-02-impl-outlineprint-for-point/src/main.rs:here}}
@@ -399,7 +399,7 @@ We get an error saying that `Display` is required but not implemented:
 To fix this, we implement `Display` on `Point` and satisfy the constraint that
 `OutlinePrint` requires, like so:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-03-impl-display-for-point/src/main.rs:here}}
@@ -431,7 +431,7 @@ orphan rule prevents us from doing directly because the `Display` trait and the
 that holds an instance of `Vec<T>`; then we can implement `Display` on
 `Wrapper` and use the `Vec<T>` value, as shown in Listing 19-23.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-23/src/main.rs}}

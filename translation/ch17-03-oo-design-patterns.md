@@ -40,7 +40,7 @@ Listing 17-11 shows this workflow in code form: this is an example usage of the
 API we’ll implement in a library crate named `blog`. This won’t compile yet
 because we haven’t implemented the `blog` crate.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch17-oop/listing-17-11/src/main.rs:all}}
@@ -383,7 +383,7 @@ draft posts where only published posts are allowed by issuing a compiler error.
 
 Let’s consider the first part of `main` in Listing 17-11:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch17-oop/listing-17-11/src/main.rs:here}}
@@ -465,7 +465,7 @@ pending review posts’ contents be empty strings, nor do we need them: we can�
 compile code that tries to use the content of posts in those states any longer.
 The updated code in `main` is shown in Listing 17-21:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch17-oop/listing-17-21/src/main.rs}}

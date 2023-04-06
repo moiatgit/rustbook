@@ -31,7 +31,7 @@ panic occurs to make it easier to track down the source of the panic.
 
 Let’s try calling `panic!` in a simple program:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,should_panic,panics
 {{#rustdoc_include ../listings/ch09-error-handling/no-listing-01-panic/src/main.rs}}
@@ -64,7 +64,7 @@ from a library because of a bug in our code instead of from our code calling
 the macro directly. Listing 9-1 has some code that attempts to access an
 index in a vector beyond the range of valid indexes.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,should_panic,panics
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-01/src/main.rs}}

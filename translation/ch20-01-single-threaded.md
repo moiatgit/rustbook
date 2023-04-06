@@ -34,7 +34,7 @@ Now enter the code in Listing 20-1 in *src/main.rs* to start. This code will
 listen at the local address `127.0.0.1:7878` for incoming TCP streams. When it
 gets an incoming stream, it will print `Connection established!`.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-01/src/main.rs}}
@@ -127,7 +127,7 @@ this new `handle_connection` function, we’ll read data from the TCP stream and
 print it so we can see the data being sent from the browser. Change the code to
 look like Listing 20-2.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-02/src/main.rs}}
@@ -273,7 +273,7 @@ successful request! From the `handle_connection` function, remove the
 `println!` that was printing the request data and replace it with the code in
 Listing 20-3.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-03/src/main.rs:here}}
@@ -316,7 +316,7 @@ from the server when a request is received, we’ll modify `handle_connection` a
 shown in Listing 20-5 to read the HTML file, add it to the response as a body,
 and send it.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-05/src/main.rs:here}}
@@ -356,7 +356,7 @@ as shown in Listing 20-6. This new code checks the content of the request
 received against what we know a request for */* looks like and adds `if` and
 `else` blocks to treat requests differently.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-06/src/main.rs:here}}
@@ -390,7 +390,7 @@ with the status code 404, which signals that the content for the request was
 not found. We’ll also return some HTML for a page to render in the browser
 indicating the response to the end user.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-07/src/main.rs:here}}
@@ -429,7 +429,7 @@ we can then use those variables unconditionally in the code to read the file
 and write the response. Listing 20-9 shows the resulting code after replacing
 the large `if` and `else` blocks.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-09/src/main.rs:here}}

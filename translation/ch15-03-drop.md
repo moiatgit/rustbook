@@ -28,7 +28,7 @@ Listing 15-14 shows a `CustomSmartPointer` struct whose only custom
 functionality is that it will print `Dropping CustomSmartPointer!` when the
 instance goes out of scope, to show when Rust runs the `drop` function.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-14/src/main.rs}}
@@ -79,7 +79,7 @@ If we try to call the `Drop` trait’s `drop` method manually by modifying the
 `main` function from Listing 15-14, as shown in Listing 15-15, we’ll get a
 compiler error:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-15/src/main.rs:here}}
@@ -114,7 +114,7 @@ trait. We call it by passing as an argument the value we want to force drop.
 The function is in the prelude, so we can modify `main` in Listing 15-15 to
 call the `drop` function, as shown in Listing 15-16:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-16/src/main.rs:here}}

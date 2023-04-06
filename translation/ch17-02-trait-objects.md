@@ -159,7 +159,7 @@ If someone using our library decides to implement a `SelectBox` struct that has
 `width`, `height`, and `options` fields, they implement the `Draw` trait on the
 `SelectBox` type as well, as shown in Listing 17-8:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch17-oop/listing-17-08/src/main.rs:here}}
@@ -174,7 +174,7 @@ by putting each in a `Box<T>` to become a trait object. They can then call the
 `run` method on the `Screen` instance, which will call `draw` on each of the
 components. Listing 17-9 shows this implementation:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch17-oop/listing-17-09/src/main.rs:here}}
@@ -208,7 +208,7 @@ our code if the values don’t implement the traits that the trait objects need.
 For example, Listing 17-10 shows what happens if we try to create a `Screen`
 with a `String` as a component:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch17-oop/listing-17-10/src/main.rs}}

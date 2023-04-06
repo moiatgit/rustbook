@@ -44,7 +44,7 @@ operations that borrow, we can move the `String` values from the iterator into
 
 Open your I/O project’s *src/main.rs* file, which should look like this:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch13-functional-features/listing-12-24-reproduced/src/main.rs:ch13}}
@@ -54,7 +54,7 @@ We’ll first change the start of the `main` function that we had in Listing
 12-24 to the code in Listing 13-18, which this time uses an iterator. This
 won’t compile until we update `Config::build` as well.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-18/src/main.rs:here}}

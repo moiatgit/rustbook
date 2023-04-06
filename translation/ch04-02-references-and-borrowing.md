@@ -8,7 +8,7 @@ A diferència dels punters, està garantit que les referències apunten un valor
 
 A continuació es mostra com definirem i usarem la funció `calcula_longitud` que té un paràmetre que fa referència a un objecte en comptes de prendre possessió del valor:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:all}}
@@ -54,7 +54,7 @@ to give it back. You don’t own it.
 So, what happens if we try to modify something we’re borrowing? Try the code in
 Listing 4-6. Spoiler alert: it doesn’t work!
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-06/src/main.rs}}
@@ -76,7 +76,7 @@ allowed to modify something we have a reference to.
 We can fix the code from Listing 4-6 to allow us to modify a borrowed value
 with just a few small tweaks that use, instead, a *mutable reference*:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-09-fixes-listing-04-06/src/main.rs}}
@@ -91,7 +91,7 @@ Mutable references have one big restriction: if you have a mutable reference to
 a value, you can have no other references to that value. This code that
 attempts to create two mutable references to `s` will fail:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-10-multiple-mut-not-allowed/src/main.rs:here}}
@@ -185,7 +185,7 @@ reference to the data does.
 Let’s try to create a dangling reference to see how Rust prevents them with a
 compile-time error:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-14-dangling-reference/src/main.rs}}
@@ -209,7 +209,7 @@ for it to be borrowed from
 Let’s take a closer look at exactly what’s happening at each stage of our
 `dangle` code:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-15-dangling-reference-annotated/src/main.rs:here}}

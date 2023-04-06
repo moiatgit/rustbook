@@ -135,7 +135,7 @@ more precision. All floating-point types are signed.
 
 Here’s an example that shows floating-point numbers in action:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-06-floating-point/src/main.rs}}
@@ -151,7 +151,7 @@ types: addition, subtraction, multiplication, division, and remainder. Integer
 division truncates toward zero to the nearest integer. The following code shows
 how you’d use each numeric operation in a `let` statement:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-07-numeric-operations/src/main.rs}}
@@ -168,7 +168,7 @@ As in most other programming languages, a Boolean type in Rust has two possible
 values: `true` and `false`. Booleans are one byte in size. The Boolean type in
 Rust is specified using `bool`. For example:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-08-boolean/src/main.rs}}
@@ -183,7 +183,7 @@ Flow”][control-flow]<!-- ignore --> section.
 Rust’s `char` type is the language’s most primitive alphabetic type. Here are
 some examples of declaring `char` values:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-09-char/src/main.rs}}
@@ -216,7 +216,7 @@ parentheses. Each position in the tuple has a type, and the types of the
 different values in the tuple don’t have to be the same. We’ve added optional
 type annotations in this example:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-10-tuples/src/main.rs}}
@@ -226,7 +226,7 @@ The variable `tup` binds to the entire tuple because a tuple is considered a
 single compound element. To get the individual values out of a tuple, we can
 use pattern matching to destructure a tuple value, like this:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-11-destructuring-tuples/src/main.rs}}
@@ -241,7 +241,7 @@ the single tuple into three parts. Finally, the program prints the value of
 We can also access a tuple element directly by using a period (`.`) followed by
 the index of the value we want to access. For example:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-12-tuple-indexing/src/main.rs}}
@@ -265,7 +265,7 @@ some other languages, arrays in Rust have a fixed length.
 We write the values in an array as a comma-separated list inside square
 brackets:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-13-arrays/src/main.rs}}
@@ -318,7 +318,7 @@ An array is a single chunk of memory of a known, fixed size that can be
 allocated on the stack. You can access elements of an array using indexing,
 like this:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-14-array-indexing/src/main.rs}}
@@ -334,7 +334,7 @@ Let’s see what happens if you try to access an element of an array that is pas
 the end of the array. Say you run this code, similar to the guessing game in
 Chapter 2, to get an array index from the user:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,panics
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-15-invalid-array-access/src/main.rs}}

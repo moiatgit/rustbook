@@ -19,7 +19,7 @@ case</span>
 With the text in place, edit *src/main.rs* and add code to read the file, as
 shown in Listing 12-4.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,should_panic,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-04/src/main.rs:here}}

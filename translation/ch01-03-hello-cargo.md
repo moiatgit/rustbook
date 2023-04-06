@@ -92,7 +92,7 @@ first project in Chapter 2, so we’ll use this dependencies section then.
 
 Now open *src/main.rs* and take a look:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 fn main() {

@@ -15,7 +15,7 @@ Let’s change the `area` function that has a `Rectangle` instance as a paramete
 and instead make an `area` method defined on the `Rectangle` struct, as shown
 in Listing 5-13.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-13/src/main.rs}}
@@ -65,7 +65,7 @@ Note that we can choose to give a method the same name as one of the struct’s
 fields. For example, we can define a method on `Rectangle` that is also named
 `width`:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-06-method-field-interaction/src/main.rs:here}}
@@ -141,7 +141,7 @@ within `self` (the first `Rectangle`); otherwise, it should return `false`.
 That is, once we’ve defined the `can_hold` method, we want to be able to write
 the program shown in Listing 5-14.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-14/src/main.rs}}
@@ -173,7 +173,7 @@ Boolean, and the implementation will check whether the width and height of
 respectively. Let’s add the new `can_hold` method to the `impl` block from
 Listing 5-13, shown in Listing 5-15.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-15/src/main.rs:here}}
@@ -204,7 +204,7 @@ one dimension parameter and use that as both width and height, thus making it
 easier to create a square `Rectangle` rather than having to specify the same
 value twice:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-03-associated-functions/src/main.rs:here}}

@@ -36,7 +36,7 @@ compiler warnings that have a clear way to correct the problem that’s likely
 what you want. It’s likely you’ve seen compiler warnings before. For example,
 consider this code:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 fn do_something() {}
@@ -80,7 +80,7 @@ $ cargo fix
 When we look at *src/main.rs* again, we’ll see that `cargo fix` has changed the
 code:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 fn do_something() {}
@@ -117,7 +117,7 @@ $ cargo clippy
 For example, say you write a program that uses an approximation of a
 mathematical constant, such as pi, as this program does:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 fn main() {
@@ -146,7 +146,7 @@ defined, and that your program would be more correct if you used the constant
 instead. You would then change your code to use the `PI` constant. The
 following code doesn’t result in any errors or warnings from Clippy:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 fn main() {

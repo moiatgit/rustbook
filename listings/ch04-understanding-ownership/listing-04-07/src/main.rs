@@ -1,5 +1,5 @@
 // ANCHOR: here
-fn first_word(s: &String) -> usize {
+fn primera_paraula(s: &String) -> usize {
     // ANCHOR: as_bytes
     let bytes = s.as_bytes();
     // ANCHOR_END: as_bytes

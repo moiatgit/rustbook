@@ -142,7 +142,7 @@ finish when the `ThreadPool` `drop` implementation calls `join` on them.
 To see this code in action, let’s modify `main` to accept only two requests
 before gracefully shutting down the server, as shown in Listing 20-25.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-25/src/main.rs:here}}
@@ -213,7 +213,7 @@ shutdown of the server, which cleans up all the threads in the pool.
 
 Here’s the full code for reference:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-07-final-code/src/main.rs}}

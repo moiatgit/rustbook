@@ -6,6 +6,39 @@
 <!-- Default translations -->
     <tu>
       <tuv lang="EN-US">
+        <seg>References and Borrowing</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164047Z" creationid="moises" creationdate="20230406T164047Z">
+        <seg>Referències i prèstec</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Slices let you reference a contiguous sequence of elements in a collection
+rather than the whole collection.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164550Z" creationid="moises" creationdate="20230406T164550Z">
+        <seg>Les seccions (en anglès *slices*) permeten referenciar una seqüència contigua d'elements en una col·lecció, en comptes de tota la col·lecció.\</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Slice Type</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164616Z" creationid="moises" creationdate="20230406T164616Z">
+        <seg>El tipus Secció</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What is Ownership?</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164028Z" creationid="moises" creationdate="20230406T164028Z">
+        <seg>Què és Ownership?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg></seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T185650Z" creationid="moises" creationdate="20230305T185650Z">
@@ -64,8 +97,8 @@ s1</seg>
       <tuv lang="EN-US">
         <seg>Filename: src/main.rs</seg>
       </tuv>
-      <tuv lang="CA" changeid="moises" changedate="20230305T190628Z" creationid="moises" creationdate="20230305T190628Z">
-        <seg>Filename: src/main.rs</seg>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165540Z" creationid="moises" creationdate="20230305T190628Z">
+        <seg>Fitxer: src/main.rs</seg>
       </tuv>
     </tu>
     <tu>
@@ -109,6 +142,35 @@ values</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T193609Z" creationid="moises" creationdate="20230305T193609Z">
         <seg>Llistat 4-5: Retornant la pertinença dels paràmetres</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Llistat 4-7: The first_word function that returns a
+byte index value into the String parameter</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T171421Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>Llistat 4-7: La funció primera_paraula que retorna el valor de la posició del paràmetre String</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Llistat 4-8: Storing the result from calling the
+first_word function and then changing the String contents</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T173502Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>Llistat 4-8: Guardem el resultat de la funció
+primera_paraula i a continuació modifiquem el contingut del String</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Llistat 4-9: Improving the first_word function by using
+a string slice for the type of the s parameter</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>Llistat 4-9: Improving the primera_paraula function by using
+a string slice for the type of the s parameter</seg>
       </tuv>
     </tu>
     <tu>
@@ -161,6 +223,15 @@ partir d'ara ometrem el fn main() { dels exemples de codi.</seg>
       <tuv lang="CA" changeid="moises" changedate="20230305T184638Z" creationid="moises" creationdate="20230305T184638Z">
         <seg>A partir d'ara, com que ja hem vist la sintaxi bàsica d'un programa en Rust, a
 partir d'ara ometrem el fn main() { dels exemples de codi.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A slice is a kind of reference, so it does
+not have ownership.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164719Z" creationid="moises" creationdate="20230406T164719Z">
+        <seg>Uan secció és un tipus de referència i, per tant, no té pertinença.</seg>
       </tuv>
     </tu>
     <tu>
@@ -422,11 +493,49 @@ continuarem aprofundint en el concepte amb la introducció del tipus String.</se
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Because word isn’t connected to the state of s
+at all, word still contains the value 5.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T173846Z" creationid="moises" creationdate="20230406T173846Z">
+        <seg>Donat que el valor de paraula no està connectat a l'estat de s, paraual encara conté el valor 4.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Because it does not own it, the value it points to will
 not be dropped when the reference stops being used.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230322T202726Z" creationid="moises" creationdate="20230322T202726Z">
         <seg>Donat que el valor no li pertany, no serà eliminat quan la referencia deixi de ser usada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Because the enumerate method returns a tuple, we can use patterns to
+destructure that tuple.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172404Z" creationid="moises" creationdate="20230406T172404Z">
+        <seg>Com que el mètode enumerate retorna una tupla, podem fer servir patrons per desestructurar-la.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Because we get a reference to the element from .iter().enumerate(), we use
+&amp; in the pattern.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172619Z" creationid="moises" creationdate="20230406T172619Z">
+        <seg>Donat que obtenim una referència a l'element des de .iter().enumerate(), hem de fer servir &amp; al patró.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Because we need to go through the String element by element and check whether
+a value is a space, we’ll convert our String to an array of bytes using the
+as_bytes method.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T171600Z" creationid="moises" creationdate="20230406T171600Z">
+        <seg>Com que ens cal atravesar el String element a element i comprovar si la posició correspon o no a un espai, convertirem el nostre String a una seqüència (array) de bytes, fent servir el mètode 
+as_bytes.</seg>
       </tuv>
     </tu>
     <tu>
@@ -465,6 +574,14 @@ common.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T193652Z" creationid="moises" creationdate="20230305T193652Z">
         <seg>Però tot plegat resulta en massa ceremònia i un munt de feina per un concepte tan habitual.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But what should we return?</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165218Z" creationid="moises" creationdate="20230406T165218Z">
+        <seg>Ara, però què és el que hauríem de retornar?</seg>
       </tuv>
     </tu>
     <tu>
@@ -532,6 +649,15 @@ funciona de la mateixa manera.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T185112Z" creationid="moises" creationdate="20230305T185112Z">
         <seg>Coneixem els continguts d'un literal de text en temps de compilació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Consider the program in Listing 4-8 that
+uses the first_word function from Listing 4-7.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T173047Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>Considerem el programa de lllistat 4-8 que fa servir la funció primera_paraula del llistat 4-7.</seg>
       </tuv>
     </tu>
     <tu>
@@ -830,6 +956,16 @@ function return value is gone.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For now, know that iter is a method that returns each element in a collection
+and that enumerate wraps the result of iter and returns each element as
+part of a tuple instead.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172135Z" creationid="moises" creationdate="20230406T172135Z">
+        <seg>De moment, simplement entenguem que iter és un mètode que retorna cada element d'una col·lecció i que enumerate transforma el resultat de iter de manera que cada element and returns each element formi part d'una tupla.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Four tables: two tables representing the stack data for s1 and s2,
 and each points to its own copy of string data on the heap.</seg>
       </tuv>
@@ -866,6 +1002,15 @@ reference to an object as a parameter instead of taking ownership of the value:<
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here’s a small programming problem: write a function that takes a string of
+words separated by spaces and returns the first word it finds in that string.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164847Z" creationid="moises" creationdate="20230406T164847Z">
+        <seg>Fem un petit exercici de programació: escriu una funció que prengui un text format per paraules separades per espais, i retorni la pimera paraula que trobi al text.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Here’s an example of the clone method in action:</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T181409Z" creationid="moises" creationdate="20230305T181409Z">
@@ -878,6 +1023,15 @@ reference to an object as a parameter instead of taking ownership of the value:<
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T185558Z" creationid="moises" creationdate="20230305T185558Z">
         <seg>Hi ha diferents maneres en Rust en què múltiples variables interaccionen amb la mateixa dada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However, we could return the index of the
+end of the word, indicated by a space.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165336Z" creationid="moises" creationdate="20230406T165336Z">
+        <seg>No obstant, sempre podem retornar l'índex del final de la paraula, indicat per un espai.</seg>
       </tuv>
     </tu>
     <tu>
@@ -902,6 +1056,15 @@ making them still valid after assignment to another variable.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If the function doesn’t find a space in the string, the whole string must be
+one word, so the entire string should be returned.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164931Z" creationid="moises" creationdate="20230406T164931Z">
+        <seg>Si la funció no troba un espai al string, retornarà tota la cadena ja que tota ella serà una paraula.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If the type needs something special to happen
 when the value goes out of scope and we add the Copy annotation to that type,
 we’ll get a compile-time error.</seg>
@@ -917,6 +1080,14 @@ stack data, we can use a common method called clone.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T181134Z" creationid="moises" creationdate="20230305T181134Z">
         <seg>Si realment volem copiar en profunditat les dades del String que es troben guardades al monticle, i no només les dades guardades a la pila, podem fer servir un mètode anomenat clone.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If we find a space, we return the position.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172738Z" creationid="moises" creationdate="20230406T172738Z">
+        <seg>Si trobem un espai, retornem la seva posició.</seg>
       </tuv>
     </tu>
     <tu>
@@ -949,6 +1120,16 @@ automatically create “deep” copies of your data.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In other words,
+because it’s a separate value from the String, there’s no guarantee that it
+will still be valid in the future.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T173017Z" creationid="moises" creationdate="20230406T173017Z">
+        <seg>En altres paraules, com que es tracta d'un valor separat del String, no hi ha cap garantia de que aquest encara sigui vàlid en el futur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In other words, the data
 representation in memory looks like Figure 4-2.</seg>
       </tuv>
@@ -968,12 +1149,31 @@ different from the usual shallow copying, and we can leave it out.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In the for loop, we specify a pattern that has i
+for the index in the tuple and &amp;item for the single byte in the tuple.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172534Z" creationid="moises" creationdate="20230406T172534Z">
+        <seg>Al bucle for especifiquem el patró que té i
+com a índex i &amp;item com la referència al byte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In this example, we would say that s1
 was moved into s2.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T183948Z" creationid="moises" creationdate="20230304T183948Z">
         <seg>En aquest exemple direm que s1 ha estat 
 moguda a s2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Inside the for loop, we search for the byte that represents the space by
+using the byte literal syntax.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172721Z" creationid="moises" creationdate="20230406T172721Z">
+        <seg>Dins del bucle for cerquem pel byte que representa l'espai tot usant la síntaxi literal.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1009,6 +1209,16 @@ from the body of the function that we might want to return as well.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T185046Z" creationid="moises" creationdate="20230305T185046Z">
         <seg>Ja hem conegut els literals de text, en els que un valor de tipus String apareix codificat directament al nostre programa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Knowing that you can take slices of literals and String values leads us to
+one more improvement on first_word, and that’s its signature:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>Knowing that you can take slices of literals and String values leads us to
+one more improvement on primera_paraula, and that’s its signature:</seg>
       </tuv>
     </tu>
     <tu>
@@ -1175,6 +1385,23 @@ implementació reserva la memòria necessària.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Let’s try that, as shown in Listing 4-7.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165354Z" creationid="moises" creationdate="20230406T165354Z">
+        <seg>Intentem això al llistat 4-7.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Let’s work through how we’d write the signature of this function without using
+slices, to understand the problem that slices will solve:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165034Z" creationid="moises" creationdate="20230406T165034Z">
+        <seg>Comencem veient com escriuríem la signatura de la funció sense fer ús de seccions, i així podrem entendre quin és el problema que resolen les seccions:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Likewise, the signature of the function uses &amp; to indicate that the type of
 the parameter s is a reference.</seg>
       </tuv>
@@ -1289,6 +1516,14 @@ ja no ens cal el nostre String.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Next, we create an iterator over the array of bytes using the iter method:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T171854Z" creationid="moises" creationdate="20230406T171710Z">
+        <seg>A continuació, creem un iterador sobre l'array de bytes, fent servir el mètode iter:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Només pot haver un propietari a cada moment.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T184635Z" creationid="moises" creationdate="20230304T172601Z">
@@ -1314,6 +1549,24 @@ accomplished with the dereference operator, *.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230321T193608Z" creationid="moises" creationdate="20230321T193608Z">
         <seg>Nota: L'oposat a referenciar amb &amp; és dereferenciar. Cosa que s'aconsegueix amb l'operador de derreferenciació,  *.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now when we call first_word, we get back a single value that is tied to the
+underlying data.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>Now when we call primera_paraula, we get back a single value that is tied to the
+underlying data.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Otherwise, we return the length of the string by using s.len().</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T174750Z" creationid="moises" creationdate="20230406T174750Z">
+        <seg>Altrament retornem la longitud del string fent servir s.len().</seg>
       </tuv>
     </tu>
     <tu>
@@ -1826,6 +2079,14 @@ però que no pren la propietat.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The first_word function has a &amp;String as a parameter.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165118Z" creationid="moises" creationdate="20230406T165118Z">
+        <seg>La funció primera_paraula espera un &amp;String com a paràmetre.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The Boolean type, bool, with values true and false.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T190114Z" creationid="moises" creationdate="20230305T190114Z">
@@ -1857,6 +2118,16 @@ capacity.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T174612Z" creationid="moises" creationdate="20230304T174612Z">
         <seg>La diferència entre longitud i capacitat és important, però no en aquest moment. Així, de moment està bé si ignorem la capacitat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The first element of the tuple returned from
+enumerate is the index, and the second element is a reference to the element.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172248Z" creationid="moises" creationdate="20230406T172248Z">
+        <seg>El primer element de cada tupla retornada per 
+enumerate és l'índex, mentre que el segon correspon a la referència a l'element corresponent a l'array de bytes.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2002,11 +2273,29 @@ same memory.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is a bit more convenient than calculating the index ourselves.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172329Z" creationid="moises" creationdate="20230406T172329Z">
+        <seg>És una mica més adequat que haver d'anar calculant l'índex.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is known as a double free error and is one of the memory
 safety bugs we mentioned previously.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T180456Z" creationid="moises" creationdate="20230304T180456Z">
         <seg>És el que es coneix com a error de doble alliberament i és un dels errors de seguretat de memòria dels que hem parlat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This program compiles without any errors and would also do so if we used word
+after calling s.clear().</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T173751Z" creationid="moises" creationdate="20230406T173751Z">
+        <seg>Aquest programa compila sense cap error i permetrà l'ús de paraula un cop cridat 
+s.clear().</seg>
       </tuv>
     </tu>
     <tu>
@@ -2214,6 +2503,16 @@ particular type for the life of that reference.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Using the slice version of first_word will throw a
+compile-time error:</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>Using the slice version of primera_paraula will throw a
+compile-time error:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Variables and Data Interacting with Clone</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T184422Z" creationid="moises" creationdate="20230304T184422Z">
@@ -2230,11 +2529,78 @@ particular type for the life of that reference.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>We could use that value 5 with
+the variable s to try to extract the first word out, but this would be a bug
+because the contents of s have changed since we saved 5 in word.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T174004Z" creationid="moises" creationdate="20230406T174004Z">
+        <seg>Podem fer servir el valor 4 amb la variable s per intentar obtenir la primera paraula, però això suposaria un error ja que el contingut de s ha canviat després d'assignar 4 a paraula.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>We do not copy the
 data on the heap that the pointer refers to.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T174812Z" creationid="moises" creationdate="20230304T174812Z">
         <seg>No es copien les dades del monticle a les que el punter fa referència.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We don’t really have a
+way to talk about part of a string.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165250Z" creationid="moises" creationdate="20230406T165250Z">
+        <seg>En realitat, no disposem d'una manera de parlar sobre una part d'un string.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We don’t want
+ownership, so this is fine.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165202Z" creationid="moises" creationdate="20230406T165202Z">
+        <seg>No volem adquirir la pertinença d'aquest string, així que amb la referència ja està bé.\</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We now have a way to find out the index of the end of the first word in the
+string, but there’s a problem.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172850Z" creationid="moises" creationdate="20230406T172850Z">
+        <seg>Ara tenim una manera de trobar l'índex del final de la primera paraula dins el string. Encara hi ha, però, un problema.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We’ll apply these rules to figure out the
+lifetimes of the references in the signature of the first_word function in
+Listing 10-25.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>We’ll apply these rules to figure out the
+lifetimes of the references in the signature of the primera_paraula function in
+Listing 10-25.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We’ll be discussing patterns more in Chapter
+6.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172428Z" creationid="moises" creationdate="20230406T172428Z">
+        <seg>Veurem més sobre patrons al capítol
+6.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We’ll discuss iterators in more detail in Chapter 13.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172002Z" creationid="moises" creationdate="20230406T172002Z">
+        <seg>Veurem els iteradors amb més detall al capítol 13.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2255,6 +2621,15 @@ Chapter 15.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230322T141435Z" creationid="moises" creationdate="20230322T141435Z">
         <seg>Veurem més usos de l'operador de dereferenciació al capítol 8, i discutirem els detalls de la referenciació al capítol 15.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We’re returning a usize on its own, but it’s
+only a meaningful number in the context of the &amp;String.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T172938Z" creationid="moises" creationdate="20230406T172938Z">
+        <seg>Estem retornant un valor usize però aquest només té significat en el context de &amp;String.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2305,6 +2680,16 @@ function is a bit tedious.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>With all this information in mind, let’s rewrite first_word to return a
+slice.</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>With all this information in mind, let’s rewrite primera_paraula to return a
+slice.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>With only s2 valid, when it goes out of scope it
 alone will free the memory, and we’re done.</seg>
       </tuv>
@@ -2330,6 +2715,46 @@ invalidated reference:</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230304T183319Z" creationid="moises" creationdate="20230304T183319Z">
         <seg>Obtenim el següent error perquè Rust evitarà que fem servir una referència invalidada:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>fn first_word(s: &amp;String) -&gt; &amp;str {</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>fn primera_paraula(s: &amp;String) -&gt; &amp;str {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>fn first_word(s: &amp;String) -&gt; ?</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165055Z" creationid="moises" creationdate="20230406T165055Z">
+        <seg>fn primera_paraula(s: &amp;String) -&gt; ?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>fn first_word(s: &amp;str) -&gt; &amp;str {</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>fn primera_paraula(s: &amp;str) -&gt; &amp;str {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>fn first_word&lt;'a&gt;(s: &amp;'a str) -&gt; &amp;'a str {</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>fn primera_paraula&lt;'a&gt;(s: &amp;'a str) -&gt; &amp;'a str {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>fn first_word&lt;'a&gt;(s: &amp;'a str) -&gt; &amp;str {</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T165646Z" creationid="moises" creationdate="20230406T165646Z">
+        <seg>fn primera_paraula&lt;'a&gt;(s: &amp;'a str) -&gt; &amp;str {</seg>
       </tuv>
     </tu>
     <tu>
@@ -2504,6 +2929,22 @@ moure's a la següent.</seg>
       </tuv>
       <tuv lang="CA" changeid="moises" changedate="20230305T184957Z" creationid="moises" creationdate="20230305T184954Z">
         <seg>Camins per referir-nos a un element en l'arbre de mòduls</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>〜 The Rust Programming Language</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T163942Z" creationid="moises" creationdate="20230406T163942Z">
+        <seg>El llenguatge de programacio Rust</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>〜 The Slice Type</seg>
+      </tuv>
+      <tuv lang="CA" changeid="moises" changedate="20230406T164441Z" creationid="moises" creationdate="20230406T164429Z">
+        <seg>El tipus secció</seg>
       </tuv>
     </tu>
 <!-- Alternative translations -->

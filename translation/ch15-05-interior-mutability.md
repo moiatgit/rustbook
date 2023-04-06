@@ -298,7 +298,7 @@ change the values in the lists. Listing 15-24 shows that by using a
 `RefCell<T>` in the `Cons` definition, we can modify the value stored in all
 the lists:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-24/src/main.rs}}

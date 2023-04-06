@@ -1,92 +1,69 @@
-## 〜 The Slice Type
+## El tipus secció
 
-*Slices* let you reference a contiguous sequence of elements in a collection
-rather than the whole collection. A slice is a kind of reference, so it does
-not have ownership.
+Les *seccions* (en anglès *slices*) permeten referenciar una seqüència contigua d'elements en una col·lecció, en comptes de tota la col·lecció.\ Uan secció és un tipus de referència i, per tant, no té pertinença.
 
-Here’s a small programming problem: write a function that takes a string of
-words separated by spaces and returns the first word it finds in that string.
-If the function doesn’t find a space in the string, the whole string must be
-one word, so the entire string should be returned.
+Fem un petit exercici de programació: escriu una funció que prengui un text format per paraules separades per espais, i retorni la pimera paraula que trobi al text.
+Si la funció no troba un espai al string, retornarà tota la cadena ja que tota ella serà una paraula.
 
-Let’s work through how we’d write the signature of this function without using
-slices, to understand the problem that slices will solve:
+Comencem veient com escriuríem la signatura de la funció sense fer ús de seccions, i així podrem entendre quin és el problema que resolen les seccions:
 
 ```rust,ignore
-fn first_word(s: &String) -> ?
+fn primera_paraula(s: &String) -> ?
 ```
 
-The `first_word` function has a `&String` as a parameter. We don’t want
-ownership, so this is fine. But what should we return? We don’t really have a
-way to talk about *part* of a string. However, we could return the index of the
-end of the word, indicated by a space. Let’s try that, as shown in Listing 4-7.
+La funció `primera_paraula` espera un `&String` com a paràmetre. No volem adquirir la pertinença d'aquest string, així que amb la referència ja està bé.\ Ara, però què és el que hauríem de retornar? En realitat, no disposem d'una manera de parlar sobre una *part* d'un string. No obstant, sempre podem retornar l'índex del final de la paraula, indicat per un espai. Intentem això al llistat 4-7.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 4-7: The `first_word` function that returns a
-byte index value into the `String` parameter</span>
+<span class="caption">Llistat 4-7: La funció `primera_paraula` que retorna el valor de la posició del paràmetre `String`</span>
 
-Because we need to go through the `String` element by element and check whether
-a value is a space, we’ll convert our `String` to an array of bytes using the
-`as_bytes` method.
+Com que ens cal atravesar el `String` element a element i comprovar si la posició correspon o no a un espai, convertirem el nostre `String` a una seqüència (array) de bytes, fent servir el mètode
+`as_bytes`.
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:as_bytes}}
 ```
 
-Next, we create an iterator over the array of bytes using the `iter` method:
+A continuació, creem un iterador sobre l'array de bytes, fent servir el mètode `iter`:
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:iter}}
 ```
 
-We’ll discuss iterators in more detail in [Chapter 13][ch13]<!-- ignore -->.
-For now, know that `iter` is a method that returns each element in a collection
-and that `enumerate` wraps the result of `iter` and returns each element as
-part of a tuple instead. The first element of the tuple returned from
-`enumerate` is the index, and the second element is a reference to the element.
-This is a bit more convenient than calculating the index ourselves.
+Veurem els iteradors amb més detall al [capítol 13][ch13]<!-- ignore -->.
+De moment, simplement entenguem que `iter` és un mètode que retorna cada element d'una col·lecció i que `enumerate` transforma el resultat de `iter` de manera que cada element and returns each element formi part d'una tupla. El primer element de cada tupla retornada per
+`enumerate` és l'índex, mentre que el segon correspon a la referència a l'element corresponent a l'array de bytes.
+És una mica més adequat que haver d'anar calculant l'índex.
 
-Because the `enumerate` method returns a tuple, we can use patterns to
-destructure that tuple. We’ll be discussing patterns more in [Chapter
-6][ch6]<!-- ignore -->. In the `for` loop, we specify a pattern that has `i`
-for the index in the tuple and `&item` for the single byte in the tuple.
-Because we get a reference to the element from `.iter().enumerate()`, we use
-`&` in the pattern.
+Com que el mètode `enumerate` retorna una tupla, podem fer servir patrons per desestructurar-la. Veurem més sobre patrons al [capítol
+6][ch6]<!-- ignore -->. Al bucle `for` especifiquem el patró que té `i`
+com a índex i `&item` com la referència al byte.
+Donat que obtenim una referència a l'element des de `.iter().enumerate()`, hem de fer servir `&` al patró.
 
-Inside the `for` loop, we search for the byte that represents the space by
-using the byte literal syntax. If we find a space, we return the position.
-Otherwise, we return the length of the string by using `s.len()`.
+Dins del bucle `for` cerquem pel byte que representa l'espai tot usant la síntaxi literal. Si trobem un espai, retornem la seva posició.
+Altrament retornem la longitud del string fent servir `s.len()`.
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:inside_for}}
 ```
 
-We now have a way to find out the index of the end of the first word in the
-string, but there’s a problem. We’re returning a `usize` on its own, but it’s
-only a meaningful number in the context of the `&String`. In other words,
-because it’s a separate value from the `String`, there’s no guarantee that it
-will still be valid in the future. Consider the program in Listing 4-8 that
-uses the `first_word` function from Listing 4-7.
+Ara tenim una manera de trobar l'índex del final de la primera paraula dins el string. Encara hi ha, però, un problema. Estem retornant un valor `usize` però aquest només té significat en el context de `&String`. En altres paraules, com que es tracta d'un valor separat del `String`, no hi ha cap garantia de que aquest encara sigui vàlid en el futur. Considerem el programa de lllistat 4-8 que fa servir la funció `primera_paraula` del llistat 4-7.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-08/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 4-8: Storing the result from calling the
-`first_word` function and then changing the `String` contents</span>
+<span class="caption">Llistat 4-8: Guardem el resultat de la funció
+`primera_paraula` i a continuació modifiquem el contingut del `String`</span>
 
-This program compiles without any errors and would also do so if we used `word`
-after calling `s.clear()`. Because `word` isn’t connected to the state of `s`
-at all, `word` still contains the value `5`. We could use that value `5` with
-the variable `s` to try to extract the first word out, but this would be a bug
-because the contents of `s` have changed since we saved `5` in `word`.
+Aquest programa compila sense cap error i permetrà l'ús de `paraula` un cop cridat
+`s.clear()`. Donat que el valor de `paraula` no està connectat a l'estat de `s`, `paraual` encara conté el valor `4`. Podem fer servir el valor `4` amb la variable `s` per intentar obtenir la primera paraula, però això suposaria un error ja que el contingut de `s` ha canviat després d'assignar `4` a `paraula`.
 
 Having to worry about the index in `word` getting out of sync with the data in
 `s` is tedious and error prone! Managing these indices is even more brittle if
@@ -173,10 +150,10 @@ let slice = &s[..];
 > more thorough discussion of UTF-8 handling is in the [“Storing UTF-8 Encoded
 > Text with Strings”][strings]<!-- ignore --> section of Chapter 8.
 
-With all this information in mind, let’s rewrite `first_word` to return a
+With all this information in mind, let’s rewrite `primera_paraula` to return a
 slice. The type that signifies “string slice” is written as `&str`:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-18-first-word-slice/src/main.rs:here}}
@@ -187,7 +164,7 @@ looking for the first occurrence of a space. When we find a space, we return a
 string slice using the start of the string and the index of the space as the
 starting and ending indices.
 
-Now when we call `first_word`, we get back a single value that is tied to the
+Now when we call `primera_paraula`, we get back a single value that is tied to the
 underlying data. The value is made up of a reference to the starting point of
 the slice and the number of elements in the slice.
 
@@ -204,10 +181,10 @@ first word but then cleared the string so our index was invalid? That code was
 logically incorrect but didn’t show any immediate errors. The problems would
 show up later if we kept trying to use the first word index with an emptied
 string. Slices make this bug impossible and let us know we have a problem with
-our code much sooner. Using the slice version of `first_word` will throw a
+our code much sooner. Using the slice version of `primera_paraula` will throw a
 compile-time error:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-19-slice-error/src/main.rs:here}}
@@ -247,10 +224,10 @@ immutable reference.
 #### String Slices as Parameters
 
 Knowing that you can take slices of literals and `String` values leads us to
-one more improvement on `first_word`, and that’s its signature:
+one more improvement on `primera_paraula`, and that’s its signature:
 
 ```rust,ignore
-fn first_word(s: &String) -> &str {
+fn primera_paraula(s: &String) -> &str {
 ```
 
 A more experienced Rustacean would write the signature shown in Listing 4-9
@@ -261,7 +238,7 @@ and `&str` values.
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 4-9: Improving the `first_word` function by using
+<span class="caption">Llistat 4-9: Improving the `primera_paraula` function by using
 a string slice for the type of the `s` parameter</span>
 
 If we have a string slice, we can pass that directly. If we have a `String`, we
@@ -273,7 +250,7 @@ Methods”][deref-coercions]<!--ignore--> section of Chapter 15.
 Defining a function to take a string slice instead of a reference to a `String`
 makes our API more general and useful without losing any functionality:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:usage}}

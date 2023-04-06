@@ -373,7 +373,7 @@ Així, quins tipus implementen el tret `Copy`? Sempre podem consultar la documen
 
 La manera de passar un valor a una funció és similar al d'assignar un valor a una variable. Quan passem una variable a una funció, el seu valor serà mogut o copiat de la mateixa manera que ho seria si fos assignada a una altra variable. El llistat 4-3 presenta un exemple amb anotacions que mostren on les variables entren i surten del seu àmbit.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}
@@ -387,7 +387,7 @@ Si intentessim fer servir `s` un cop cridat `mou()`, Rust llançaria un error de
 
 També es pot transferir la pertinença quan retornem valors. El llistat 4-4 mostra un exemple de funció que retorna un valor, amb anotacions similars a les del llistat 4-3.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-04/src/main.rs}}
@@ -401,7 +401,7 @@ Malgrat això funciona, obtenir la pertinença i retornar-la a cada funció resu
 
 Rust ens permet retornar múltiples valors fent servir una tupla, com es pot veure al llistat 4-5.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-05/src/main.rs}}

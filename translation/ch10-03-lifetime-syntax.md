@@ -104,7 +104,7 @@ function will take two string slices and return a single string slice. After
 we’ve implemented the `longest` function, the code in Listing 10-19 should
 print `The longest string is abcd`.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-19/src/main.rs}}
@@ -123,7 +123,7 @@ ones we want.
 If we try to implement the `longest` function as shown in Listing 10-20, it
 won’t compile.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-20/src/main.rs:here}}
@@ -197,7 +197,7 @@ relationship between lifetimes of the parameters and the return value. We’ll
 name the lifetime `'a` and then add it to each reference, as shown in Listing
 10-21.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-21/src/main.rs:here}}
@@ -249,7 +249,7 @@ Let’s look at how the lifetime annotations restrict the `longest` function by
 passing in references that have different concrete lifetimes. Listing 10-22 is
 a straightforward example.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-22/src/main.rs:here}}
@@ -272,7 +272,7 @@ assignment of the value to the `result` variable inside the scope with
 inner scope, after the inner scope has ended. The code in Listing 10-23 will
 not compile.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-23/src/main.rs:here}}
@@ -314,7 +314,7 @@ function is doing. For example, if we changed the implementation of the
 string slice, we wouldn’t need to specify a lifetime on the `y` parameter. The
 following code will compile:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-08-only-one-reference-with-lifetime/src/main.rs:here}}
@@ -332,7 +332,7 @@ reference because the value will go out of scope at the end of the function.
 Consider this attempted implementation of the `longest` function that won’t
 compile:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-09-unrelated-lifetime/src/main.rs:here}}
@@ -367,7 +367,7 @@ hold references, but in that case we would need to add a lifetime annotation on
 every reference in the struct’s definition. Listing 10-24 has a struct named
 `ImportantExcerpt` that holds a string slice.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-24/src/main.rs}}
@@ -413,7 +413,7 @@ every reference needed an explicit lifetime. At that time, the function
 signature would have been written like this:
 
 ```rust,ignore
-fn first_word<'a>(s: &'a str) -> &'a str {
+fn primera_paraula<'a>(s: &'a str) -> &'a str {
 ```
 
 After writing a lot of Rust code, the Rust team found that Rust programmers
@@ -464,12 +464,12 @@ one of them is `&self` or `&mut self` because this is a method, the lifetime of
 methods much nicer to read and write because fewer symbols are necessary.
 
 Let’s pretend we’re the compiler. We’ll apply these rules to figure out the
-lifetimes of the references in the signature of the `first_word` function in
+lifetimes of the references in the signature of the `primera_paraula` function in
 Listing 10-25. The signature starts without any lifetimes associated with the
 references:
 
 ```rust,ignore
-fn first_word(s: &str) -> &str {
+fn primera_paraula(s: &str) -> &str {
 ```
 
 Then the compiler applies the first rule, which specifies that each parameter
@@ -477,7 +477,7 @@ gets its own lifetime. We’ll call it `'a` as usual, so now the signature is
 this:
 
 ```rust,ignore
-fn first_word<'a>(s: &'a str) -> &str {
+fn primera_paraula<'a>(s: &'a str) -> &str {
 ```
 
 The second rule applies because there is exactly one input lifetime. The second
@@ -485,7 +485,7 @@ rule specifies that the lifetime of the one input parameter gets assigned to
 the output lifetime, so the signature is now this:
 
 ```rust,ignore
-fn first_word<'a>(s: &'a str) -> &'a str {
+fn primera_paraula<'a>(s: &'a str) -> &'a str {
 ```
 
 Now all the references in this function signature have lifetimes, and the

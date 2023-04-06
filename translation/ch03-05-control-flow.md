@@ -14,7 +14,7 @@ of code. If the condition is not met, do not run this block of code.”
 Create a new project called *branches* in your *projects* directory to explore
 the `if` expression. In the *src/main.rs* file, input the following:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-26-if-true/src/main.rs}}
@@ -58,7 +58,7 @@ It’s also worth noting that the condition in this code *must* be a `bool`. If
 the condition isn’t a `bool`, we’ll get an error. For example, try running the
 following code:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-28-if-condition-must-be-bool/src/main.rs}}
@@ -78,7 +78,7 @@ convert non-Boolean types to a Boolean. You must be explicit and always provide
 only when a number is not equal to `0`, for example, we can change the `if`
 expression to the following:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-29-if-not-equal-0/src/main.rs}}
@@ -91,7 +91,7 @@ Running this code will print `number was something other than zero`.
 You can use multiple conditions by combining `if` and `else` in an `else if`
 expression. For example:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-30-else-if/src/main.rs}}
@@ -120,7 +120,7 @@ Rust branching construct called `match` for these cases.
 Because `if` is an expression, we can use it on the right side of a `let`
 statement to assign the outcome to a variable, as in Listing 3-2.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-02/src/main.rs}}
@@ -144,7 +144,7 @@ the same type; in Listing 3-2, the results of both the `if` arm and the `else`
 arm were `i32` integers. If the types are mismatched, as in the following
 example, we’ll get an error:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-31-arms-must-return-same-type/src/main.rs}}
@@ -184,7 +184,7 @@ forever or until you explicitly tell it to stop.
 As an example, change the *src/main.rs* file in your *loops* directory to look
 like this:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-32-loop/src/main.rs}}
@@ -282,7 +282,7 @@ that Rust has a built-in language construct for it, called a `while` loop. In
 Listing 3-3, we use `while` to loop the program three times, counting down each
 time, and then, after the loop, print a message and exit.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-03/src/main.rs}}
@@ -301,7 +301,7 @@ You can choose to use the `while` construct to loop over the elements of a
 collection, such as an array. For example, the loop in Listing 3-4 prints each
 element in the array `a`.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-04/src/main.rs}}
@@ -333,7 +333,7 @@ index is within the bounds of the array on every iteration through the loop.
 As a more concise alternative, you can use a `for` loop and execute some code
 for each item in a collection. A `for` loop looks like the code in Listing 3-5.
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-05/src/main.rs}}
@@ -362,7 +362,7 @@ number.
 Here’s what the countdown would look like using a `for` loop and another method
 we’ve not yet talked about, `rev`, to reverse the range:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">Fitxer: src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-34-for-range/src/main.rs}}
