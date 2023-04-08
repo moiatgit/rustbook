@@ -22,7 +22,7 @@ or smart pointers.
 <!-- Old link, do not remove -->
 <a id="following-the-pointer-to-the-value-with-the-dereference-operator"></a>
 
-### Following the Pointer to the Value
+### Seguint el punter al valor
 
 A regular reference is a type of pointer, and one way to think of a pointer is
 as an arrow to a value stored somewhere else. In Listing 15-6, we create a

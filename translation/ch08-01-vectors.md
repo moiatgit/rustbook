@@ -60,135 +60,129 @@ elements amb el mètode `push`.
 <span class="caption">Llistat 8-3: Ús del mètode `push` per afegir valors a un
 vector</span>
 
-De la mateixa manera que amb qualsevol variable, si volem canviar els valors, necessitem fer la variable mutable, fent servir la paraula clau 
- `mut`, tal i com vam veure al capítol 3. 
-Els nombres que hi col·loquem són tots de tipus `i32` i, per tant, Rust infereix que el tipus del vector és `Vec<i32»` sense necessitat d'anotacions.
+De la mateixa manera que amb qualsevol variable, si volem canviar els valors,
+necessitem fer la variable mutable, fent servir la paraula clau `mut`, tal i
+com vam veure al capítol 3. Els nombres que hi col·loquem són tots de tipus
+`i32` i, per tant, Rust infereix que el tipus del vector és `Vec<i32»` sense
+necessitat d'anotacions.
 
-### Reading Elements of Vectors
+### Llegint els elements d'un vector
 
-There are two ways to reference a value stored in a vector: via indexing or
-using the `get` method. In the following examples, we’ve annotated the types of
-the values that are returned from these functions for extra clarity.
+Hi ha dues maneres de referenciar un valor emmagatzemat a un vector: via
+indexacio o fent servir el mdtode `get`. En els següents exemples, per ajudar
+en la comprensió, anotarem els tipus dels valors retornats per aquestes
+funcions.
 
-Listing 8-4 shows both methods of accessing a value in a vector, with indexing
-syntax and the `get` method.
+El llistat 8-4 mostra els dos mètodes d'accés a un valor dins un vector, amb la sintaxi d'indexació i amb el mètode `get`.
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-04/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-4: Using indexing syntax or the `get` method to
-access an item in a vector</span>
+<span class="caption">Llistat 8-4: Ús de la sintaxi d'indexació i el mètode
+`get` per a accedir a un element dins d'un vector</span>
 
-Note a few details here. We use the index value of `2` to get the third element
-because vectors are indexed by number, starting at zero. Using `&` and `[]`
-gives us a reference to the element at the index value. When we use the `get`
-method with the index passed as an argument, we get an `Option<&T>` that we can
-use with `match`.
+Alguns detalls a tenir en compte: fem servir el valor `2` com a índex del
+tercer element perquè els vectors s'indexen amb un número i comencen amb el
+zero. L'ús de `&` i `[]` ens permet referenciar a l'element que es troba a la
+posició indicada per l'index. `Option<&T>` que podem fer servir amb `match`.
 
-The reason Rust provides these two ways to reference an element is so you can
-choose how the program behaves when you try to use an index value outside the
-range of existing elements. As an example, let’s see what happens when we have
-a vector of five elements and then we try to access an element at index 100
-with each technique, as shown in Listing 8-5.
+Rust ofereix aquestes dues maneres de referenciar un element per permetrens escollir com volem que el programa es comporti quan intentem fer servir un índex fora de rang. Veiem què passa quan intentem accedir a l'element amb índex 100 amb cadascuna de les dues tècniques.
 
 ```rust,should_panic,panics
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-05/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-5: Attempting to access the element at index
-100 in a vector containing five elements</span>
+<span class="caption">Llistat 8-5: Intentant accedir a l'element amb índex 100 en un vector que conté 5 elements.</span>
 
-When we run this code, the first `[]` method will cause the program to panic
-because it references a nonexistent element. This method is best used when you
-want your program to crash if there’s an attempt to access an element past the
-end of the vector.
+En executar aquest codi, el primer mètode `[]` farà que el programa avorti
+l'execució perquè fa referència a un element no existent. Aquest mètode és més
+adequat quan volem que el programa finalitzi amb error si s'intenta accedir a
+un element més enllà del final del vector.
 
-When the `get` method is passed an index that is outside the vector, it returns
-`None` without panicking. You would use this method if accessing an element
-beyond the range of the vector may happen occasionally under normal
-circumstances. Your code will then have logic to handle having either
-`Some(&element)` or `None`, as discussed in Chapter 6. For example, the index
-could be coming from a person entering a number. If they accidentally enter a
-number that’s too large and the program gets a `None` value, you could tell the
-user how many items are in the current vector and give them another chance to
-enter a valid value. That would be more user-friendly than crashing the program
-due to a typo!
+> Nota: en el context de Rust, quan el programa avorta l'execució es fa servir
+> sovint l'expressió *panics*. Per tant, és interessant que ens familiaritzem
+> amb aquest terme.
 
-When the program has a valid reference, the borrow checker enforces the
-ownership and borrowing rules (covered in Chapter 4) to ensure this reference
-and any other references to the contents of the vector remain valid. Recall the
-rule that states you can’t have mutable and immutable references in the same
-scope. That rule applies in Listing 8-6, where we hold an immutable reference
-to the first element in a vector and try to add an element to the end. This
-program won’t work if we also try to refer to that element later in the
-function:
+Quan passem al mètode `get` un índex fora del vector, retorna `None` sense
+avortar l'execució. Farem servir aquest mètode quan som conscients que l'accès
+a una posició fora de rang pot passar de tant en tant, en circumstàncies
+normals. En aquest cas, el programa inclourà lògica per gestionar les respostes
+`Some(&element)` i `None`, tal i com vam veure al capítol 6. Per exemple,
+l'índex podria venir d'una persona que introdueix un número. Si accidentalment
+els usuaris entren un valor massa gran pel vector actual, i el programa obté un
+`None`, podem informar els usuaris que el valor introduït està fora de rang i
+convidar-lo a introduir un de nou. Això faria el nostre programa més agradable
+per ser usat que simplement avortar l'execució quan els usuaris s'equivoquen en
+teclejar.
+
+Quan el programa té una referència vàlida, el *borrow checker* força les regles
+de pertinença i prèstec que vam veure al capítol 4, per assegurar que aquesta
+referència i qualsevol altra al contingut del vector, continua es mantenen
+vàlides. Recordem la regla que diu que no podem tenir referències mutables i
+immutables dins del mateix abast. Aquest regla és pertinent al llistat 8-6 on
+tenim una referència inmutable al primer element del vector, i intentem afegir
+un element al final. El programa no funcionarà si intentem tambe er referència
+a aquest element més endavant a la funció.
 
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-06/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-6: Attempting to add an element to a vector
-while holding a reference to an item</span>
+<span class="caption">Llistat 8-6: Intent d'afegir un element a un vector
+mentre hi ha una referència a un dels seus elements. </span>
 
-Compiling this code will result in this error:
+En compilar aquest codi, obtindrem el següent error:
 
 
 ```console
 {{#include ../listings/ch08-common-collections/listing-08-06/output.txt}}
 ```
 
-The code in Listing 8-6 might look like it should work: why should a reference
-to the first element care about changes at the end of the vector? This error is
-due to the way vectors work: because vectors put the values next to each other
-in memory, adding a new element onto the end of the vector might require
-allocating new memory and copying the old elements to the new space, if there
-isn’t enough room to put all the elements next to each other where the vector
-is currently stored. In that case, the reference to the first element would be
-pointing to deallocated memory. The borrowing rules prevent programs from
-ending up in that situation.
+El missatge ens indica que a la línia 4 es produeix el prèstec inmutable de
+l'element dins del vector. A la línia 6 es produeix l'intent de passar un
+prèstec mutable, i finalment a la línia 8 intentem fer servir el prèstec
+inmutable.
 
-> Note: For more on the implementation details of the `Vec<T>` type, see [“The
-> Rustonomicon”][nomicon].
 
-### Iterating over the Values in a Vector
+El codi en el llistat 8-6 semblaria que hauria de funcionar ja que afegir un element al final del vector no hauria d'afectar al primer element. L'error es justifica pel funcionament intern dels vectors. Quan afegim un element a un vector, si aquest ja no té espai per afegir el no element, caldrà reservar un nou espai de memòria on hi càpiguin tots els elements, copiar-hi els elements anteriors, i finalment alliberant la memòria anterior. Si Rust no generés un error en aquest cas, la referència al primer element estaria apuntant a una posició de memòria ja alliberada. Les regles de prèstec eviten que el programa es trobi en aquesta situació.
 
-To access each element in a vector in turn, we would iterate through all of the
-elements rather than use indices to access one at a time. Listing 8-7 shows how
-to use a `for` loop to get immutable references to each element in a vector of
-`i32` values and print them.
+> Nota: Es poden consultar més detalls de l aimplementació del tipus `Vec<T>`
+> al llibre [“The Rustonomicon”][nomicon].
+
+### Iterant sobre els valors d'un vector
+
+Per accedir cada element d'un vector, iterarem sobre tots ells en comptes de
+fer servir índexos per accedir-los d'un en un. El llistat 8-7 mostra com fer
+servir el bucle `for` per obtenir referències inmutables a cada element d'un
+vector de valors `i32` i anar-los mostrant.
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-07/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-7: Printing each element in a vector by
-iterating over the elements using a `for` loop</span>
+<span class="caption">Llistat 8-7: Mostrant cada element d'un vector fent
+servir el bucle `for`</span>
 
-We can also iterate over mutable references to each element in a mutable vector
-in order to make changes to all the elements. The `for` loop in Listing 8-8
-will add `50` to each element.
+Podem també iterar sobre referències mutables a cada element d'un vector mutable, quan ens interessi fer canvis als elements. El bucle `for` del llistat 8-8 afegirà `50` a cada element.
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-08/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-8: Iterating over mutable references to
-elements in a vector</span>
+<span class="caption">Llistat 8-8: Iterant sobre referències mutables a
+elements d'un vector.</span>
 
-To change the value that the mutable reference refers to, we have to use the
-`*` dereference operator to get to the value in `i` before we can use the `+=`
-operator. We’ll talk more about the dereference operator in the [“Following the
-Pointer to the Value with the Dereference Operator”][deref]<!-- ignore -->
-section of Chapter 15.
+Per canviar els valors als que fa referència, ens cal fer servir l'operador de
+dereferenciació `*` amb el que obtenim el valor a `i` abans que puguem
+incrementar-ho amb l'operador `+=`. En parlarem més sobre l'operador de
+derreferenciació a la secció [“Seguint el punter al valor amb l'operador de
+derreferenciació”][deref]<!-- ignore --> del capítol 15.
 
-Iterating over a vector, whether immutably or mutably, is safe because of the
-borrow checker's rules. If we attempted to insert or remove items in the `for`
-loop bodies in Listing 8-7 and Listing 8-8, we would get a compiler error
-similar to the one we got with the code in Listing 8-6. The reference to the
-vector that the `for` loop holds prevents simultaneous modification of the
-whole vector.
+Gràcies a les regles de prèstec, resulta segur iterar sobre un vector, ja sigui amb referències mutables o inmutables. Si intentem afegir o eliminar un element 
+dins del cos del bucle dels llistats 8-7 i 8-8, obtindríem un error de compilació similar al que hem vist pel codi del llistat 8-6. La referència a un vector que 
+manté el bucle `for` evita modificacions simultànies de tot el vector.
 
 ### Using an Enum to Store Multiple Types
 
