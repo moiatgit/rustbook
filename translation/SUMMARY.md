@@ -45,7 +45,7 @@
    - [Separating Modules into Different Files](ch07-05-separating-modules-into-different-files.md)
 
 - [Col·leccions comuns](ch08-00-common-collections.md)
-   - [Storing Lists of Values with Vectors](ch08-01-vectors.md)
+   - [Emmagatzemar llistes de valors en vectors](ch08-01-vectors.md)
    - [Storing UTF-8 Encoded Text with Strings](ch08-02-strings.md)
    - [Storing Keys with Associated Values in Hash Maps](ch08-03-hash-maps.md)
 

@@ -1,67 +1,68 @@
-## 〜 Storing Lists of Values with Vectors
+## Emmagatzemar llistes de valors en vectors
 
-The first collection type we’ll look at is `Vec<T>`, also known as a *vector*.
-Vectors allow you to store more than one value in a single data structure that
-puts all the values next to each other in memory. Vectors can only store values
-of the same type. They are useful when you have a list of items, such as the
-lines of text in a file or the prices of items in a shopping cart.
+La primera col·lecció que estudiarem és `Vec<T>`, també coneguda com *vector*.
+Els vectors permeten emmagatzemar més d'un valor en una única estructura de
+dades que col·loca cada valor un al costat de l'altre a memòria. Els vectors
+només poden emmagatzemar valors del mateix tipus. Són útils quan tenim una
+llista d'elements, com ara línies de text d'un fitxers o els preus dels
+elements en una cistella de la compra.
 
-### Creating a New Vector
+### Creació d'un nou vector
 
-To create a new empty vector, we call the `Vec::new` function, as shown in
-Listing 8-1.
+Per crear un nou vector buit, cridem la funció `Vec::new` com es mostra al
+llistat 8-1.
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-01/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-1: Creating a new, empty vector to hold values
-of type `i32`</span>
+<span class="caption">Llistat 8-1: Creació d'un nou vector buit per valors de
+tipus `i32`</span>
 
-Note that we added a type annotation here. Because we aren’t inserting any
-values into this vector, Rust doesn’t know what kind of elements we intend to
-store. This is an important point. Vectors are implemented using generics;
-we’ll cover how to use generics with your own types in Chapter 10. For now,
-know that the `Vec<T>` type provided by the standard library can hold any type.
-When we create a vector to hold a specific type, we can specify the type within
-angle brackets. In Listing 8-1, we’ve told Rust that the `Vec<T>` in `v` will
-hold elements of the `i32` type.
+Donat que no hem inserit cap valor al vector, Rust no sap de quin tipus seran
+els elements que pretenem emmagatzemar-hi. Per aquesta raó, ens ha calgut
+especificar una anotació de tipus. Es tracta d'un punt important. Els vectors
+estan implementats fent servir genèrics. Veurem els genèrics amb els nostres
+propis tipus al capítol 10. De moment en tindrem prou sabent que un array de
+tipus `Vec<T>` pot emmagatzemar qualsevol tipus. Quan creem un vector per
+emmagatzemar un tipus concret, podem especificar aqust tipus entre els angles.
+Al llistat 8-1 hem indicat a Rust que el vector `v` contindrà elements de tipus
+`i32`.
 
-More often, you’ll create a `Vec<T>` with initial values and Rust will infer
-the type of value you want to store, so you rarely need to do this type
-annotation. Rust conveniently provides the `vec!` macro, which will create a
-new vector that holds the values you give it. Listing 8-2 creates a new
-`Vec<i32>` that holds the values `1`, `2`, and `3`. The integer type is `i32`
-because that’s the default integer type, as we discussed in the [“Data
-Types”][data-types]<!-- ignore --> section of Chapter 3.
+Sovint crearem els vectors amb valors inicials i Rust serà capaç d'inferir de
+quin tipus és `T`, de manera que serà infreqüent que hàgim d'especificar
+aquesta anotació. Rust ens ofereix la macro `vec!` que crearà un nou vector amb
+els valors que li indiquem. El llistat 8-2 crea un nou `Vec<i32>` que conté els
+valors `1`, `2` i `3`. El tipus enter `i32` ja que aquest és el tipus per
+defecte, com vam veure a la secció [“Tipus de dades”][data-types]<!-- ignore
+--> del capítol 3.
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-02/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-2: Creating a new vector containing
-values</span>
+<span class="caption">Llistat 8-2: Creació d'un nou vector amb valors inicials.</span>
 
-Because we’ve given initial `i32` values, Rust can infer that the type of `v`
-is `Vec<i32>`, and the type annotation isn’t necessary. Next, we’ll look at how
-to modify a vector.
+Donat que hem fet la inicialització amb valors 
+`i32`, Rust pot inferir que el tipus de `v`
+és `Vec<i32>`, i l'anotació del tipus deixa de ser necessària.
+Veiem ara com modificar un vector.
 
-### Updating a Vector
+### Modificar un Vector
 
-To create a vector and then add elements to it, we can use the `push` method,
-as shown in Listing 8-3.
+El llistat 8-3 ens mostra com crear un vector i a continuació afegir-hi
+elements amb el mètode `push`.
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-03/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 8-3: Using the `push` method to add values to a
+<span class="caption">Llistat 8-3: Ús del mètode `push` per afegir valors a un
 vector</span>
 
-As with any variable, if we want to be able to change its value, we need to
-make it mutable using the `mut` keyword, as discussed in Chapter 3. The numbers
-we place inside are all of type `i32`, and Rust infers this from the data, so
-we don’t need the `Vec<i32>` annotation.
+De la mateixa manera que amb qualsevol variable, si volem canviar els valors, necessitem fer la variable mutable, fent servir la paraula clau 
+ `mut`, tal i com vam veure al capítol 3. 
+Els nombres que hi col·loquem són tots de tipus `i32` i, per tant, Rust infereix que el tipus del vector és `Vec<i32»` sense necessitat d'anotacions.
 
 ### Reading Elements of Vectors
 
