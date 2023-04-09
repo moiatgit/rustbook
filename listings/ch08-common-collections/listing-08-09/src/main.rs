@@ -1,15 +1,15 @@
 fn main() {
     // ANCHOR: here
-    enum SpreadsheetCell {
+    enum CellaFullCalcul {
         Int(i32),
         Float(f64),
         Text(String),
     }
 
-    let row = vec![
-        SpreadsheetCell::Int(3),
-        SpreadsheetCell::Text(String::from("blue")),
-        SpreadsheetCell::Float(10.12),
+    let fila = vec![
+        CellaFullCalcul::Int(3),
+        CellaFullCalcul::Text(String::from("blau")),
+        CellaFullCalcul::Float(10.12),
     ];
     // ANCHOR_END: here
 }
