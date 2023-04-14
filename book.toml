@@ -4,7 +4,13 @@ authors = ["Steve Klabnik", "Carol Nichols", "Amb la col·laboració de la Comun
 language = "ca"
 src = "translation"
 
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+max_depth = 3
+
 [output.html]
 additional-css = ["ferris.css", "theme/2018-edition.css"]
 additional-js = ["ferris.js"]
 git-repository-url = "https://github.com/rust-lang/book"
+

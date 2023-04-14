@@ -1,12 +1,12 @@
 # El llenguatge de programacio Rust
 
-[The Rust Programming Language](title-page.md)
-[Foreword](foreword.md)
-[Introduction](ch00-00-introduction.md)
+[El llenguatge de programació Rust](title-page.md)
+[Pròleg](foreword.md)
+[Introducció](ch00-00-introduction.md)
 
-## 〜 Getting started
+## Comencem
 
-- [Getting Started](ch01-00-getting-started.md)
+- [Comencem](ch01-00-getting-started.md)
    - [Installation](ch01-01-installation.md)
    - [Hello, World!](ch01-02-hello-world.md)
    - [Hello, Cargo!](ch01-03-hello-cargo.md)
@@ -20,8 +20,8 @@
    - [Comments](ch03-04-comments.md)
    - [Control Flow](ch03-05-control-flow.md)
 
-- [Comprenem l'Ownership](ch04-00-understanding-ownership.md)
-   - [Què és Ownership?](ch04-01-what-is-ownership.md)
+- [Entenem la pertinença](ch04-00-understanding-ownership.md)
+   - [Què és la pertinença?](ch04-01-what-is-ownership.md)
    - [Referències i prèstec](ch04-02-references-and-borrowing.md)
    - [El tipus Secció](ch04-03-slices.md)
 

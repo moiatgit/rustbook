@@ -97,17 +97,17 @@ regles al cap així anem passant pels diferents exemples que vindran:
 
 * Cada valor en Rust té un *propietari* (*owner*).
 * Només pot haver un propietari a cada moment.
-* Quan el propietari mor (queda fora de l'àmbit), el valor serà eliminat.
+* Quan el propietari mor (queda fora de l'abast), el valor serà eliminat.
 
-### Àmbit de les variables
+### Abast de les variables
 
 A partir d'ara, com que ja hem vist la sintaxi bàsica d'un programa en Rust, a
 partir d'ara ometrem el `fn main() {` dels exemples de codi. Així, si vas
 provant-los, recorda afegir-los el `main`. Així els exemples apareixeran una
 mica més concisos, permetent-nos focalitzar en els detalls de l'exemple.
 
-Com a primer exemple de pertinença, considerarem l'*àmbit* (en anglès *scope*)
-d'algunes variables. L'àmbit és l'interval dins del programa on un element és vàlid. Per exemple:
+Com a primer exemple de pertinença, considerarem l'*abast* (en anglès *scope*)
+d'algunes variables. l'abast és l'interval dins del programa on un element és vàlid. Per exemple:
 
 ```rust
 let s = "hola";
@@ -116,21 +116,21 @@ let s = "hola";
 La variable `s` fa referència a un literal de text. És a dir, el valor de la
 cadena de text estarà codificat directament en el codi del nostre programa. La
 variable és vàlida des del moment en que està declarada fins que finalitza
-l'àmbit actual. El llistat 4-1 mostra un programa amb comentaris indicant on
+l'abast actual. El llistat 4-1 mostra un programa amb comentaris indicant on
 serà vàlida la variable `s`.
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}
 ```
 
-<span class="caption">Llistat 4-1: Una variable i l'àmbit en què és vàlida</span>
+<span class="caption">Llistat 4-1: Una variable i l'abast en què és vàlida</span>
 
 En altres paraules, hi ha dos punts de temps importants a considerar:
 
-* Quan `s` *entra* en l'àmbit, és vàlida.
-* Es manté vàlida fins que *surt* de l'àmbit.
+* Quan `s` *entra* en l'abast, és vàlida.
+* Es manté vàlida fins que *surt* de l'abast.
 
-Ara per ara, la relació entre àmbits i la validesa de les variables és similar
+Ara per ara, la relació entre l'abast i la validesa de les variables és similar
 a la d'altres llenguatges de programació. Basant-nos en aquest coneixement,
 continuarem aprofundint en el concepte amb la introducció del tipus `String`.
 
@@ -140,9 +140,9 @@ Com a exemple d'aplicació de les regles de pertinença, necessitem un tipus de
 dades que sigui més complex que aquells que hem vist a la secció [“Tipus de
 dades”][data-types]<!-- ignore --> al capítol 3. Els tipus que hem vist fins
 ara tenen mida coneguda, poden ser emmagatzemats a la pila i eliminats
-d'aquesta quan finalitza el seu àmbit. També poden ser copiats de manera
+d'aquesta quan finalitza el seu abast. També poden ser copiats de manera
 trivial per crear-ne una nova instància independent de l'anterior, si una altra
-part del codi requereix fer servir el mateix valor en un altre àmbit. Ara volem
+part del codi requereix fer servir el mateix valor en un altre abast. Ara volem
 considerar un tipus de dades que sigui emmagatzemat al montícle i, així,
 explorar com sap Rust quan alliberar aquestes dades, `String` és genial per
 aquest objectiu.
@@ -209,7 +209,7 @@ necessitem una variable, ens cal alliberar el seu espai explícitament, cosa que
 històricament representa un problema complicat si es vol fer bé. Si oblidem alliberar, estem malbaratant memòria. Si ho fem massa d'hora, tenim una variable invàlida. Si ho fem més d'un cop sobre la mateixa memòria, també suposa un error. Per fer-ho bé, ens cal alliberar exactament una vegada cada espai que reservem.
 
 Rust ho resol d'una altra manera: la memòria és automàticament retornada un cop
-la variable a qui pertany, surt fora d'àmbit. A continuació veurem una versió de l'exemple del llistat 4-1, tot usant un `String` en comptes d'un literal de
+la variable a qui pertany, surt fora d'abast. A continuació veurem una versió de l'exemple del llistat 4-1, tot usant un `String` en comptes d'un literal de
 text.
 
 ```rust
@@ -217,7 +217,7 @@ text.
 ```
 
 Hi ha un moment natural en el que podem retornar la memòria del nostre
-`String`: quan `s` surt de l'àmbit. Quan una variable surt d'àmbit, Rust crida una funció especial per nosaltres. Aquesta funció s'anomena [`drop`][drop]<!--
+`String`: quan `s` surt de l'abast. Quan una variable surt d'abast, Rust crida una funció especial per nosaltres. Aquesta funció s'anomena [`drop`][drop]<!--
 ignore -->, i és el lloc on l'autor de `String` pot col·locar el codi per
 retornar l'espai de memòria. Rust crida `drop` automàticament en el moment que
 es tanca el claudàtor.
@@ -295,9 +295,9 @@ src="img/trpl04-03.svg" class="center" style="width: 50%;" />
 
 <span class="caption">Figura 4-3: Com es veuria si per `s2 = s1` Rust copiès també les dades del monticle.</span>
 
-Abans hem comentat que quan una variable surt de l'àmbit, Rust automàticament crida la funció `drop` i allibera l'espai assignat del monticle. Però la figura 4-2 mostra com els dos punters fan referència a la mateixa posició. Això representa un problema: quan `s2` i `s1` surten del seu àmbit, Rust hauria d'alliberar la mateixa memòria dues vegades. És el que es coneix com a error de *doble alliberament* i és un dels errors de seguretat de memòria dels que hem parlat. L'alliberament per duplicat de memòria pot portar a corrupció de la memòria, el que pot portar a vulnerabilitats en la seguretat.
+Abans hem comentat que quan una variable surt de l'abast, Rust automàticament crida la funció `drop` i allibera l'espai assignat del monticle. Però la figura 4-2 mostra com els dos punters fan referència a la mateixa posició. Això representa un problema: quan `s2` i `s1` surten del seu abast, Rust hauria d'alliberar la mateixa memòria dues vegades. És el que es coneix com a error de *doble alliberament* i és un dels errors de seguretat de memòria dels que hem parlat. L'alliberament per duplicat de memòria pot portar a corrupció de la memòria, el que pot portar a vulnerabilitats en la seguretat.
 
-Per assegurar la seguretat de la memòria, un cop executada la línia `let s2 = s1;`, Rust considera que la variable `s1` ja no és vàlida. Per tant, Rust no necessita alliberar res quan `s1` surt de l'àmbit. Comprova què passa quan intentem fer servir `s1` després que hagi estat creada `s2`. No funcionarà:
+Per assegurar la seguretat de la memòria, un cop executada la línia `let s2 = s1;`, Rust considera que la variable `s1` ja no és vàlida. Per tant, Rust no necessita alliberar res quan `s1` surt de l'abast. Comprova què passa quan intentem fer servir `s1` després que hagi estat creada `s2`. No funcionarà:
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-04-cant-use-after-move/src/main.rs:here}}
@@ -318,7 +318,7 @@ Taula s1 està marcada en gris perquè ja no és vàlida. Només s2 pot accedir 
 
 <span class="caption">Figura 4-4: Representació en memòria un cop `s1` ha estat invalidada</span>
 
-Això resol el nostre problema! Ara que només és vàlida `s2`, quan surti del seu àmbit només serà alliberada la memòria per aquesta variable.
+Això resol el nostre problema! Ara que només és vàlida `s2`, quan surti del seu abast només serà alliberada la memòria per aquesta variable.
 
 Hi ha una decisió de disseny implícita darrera d'això: Rust mai no farà còpies "profundes" de les nostres dades. Per tant, tota còpia *automàtica*
 es pot suposar que serà econòmica en temps d'execució.
@@ -358,7 +358,7 @@ L'explicació és que els tipus com ara enters, que presenten una mida coneguda 
 Rust disposa d'una notació especial anomenada el tret (*trait*) `Copy` que podrem assignar a tipus de dades que estan emmagatzemats a la pila, com ara els enters. En parlarem més sobre *traits* al
 [capítol 10][traits]<!-- ignore -->). Si un tipus implementa el tret `Copy`, les variables d'aquest no mouran la pertinença del seu valor, sinó que faran una còpia superficial d'aquest. Tot plegat, farà que aquestes variables continuïn sent vàlides després de l'assignació a una altra variable.
 
-Rust no ens permetra anotar un tipus amb el tret `Copy` si el tipus, o alguna de les seves parts, té implementat el tret `Drop`. Si el tipus necessita un comportament especial quan els valors surten d'àmbit, i li afegim el tret `Copy`, obtindrem un error en temps de compilació. Aprendrem com afegir l'anotació `Copy` als nostres tipus per implementar el tret a
+Rust no ens permetra anotar un tipus amb el tret `Copy` si el tipus, o alguna de les seves parts, té implementat el tret `Drop`. Si el tipus necessita un comportament especial quan els valors surten d'abast, i li afegim el tret `Copy`, obtindrem un error en temps de compilació. Aprendrem com afegir l'anotació `Copy` als nostres tipus per implementar el tret a
 [“Trets derivables”][derivable-traits]<!-- ignore --> a l'apèndix C.
 
 Així, quins tipus implementen el tret `Copy`? Sempre podem consultar la documentació del corresponent tipus per estar segurs. No obstant, com a regla general, tot grup de valors escalars simples poden implementar el tret `Copy`, mentre que cap tipus que requereixi assignació de memòria o sigui algun tipus de recurs, podrà implementar `Copy`. A continuació, veiem alguns dels tipus que implementen `Copy`:
@@ -371,7 +371,7 @@ Així, quins tipus implementen el tret `Copy`? Sempre podem consultar la documen
 
 ### Pertinença i funcions
 
-La manera de passar un valor a una funció és similar al d'assignar un valor a una variable. Quan passem una variable a una funció, el seu valor serà mogut o copiat de la mateixa manera que ho seria si fos assignada a una altra variable. El llistat 4-3 presenta un exemple amb anotacions que mostren on les variables entren i surten del seu àmbit.
+La manera de passar un valor a una funció és similar al d'assignar un valor a una variable. Quan passem una variable a una funció, el seu valor serà mogut o copiat de la mateixa manera que ho seria si fos assignada a una altra variable. El llistat 4-3 presenta un exemple amb anotacions que mostren on les variables entren i surten del seu abast.
 
 <span class="filename">Fitxer: src/main.rs</span>
 
@@ -379,11 +379,11 @@ La manera de passar un valor a una funció és similar al d'assignar un valor a 
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}
 ```
 
-<span class="caption">Llistat 4-3: Funcions amb pertinença i anotacions d'àmbit</span>
+<span class="caption">Llistat 4-3: Funcions amb pertinença i anotacions d'abast</span>
 
 Si intentessim fer servir `s` un cop cridat `mou()`, Rust llançaria un error de compilació. Aquestes comprovacions estàtiques ens protegeixen d'errors. Intentem afegir codi al `main()` que faci servir `s` i `x` per comprovar quan els podem fer servir i quan les regles de pertinença ens ho impedeixen.
 
-### Valors de retorn i àmbit
+### Valors de retorn i abast
 
 També es pot transferir la pertinença quan retornem valors. El llistat 4-4 mostra un exemple de funció que retorna un valor, amb anotacions similars a les del llistat 4-3.
 
@@ -395,7 +395,7 @@ També es pot transferir la pertinença quan retornem valors. El llistat 4-4 mos
 
 <span class="caption">Llistat 4-4: Transferint la pertinença dels valors de retorn</span>
 
-La pertinença d'una variable segueix el mateix patró cada cop: assignar el valor a una altra variable el mou. Quan una variable que inclou dades al monticle surt d'àmbit, el valor serà alliberat amb `drop` a menys que la pertinença de les dades hagi estat moguda a una altra variable.
+La pertinença d'una variable segueix el mateix patró cada cop: assignar el valor a una altra variable el mou. Quan una variable que inclou dades al monticle surt d'abast, el valor serà alliberat amb `drop` a menys que la pertinença de les dades hagi estat moguda a una altra variable.
 
 Malgrat això funciona, obtenir la pertinença i retornar-la a cada funció resulta una mica tediós. Què passaria si ens interesés permetre que una funció fes servir un valor però no passar la pertinença? Resulta una mica incòmode que allò que passem a la funció, hagi de ser retornat si el volem fer servir novament, juntament amb qualsevol altra dada que la funció requereixi retornar també.
 

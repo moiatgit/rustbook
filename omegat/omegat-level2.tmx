@@ -1,0 +1,2646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-4.3.3" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Getting Started<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T034249Z" creationid="moises" creationdate="20230331T034249Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Comencem<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>References and Borrowing<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T115754Z" creationid="moises" creationdate="20230330T115754Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Referències i prèstec<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>The Rust Programming Language<ept i="1">&lt;/g1&gt;</ept>
+<bpt i="2" x="2">&lt;g2&gt;</bpt>Foreword<ept i="2">&lt;/g2&gt;</ept>
+<bpt i="3" x="3">&lt;g3&gt;</bpt>Introduction<ept i="3">&lt;/g3&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T115511Z" creationid="moises" creationdate="20230330T115511Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>El llenguatge de programació Rust<ept i="1">&lt;/g1&gt;</ept>
+<bpt i="2" x="2">&lt;g2&gt;</bpt>Pròleg<ept i="2">&lt;/g2&gt;</ept>
+<bpt i="3" x="3">&lt;g3&gt;</bpt>Introducció<ept i="3">&lt;/g3&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Understanding Ownership<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T115818Z" creationid="moises" creationdate="20230330T115611Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Entenem la pertinença<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>What is Ownership?<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T115720Z" creationid="moises" creationdate="20230330T115645Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Què és la pertinença?<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185650Z" creationid="moises" creationdate="20230305T185650Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figura 4-1: Representació en memòria de la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>s1<ept i="2">&lt;/g2&gt;</ept>
+de tipus <bpt i="3" x="3">&lt;g3&gt;</bpt>String<ept i="3">&lt;/g3&gt;</ept> amb el valor <bpt i="4" x="4">&lt;g4&gt;</bpt>"hola"<ept i="4">&lt;/g4&gt;</ept><ph x="5">&lt;x5/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185651Z" creationid="moises" creationdate="20230305T185651Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figura 4-1: Representació en memòria de la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>s1<ept i="2">&lt;/g2&gt;</ept>
+de tipus <bpt i="3" x="3">&lt;g3&gt;</bpt>String<ept i="3">&lt;/g3&gt;</ept> amb el valor <bpt i="4" x="4">&lt;g4&gt;</bpt>"hola"<ept i="4">&lt;/g4&gt;</ept><ph x="5">&lt;x5/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figure 4-2: Representation in memory of the variable <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept>
+that has a copy of the pointer, length, and capacity of <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T175106Z" creationid="moises" creationdate="20230304T175106Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figura 4-2: Representació en memòria de la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept>
+que té una còpia del punter, la longitud i la capacitat de <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figure 4-3: Another possibility for what <bpt i="2" x="2">&lt;g2&gt;</bpt>s2 = s1<ept i="2">&lt;/g2&gt;</ept> might
+do if Rust copied the heap data as well<ph x="3">&lt;x3/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T175716Z" creationid="moises" creationdate="20230304T175716Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figura 4-3: Com es veuria si per <bpt i="2" x="2">&lt;g2&gt;</bpt>s2 = s1<ept i="2">&lt;/g2&gt;</ept> Rust copiès també les dades del monticle.<ph x="3">&lt;x3/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figure 4-4: Representation in memory after <bpt i="2" x="2">&lt;g2&gt;</bpt>s1<ept i="2">&lt;/g2&gt;</ept> has been
+invalidated<ph x="3">&lt;x3/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T184044Z" creationid="moises" creationdate="20230304T184044Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figura 4-4: Representació en memòria un cop <bpt i="2" x="2">&lt;g2&gt;</bpt>s1<ept i="2">&lt;/g2&gt;</ept> ha estat invalidada<ph x="3">&lt;x3/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figure 4-5: A diagram of <bpt i="2" x="2">&lt;g2&gt;</bpt>&amp;String s<ept i="2">&lt;/g2&gt;</ept> pointing at <bpt i="3" x="3">&lt;g3&gt;</bpt>String
+s1<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193427Z" creationid="moises" creationdate="20230321T193427Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Figura 4-5: Un diagrama de <bpt i="2" x="2">&lt;g2&gt;</bpt>&amp;String s<ept i="2">&lt;/g2&gt;</ept> apuntant a <bpt i="3" x="3">&lt;g3&gt;</bpt>String
+s1<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Filename: src/main.rs<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190628Z" creationid="moises" creationdate="20230305T190628Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Filename: src/main.rs<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-1: Una variable i l'àmbit en què és vàlida<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230305T184742Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-1: Una variable i l'abast en què és vàlida<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-2: Assignació del valor enter de la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>
+a <bpt i="3" x="3">&lt;g3&gt;</bpt>y<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185615Z" creationid="moises" creationdate="20230305T185615Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-2: Assignació del valor enter de la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept> a <bpt i="3" x="3">&lt;g3&gt;</bpt>y<ept i="3">&lt;/g3&gt;</ept><ph x="4">&lt;x4/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-3: Functions with ownership and scope
+annotated<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114440Z" creationid="moises" creationdate="20230305T191344Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-3: Funcions amb pertinença i anotacions d'abast<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-4: Transferring ownership of return
+values<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T192757Z" creationid="moises" creationdate="20230305T192757Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-4: Transferint la pertinença dels valors de retorn<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-5: Returning ownership of parameters<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193609Z" creationid="moises" creationdate="20230305T193609Z">
+        <seg><ph x="1">&lt;x1/&gt;</ph>Llistat 4-5: Retornant la pertinença dels paràmetres<ph x="2">&lt;x2/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A <bpt i="7" x="7">&lt;g7&gt;</bpt>reference<ept i="7">&lt;/g7&gt;</ept> is like a pointer in that it’s an address we can follow to access
+the data stored at that address; that data is owned by some other variable.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T173712Z" creationid="moises" creationdate="20230321T173712Z">
+        <seg>Una <bpt i="7" x="7">&lt;g7&gt;</bpt>referència<ept i="7">&lt;/g7&gt;</ept> iés una mena d'apuntador a una posició de memòria, que podem seguir per arribar al valor emmagatzemat en aquesta adreça, i que pertany a una altra variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A continuació veurem una versió
+de l'exemple del llistat 4-1, tot usant un <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> en comptes d'un literal de
+text.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185243Z" creationid="moises" creationdate="20230305T185243Z">
+        <seg>A continuació veurem una versió de l'exemple del llistat 4-1, tot usant un <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> en comptes d'un literal de
+text.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A la dreta de la figura, hi trobem la memòria al monticle, on es
+guarden els continguts.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185642Z" creationid="moises" creationdate="20230305T185642Z">
+        <seg>A la dreta de la figura, hi trobem la memòria al monticle, on es
+guarden els continguts.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A la majoria dels llenguatges sense GC, un cop sabem que no
+necessitem una variable, ens cal alliberar el seu espai explícitament, cosa que
+històricament representa un problema complicat si es vol fer bé.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185226Z" creationid="moises" creationdate="20230305T185226Z">
+        <seg>A la majoria dels llenguatges sense GC, un cop sabem que no
+necessitem una variable, ens cal alliberar el seu espai explícitament, cosa que
+històricament representa un problema complicat si es vol fer bé.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A partir d'ara, com que ja hem vist la sintaxi bàsica d'un programa en Rust, a
+partir d'ara ometrem el <bpt i="1" x="1">&lt;g1&gt;</bpt>fn main() {<ept i="1">&lt;/g1&gt;</ept> dels exemples de codi.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184638Z" creationid="moises" creationdate="20230305T184638Z">
+        <seg>A partir d'ara, com que ja hem vist la sintaxi bàsica d'un programa en Rust, a
+partir d'ara ometrem el <bpt i="1" x="1">&lt;g1&gt;</bpt>fn main() {<ept i="1">&lt;/g1&gt;</ept> dels exemples de codi.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Afegir a la pila és més ràpid que assignar al munticle, ja que no cal cercar
+per saber on col·locar-hi el nou valor.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184542Z" creationid="moises" creationdate="20230305T184542Z">
+        <seg>Afegir a la pila és més ràpid que assignar al munticle, ja que no cal cercar
+per saber on col·locar-hi el nou valor.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Afegir dades a una pila es coneix com <bpt i="3" x="3">&lt;g3&gt;</bpt>push<ept i="3">&lt;/g3&gt;</ept>, mentre que de treure'n en
+diem <bpt i="4" x="4">&lt;g4&gt;</bpt>pop<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184530Z" creationid="moises" creationdate="20230305T184530Z">
+        <seg>Afegir dades a una pila es coneix com <bpt i="3" x="3">&lt;g3&gt;</bpt>push<ept i="3">&lt;/g3&gt;</ept>, mentre que de treure'n en
+diem <bpt i="4" x="4">&lt;g4&gt;</bpt>pop<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Afegir i eliminar plats del mig o la base de la pila no funcionaria tan
+bé!</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184530Z" creationid="moises" creationdate="20230305T184530Z">
+        <seg>Afegir i eliminar plats del mig o la base de la pila no funcionaria tan
+bé!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Agafar primer una comanda de la taula A, passar a la B
+per una altra i tornar a la A un altre cop per una altra, seria un procés
+molt més lent.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184553Z" creationid="moises" creationdate="20230305T184553Z">
+        <seg>Agafar primer una comanda de la taula A, passar a la B
+per una altra i tornar a la A un altre cop per una altra, seria un procés
+molt més lent.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Així els exemples apareixeran una
+mica més concisos, permetent-nos focalitzar en els detalls de l'exemple.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184641Z" creationid="moises" creationdate="20230305T184641Z">
+        <seg>Així els exemples apareixeran una
+mica més concisos, permetent-nos focalitzar en els detalls de l'exemple.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Així, quina és la diferència?</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185102Z" creationid="moises" creationdate="20230305T185102Z">
+        <seg>Així, quina és la diferència?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Així, si vas
+provant-los, recorda afegir-los el <bpt i="2" x="2">&lt;g2&gt;</bpt>main<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184639Z" creationid="moises" creationdate="20230305T184639Z">
+        <seg>Així, si vas
+provant-los, recorda afegir-los el <bpt i="2" x="2">&lt;g2&gt;</bpt>main<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Això
+implica:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185206Z" creationid="moises" creationdate="20230305T185206Z">
+        <seg>Això implica:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Això és així
+perquè els enters són valors simples, de mida fixa i coneguda.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185622Z" creationid="moises" creationdate="20230305T185622Z">
+        <seg>Això és així perquè els enters són valors simples, de mida fixa i coneguda.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Alguns
+llenguatges disposen de recol·lector d'escombraries (<bpt i="2" x="2">&lt;g2&gt;</bpt>garbage collector<ept i="2">&lt;/g2&gt;</ept>) que
+se n'encarrega de gestionar memòria que ja no està en ús per part del programa.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184507Z" creationid="moises" creationdate="20230305T184507Z">
+        <seg>Alguns
+llenguatges disposen de recol·lector d'escombraries (<bpt i="2" x="2">&lt;g2&gt;</bpt>garbage collector<ept i="2">&lt;/g2&gt;</ept>) que
+se n'encarrega de gestionar memòria que ja no està en ús per part del programa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>All the floating-point types, such as <bpt i="1" x="1">&lt;g1&gt;</bpt>f64<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190131Z" creationid="moises" creationdate="20230305T190131Z">
+        <seg>Tots els tipus de coma flotant, com ara <bpt i="1" x="1">&lt;g1&gt;</bpt>f64<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>All the integer types, such as <bpt i="1" x="1">&lt;g1&gt;</bpt>u32<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190046Z" creationid="moises" creationdate="20230305T190046Z">
+        <seg>Tots els tipus enters, com ara <bpt i="1" x="1">&lt;g1&gt;</bpt>u32<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquelles dades que puguin canviar de midda,
+no podran anar a la pila i caldrà guardar-les al monticle.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184532Z" creationid="moises" creationdate="20230305T184532Z">
+        <seg>Aquelles dades que puguin canviar de midda,
+no podran anar a la pila i caldrà guardar-les al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquest patró suposa un impacte profund en la manera en que escrivim codi en
+Rust.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185435Z" creationid="moises" creationdate="20230305T185350Z">
+        <seg>Aquest patró determina profundament la manera com escrivim codi en Rust.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquest procés es
+coneix com <bpt i="2" x="2">&lt;g2&gt;</bpt>assignar al monticle<ept i="2">&lt;/g2&gt;</ept> i, de vegades s'abrevia amb simplement
+<bpt i="3" x="3">&lt;g3&gt;</bpt>assignar<ept i="3">&lt;/g3&gt;</ept> (afegir valors a la pila no es considera assignar).</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184535Z" creationid="moises" creationdate="20230305T184535Z">
+        <seg>Aquest procés es
+coneix com <bpt i="2" x="2">&lt;g2&gt;</bpt>assignar al monticle<ept i="2">&lt;/g2&gt;</ept> i, de vegades s'abrevia amb simplement
+<bpt i="3" x="3">&lt;g3&gt;</bpt>assignar<ept i="3">&lt;/g3&gt;</ept> (afegir valors a la pila no es considera assignar).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquest tipus gestiona les dades assignades al montícle i, com a tal, és capaç d'emmagatzemar una cadena de text de llargària desconeguida en temps de compilació.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184914Z" creationid="moises" creationdate="20230305T184914Z">
+        <seg>Aquest tipus gestiona les dades assignades al montícle i, com a tal, és capaç d'emmagatzemar una cadena de text de llargària desconeguida en temps de compilació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquesta classe de text <bpt i="1" x="1">&lt;g1&gt;</bpt>és<ept i="1">&lt;/g1&gt;</ept> mutable:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185059Z" creationid="moises" creationdate="20230305T185059Z">
+        <seg>Aquesta classe de text <bpt i="1" x="1">&lt;g1&gt;</bpt>és<ept i="1">&lt;/g1&gt;</ept> mutable:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquesta estructura es descriu com <bpt i="1" x="1">&lt;g1&gt;</bpt>l'últim que
+entra és el primer que surt<ept i="1">&lt;/g1&gt;</ept> i en anglès es sol coneixer com (<bpt i="2" x="2">&lt;g2&gt;</bpt>LIFO<ept i="2">&lt;/g2&gt;</ept> - last
+in, first out).</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184527Z" creationid="moises" creationdate="20230305T184527Z">
+        <seg>Aquesta estructura es descriu com <bpt i="1" x="1">&lt;g1&gt;</bpt>l'últim que
+entra és el primer que surt<ept i="1">&lt;/g1&gt;</ept> i en anglès es sol coneixer com (<bpt i="2" x="2">&lt;g2&gt;</bpt>LIFO<ept i="2">&lt;/g2&gt;</ept> - last
+in, first out).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquesta funció s'anomena <bpt i="3" x="3">&lt;g3&gt;</bpt><bpt i="4" x="4">&lt;g4&gt;</bpt>drop<ept i="4">&lt;/g4&gt;</ept><ept i="3">&lt;/g3&gt;</ept><bpt i="5" x="5">&lt;g5&gt;</bpt><ept i="5">&lt;/g5&gt;</ept><ph x="9">&lt;e9/&gt;</ph><ph x="6">&lt;x6/&gt;</ph>, i és el lloc on l'autor de <bpt i="7" x="7">&lt;g7&gt;</bpt>String<ept i="7">&lt;/g7&gt;</ept> pot col·locar el codi per
+retornar l'espai de memòria.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185253Z" creationid="moises" creationdate="20230305T185253Z">
+        <seg>Aquesta funció s'anomena <bpt i="3" x="3">&lt;g3&gt;</bpt><bpt i="4" x="4">&lt;g4&gt;</bpt>drop<ept i="4">&lt;/g4&gt;</ept><ept i="3">&lt;/g3&gt;</ept><bpt i="5" x="5">&lt;g5&gt;</bpt><ept i="5">&lt;/g5&gt;</ept><ph x="9">&lt;e9/&gt;</ph><ph x="6">&lt;x6/&gt;</ph>, i és el lloc on l'autor de <bpt i="7" x="7">&lt;g7&gt;</bpt>String<ept i="7">&lt;/g7&gt;</ept> pot col·locar el codi per
+retornar l'espai de memòria.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquestes característiques
+tenen com a preu que els literals han de ser immutables.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185144Z" creationid="moises" creationdate="20230305T185144Z">
+        <seg>Aquestes característiques tenen com a preu que els literals han de ser immutables.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Aquestes tres dades es guarden
+en la pila.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185641Z" creationid="moises" creationdate="20230305T185641Z">
+        <seg>Aquestes tres dades es guarden
+en la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Ara explorarem algunes
+d'aquestes situacions.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185444Z" creationid="moises" creationdate="20230305T185444Z">
+        <seg>Ara explorarem algunes d'aquestes situacions.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Ara per ara, la relació entre àmbits i la validesa de les variables és similar
+a la d'altres llenguatges de programació.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114952Z" creationid="moises" creationdate="20230305T184747Z">
+        <seg>Ara per ara, la relació entre l'abast i la validesa de les variables és similar
+a la d'altres llenguatges de programació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Ara volem
+considerar un tipus de dades que sigui emmagatzemat al montícle i, així,
+explorar com sap Rust quan alliberar aquestes dades, <bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept> és genial per
+aquest objectiu.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185032Z" creationid="moises" creationdate="20230305T185032Z">
+        <seg>Ara volem
+considerar un tipus de dades que sigui emmagatzemat al montícle i, així,
+explorar com sap Rust quan alliberar aquestes dades, <bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept> és genial per
+aquest objectiu.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>As such, they cannot be used as identifiers (except
+as raw identifiers as we’ll discuss in the “<bpt i="1" x="1">&lt;g1&gt;</bpt>Raw
+Identifiers<ept i="1">&lt;/g1&gt;</ept><bpt i="2" x="2">&lt;g2&gt;</bpt><ept i="2">&lt;/g2&gt;</ept><ph x="4">&lt;e4/&gt;</ph><ph x="3">&lt;x3/&gt;</ph>” section).</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T172323Z" creationid="moises" creationdate="20230304T172323Z">
+        <seg>Per aquesta raó, no poden ser usades com a identificadors, a excepció d'identificadors sense processar com discutirem a la secció “<bpt i="1" x="1">&lt;g1&gt;</bpt>Identificadors sense processar<ept i="1">&lt;/g1&gt;</ept><bpt i="2" x="2">&lt;g2&gt;</bpt><ept i="2">&lt;/g2&gt;</ept><ph x="4">&lt;e4/&gt;</ph><ph x="3">&lt;x3/&gt;</ph>”).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Basant-nos en aquest coneixement,
+continuarem aprofundint en el concepte amb la introducció del tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184749Z" creationid="moises" creationdate="20230305T184749Z">
+        <seg>Basant-nos en aquest coneixement,
+continuarem aprofundint en el concepte amb la introducció del tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Because it does not own it, the value it points to will
+not be dropped when the reference stops being used.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230322T202726Z" creationid="moises" creationdate="20230322T202726Z">
+        <seg>Donat que el valor no li pertany, no serà eliminat quan la referencia deixi de ser usada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>But
+Figure 4-2 shows both data pointers pointing to the same location.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T180110Z" creationid="moises" creationdate="20230304T180013Z">
+        <seg>Però la figura 4-2 mostra com els dos punters fan referència a la mateixa posició.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>But
+because Rust also invalidates the first variable, instead of being called a
+shallow copy, it’s known as a <bpt i="3" x="3">&lt;g3&gt;</bpt>move<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T183855Z" creationid="moises" creationdate="20230304T183855Z">
+        <seg>Però, com que Rust també invalida la primera variable, en comptes d'anomenar-la una còpia superficial, li diem *moure* (<bpt i="3" x="3">&lt;g3&gt;</bpt>move<ept i="3">&lt;/g3&gt;</ept>).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>But this code seems to contradict what we just learned: we don’t have a call to
+<bpt i="1" x="1">&lt;g1&gt;</bpt>clone<ept i="1">&lt;/g1&gt;</ept>, but <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept> is still valid and wasn’t moved into <bpt i="3" x="3">&lt;g3&gt;</bpt>y<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T182905Z" creationid="moises" creationdate="20230305T182905Z">
+        <seg>Semblaria que aquest codi contradiu el que acabem d'aprendre: no hem cridat el mètode
+<bpt i="1" x="1">&lt;g1&gt;</bpt>clone<ept i="1">&lt;/g1&gt;</ept> i <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept> continua sent vàlida; és a dir, el seu valor no s'ha mogut a <bpt i="3" x="3">&lt;g3&gt;</bpt>y<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>But this is too much ceremony and a lot of work for a concept that should be
+common.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193652Z" creationid="moises" creationdate="20230305T193652Z">
+        <seg>Però tot plegat resulta en massa ceremònia i un munt de feina per un concepte tan habitual.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Cada valor en Rust té un <bpt i="1" x="1">&lt;g1&gt;</bpt>propietari<ept i="1">&lt;/g1&gt;</ept> (<bpt i="2" x="2">&lt;g2&gt;</bpt>owner<ept i="2">&lt;/g2&gt;</ept>).</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184634Z" creationid="moises" creationdate="20230305T184634Z">
+        <seg>Cada valor en Rust té un <bpt i="1" x="1">&lt;g1&gt;</bpt>propietari<ept i="1">&lt;/g1&gt;</ept> (<bpt i="2" x="2">&lt;g2&gt;</bpt>owner<ept i="2">&lt;/g2&gt;</ept>).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Cap de les funcionalitats de <bpt i="3" x="3">&lt;g3&gt;</bpt>ownership<ept i="3">&lt;/g3&gt;</ept> rellenteix l'execució del
+programa.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184511Z" creationid="moises" creationdate="20230305T184511Z">
+        <seg>Cap de les funcionalitats de <bpt i="3" x="3">&lt;g3&gt;</bpt>ownership<ept i="3">&lt;/g3&gt;</ept> rellenteix l'execució del
+programa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Check out what happens when you try to use <bpt i="4" x="4">&lt;g4&gt;</bpt>s1<ept i="4">&lt;/g4&gt;</ept> after <bpt i="5" x="5">&lt;g5&gt;</bpt>s2<ept i="5">&lt;/g5&gt;</ept> is
+created; it won’t work:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T183234Z" creationid="moises" creationdate="20230304T183234Z">
+        <seg>Comprova què passa quan intentem fer servir <bpt i="4" x="4">&lt;g4&gt;</bpt>s1<ept i="4">&lt;/g4&gt;</ept> després que hagi estat creada <bpt i="5" x="5">&lt;g5&gt;</bpt>s2<ept i="5">&lt;/g5&gt;</ept>. No funcionarà:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Com a exemple d'aplicació de les regles de pertinença, necessitem un tipus de
+dades que sigui més complex que aquells que hem vist a la secció <bpt i="1" x="1">&lt;g1&gt;</bpt>“Tipus de
+dades”<ept i="1">&lt;/g1&gt;</ept><bpt i="2" x="2">&lt;g2&gt;</bpt><ept i="2">&lt;/g2&gt;</ept><ph x="5">&lt;e5/&gt;</ph><ph x="3">&lt;x3/&gt;</ph> al capítol 3.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184751Z" creationid="moises" creationdate="20230305T184751Z">
+        <seg>Com a exemple d'aplicació de les regles de pertinença, necessitem un tipus de
+dades que sigui més complex que aquells que hem vist a la secció <bpt i="1" x="1">&lt;g1&gt;</bpt>“Tipus de
+dades”<ept i="1">&lt;/g1&gt;</ept><bpt i="2" x="2">&lt;g2&gt;</bpt><ept i="2">&lt;/g2&gt;</ept><ph x="5">&lt;e5/&gt;</ph><ph x="3">&lt;x3/&gt;</ph> al capítol 3.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Com a primer exemple de pertinença, considerarem l'<bpt i="1" x="1">&lt;g1&gt;</bpt>àmbit<ept i="1">&lt;/g1&gt;</ept> (en anglès <bpt i="2" x="2">&lt;g2&gt;</bpt>scope<ept i="2">&lt;/g2&gt;</ept>)
+d'algunes variables.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114603Z" creationid="moises" creationdate="20230305T184643Z">
+        <seg>Com a primer exemple de pertinença, considerarem l'<bpt i="1" x="1">&lt;g1&gt;</bpt>abast<ept i="1">&lt;/g1&gt;</ept> (en anglès <bpt i="2" x="2">&lt;g2&gt;</bpt>scope<ept i="2">&lt;/g2&gt;</ept>)
+d'algunes variables.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Com que es veu molt similar a l'exemple amb enters, podríem assumir que
+funciona de la mateixa manera.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185633Z" creationid="moises" creationdate="20230305T185633Z">
+        <seg>Com que es veu molt similar a l'exemple amb enters, podríem assumir que
+funciona de la mateixa manera.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Coneixem els continguts d'un literal de text en temps de compilació.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185112Z" creationid="moises" creationdate="20230305T185112Z">
+        <seg>Coneixem els continguts d'un literal de text en temps de compilació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Considerem el següent exemple, fent servir un enter, al llistat 4-2.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185602Z" creationid="moises" creationdate="20230305T185602Z">
+        <seg>Considerem el següent exemple, fent servir un enter, al llistat 4-2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Considteix en la seva longitud (4), capacitat (5) i punter al primer valor en
+la segona taula.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185645Z" creationid="moises" creationdate="20230305T185645Z">
+        <seg>Considteix en la seva longitud (4), capacitat (5) i punter al primer valor en
+la segona taula.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Continuant l'analogia,
+considerem que el cambrer del restaurant ha d'agafar comandes de moltes
+taules.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184551Z" creationid="moises" creationdate="20230305T184551Z">
+        <seg>Continuant l'analogia,
+considerem que el cambrer del restaurant ha d'agafar comandes de moltes
+taules.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>De moment ens concentrarem en les parts de <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> relacionades amb la
+pertinença Aquests aspectes també són vàlids per altres tipus de dades
+complexos, ja siguin inclosos a la llibreria estàndard o creats per nosaltres.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T172750Z" creationid="moises" creationdate="20230304T172750Z">
+        <seg>De moment ens concentrarem en les parts de <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> relacionades amb la
+pertinença Aquests aspectes també són vàlids per altres tipus de dades
+complexos, siguin inclosos a la llibreria estàndard o bé creats per nosaltres.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Donat que el
+punter al monticle té una mida fixa coneguda, podem emmagatzemar-lo a la
+pila, però quan volem aconseguir el valor al que apunta, hem de <bpt i="4" x="4">&lt;g4&gt;</bpt>seguir<ept i="4">&lt;/g4&gt;</ept> el
+punter.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184536Z" creationid="moises" creationdate="20230305T184536Z">
+        <seg>Donat que el
+punter al monticle té una mida fixa coneguda, podem emmagatzemar-lo a la
+pila, però quan volem aconseguir el valor al que apunta, hem de <bpt i="4" x="4">&lt;g4&gt;</bpt>seguir<ept i="4">&lt;/g4&gt;</ept> el
+punter.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Donat que el concepte de <bpt i="1" x="1">&lt;g1&gt;</bpt>ownership<ept i="1">&lt;/g1&gt;</ept> és nou per molts desenvolupadors, sol
+costar una mica acostumar-se'n.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184512Z" creationid="moises" creationdate="20230305T184512Z">
+        <seg>Donat que el concepte de <bpt i="1" x="1">&lt;g1&gt;</bpt>ownership<ept i="1">&lt;/g1&gt;</ept> és nou per molts desenvolupadors, sol
+costar una mica acostumar-se'n.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Dos taules: la primera conté la representació de s1 en la pila.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185643Z" creationid="moises" creationdate="20230305T185643Z">
+        <seg>Dos taules: la primera conté la representació de s1 en la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Earlier, we said that when a variable goes out of scope, Rust automatically
+calls the <bpt i="1" x="1">&lt;g1&gt;</bpt>drop<ept i="1">&lt;/g1&gt;</ept> function and cleans up the heap memory for that variable.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230304T175822Z">
+        <seg>Abans hem comentat que quan una variable surt de l'abast, Rust automàticament crida la funció <bpt i="1" x="1">&lt;g1&gt;</bpt>drop<ept i="1">&lt;/g1&gt;</ept> i allibera l'espai assignat del monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>El llistat 4-1 mostra un programa amb comentaris indicant on
+serà vàlida la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>s<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184739Z" creationid="moises" creationdate="20230305T184739Z">
+        <seg>El llistat 4-1 mostra un programa amb comentaris indicant on
+serà vàlida la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>s<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>El mecanisme de <bpt i="1" x="1">&lt;g1&gt;</bpt>ownership<ept i="1">&lt;/g1&gt;</ept> se n'encarrega de portar la comptabilitat de
+quines parts del codi fan servir quines dades al monticle, minimitzant la
+quantitat de dades duplicades al monticle i alliberant-hi espai que ja no es
+fa servir, de manera que no ens quedem sense espai.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184557Z" creationid="moises" creationdate="20230305T184557Z">
+        <seg>El mecanisme de <bpt i="1" x="1">&lt;g1&gt;</bpt>ownership<ept i="1">&lt;/g1&gt;</ept> se n'encarrega de portar la comptabilitat de
+quines parts del codi fan servir quines dades al monticle, minimitzant la
+quantitat de dades duplicades al monticle i alliberant-hi espai que ja no es
+fa servir, de manera que no ens quedem sense espai.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>El mecanisme de pertinença o <bpt i="1" x="1">&lt;g1&gt;</bpt>Ownership<ept i="1">&lt;/g1&gt;</ept> és un conjunt de regles que governen
+com un programa en Rust gestiona la memòria.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184504Z" creationid="moises" creationdate="20230305T184504Z">
+        <seg>El mecanisme de pertinença o <bpt i="1" x="1">&lt;g1&gt;</bpt>Ownership<ept i="1">&lt;/g1&gt;</ept> és un conjunt de regles que governen
+com un programa en Rust gestiona la memòria.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>El monticle és menys organitzat.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184533Z" creationid="moises" creationdate="20230305T184533Z">
+        <seg>El monticle és menys organitzat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>El tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184750Z" creationid="moises" creationdate="20230305T184750Z">
+        <seg>El tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Els dos punts dobles <bpt i="1" x="1">&lt;g1&gt;</bpt>::<ept i="1">&lt;/g1&gt;</ept> és un operador que ens permet gestionar l'espai de
+noms a partir de la cadena de text, en comptes de requerir-nos alguna funció
+especial com ara <bpt i="2" x="2">&lt;g2&gt;</bpt>string_from<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184919Z" creationid="moises" creationdate="20230305T184919Z">
+        <seg>Els dos punts dobles <bpt i="1" x="1">&lt;g1&gt;</bpt>::<ept i="1">&lt;/g1&gt;</ept> és un operador que ens permet gestionar l'espai de
+noms a partir de la cadena de text, en comptes de requerir-nos alguna funció
+especial com ara <bpt i="2" x="2">&lt;g2&gt;</bpt>string_from<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Els literals de text són convenients però no són adequats per totes les situacions en les que podem voler usar text.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T173124Z" creationid="moises" creationdate="20230304T173124Z">
+        <seg>Els literals de text són convenients però no són adequats per totes aquelles situacions que voldrem usar text.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Els processadors actuals van més
+ràpids quan no els cal saltar tant en memòria.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184550Z" creationid="moises" creationdate="20230305T184550Z">
+        <seg>Els processadors actuals van més
+ràpids quan no els cal saltar tant en memòria.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Els tipus que hem vist fins
+ara tenen mida coneguda, poden ser emmagatzemats a la pila i eliminats
+d'aquesta quan finalitza el seu àmbit.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114603Z" creationid="moises" creationdate="20230305T185028Z">
+        <seg>Els tipus que hem vist fins
+ara tenen mida coneguda, poden ser emmagatzemats a la pila i eliminats
+d'aquesta quan finalitza el seu abast.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>En
+finalitzar, disposem de dues variables <bpt i="5" x="5">&lt;g5&gt;</bpt>x<ept i="5">&lt;/g5&gt;</ept> i <bpt i="6" x="6">&lt;g6&gt;</bpt>y<ept i="6">&lt;/g6&gt;</ept> que valen <bpt i="7" x="7">&lt;g7&gt;</bpt>5<ept i="7">&lt;/g7&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185620Z" creationid="moises" creationdate="20230305T185620Z">
+        <seg>En finalitzar, disposem de dues variables <bpt i="5" x="5">&lt;g5&gt;</bpt>x<ept i="5">&lt;/g5&gt;</ept> i <bpt i="6" x="6">&lt;g6&gt;</bpt>y<ept i="6">&lt;/g6&gt;</ept> que valen <bpt i="7" x="7">&lt;g7&gt;</bpt>5<ept i="7">&lt;/g7&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>En altres llenguatges, són els programadors els que han de reservar i alliberar
+memòria explícitament.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184509Z" creationid="moises" creationdate="20230305T184509Z">
+        <seg>En altres llenguatges, són els programadors els que han de reservar i alliberar
+memòria explícitament.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>En altres paraules, hi ha dos punts de temps importants a considerar:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184743Z" creationid="moises" creationdate="20230305T184743Z">
+        <seg>En altres paraules, hi ha dos punts de temps importants a considerar:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>En aquest capítol
+aprendrem el concepte tot treballant amb exemples focalitzats en una estructura
+de dades ben comuna: les cadenes de text o <bpt i="2" x="2">&lt;g2&gt;</bpt>strings<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184517Z" creationid="moises" creationdate="20230305T184517Z">
+        <seg>En aquest capítol
+aprendrem el concepte tot treballant amb exemples focalitzats en una estructura
+de dades ben comuna: les cadenes de text o <bpt i="2" x="2">&lt;g2&gt;</bpt>strings<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>En canvi, assignar espai al monticle requereix més feina ja que
+l'assignador ha de cercar un espai prou gran on guardar el valor i ha de
+registrar que està ocupat per posteriors assignacions.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184548Z" creationid="moises" creationdate="20230305T184548Z">
+        <seg>En canvi, assignar espai al monticle requereix més feina ja que
+l'assignador ha de cercar un espai prou gran on guardar el valor i ha de
+registrar que està ocupat per posteriors assignacions.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>En entrar, demanem
+lloc pel nombre de persones que composa el nostre grup.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184538Z" creationid="moises" creationdate="20230305T184538Z">
+        <seg>En entrar, demanem
+lloc pel nombre de persones que composa el nostre grup.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>En llenguatges amb un recol·lector
+d'escombraries (<bpt i="1" x="1">&lt;g1&gt;</bpt>Garbage Collector<ept i="1">&lt;/g1&gt;</ept> o <bpt i="2" x="2">&lt;g2&gt;</bpt>GC<ept i="2">&lt;/g2&gt;</ept>), el GC va enregistrant i alliberant
+la memòria, així deixa de ser usada, de manera que els programadors no ens
+n'hem de preocupar.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185224Z" creationid="moises" creationdate="20230305T185224Z">
+        <seg>En llenguatges amb un recol·lector
+d'escombraries (<bpt i="1" x="1">&lt;g1&gt;</bpt>Garbage Collector<ept i="1">&lt;/g1&gt;</ept> o <bpt i="2" x="2">&lt;g2&gt;</bpt>GC<ept i="2">&lt;/g2&gt;</ept>), el GC va enregistrant i alliberant
+la memòria, així deixa de ser usada, de manera que els programadors no ens
+n'hem de preocupar.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Es manté vàlida fins que <bpt i="1" x="1">&lt;g1&gt;</bpt>surt<ept i="1">&lt;/g1&gt;</ept> de l'àmbit.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230305T184746Z">
+        <seg>Es manté vàlida fins que <bpt i="1" x="1">&lt;g1&gt;</bpt>surt<ept i="1">&lt;/g1&gt;</ept> de l'abast.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Figure 4-5 depicts this concept.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193037Z" creationid="moises" creationdate="20230321T193037Z">
+        <seg>La figura 4-5 il·lustra aquest concepte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Finalment, el
+cambrer ens dirigeix a la taula trobada.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184540Z" creationid="moises" creationdate="20230305T184540Z">
+        <seg>Finalment, el
+cambrer ens dirigeix a la taula trobada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>First, notice that all the tuple code in the variable declaration and the
+function return value is gone.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T190951Z" creationid="moises" creationdate="20230321T190951Z">
+        <seg>En primer lloc, fixat que tant el codi de la tupla en la declaració de la variable i en el valor de retorn de la funció, han desaparegut.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>For example,
+<bpt i="2" x="2">&lt;g2&gt;</bpt>(i32, i32)<ept i="2">&lt;/g2&gt;</ept> implements <bpt i="3" x="3">&lt;g3&gt;</bpt>Copy<ept i="3">&lt;/g3&gt;</ept>, but <bpt i="4" x="4">&lt;g4&gt;</bpt>(i32, String)<ept i="4">&lt;/g4&gt;</ept> does not.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190245Z" creationid="moises" creationdate="20230305T190245Z">
+        <seg>Per exemple, <bpt i="2" x="2">&lt;g2&gt;</bpt>(i32, i32)<ept i="2">&lt;/g2&gt;</ept> implementa <bpt i="3" x="3">&lt;g3&gt;</bpt>Copy<ept i="3">&lt;/g3&gt;</ept>, mentre que <bpt i="4" x="4">&lt;g4&gt;</bpt>(i32, String)<ept i="4">&lt;/g4&gt;</ept> no ho fa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Four tables: two tables representing the stack data for s1 and s2,
+and each points to its own copy of string data on the heap.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T175453Z" creationid="moises" creationdate="20230304T175453Z">
+        <seg>Dues taules: dues taules que representen les dades de la pila per s1 i s2, i cadascuna apunta a la seva còpia de la cadena de text al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Freeing memory twice can lead to memory
+corruption, which can potentially lead to security vulnerabilities.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T180601Z" creationid="moises" creationdate="20230304T180601Z">
+        <seg>L'alliberament per duplicat de memòria pot portar a corrupció de la memòria, el que pot portar a vulnerabilitats en la seguretat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Here are some of the types that
+implement <bpt i="4" x="4">&lt;g4&gt;</bpt>Copy<ept i="4">&lt;/g4&gt;</ept>:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190032Z" creationid="moises" creationdate="20230305T190032Z">
+        <seg>A continuació, veiem alguns dels tipus que implementen <bpt i="4" x="4">&lt;g4&gt;</bpt>Copy<ept i="4">&lt;/g4&gt;</ept>:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Here is how you would define and use a <bpt i="1" x="1">&lt;g1&gt;</bpt>calculate_length<ept i="1">&lt;/g1&gt;</ept> function that has a
+reference to an object as a parameter instead of taking ownership of the value:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T190010Z">
+        <seg>A continuació es mostra com definirem i usarem la funció <bpt i="1" x="1">&lt;g1&gt;</bpt>calcula_longitud<ept i="1">&lt;/g1&gt;</ept> que té un paràmetre que fa referència a un objecte en comptes de prendre possessió del valor:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Here’s an example of the <bpt i="1" x="1">&lt;g1&gt;</bpt>clone<ept i="1">&lt;/g1&gt;</ept> method in action:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T181409Z" creationid="moises" creationdate="20230305T181409Z">
+        <seg>Veiem el mètode <bpt i="1" x="1">&lt;g1&gt;</bpt>clone<ept i="1">&lt;/g1&gt;</ept> en funcionament:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Hi ha diferents maneres en Rust en que múltiples variables interaccionen amb la mateixa dada.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185558Z" creationid="moises" creationdate="20230305T185558Z">
+        <seg>Hi ha diferents maneres en Rust en què múltiples variables interaccionen amb la mateixa dada.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Hi ha un moment natural en el que podem retornar la memòria del nostre
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>: quan <bpt i="2" x="2">&lt;g2&gt;</bpt>s<ept i="2">&lt;/g2&gt;</ept> surt de l'àmbit.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230330T114412Z">
+        <seg>Hi ha un moment natural en el que podem retornar la memòria del nostre
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>: quan <bpt i="2" x="2">&lt;g2&gt;</bpt>s<ept i="2">&lt;/g2&gt;</ept> surt de l'abast.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If Rust did this, the
+operation <bpt i="2" x="2">&lt;g2&gt;</bpt>s2 = s1<ept i="2">&lt;/g2&gt;</ept> could be very expensive in terms of runtime performance if
+the data on the heap were large.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T175352Z" creationid="moises" creationdate="20230304T175352Z">
+        <seg>Si Rust fes això, l'operació <bpt i="2" x="2">&lt;g2&gt;</bpt>s2 = s1<ept i="2">&lt;/g2&gt;</ept> seria molt cara en termes d'eficiència en temps d'execució, especialment quan les dades al monticle són voluminoses.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If a type implements the <bpt i="5" x="5">&lt;g5&gt;</bpt>Copy<ept i="5">&lt;/g5&gt;</ept>
+trait, variables that use it do not move, but rather are trivially copied,
+making them still valid after assignment to another variable.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T183818Z" creationid="moises" creationdate="20230305T183818Z">
+        <seg>Si un tipus implementa el tret <bpt i="5" x="5">&lt;g5&gt;</bpt>Copy<ept i="5">&lt;/g5&gt;</ept>, les variables d'aquest no mouran la pertinença del seu valor, sinó que faran una còpia superficial d'aquest. Tot plegat, farà que aquestes variables continuïn sent vàlides després de l'assignació a una altra variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If the type needs something special to happen
+when the value goes out of scope and we add the <bpt i="3" x="3">&lt;g3&gt;</bpt>Copy<ept i="3">&lt;/g3&gt;</ept> annotation to that type,
+we’ll get a compile-time error.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114440Z" creationid="moises" creationdate="20230305T184042Z">
+        <seg>Si el tipus necessita un comportament especial quan els valors surten d'abast, i li afegim el tret <bpt i="3" x="3">&lt;g3&gt;</bpt>Copy<ept i="3">&lt;/g3&gt;</ept>, obtindrem un error en temps de compilació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If we <bpt i="1" x="1">&lt;g1&gt;</bpt>do<ept i="1">&lt;/g1&gt;</ept> want to deeply copy the heap data of the <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept>, not just the
+stack data, we can use a common method called <bpt i="3" x="3">&lt;g3&gt;</bpt>clone<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T181134Z" creationid="moises" creationdate="20230305T181134Z">
+        <seg>Si <bpt i="1" x="1">&lt;g1&gt;</bpt>realment<ept i="1">&lt;/g1&gt;</ept> volem copiar en profunditat les dades del <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> que es troben guardades al monticle, i no només les dades guardades a la pila, podem fer servir un mètode anomenat <bpt i="3" x="3">&lt;g3&gt;</bpt>clone<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If we tried to use <bpt i="1" x="1">&lt;g1&gt;</bpt>s<ept i="1">&lt;/g1&gt;</ept> after the call to <bpt i="2" x="2">&lt;g2&gt;</bpt>takes_ownership<ept i="2">&lt;/g2&gt;</ept>, Rust would throw a
+compile-time error.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T191513Z" creationid="moises" creationdate="20230305T191513Z">
+        <seg>Si intentessim fer servir <bpt i="1" x="1">&lt;g1&gt;</bpt>s<ept i="1">&lt;/g1&gt;</ept> un cop cridat <bpt i="2" x="2">&lt;g2&gt;</bpt>mou()<ept i="2">&lt;/g2&gt;</ept>, Rust llançaria un error de compilació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If you’ve heard the terms <bpt i="1" x="1">&lt;g1&gt;</bpt>shallow copy<ept i="1">&lt;/g1&gt;</ept> and <bpt i="2" x="2">&lt;g2&gt;</bpt>deep copy<ept i="2">&lt;/g2&gt;</ept> while working with
+other languages, the concept of copying the pointer, length, and capacity
+without copying the data probably sounds like making a shallow copy.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T183759Z" creationid="moises" creationdate="20230304T183635Z">
+        <seg>Si has sentit els termes *còpia superficial* (<bpt i="1" x="1">&lt;g1&gt;</bpt>shallow copy<ept i="1">&lt;/g1&gt;</ept>) i *còpia profunda* (<bpt i="2" x="2">&lt;g2&gt;</bpt>deep copy<ept i="2">&lt;/g2&gt;</ept>) treballant amb altres llenguatges de programació, el concepte de copiar el punter, la longitud i la capacitat, sense copiar el text apuntat, probablement et sonarà com realitzar una còpia superficial.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>In addition, there’s a design choice that’s implied by this: Rust will never
+automatically create “deep” copies of your data.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T184311Z" creationid="moises" creationdate="20230304T184311Z">
+        <seg>Hi ha una decisió de disseny implícita darrera d'això: Rust mai no farà còpies "profundes" de les nostres dades.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>In other words, the data
+representation in memory looks like Figure 4-2.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T174845Z" creationid="moises" creationdate="20230304T174845Z">
+        <seg>En altres paraules, la representació de les dades en memòria té l'aspecte indicat a la figura 4-2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>In other words, there’s no difference
+between deep and shallow copying here, so calling <bpt i="3" x="3">&lt;g3&gt;</bpt>clone<ept i="3">&lt;/g3&gt;</ept> wouldn’t do anything
+different from the usual shallow copying, and we can leave it out.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T183415Z" creationid="moises" creationdate="20230305T183415Z">
+        <seg>En altres paraules, aquí no hi ha diferència entre còpia superficial i profunda. Per tant, cridar <bpt i="3" x="3">&lt;g3&gt;</bpt>clone<ept i="3">&lt;/g3&gt;</ept> no faria cap diferència respecte la còpia superficial i, per tant, ens la podem estalviar.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>In this chapter, we’ll discuss:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033707Z" creationid="moises" creationdate="20230331T033659Z">
+        <seg>A aquest capítol veurem:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>In this example, we would say that <bpt i="4" x="4">&lt;g4&gt;</bpt>s1<ept i="4">&lt;/g4&gt;</ept>
+was <bpt i="5" x="5">&lt;g5&gt;</bpt>moved<ept i="5">&lt;/g5&gt;</ept> into <bpt i="6" x="6">&lt;g6&gt;</bpt>s2<ept i="6">&lt;/g6&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T183948Z" creationid="moises" creationdate="20230304T183948Z">
+        <seg>En aquest exemple direm que <bpt i="4" x="4">&lt;g4&gt;</bpt>s1<ept i="4">&lt;/g4&gt;</ept> ha estat 
+<bpt i="5" x="5">&lt;g5&gt;</bpt>moguda<ept i="5">&lt;/g5&gt;</ept> a <bpt i="6" x="6">&lt;g6&gt;</bpt>s2<ept i="6">&lt;/g6&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Installing Rust on Linux, macOS, and Windows</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033729Z" creationid="moises" creationdate="20230331T033729Z">
+        <seg>Instal·lació de Rust a Linux, macOS, i Windows</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Instead, we can provide a reference to the <bpt i="6" x="6">&lt;g6&gt;</bpt>String<ept i="6">&lt;/g6&gt;</ept> value.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T173540Z" creationid="moises" creationdate="20230321T173540Z">
+        <seg>En comptes d'això, podem oferir una referència al valor del <bpt i="6" x="6">&lt;g6&gt;</bpt>String<ept i="6">&lt;/g6&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>It’s a visual indicator that something
+different is going on.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T181911Z" creationid="moises" creationdate="20230305T181911Z">
+        <seg>És un senyal visual que ens indica que alguna cosa diferent està passant.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>It’s quite annoying that anything we pass in also needs to
+be passed back if we want to use it again, in addition to any data resulting
+from the body of the function that we might want to return as well.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193404Z" creationid="moises" creationdate="20230305T193328Z">
+        <seg>Resulta una mica incòmode que allò que passem a la funció, hagi de ser retornat si el volem fer servir novament, juntament amb qualsevol altra dada que la funció requereixi retornar també.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Ja hem conegut els literals de text, en els que un valor de tipus String apareix codificat directament al nostre programa.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185046Z" creationid="moises" creationdate="20230305T185046Z">
+        <seg>Ja hem conegut els literals de text, en els que un valor de tipus String apareix codificat directament al nostre programa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>L'accés a les dades en el monticle també és més lent que en la pila, donat
+que cal seguir un punter per arribar-hi.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184549Z" creationid="moises" creationdate="20230305T184549Z">
+        <seg>L'accés a les dades en el monticle també és més lent que en la pila, donat
+que cal seguir un punter per arribar-hi.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>L'assignador de memòria ha de reservar l'espai en temps d'execució.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185209Z" creationid="moises" creationdate="20230305T185209Z">
+        <seg>L'assignador de memòria ha de reservar l'espai en temps d'execució.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>L'assignador de memòria troba un espai lliure en el
+monticle que sigui prou gran, el marca que està en ús, i retorna un <bpt i="1" x="1">&lt;g1&gt;</bpt>punter<ept i="1">&lt;/g1&gt;</ept>
+que correspon a l'adreça de memòria d'aquella posició.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184535Z" creationid="moises" creationdate="20230305T184535Z">
+        <seg>L'assignador de memòria troba un espai lliure en el
+monticle que sigui prou gran, el marca que està en ús, i retorna un <bpt i="1" x="1">&lt;g1&gt;</bpt>punter<ept i="1">&lt;/g1&gt;</ept>
+que correspon a l'adreça de memòria d'aquella posició.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>L'àmbit és l'interval dins del programa en que un element
+és vàlid.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230305T184645Z">
+        <seg>l'abast és l'interval dins del programa on un element és vàlid.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La
+variable és vàlida des del moment en que està declarada fins que finalitza
+l'àmbit actual.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230305T184728Z">
+        <seg>La
+variable és vàlida des del moment en que està declarada fins que finalitza
+l'abast actual.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La bona notícia és que, a mida que guanyem
+experiència amb Rust i les regles del sistema de pertinença, anirem trobant més
+natural desenvolupar codi segur i eficient.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184513Z" creationid="moises" creationdate="20230305T184513Z">
+        <seg>La bona notícia és que, a mida que guanyem
+experiència amb Rust i les regles del sistema de pertinença, anirem trobant més
+natural desenvolupar codi segur i eficient.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La diferència rau en com aquests dos tipus
+són gestionats en memòria.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185108Z" creationid="moises" creationdate="20230305T185108Z">
+        <seg>La diferència rau en com aquests dos tipus són gestionats en memòria.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La figura 4-1 ens representa què passa realment amb els valors de tipus
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185638Z" creationid="moises" creationdate="20230305T185638Z">
+        <seg>La figura 4-1 ens representa què passa realment amb els valors de tipus
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La funció <bpt i="3" x="3">&lt;g3&gt;</bpt>drop<ept i="3">&lt;/g3&gt;</ept> a Rust resultarà familiar a hom que hagi fet servir el patró RAII.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185348Z" creationid="moises" creationdate="20230305T185348Z">
+        <seg>La funció <bpt i="3" x="3">&lt;g3&gt;</bpt>drop<ept i="3">&lt;/g3&gt;</ept> a Rust resultarà familiar a hom que hagi fet servir el patró RAII.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La nova posició és sempre el cim de
+la pila.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184543Z" creationid="moises" creationdate="20230305T184543Z">
+        <seg>La nova posició és sempre el cim de
+la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La pila emmagatzema els valors en l'ordre en que els obté i
+els elimina en ordre invers.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184526Z" creationid="moises" creationdate="20230305T184526Z">
+        <seg>La pila emmagatzema els valors en l'ordre en que els obté i
+els elimina en ordre invers.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La primera part la realitzem nosaltres quan cridem a <bpt i="1" x="1">&lt;g1&gt;</bpt>String::from<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185213Z" creationid="moises" creationdate="20230305T185213Z">
+        <seg>La primera part la realitzem nosaltres quan cridem a <bpt i="1" x="1">&lt;g1&gt;</bpt>String::from<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La segona taula representa les dades de la cadena de text al
+monticle, byte a byte.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185646Z" creationid="moises" creationdate="20230305T185646Z">
+        <seg>La segona taula representa les dades de la cadena de text al
+monticle, byte a byte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La seva
+implementació reserva la memòria necessària.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185216Z" creationid="moises" creationdate="20230305T185216Z">
+        <seg>La seva
+implementació reserva la memòria necessària.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>La variable <bpt i="1" x="1">&lt;g1&gt;</bpt>s<ept i="1">&lt;/g1&gt;</ept> fa referència a un literal de text.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184723Z" creationid="moises" creationdate="20230305T184723Z">
+        <seg>La variable <bpt i="1" x="1">&lt;g1&gt;</bpt>s<ept i="1">&lt;/g1&gt;</ept> fa referència a un literal de text.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Let’s add some explanatory annotations:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230322T202832Z" creationid="moises" creationdate="20230322T202832Z">
+        <seg>Afegim-hi algunes anotacions explicatives:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Let’s start your Rust journey!</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033620Z" creationid="moises" creationdate="20230331T033620Z">
+        <seg>Comencem la nostra aventura amb Rust!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Let’s take a closer look at the function call here:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230322T141335Z" creationid="moises" creationdate="20230322T141335Z">
+        <seg>Fixem-nos amb més detall a la crida en la funció:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Likewise, the signature of the function uses <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;<ept i="1">&lt;/g1&gt;</ept> to indicate that the type of
+the parameter <bpt i="2" x="2">&lt;g2&gt;</bpt>s<ept i="2">&lt;/g2&gt;</ept> is a reference.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230322T202809Z" creationid="moises" creationdate="20230322T202809Z">
+        <seg>De la mateixa manera, la signatura de la funció fa servir <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;<ept i="1">&lt;/g1&gt;</ept> per indicar que el tipus del paràmetre <bpt i="2" x="2">&lt;g2&gt;</bpt>s<ept i="2">&lt;/g2&gt;</ept>  és una referència.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Listing 4-3 has an example with some annotations
+showing where variables go into and out of scope.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114603Z" creationid="moises" creationdate="20230305T190615Z">
+        <seg>El llistat 4-3 presenta un exemple amb anotacions que mostren on les variables entren i surten del seu abast.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Listing 4-4 shows an example of a
+function that returns some value, with similar annotations as those in Listing
+4-3.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T191800Z" creationid="moises" creationdate="20230305T191800Z">
+        <seg>El llistat 4-4 mostra un exemple de funció que retorna un valor, amb anotacions similars a les del llistat 4-3.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Llavors el cambrer
+ens troba una taula buida amb prou espai per seure tot el grup.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184539Z" creationid="moises" creationdate="20230305T184539Z">
+        <seg>Llavors el cambrer
+ens troba una taula buida amb prou espai per seure tot el grup.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Luckily for us, Rust has a feature for using a value without
+transferring ownership, called <bpt i="1" x="1">&lt;g1&gt;</bpt>references<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193745Z" creationid="moises" creationdate="20230305T193745Z">
+        <seg>Per sort, Rust ofereix una característica que permet usar un valor sense transferir la pertinença: es diu <bpt i="1" x="1">&lt;g1&gt;</bpt>referències<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Malauradament no podem
+reservar un espai indeterminat de memòria dins l'executable, per cada peça de
+text de la que no coneixem la mida en temps d'execució i, a sobre, quan aquesta
+pot canviar durant l'execució del programa.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185148Z" creationid="moises" creationdate="20230305T185148Z">
+        <seg>Malauradament no podem reservar un espai indeterminat de memòria dins l'executable, per cada peça de
+text de la que no coneixem la mida en temps d'execució i, a sobre, quan aquesta
+pot canviar durant l'execució del programa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Mantinguem aquestes
+regles al cap així anem passant pels diferents exemples que vindran:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184631Z" creationid="moises" creationdate="20230304T174156Z">
+        <seg>Mantinguem aquestes
+regles al cap així anem passant pels diferents exemples que vindran:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Memòria i assignació</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185110Z" creationid="moises" creationdate="20230305T185110Z">
+        <seg>Memòria i assignació</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Molts llenguatges de programació no ens requereixen pensar massa sovint sobre
+la pila (<bpt i="1" x="1">&lt;g1&gt;</bpt>stack<ept i="1">&lt;/g1&gt;</ept>) i el monticle (<bpt i="2" x="2">&lt;g2&gt;</bpt>heap<ept i="2">&lt;/g2&gt;</ept>) Però en un llenguatge de sistemes
+com ara Rust, que un valor estigui a la pila o al monticle afecta en com el
+llenguatge es comporta i en perquè hem de prendre determinades decisions.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184519Z" creationid="moises" creationdate="20230305T184519Z">
+        <seg>Molts llenguatges de programació no ens requereixen pensar massa sovint sobre
+la pila (<bpt i="1" x="1">&lt;g1&gt;</bpt>stack<ept i="1">&lt;/g1&gt;</ept>) i el monticle (<bpt i="2" x="2">&lt;g2&gt;</bpt>heap<ept i="2">&lt;/g2&gt;</ept>) Però en un llenguatge de sistemes
+com ara Rust, que un valor estigui a la pila o al monticle afecta en com el
+llenguatge es comporta i en perquè hem de prendre determinades decisions.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Més
+tard en aquest capítol es descriurà una part del concepte de pertinença, en
+relació amb la pila i el monticle.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184520Z" creationid="moises" creationdate="20230305T184520Z">
+        <seg>Més
+tard en aquest capítol es descriurà una part del concepte de pertinença, en
+relació amb la pila i el monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Necessitem alguna manera de retornar aquesta memòria a l'assignador, un cop
+ja no ens cal el nostre <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185211Z" creationid="moises" creationdate="20230305T185211Z">
+        <seg>Necessitem alguna manera de retornar aquesta memòria a l'assignador, un cop
+ja no ens cal el nostre <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Només pot haver un propietari a cada moment.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184635Z" creationid="moises" creationdate="20230304T172601Z">
+        <seg>Només pot haver un propietari a cada moment.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Nota: En C++, aquest patró d'alliberament de recursos al final del temps de
+vida d'un element, és de vegades anomenat <bpt i="1" x="1">&lt;g1&gt;</bpt>l'adquisició del recurs és la
+inicialització<ept i="1">&lt;/g1&gt;</ept> o, en anglès <bpt i="2" x="2">&lt;g2&gt;</bpt>Resource Acquisition Is Initialization<ept i="2">&lt;/g2&gt;</ept> (RAII).</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185344Z" creationid="moises" creationdate="20230305T185344Z">
+        <seg>Nota: En C++, aquest patró d'alliberament de recursos al final del temps de
+vida d'un element s'anomena de vegades <bpt i="1" x="1">&lt;g1&gt;</bpt>l'adquisició del recurs és la
+inicialització<ept i="1">&lt;/g1&gt;</ept> o, en anglès <bpt i="2" x="2">&lt;g2&gt;</bpt>Resource Acquisition Is Initialization<ept i="2">&lt;/g2&gt;</ept> (RAII).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Note: The opposite of referencing by using <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;<ept i="1">&lt;/g1&gt;</ept> is <bpt i="2" x="2">&lt;g2&gt;</bpt>dereferencing<ept i="2">&lt;/g2&gt;</ept>, which is
+accomplished with the dereference operator, <bpt i="3" x="3">&lt;g3&gt;</bpt>*<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193608Z" creationid="moises" creationdate="20230321T193608Z">
+        <seg>Nota: L'oposat a referenciar amb <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;<ept i="1">&lt;/g1&gt;</ept> és <bpt i="2" x="2">&lt;g2&gt;</bpt>dereferenciar<ept i="2">&lt;/g2&gt;</ept>. Cosa que s'aconsegueix amb l'operador de derreferenciació,  <bpt i="3" x="3">&lt;g3&gt;</bpt>*<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Ownership and Functions</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190254Z" creationid="moises" creationdate="20230305T190254Z">
+        <seg>Pertinença i funcions</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Passing a variable to a function will move or
+copy, just as assignment does.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190534Z" creationid="moises" creationdate="20230305T190534Z">
+        <seg>Quan passem una variable a una funció, el seu valor serà mogut o copiat de la mateixa manera que ho seria si fos assignada a una altra variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Pensem en com aconseguim lloc a un restaurant.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184537Z" creationid="moises" creationdate="20230305T184537Z">
+        <seg>Pensem en com aconseguim lloc a un restaurant.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Pensem en una pila de plats.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184528Z" creationid="moises" creationdate="20230305T184528Z">
+        <seg>Pensem en una pila de plats.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per
+aquesta raó els literals són ràpids i eficients.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185141Z" creationid="moises" creationdate="20230305T185141Z">
+        <seg>Per aquesta raó els literals són ràpids i eficients.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per
+aquesta raó, el text pot ser inclós directament a l'executable final.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185116Z" creationid="moises" creationdate="20230305T185116Z">
+        <seg>Per aquesta raó, el text pot ser inclós directament a l'executable final.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per a poder oferir la possibilitat de modificar i ampliar una peça de test, el
+valor del tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> ha de ser guardat al monticle, durant l'execució.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185201Z" creationid="moises" creationdate="20230305T185201Z">
+        <seg>Per a poder oferir la possibilitat de modificar i ampliar una peça de test, el
+valor del tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> ha de ser guardat al monticle, durant l'execució.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per aquesta raó, a continuació passarem a
+fer-ne una breu explicació.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184521Z" creationid="moises" creationdate="20230305T184521Z">
+        <seg>Per aquesta raó, a continuació passarem a
+fer-ne una breu explicació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per exemple, què
+passaria si volguessim obtenir l'entrada dels nostres usuaris i
+emmagarzemar-la?</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184910Z" creationid="moises" creationdate="20230305T184910Z">
+        <seg>Per exemple, què
+passaria si volguessim obtenir l'entrada dels nostres usuaris i
+emmagarzemar-la?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per exemple:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184721Z" creationid="moises" creationdate="20230305T184721Z">
+        <seg>Per exemple:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per fer-ho bé, ens cal alliberar exactament una vegada cada
+espai que reservem.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185235Z" creationid="moises" creationdate="20230305T185235Z">
+        <seg>Per fer-ho bé, ens cal alliberar exactament una vegada cada espai que reservem.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per la mateixa raó, el processador fa millor la seva feina si
+treballa amb dades que es troben a prop d'altres dades, com ara a la pila, en
+comptes de més lluny, com passa al monticle.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184553Z" creationid="moises" creationdate="20230305T184553Z">
+        <seg>Per la mateixa raó, el processador fa millor la seva feina si
+treballa amb dades que es troben a prop d'altres dades, com ara a la pila, en
+comptes de més lluny, com passa al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per què podem modificar un valor de tipus
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> però no de literal de text?</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185103Z" creationid="moises" creationdate="20230305T185103Z">
+        <seg>Per què podem modificar un valor de tipus
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> però no de literal de text?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Per situacions com aquesta, Rust disposa d'un segon tipus de cadenes de text, anomenat <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184912Z" creationid="moises" creationdate="20230305T184912Z">
+        <seg>Per situacions com aquesta, Rust disposa d'un segon tipus de cadenes de text, anomenat <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Però no és ben bé així com va.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185636Z" creationid="moises" creationdate="20230305T185636Z">
+        <seg>Però no és ben bé així com va.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Pila i monticle</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184518Z" creationid="moises" creationdate="20230305T184518Z">
+        <seg>Pila i monticle</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Pot semblar simple ara mateix, però el comportament del codi pot ser
+inesperat en situacions més complexes quan vulguem disposar de múltiples
+variables usant les dades que hem reservat al monticle.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185440Z" creationid="moises" creationdate="20230305T185440Z">
+        <seg>Pot semblar simple ara mateix, però el comportament del codi pot ser
+inesperat en situacions més complexes quan vulguem disposar de múltiples
+variables usant les dades que hem reservat al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Probablement pots deduir què passa en aquest exemple: primer associa el valor
+<bpt i="1" x="1">&lt;g1&gt;</bpt>5<ept i="1">&lt;/g1&gt;</ept> a <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>, després fa una còpia del valor de <bpt i="3" x="3">&lt;g3&gt;</bpt>x<ept i="3">&lt;/g3&gt;</ept> i l'associa a <bpt i="4" x="4">&lt;g4&gt;</bpt>y<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185617Z" creationid="moises" creationdate="20230305T185617Z">
+        <seg>Probablement pots deduir què passa en aquest exemple: primer associa el valor
+<bpt i="1" x="1">&lt;g1&gt;</bpt>5<ept i="1">&lt;/g1&gt;</ept> a <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>, després fa una còpia del valor de <bpt i="3" x="3">&lt;g3&gt;</bpt>x<ept i="3">&lt;/g3&gt;</ept> i l'associa a <bpt i="4" x="4">&lt;g4&gt;</bpt>y<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan <bpt i="1" x="1">&lt;g1&gt;</bpt>s<ept i="1">&lt;/g1&gt;</ept> <bpt i="2" x="2">&lt;g2&gt;</bpt>entra<ept i="2">&lt;/g2&gt;</ept> en l'àmbit, és vàlida.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230305T184745Z">
+        <seg>Quan <bpt i="1" x="1">&lt;g1&gt;</bpt>s<ept i="1">&lt;/g1&gt;</ept> <bpt i="2" x="2">&lt;g2&gt;</bpt>entra<ept i="2">&lt;/g2&gt;</ept> en l'abast, és vàlida.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan el nostre codi crida una funció, els valors que es passen a aquesta
+funció, incloent potencialment punters a dades al monticle, i les variables
+locals de la funció, són afegits al cim de la pila.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184554Z" creationid="moises" creationdate="20230305T184554Z">
+        <seg>Quan el nostre codi crida una funció, els valors que es passen a aquesta
+funció, incloent potencialment punters a dades al monticle, i les variables
+locals de la funció, són afegits al cim de la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan el propietari mor (queda fora de l'àmbit), el valor serà eliminat.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230305T184636Z">
+        <seg>Quan el propietari mor (queda fora de l'abast), el valor serà eliminat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan hi afegim dades, hem de demanar una
+certa quantitat d'espai.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184534Z" creationid="moises" creationdate="20230305T184534Z">
+        <seg>Quan hi afegim dades, hem de demanar una
+certa quantitat d'espai.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan hi afegim més plats, els
+col·loquem a dalt de tot de la pila, i quan en traiem, els agafem també del
+cim.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184529Z" creationid="moises" creationdate="20230305T184529Z">
+        <seg>Quan hi afegim més plats, els
+col·loquem a dalt de tot de la pila, i quan en traiem, els agafem també del
+cim.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan la funció ha
+finalitzat, aquests valors són eliminats de la pila.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184555Z" creationid="moises" creationdate="20230305T184555Z">
+        <seg>Quan la funció ha
+finalitzat, aquests valors són eliminats de la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan troba que el programa viola una de les regles, no el
+compila.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184510Z" creationid="moises" creationdate="20230305T184510Z">
+        <seg>Quan troba que el programa viola una de les regles, no el
+compila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Quan una variable surt d'àmbit, Rust crida
+una funció especial per nosaltres.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114440Z" creationid="moises" creationdate="20230305T185251Z">
+        <seg>Quan una variable surt d'abast, Rust crida una funció especial per nosaltres.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Què passarà amb variables de tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>?</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185629Z" creationid="moises" creationdate="20230305T185629Z">
+        <seg>Què passarà amb variables de tipus <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Què és <bpt i="1" x="1">&lt;g1&gt;</bpt>Ownership<ept i="1">&lt;/g1&gt;</ept>?</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184500Z" creationid="moises" creationdate="20230305T184500Z">
+        <seg>Què és <bpt i="1" x="1">&lt;g1&gt;</bpt>Ownership<ept i="1">&lt;/g1&gt;</ept>?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>References and Borrowing</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230322T140945Z" creationid="moises" creationdate="20230322T140945Z">
+        <seg>Referències i prestec</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Regles de pertinença</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184601Z" creationid="moises" creationdate="20230305T184601Z">
+        <seg>Regles de pertinença</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Return Values and Scope</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114603Z" creationid="moises" creationdate="20230305T191658Z">
+        <seg>Valors de retorn i abast</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Returning values can also transfer ownership.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T191726Z" creationid="moises" creationdate="20230305T191726Z">
+        <seg>També es pot transferir la pertinença quan retornem valors.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Rust crida <bpt i="8" x="8">&lt;g8&gt;</bpt>drop<ept i="8">&lt;/g8&gt;</ept> automàticament en el moment que
+es tanca el claudàtor.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185257Z" creationid="moises" creationdate="20230305T185257Z">
+        <seg>Rust crida <bpt i="8" x="8">&lt;g8&gt;</bpt>drop<ept i="8">&lt;/g8&gt;</ept> automàticament en el moment que
+es tanca el claudàtor.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Rust does let us return multiple values using a tuple, as shown in Listing 4-5.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193430Z" creationid="moises" creationdate="20230305T193430Z">
+        <seg>Rust ens permet retornar múltiples valors fent servir una tupla, com es pot veure al llistat 4-5.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Rust fa servir una tercera opció: la memòria es
+gestionada per un sistema de pertinença, amb un conjunt de regles que comprova
+el compilador.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184509Z" creationid="moises" creationdate="20230305T184509Z">
+        <seg>Rust fa servir una tercera opció: la memòria es
+gestionada per un sistema de pertinença, amb un conjunt de regles que comprova
+el compilador.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Rust has a special annotation called the <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept> trait that we can place on
+types that are stored on the stack, as integers are (we’ll talk more about
+traits in <bpt i="2" x="2">&lt;g2&gt;</bpt>Chapter 10<ept i="2">&lt;/g2&gt;</ept><bpt i="3" x="3">&lt;g3&gt;</bpt><ept i="3">&lt;/g3&gt;</ept><ph x="6">&lt;e6/&gt;</ph><ph x="4">&lt;x4/&gt;</ph>).</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T183603Z" creationid="moises" creationdate="20230305T183603Z">
+        <seg>Rust disposa d'una notació especial anomenada el tret (*trait*) <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept> que podrem assignar a tipus de dades que estan emmagatzemats a la pila, com ara els enters. En parlarem més sobre *traits* al 
+<bpt i="2" x="2">&lt;g2&gt;</bpt>capítol 10<ept i="2">&lt;/g2&gt;</ept><bpt i="3" x="3">&lt;g3&gt;</bpt><ept i="3">&lt;/g3&gt;</ept><ph x="6">&lt;e6/&gt;</ph><ph x="4">&lt;x4/&gt;</ph>).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Rust ho resol d'una altra manera: la memòria és automàticament retornada un cop
+la variable a qui pertany, surt fora d'àmbit.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114440Z" creationid="moises" creationdate="20230305T185237Z">
+        <seg>Rust ho resol d'una altra manera: la memòria és automàticament retornada un cop
+la variable a qui pertany, surt fora d'abast.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Rust won’t let us annotate a type with <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept> if the type, or any of its parts,
+has implemented the <bpt i="2" x="2">&lt;g2&gt;</bpt>Drop<ept i="2">&lt;/g2&gt;</ept> trait.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T183912Z" creationid="moises" creationdate="20230305T183912Z">
+        <seg>Rust no ens permetra anotar un tipus amb el tret <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept> si el tipus, o alguna de les seves parts, té implementat el tret <bpt i="2" x="2">&lt;g2&gt;</bpt>Drop<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Saber, però, que el principal objectiu del <bpt i="2" x="2">&lt;g2&gt;</bpt>ownership<ept i="2">&lt;/g2&gt;</ept> és gestionar
+les dades del monticle, ens ajuda a explicar perquè funciona de la manera que
+ho fa.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184559Z" creationid="moises" creationdate="20230305T184559Z">
+        <seg>Saber, però, que el principal objectiu del <bpt i="2" x="2">&lt;g2&gt;</bpt>ownership<ept i="2">&lt;/g2&gt;</ept> és gestionar
+les dades del monticle, ens ajuda a explicar perquè funciona de la manera que
+ho fa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Second, note that we pass <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;s1<ept i="1">&lt;/g1&gt;</ept> into
+<bpt i="2" x="2">&lt;g2&gt;</bpt>calculate_length<ept i="2">&lt;/g2&gt;</ept> and, in its definition, we take <bpt i="3" x="3">&lt;g3&gt;</bpt>&amp;String<ept i="3">&lt;/g3&gt;</ept> rather than
+<bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T191112Z">
+        <seg>En segon lloc, nota que passem <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;s1<ept i="1">&lt;/g1&gt;</ept> a
+<bpt i="2" x="2">&lt;g2&gt;</bpt>calcula_longitud()<ept i="2">&lt;/g2&gt;</ept> i, en la seva definició, obtenim un <bpt i="3" x="3">&lt;g3&gt;</bpt>&amp;String<ept i="3">&lt;/g3&gt;</ept> en comptes d'un 
+<bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Si algú del grup arriba tard, podrà
+preguntar on trobar-nos.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184541Z" creationid="moises" creationdate="20230305T184541Z">
+        <seg>Si algú del grup arriba tard, podrà
+preguntar on trobar-nos.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Si ho fem massa d'hora, tenim una
+variable invàlida.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185231Z" creationid="moises" creationdate="20230305T185231Z">
+        <seg>Si ho fem massa d'hora, tenim una variable invàlida.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Si ho fem més d'un cop sobre la mateixa memòria, també
+suposa un error.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185233Z" creationid="moises" creationdate="20230305T185233Z">
+        <seg>Si ho fem més d'un cop sobre la mateixa memòria, també suposa un error.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Si oblidem
+alliberar, estem malbaratant memòria.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185229Z" creationid="moises" creationdate="20230305T185229Z">
+        <seg>Si oblidem alliberar, estem malbaratant memòria.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>So, what actually happens is shown in Figure 4-4.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T184010Z" creationid="moises" creationdate="20230304T184010Z">
+        <seg>La figura 4-4 mostra el que en realitat passa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>So, what types implement the <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept> trait?</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185740Z" creationid="moises" creationdate="20230305T185740Z">
+        <seg>Així, quins tipus implementen el tret <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept>?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Stack-Only Data: Copy</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T182035Z" creationid="moises" creationdate="20230305T182027Z">
+        <seg>Dades només en la pila: Copy</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Són estructurades, però, de
+manera diferent.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184525Z" creationid="moises" creationdate="20230305T184525Z">
+        <seg>Són estructurades, però, de
+manera diferent.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Table s1 is grayed out be-cause s1 is no longer valid; only s2 can be used to
+access the heap data.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T183121Z" creationid="moises" creationdate="20230304T183121Z">
+        <seg>Taula s1 està marcada en gris perquè ja no és vàlida. Només s2 pot accedir les dades al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>També poden ser copiats de manera
+trivial per crear-ne una nova instància independent de l'anterior, si una altra
+part del codi requereix fer servir el mateix valor en un altre àmbit.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114603Z" creationid="moises" creationdate="20230305T185030Z">
+        <seg>També poden ser copiats de manera
+trivial per crear-ne una nova instància independent de l'anterior, si una altra
+part del codi requereix fer servir el mateix valor en un altre abast.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tant la pila com el monticle són parts de la memòria disponible per que el
+nostre codi la faci servir en temps d'execució.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184523Z" creationid="moises" creationdate="20230305T184523Z">
+        <seg>Tant la pila com el monticle són parts de la memòria disponible per que el
+nostre codi la faci servir en temps d'execució.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>That means there’s no reason we would want to prevent <bpt i="1" x="1">&lt;g1&gt;</bpt>x<ept i="1">&lt;/g1&gt;</ept> from being
+valid after we create the variable <bpt i="2" x="2">&lt;g2&gt;</bpt>y<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T183135Z" creationid="moises" creationdate="20230305T183135Z">
+        <seg>Això significa que no hi ha cap raó per la qual podríem voler evitar que <bpt i="1" x="1">&lt;g1&gt;</bpt>x<ept i="1">&lt;/g1&gt;</ept> seguís sent vàlid un cop inicialitzada la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>y<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>That solves our problem!</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T184053Z" creationid="moises" creationdate="20230304T184053Z">
+        <seg>Això resol el nostre problema!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;s1<ept i="1">&lt;/g1&gt;</ept> syntax lets us create a reference that <bpt i="2" x="2">&lt;g2&gt;</bpt>refers<ept i="2">&lt;/g2&gt;</ept> to the value of <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept>
+but does not own it.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230322T202654Z" creationid="moises" creationdate="20230322T202654Z">
+        <seg>La sintaxi <bpt i="1" x="1">&lt;g1&gt;</bpt>&amp;s1<ept i="1">&lt;/g1&gt;</ept> ens permet crear una referència que <bpt i="2" x="2">&lt;g2&gt;</bpt>apunta<ept i="2">&lt;/g2&gt;</ept> al valor de <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept>
+però que no pren la propietat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The Boolean type, <bpt i="1" x="1">&lt;g1&gt;</bpt>bool<ept i="1">&lt;/g1&gt;</ept>, with values <bpt i="2" x="2">&lt;g2&gt;</bpt>true<ept i="2">&lt;/g2&gt;</ept> and <bpt i="3" x="3">&lt;g3&gt;</bpt>false<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190114Z" creationid="moises" creationdate="20230305T190114Z">
+        <seg>El tipus Boolean <bpt i="1" x="1">&lt;g1&gt;</bpt>bool<ept i="1">&lt;/g1&gt;</ept>, amb els seus valors <bpt i="2" x="2">&lt;g2&gt;</bpt>true<ept i="2">&lt;/g2&gt;</ept> i <bpt i="3" x="3">&lt;g3&gt;</bpt>false<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The capacity is the total amount of memory, in bytes, that the
+<bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> has received from the allocator.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T174515Z" creationid="moises" creationdate="20230304T174515Z">
+        <seg>La capacitat és la quantitat total de memòria, també en bytes, que s'ha reservat al <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The character type, <bpt i="1" x="1">&lt;g1&gt;</bpt>char<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190145Z" creationid="moises" creationdate="20230305T190145Z">
+        <seg>El tipus caracter, <bpt i="1" x="1">&lt;g1&gt;</bpt>char<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The difference between length and
+capacity matters, but not in this context, so for now, it’s fine to ignore the
+capacity.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T174612Z" creationid="moises" creationdate="20230304T174612Z">
+        <seg>La diferència entre longitud i capacitat és important, però no en aquest moment. Així, de moment està bé si ignorem la capacitat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The following list contains keywords that are reserved for current or future
+use by the Rust language.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T172153Z" creationid="moises" creationdate="20230304T172153Z">
+        <seg>La següent llista conté paraules clau reservades per ser usades pel llenguatge Rust, ara o en un futur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The issue with the tuple code in Listing 4-5 is that we have to return the
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> to the calling function so we can still use the <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> after the
+call to <bpt i="3" x="3">&lt;g3&gt;</bpt>calculate_length<ept i="3">&lt;/g3&gt;</ept>, because the <bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept> was moved into
+<bpt i="5" x="5">&lt;g5&gt;</bpt>calculate_length<ept i="5">&lt;/g5&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T191456Z" creationid="moises" creationdate="20230321T153058Z">
+        <seg>El problema amb l'ús de tuples al codi del llistat 4-5 és que ens veiem forçats a retornar el
+<bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> a la funció que crida, de manera que aquesta pugui continuar utilitzant-lo un cop cridat <bpt i="3" x="3">&lt;g3&gt;</bpt>calcula_longitud()<ept i="3">&lt;/g3&gt;</ept>, ja que el <bpt i="4" x="4">&lt;g4&gt;</bpt>String<ept i="4">&lt;/g4&gt;</ept> ha estat mogut a
+<bpt i="5" x="5">&lt;g5&gt;</bpt>calcula_longitud()<ept i="5">&lt;/g5&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The length is how much memory, in bytes, the contents of the <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept> are
+currently using.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T174436Z" creationid="moises" creationdate="20230304T174436Z">
+        <seg>La longitud indica quanta memòria, en bytes, usen els continguts del <bpt i="1" x="1">&lt;g1&gt;</bpt>String<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The mechanics of passing a value to a function are similar to those when
+assigning a value to a variable.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190431Z" creationid="moises" creationdate="20230305T190431Z">
+        <seg>La manera de passar un valor a una funció és similar al d'assignar un valor a una variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The ownership of a variable follows the same pattern every time: assigning a
+value to another variable moves it.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T192906Z" creationid="moises" creationdate="20230305T192906Z">
+        <seg>La pertinença d'una variable segueix el mateix patró cada cop: assignar el valor a una altra variable el mou.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The reason is that types such as integers that have a known size at compile
+time are stored entirely on the stack, so copies of the actual values are quick
+to make.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T183033Z" creationid="moises" creationdate="20230305T183033Z">
+        <seg>L'explicació és que els tipus com ara enters, que presenten una mida coneguda en temps de compilació, són emmagatzemats completament en la pila. Així les còpies dels seus valors es realitzen ràpides.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The representation does <bpt i="1" x="1">&lt;g1&gt;</bpt>not<ept i="1">&lt;/g1&gt;</ept> look like Figure 4-3, which is what memory would
+look like if Rust instead copied the heap data as well.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T175221Z" creationid="moises" creationdate="20230304T175221Z">
+        <seg>La representació <bpt i="1" x="1">&lt;g1&gt;</bpt>no<ept i="1">&lt;/g1&gt;</ept> s'assembla a la de la figura 4-3, que és com es veuria si Rust copies també les dades del monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The table for s1 contains the stack data for s1 and points to the
+string data on the heap.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193159Z" creationid="moises" creationdate="20230321T193159Z">
+        <seg>La taula per s1 conté la data de la pila per s1 i apunta al string en el monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Therefore, Rust doesn’t need to free anything when <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept> goes
+out of scope.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114412Z" creationid="moises" creationdate="20230304T180731Z">
+        <seg>Per tant, Rust no necessita alliberar res quan <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept> surt de l'abast.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Therefore, any <bpt i="1" x="1">&lt;g1&gt;</bpt>automatic<ept i="1">&lt;/g1&gt;</ept>
+copying can be assumed to be inexpensive in terms of runtime performance.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T184404Z" creationid="moises" creationdate="20230304T184404Z">
+        <seg>Per tant, tota còpia <bpt i="1" x="1">&lt;g1&gt;</bpt>automàtica<ept i="1">&lt;/g1&gt;</ept>
+es pot suposar que serà econòmica en temps d'execució.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>There’s a lot to learn, but every journey starts
+somewhere.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033646Z" creationid="moises" creationdate="20230331T033646Z">
+        <seg>Hi ha un munt de coses a aprendre, però tota aventura comença en algun lloc.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>There’s another wrinkle we haven’t talked about yet.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T182200Z" creationid="moises" creationdate="20230305T182200Z">
+        <seg>Hi ha una altra consideració que no hem tractat encara.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>These ampersands represent <bpt i="5" x="5">&lt;g5&gt;</bpt>references<ept i="5">&lt;/g5&gt;</ept>, and they allow you to refer
+to some value without taking ownership of it.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193019Z" creationid="moises" creationdate="20230321T193019Z">
+        <seg>Els ampersands representen <bpt i="5" x="5">&lt;g5&gt;</bpt>referències<ept i="5">&lt;/g5&gt;</ept>, i permeten referir-nos a un valor sense prendre'n possessió.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>These static checks protect us from mistakes.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T191534Z" creationid="moises" creationdate="20230305T191534Z">
+        <seg>Aquestes comprovacions estàtiques ens protegeixen d'errors.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This code using
+integers—part of which was shown in Listing 4-2—works and is valid:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T182302Z" creationid="moises" creationdate="20230305T182302Z">
+        <seg>El codi que fa servir enters
+—part va ser mostrat al llistat 4-2—funciona i és vàlid:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This is a
+problem: when <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept> and <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept> go out of scope, they will both try to free the
+same memory.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114603Z" creationid="moises" creationdate="20230304T180332Z">
+        <seg>Això representa un problema: quan <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept> i <bpt i="3" x="3">&lt;g3&gt;</bpt>s1<ept i="3">&lt;/g3&gt;</ept> surten del seu abast, Rust hauria d'alliberar la mateixa memòria dues vegades.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This is known as a <bpt i="4" x="4">&lt;g4&gt;</bpt>double free<ept i="4">&lt;/g4&gt;</ept> error and is one of the memory
+safety bugs we mentioned previously.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T180456Z" creationid="moises" creationdate="20230304T180456Z">
+        <seg>És el que es coneix com a error de <bpt i="4" x="4">&lt;g4&gt;</bpt>doble alliberament<ept i="4">&lt;/g4&gt;</ept> i és un dels errors de seguretat de memòria dels que hem parlat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This works just fine and explicitly produces the behavior shown in Figure 4-3,
+where the heap data <bpt i="1" x="1">&lt;g1&gt;</bpt>does<ept i="1">&lt;/g1&gt;</ept> get copied.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T181716Z" creationid="moises" creationdate="20230305T181716Z">
+        <seg>L'exemple funciona i produeix explícitament el comportament representat per la figura 4-3,
+on les dades del monticle resulten <bpt i="1" x="1">&lt;g1&gt;</bpt>copiades<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Three tables: tables s1 and s2 representing those strings on the
+stack, respectively, and both pointing to the same string data on the heap.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T175004Z" creationid="moises" creationdate="20230304T175004Z">
+        <seg>Tres taules: taules s1 i s2 representen els Strings en la pila, respectivament, i ambdues apunten a la mateixa dada al monticle.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Three tables: the table for s contains only a pointer to the table
+for s1.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T193112Z" creationid="moises" creationdate="20230321T193112Z">
+        <seg>Tres taules: la taula per s conté només un punter a la taula per s1.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tingués paciència.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184515Z" creationid="moises" creationdate="20230305T184515Z">
+        <seg>Tingués paciència.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tipus de dades</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184821Z" creationid="moises" creationdate="20230305T184821Z">
+        <seg>Tipus de dades</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>To ensure memory safety, after the line <bpt i="1" x="1">&lt;g1&gt;</bpt>let s2 = s1;<ept i="1">&lt;/g1&gt;</ept>, Rust considers <bpt i="2" x="2">&lt;g2&gt;</bpt>s1<ept i="2">&lt;/g2&gt;</ept> as
+no longer valid.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T180656Z" creationid="moises" creationdate="20230304T180656Z">
+        <seg>Per assegurar la seguretat de la memòria, un cop executada la línia <bpt i="1" x="1">&lt;g1&gt;</bpt>let s2 = s1;<ept i="1">&lt;/g1&gt;</ept>, Rust considera que la variable <bpt i="2" x="2">&lt;g2&gt;</bpt>s1<ept i="2">&lt;/g2&gt;</ept> ja no és vàlida.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>To learn about how to add the <bpt i="4" x="4">&lt;g4&gt;</bpt>Copy<ept i="4">&lt;/g4&gt;</ept> annotation
+to your type to implement the trait, see <bpt i="5" x="5">&lt;g5&gt;</bpt>“Derivable
+Traits”<ept i="5">&lt;/g5&gt;</ept><bpt i="6" x="6">&lt;g6&gt;</bpt><ept i="6">&lt;/g6&gt;</ept><ph x="8">&lt;e8/&gt;</ph><ph x="7">&lt;x7/&gt;</ph> in Appendix C.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184213Z" creationid="moises" creationdate="20230305T184213Z">
+        <seg>Aprendrem com afegir l'anotació <bpt i="4" x="4">&lt;g4&gt;</bpt>Copy<ept i="4">&lt;/g4&gt;</ept> als nostres tipus per implementar el tret a
+<bpt i="5" x="5">&lt;g5&gt;</bpt>“Trets derivables”<ept i="5">&lt;/g5&gt;</ept><bpt i="6" x="6">&lt;g6&gt;</bpt><ept i="6">&lt;/g6&gt;</ept><ph x="8">&lt;e8/&gt;</ph><ph x="7">&lt;x7/&gt;</ph> a l'apèndix C.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tot plegat és quelcom força
+universal en els llenguatges de programació.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185221Z" creationid="moises" creationdate="20230305T185221Z">
+        <seg>Tot plegat és quelcom força universal en els llenguatges de programació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tots dos <bpt i="8" x="8">&lt;g8&gt;</bpt>5<ept i="8">&lt;/g8&gt;</ept> són
+afegits a la pila.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185625Z" creationid="moises" creationdate="20230305T185625Z">
+        <seg>Tots dos <bpt i="8" x="8">&lt;g8&gt;</bpt>5<ept i="8">&lt;/g8&gt;</ept> són afegits a la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tots els elements que guardem en la pila han de tenir una mida
+coneguda en temps de compilació.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184531Z" creationid="moises" creationdate="20230305T184531Z">
+        <seg>Tots els elements que guardem en la pila han de tenir una mida
+coneguda en temps de compilació.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tots els programes han de manegar
+la manera en que fan servir la memòria de l'ordinador quan s'executen.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184506Z" creationid="moises" creationdate="20230305T184506Z">
+        <seg>Tots els programes han de manegar
+la manera en que fan servir la memòria de l'ordinador quan s'executen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tractarem aquesta sintaxi més endavant, a la
+secció <bpt i="3" x="3">&lt;g3&gt;</bpt>“Síntaxi del mètode”<ept i="3">&lt;/g3&gt;</ept><bpt i="4" x="4">&lt;g4&gt;</bpt><ept i="4">&lt;/g4&gt;</ept><ph x="9">&lt;e9/&gt;</ph><ph x="5">&lt;x5/&gt;</ph> del capítol, així
+com de l'ús d'espais de noms a <bpt i="6" x="6">&lt;g6&gt;</bpt>“Camins per referir-nos a un element en l'arbre
+de mòduls”<ept i="6">&lt;/g6&gt;</ept><bpt i="7" x="7">&lt;g7&gt;</bpt><ept i="7">&lt;/g7&gt;</ept><ph x="10">&lt;e10/&gt;</ph><ph x="8">&lt;x8/&gt;</ph> al capítol 7.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184920Z" creationid="moises" creationdate="20230305T184920Z">
+        <seg>Tractarem aquesta sintaxi més endavant, a la
+secció <bpt i="3" x="3">&lt;g3&gt;</bpt>“Síntaxi del mètode”<ept i="3">&lt;/g3&gt;</ept><bpt i="4" x="4">&lt;g4&gt;</bpt><ept i="4">&lt;/g4&gt;</ept><ph x="9">&lt;e9/&gt;</ph><ph x="5">&lt;x5/&gt;</ph> del capítol, així
+com de l'ús d'espais de noms a <bpt i="6" x="6">&lt;g6&gt;</bpt>“Camins per referir-nos a un element en l'arbre
+de mòduls”<ept i="6">&lt;/g6&gt;</ept><bpt i="7" x="7">&lt;g7&gt;</bpt><ept i="7">&lt;/g7&gt;</ept><ph x="10">&lt;e10/&gt;</ph><ph x="8">&lt;x8/&gt;</ph> al capítol 7.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tractarem el tipus <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> en més profunditat al <bpt i="3" x="3">&lt;g3&gt;</bpt>Capítol 8<ept i="3">&lt;/g3&gt;</ept><bpt i="4" x="4">&lt;g4&gt;</bpt><ept i="4">&lt;/g4&gt;</ept><ph x="6">&lt;e6/&gt;</ph><ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185042Z" creationid="moises" creationdate="20230305T185042Z">
+        <seg>Tractarem el tipus <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> en més profunditat al <bpt i="3" x="3">&lt;g3&gt;</bpt>Capítol 8<ept i="3">&lt;/g3&gt;</ept><bpt i="4" x="4">&lt;g4&gt;</bpt><ept i="4">&lt;/g4&gt;</ept><ph x="6">&lt;e6/&gt;</ph><ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Try adding
+code to <bpt i="3" x="3">&lt;g3&gt;</bpt>main<ept i="3">&lt;/g3&gt;</ept> that uses <bpt i="4" x="4">&lt;g4&gt;</bpt>s<ept i="4">&lt;/g4&gt;</ept> and <bpt i="5" x="5">&lt;g5&gt;</bpt>x<ept i="5">&lt;/g5&gt;</ept> to see where you can use them and where
+the ownership rules prevent you from doing so.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T191634Z" creationid="moises" creationdate="20230305T191634Z">
+        <seg>Intentem afegir codi al <bpt i="3" x="3">&lt;g3&gt;</bpt>main()<ept i="3">&lt;/g3&gt;</ept> que faci servir <bpt i="4" x="4">&lt;g4&gt;</bpt>s<ept i="4">&lt;/g4&gt;</ept> i <bpt i="5" x="5">&lt;g5&gt;</bpt>x<ept i="5">&lt;/g5&gt;</ept> per comprovar quan els podem fer servir i quan les regles de pertinença ens ho impedeixen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Tuples, if they only contain types that also implement <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190213Z" creationid="moises" creationdate="20230305T190213Z">
+        <seg>Les tuples, sempre i quant només continguin elements de tipus que també implementin <bpt i="1" x="1">&lt;g1&gt;</bpt>Copy<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Un <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> està format per tres parts, que la figura mostra a
+l'esquerra: un punter a la posició de memòria que conté el valor de la cadena
+de text, la seva longitud i la seva capacitat.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185639Z" creationid="moises" creationdate="20230305T185639Z">
+        <seg>Un <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> està format per tres parts, que la figura mostra a
+l'esquerra: un punter a la posició de memòria que conté el valor de la cadena
+de text, la seva longitud i la seva capacitat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Un cop entenguem el
+mecanisme de pertinença, no ens caldrà pensar en la pila ni el monticle tant
+sovint.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184558Z" creationid="moises" creationdate="20230305T184558Z">
+        <seg>Un cop entenguem el
+mecanisme de pertinença, no ens caldrà pensar en la pila ni el monticle tant
+sovint.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Un cop entenguem el <bpt i="1" x="1">&lt;g1&gt;</bpt>ownership<ept i="1">&lt;/g1&gt;</ept>, disposarem d'una base sòlida per entendre les
+característiques que fan de Rust, un llenguatge únic.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184516Z" creationid="moises" creationdate="20230305T184516Z">
+        <seg>Un cop entenguem el <bpt i="1" x="1">&lt;g1&gt;</bpt>ownership<ept i="1">&lt;/g1&gt;</ept>, disposarem d'una base sòlida per entendre les
+característiques que fan de Rust, un llenguatge únic.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Una altra és que no tots els valors de
+tipus string poden conèixer quan escrivim el nostre codi.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184908Z" creationid="moises" creationdate="20230305T184908Z">
+        <seg>Una altra és que no tots els valors de
+tipus string poden conèixer quan escrivim el nostre codi.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Una de les raons és que són immutables.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184906Z" creationid="moises" creationdate="20230305T184906Z">
+        <seg>Una de les raons és que són immutables.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Unlike a pointer, a reference is guaranteed to point to a valid value of a
+particular type for the life of that reference.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230321T173817Z" creationid="moises" creationdate="20230321T173817Z">
+        <seg>A diferència dels punters, està garantit que les referències apunten un valor vàlid d'un tipus determinat durant la vida de la referència.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Using <bpt i="1" x="1">&lt;g1&gt;</bpt>cargo<ept i="1">&lt;/g1&gt;</ept>, Rust’s package manager and build system</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033911Z" creationid="moises" creationdate="20230331T033911Z">
+        <seg>Usant <bpt i="1" x="1">&lt;g1&gt;</bpt>cargo<ept i="1">&lt;/g1&gt;</ept>, el gestor de paquets i constructor de Rust</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Variables and Data Interacting with Clone</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T184422Z" creationid="moises" creationdate="20230304T184422Z">
+        <seg>Variables i dades interaccionant amb *Clone*</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Variables i dades interaccionant amb <bpt i="1" x="1">&lt;g1&gt;</bpt>Move<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185451Z" creationid="moises" creationdate="20230305T185451Z">
+        <seg>Variables i dades interaccionant amb <bpt i="1" x="1">&lt;g1&gt;</bpt>Move<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>We do not copy the
+data on the heap that the pointer refers to.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T174812Z" creationid="moises" creationdate="20230304T174812Z">
+        <seg>No es copien les dades del monticle a les que el punter fa referència.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>We’ll discuss method
+syntax in Chapter 5, but because methods are a common feature in many
+programming languages, you’ve probably seen them before.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T181245Z" creationid="moises" creationdate="20230305T181245Z">
+        <seg>Tractarem la sintaxi dels mètodes en el capítol 5, però donat que els mètodes són una característica comuna en molts llenguatges de programació, segurament ja els coneixes. </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>We’ll see some uses of the
+dereference operator in Chapter 8 and discuss details of dereferencing in
+Chapter 15.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230322T141435Z" creationid="moises" creationdate="20230322T141435Z">
+        <seg>Veurem més usos de l'operador de dereferenciació al capítol 8, i discutirem els detalls de la referenciació al capítol 15.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>What if we want to let a function use a value but
+not take ownership?</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193220Z" creationid="moises" creationdate="20230305T193220Z">
+        <seg>Què passaria si ens interesés permetre que una funció fes servir un valor però no passar la pertinença?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>When a variable that includes data on the
+heap goes out of scope, the value will be cleaned up by <bpt i="1" x="1">&lt;g1&gt;</bpt>drop<ept i="1">&lt;/g1&gt;</ept> unless ownership
+of the data has been moved to another variable.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114440Z" creationid="moises" creationdate="20230305T193015Z">
+        <seg>Quan una variable que inclou dades al monticle surt d'abast, el valor serà alliberat amb <bpt i="1" x="1">&lt;g1&gt;</bpt>drop<ept i="1">&lt;/g1&gt;</ept> a menys que la pertinença de les dades hagi estat moguda a una altra variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>When we assign <bpt i="1" x="1">&lt;g1&gt;</bpt>s1<ept i="1">&lt;/g1&gt;</ept> to <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept>, the <bpt i="3" x="3">&lt;g3&gt;</bpt>String<ept i="3">&lt;/g3&gt;</ept> data is copied, meaning we copy the
+pointer, the length, and the capacity that are on the stack.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T174740Z" creationid="moises" creationdate="20230304T174740Z">
+        <seg>Un cop assignem <bpt i="1" x="1">&lt;g1&gt;</bpt>s1<ept i="1">&lt;/g1&gt;</ept> a <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept>, el valor del <bpt i="3" x="3">&lt;g3&gt;</bpt>String<ept i="3">&lt;/g3&gt;</ept> és copiat. És a dir, copiem els valors del punter, la longitud i la capacitat que es troben a la pila.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>When you see a call to <bpt i="1" x="1">&lt;g1&gt;</bpt>clone<ept i="1">&lt;/g1&gt;</ept>, you know that some arbitrary code is being
+executed and that code may be expensive.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T181834Z" creationid="moises" creationdate="20230305T181834Z">
+        <seg>Quan ens trobem amb una crida al mètode <bpt i="1" x="1">&lt;g1&gt;</bpt>clone<ept i="1">&lt;/g1&gt;</ept>, sabem que darrere s'executarà un codi i que aquest podria ser costós.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>While this works, taking ownership and then returning ownership with every
+function is a bit tedious.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193114Z" creationid="moises" creationdate="20230305T193114Z">
+        <seg>Malgrat això funciona, obtenir la pertinença i retornar-la a cada funció resulta una mica tediós.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>With only <bpt i="1" x="1">&lt;g1&gt;</bpt>s2<ept i="1">&lt;/g1&gt;</ept> valid, when it goes out of scope it
+alone will free the memory, and we’re done.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114603Z" creationid="moises" creationdate="20230304T184157Z">
+        <seg>Ara que només és vàlida <bpt i="1" x="1">&lt;g1&gt;</bpt>s2<ept i="1">&lt;/g1&gt;</ept>, quan surti del seu abast només serà alliberada la memòria per aquesta variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Writing a program that prints <bpt i="1" x="1">&lt;g1&gt;</bpt>Hello, world!<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033801Z" creationid="moises" creationdate="20230331T033801Z">
+        <seg>Escrivint el programa <bpt i="1" x="1">&lt;g1&gt;</bpt>Hola món!<ept i="1">&lt;/g1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>You can check the documentation for
+the given type to be sure, but as a general rule, any group of simple scalar
+values can implement <bpt i="2" x="2">&lt;g2&gt;</bpt>Copy<ept i="2">&lt;/g2&gt;</ept>, and nothing that requires allocation or is some
+form of resource can implement <bpt i="3" x="3">&lt;g3&gt;</bpt>Copy<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190010Z" creationid="moises" creationdate="20230305T190010Z">
+        <seg>Sempre podem consultar la documentació del corresponent tipus per estar segurs. No obstant, com a regla general, tot grup de valors escalars simples poden implementar el tret <bpt i="2" x="2">&lt;g2&gt;</bpt>Copy<ept i="2">&lt;/g2&gt;</ept>, mentre que cap tipus que requereixi assignació de memòria o sigui algun tipus de recurs, podrà implementar <bpt i="3" x="3">&lt;g3&gt;</bpt>Copy<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>You’ll get an error like this because Rust prevents you from using the
+invalidated reference:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T183319Z" creationid="moises" creationdate="20230304T183319Z">
+        <seg>Obtenim el següent error perquè Rust evitarà que fem servir una referència invalidada:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>let s = "hola";</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184722Z" creationid="moises" creationdate="20230305T184722Z">
+        <seg>let s = "hola";</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>let s = String::from("hola");</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184917Z" creationid="moises" creationdate="20230305T184917Z">
+        <seg>let s = String::from("hola");</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184741Z" creationid="moises" creationdate="20230305T184741Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-02/src/main.rs:here}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185605Z" creationid="moises" creationdate="20230305T185605Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-02/src/main.rs:here}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T190635Z" creationid="moises" creationdate="20230305T190635Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-04/src/main.rs}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T192733Z" creationid="moises" creationdate="20230305T192733Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-04/src/main.rs}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-05/src/main.rs}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T193543Z" creationid="moises" creationdate="20230305T193543Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-05/src/main.rs}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-01-can-mutate-string/src/main.rs:here}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185100Z" creationid="moises" creationdate="20230305T185100Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-01-can-mutate-string/src/main.rs:here}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-02-string-scope/src/main.rs:here}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185246Z" creationid="moises" creationdate="20230305T185246Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-02-string-scope/src/main.rs:here}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-03-string-move/src/main.rs:here}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185631Z" creationid="moises" creationdate="20230305T185631Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-03-string-move/src/main.rs:here}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-05-clone/src/main.rs:here}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T181547Z" creationid="moises" creationdate="20230305T181547Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-05-clone/src/main.rs:here}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-06-copy/src/main.rs:here}}</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T182655Z" creationid="moises" creationdate="20230305T182655Z">
+        <seg>{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-06-copy/src/main.rs:here}}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Àmbit de les variables</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T114627Z" creationid="moises" creationdate="20230305T184637Z">
+        <seg>Abast de les variables</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>És a dir, el valor de la
+cadena de text estarà codificat directament en el codi del nostre programa.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184725Z" creationid="moises" creationdate="20230305T184725Z">
+        <seg>És a dir, el valor de la
+cadena de text estarà codificat directament en el codi del nostre programa.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>És a dir, que la segona línia farà una còpia del
+valor de <bpt i="1" x="1">&lt;g1&gt;</bpt>s1<ept i="1">&lt;/g1&gt;</ept> i l'associarà amb <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185635Z" creationid="moises" creationdate="20230305T185635Z">
+        <seg>És a dir, que la segona línia farà una còpia del
+valor de <bpt i="1" x="1">&lt;g1&gt;</bpt>s1<ept i="1">&lt;/g1&gt;</ept> i l'associarà amb <bpt i="2" x="2">&lt;g2&gt;</bpt>s2<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>És més eficient apuntar totes les comandes d'una taula abans de
+moure's a la següent.</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184552Z" creationid="moises" creationdate="20230305T184552Z">
+        <seg>És més eficient apuntar totes les comandes d'una taula abans de
+moure's a la següent.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>És possible crear un <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> a partir d'un literal de text, fent servir la funció <bpt i="3" x="3">&lt;g3&gt;</bpt>from<ept i="3">&lt;/g3&gt;</ept>, de la següent manera:</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184916Z" creationid="moises" creationdate="20230305T184916Z">
+        <seg>És possible crear un <bpt i="2" x="2">&lt;g2&gt;</bpt>String<ept i="2">&lt;/g2&gt;</ept> a partir d'un literal de text, fent servir la funció <bpt i="3" x="3">&lt;g3&gt;</bpt>from<ept i="3">&lt;/g3&gt;</ept>, de la següent manera:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T185655Z" creationid="moises" creationdate="20230305T185655Z">
+        <seg>〜</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜 Appendix A: Keywords</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230304T172100Z" creationid="moises" creationdate="20230304T171348Z">
+        <seg>Apèndix A: Paraules clau</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜 Appendix C: Derivable Traits</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184426Z" creationid="moises" creationdate="20230305T184426Z">
+        <seg>Apèndix C: Trets derivables</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜 Camins per referir-nos a un element en l'arbre de mòduls</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230305T184957Z" creationid="moises" creationdate="20230305T184954Z">
+        <seg>Camins per referir-nos a un element en l'arbre de mòduls</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜 Getting Started</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033536Z" creationid="moises" creationdate="20230331T033536Z">
+        <seg>Comencem</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜 Getting started</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T034138Z" creationid="moises" creationdate="20230331T034138Z">
+        <seg>Comencem</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜 Introduction</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230331T033504Z" creationid="moises" creationdate="20230331T033504Z">
+        <seg>Introducció</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>〜 The Rust Programming Language</seg>
+      </tuv>
+      <tuv xml:lang="CA" changeid="moises" changedate="20230330T115353Z" creationid="moises" creationdate="20230330T115353Z">
+        <seg>El llenguatge de programació Rust</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>
