@@ -1,4 +1,4 @@
-## 〜 Storing Keys with Associated Values in Hash Maps
+## Storing Keys with Associated Values in Hash Maps
 
 The last of our common collections is the *hash map*. The type `HashMap<K, V>`
 stores a mapping of keys of type `K` to values of type `V` using a
@@ -212,7 +212,7 @@ algorithms.
 
 [^siphash]: [https://en.wikipedia.org/wiki/SipHash](https://en.wikipedia.org/wiki/SipHash)
 
-## 〜 Summary
+## Summary
 
 Vectors, strings, and hash maps will provide a large amount of functionality
 necessary in programs when you need to store, access, and modify data. Here are

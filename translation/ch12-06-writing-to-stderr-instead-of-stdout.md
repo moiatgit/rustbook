@@ -1,4 +1,4 @@
-## 〜 Writing Error Messages to Standard Error Instead of Standard Output
+## Writing Error Messages to Standard Error Instead of Standard Output
 
 At the moment, we’re writing all of our output to the terminal using the
 `println!` macro. In most terminals, there are two kinds of output: *standard
@@ -94,7 +94,7 @@ How dreary to be somebody!
 This demonstrates that we’re now using standard output for successful output
 and standard error for error output as appropriate.
 
-## 〜 Summary
+## Summary
 
 This chapter recapped some of the major concepts you’ve learned so far and
 covered how to perform common I/O operations in Rust. By using command line

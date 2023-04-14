@@ -1,4 +1,4 @@
-## 〜 Running Code on Cleanup with the `Drop` Trait
+## Running Code on Cleanup with the `Drop` Trait
 
 The second trait important to the smart pointer pattern is `Drop`, which lets
 you customize what happens when a value is about to go out of scope. You can

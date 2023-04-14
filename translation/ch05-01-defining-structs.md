@@ -1,4 +1,4 @@
-## 〜 Defining and Instantiating Structs
+## Defining and Instantiating Structs
 
 Structs are similar to tuples, discussed in [“The Tuple Type”][tuples]<!--
 ignore --> section, in that both hold multiple related values. Like tuples, the

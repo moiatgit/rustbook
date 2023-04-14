@@ -15,7 +15,7 @@ technical capacity and a great developer experience, Rust gives you the option
 to control low-level details (such as memory usage) without all the hassle
 traditionally associated with such control.
 
-## 〜 Who Rust Is For
+## Who Rust Is For
 
 Rust is ideal for many people for a variety of reasons. Let’s look at a few of
 the most important groups.
@@ -84,7 +84,7 @@ ambition is to eliminate the trade-offs that programmers have accepted for
 decades by providing safety *and* productivity, speed *and* ergonomics. Give
 Rust a try and see if its choices work for you.
 
-## 〜 Who This Book Is For
+## Who This Book Is For
 
 This book assumes that you’ve written code in another programming language but
 doesn’t make any assumptions about which one. We’ve tried to make the material
@@ -93,7 +93,7 @@ don’t spend a lot of time talking about what programming *is* or how to think
 about it. If you’re entirely new to programming, you would be better served by
 reading a book that specifically provides an introduction to programming.
 
-## 〜 How to Use This Book
+## How to Use This Book
 
 In general, this book assumes that you’re reading it in sequence from front to
 back. Later chapters build on concepts in earlier chapters, and earlier
@@ -185,7 +185,7 @@ error. Ferris will also help you distinguish code that isn’t meant to work:
 In most situations, we’ll lead you to the correct version of any code that
 doesn’t compile.
 
-## 〜 Source Code
+## Source Code
 
 The source files from which this book is generated can be found on
 [GitHub][book].

@@ -1,4 +1,4 @@
-## 〜 Working with Environment Variables
+## Working with Environment Variables
 
 We’ll improve `minigrep` by adding an extra feature: an option for
 case-insensitive searching that the user can turn on via an environment

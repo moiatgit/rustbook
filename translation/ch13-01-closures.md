@@ -1,7 +1,7 @@
 <!-- Old heading. Do not remove or links may break. -->
 <a id="closures-anonymous-functions-that-can-capture-their-environment"></a>
 
-## 〜 Closures: Anonymous Functions that Capture Their Environment
+## Closures: Anonymous Functions that Capture Their Environment
 
 Rust’s closures are anonymous functions you can save in a variable or pass as
 arguments to other functions. You can create the closure in one place and then

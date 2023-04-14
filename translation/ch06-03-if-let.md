@@ -1,4 +1,4 @@
-## 〜 Concise Control Flow with `if let`
+## Concise Control Flow with `if let`
 
 The `if let` syntax lets you combine `if` and `let` into a less verbose way to
 handle values that match one pattern while ignoring the rest. Consider the
@@ -64,7 +64,7 @@ Or we could use an `if let` and `else` expression, like this:
 If you have a situation in which your program has logic that is too verbose to
 express using a `match`, remember that `if let` is in your Rust toolbox as well.
 
-## 〜 Summary
+## Summary
 
 We’ve now covered how to use enums to create custom types that can be one of a
 set of enumerated values. We’ve shown how the standard library’s `Option<T>`

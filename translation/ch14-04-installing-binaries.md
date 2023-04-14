@@ -1,7 +1,7 @@
 <!-- Old link, do not remove -->
 <a id="installing-binaries-from-cratesio-with-cargo-install"></a>
 
-## 〜 Installing Binaries with `cargo install`
+## Installing Binaries with `cargo install`
 
 The `cargo install` command allows you to install and use binary crates
 locally. This isn’t intended to replace system packages; it’s meant to be a

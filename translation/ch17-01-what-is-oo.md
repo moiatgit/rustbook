@@ -1,4 +1,4 @@
-## 〜 Characteristics of Object-Oriented Languages
+## Characteristics of Object-Oriented Languages
 
 There is no consensus in the programming community about what features a
 language must have to be considered object-oriented. Rust is influenced by many

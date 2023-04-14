@@ -1,4 +1,4 @@
-## 〜 Extensible Concurrency with the `Sync` and `Send` Traits
+## Extensible Concurrency with the `Sync` and `Send` Traits
 
 Interestingly, the Rust language has *very* few concurrency features. Almost
 every concurrency feature we’ve talked about so far in this chapter has been
@@ -60,7 +60,7 @@ information is that building new concurrent types not made up of `Send` and
 Rustonomicon”][nomicon] has more information about these guarantees and how to
 uphold them.
 
-## 〜 Summary
+## Summary
 
 This isn’t the last you’ll see of concurrency in this book: the project in
 Chapter 20 will use the concepts in this chapter in a more realistic situation

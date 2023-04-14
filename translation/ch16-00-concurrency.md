@@ -1,4 +1,4 @@
-# 〜 Fearless Concurrency
+# Fearless Concurrency
 
 Handling concurrent programming safely and efficiently is another of Rust’s
 major goals. *Concurrent programming*, where different parts of a program

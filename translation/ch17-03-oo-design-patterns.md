@@ -1,4 +1,4 @@
-## 〜 Implementing an Object-Oriented Design Pattern
+## Implementing an Object-Oriented Design Pattern
 
 The *state pattern* is an object-oriented design pattern. The crux of the
 pattern is that we define a set of states a value can have internally. The
@@ -496,7 +496,7 @@ preventing some bugs at compile time. Object-oriented patterns won’t always be
 the best solution in Rust due to certain features, like ownership, that
 object-oriented languages don’t have.
 
-## 〜 Summary
+## Summary
 
 No matter whether or not you think Rust is an object-oriented language after
 reading this chapter, you now know that you can use trait objects to get some

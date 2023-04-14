@@ -1,4 +1,4 @@
-# 〜 Writing Automated Tests
+# Writing Automated Tests
 
 In his 1972 essay “The Humble Programmer,” Edsger W. Dijkstra said that
 “Program testing can be a very effective way to show the presence of bugs, but

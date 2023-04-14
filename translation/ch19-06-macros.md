@@ -1,4 +1,4 @@
-## 〜 Macros
+## Macros
 
 We’ve used macros like `println!` throughout this book, but we haven’t fully
 explored what a macro is and how it works. The term *macro* refers to a family
@@ -492,7 +492,7 @@ This definition is similar to the custom derive macro’s signature: we receive
 the tokens that are inside the parentheses and return the code we wanted to
 generate.
 
-## 〜 Summary
+## Summary
 
 Whew! Now you have some Rust features in your toolbox that you likely won’t use
 often, but you’ll know they’re available in very particular circumstances.

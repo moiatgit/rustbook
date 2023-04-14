@@ -1,4 +1,4 @@
-## 〜 `RefCell<T>` and the Interior Mutability Pattern
+## `RefCell<T>` and the Interior Mutability Pattern
 
 *Interior mutability* is a design pattern in Rust that allows you to mutate
 data even when there are immutable references to that data; normally, this

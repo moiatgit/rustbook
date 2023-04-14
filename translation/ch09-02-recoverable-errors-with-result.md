@@ -1,4 +1,4 @@
-## 〜 Recoverable Errors with `Result`
+## Recoverable Errors with `Result`
 
 Most errors aren’t serious enough to require the program to stop entirely.
 Sometimes, when a function fails, it’s for a reason that you can easily

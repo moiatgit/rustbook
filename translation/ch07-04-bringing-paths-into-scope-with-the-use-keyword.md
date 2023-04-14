@@ -1,4 +1,4 @@
-## 〜 Bringing Paths into Scope with the `use` Keyword
+## Bringing Paths into Scope with the `use` Keyword
 
 Having to write out the paths to call functions can feel inconvenient and
 repetitive. In Listing 7-7, whether we chose the absolute or relative path to

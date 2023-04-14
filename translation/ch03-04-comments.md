@@ -1,4 +1,4 @@
-## 〜 Comments
+## Comments
 
 All programmers strive to make their code easy to understand, but sometimes
 extra explanation is warranted. In these cases, programmers leave *comments* in

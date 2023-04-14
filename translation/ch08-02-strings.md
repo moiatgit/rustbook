@@ -1,20 +1,21 @@
 ## Emmagatzemant texts en Strings codificats amb UTF-8
 
-We talked about strings in Chapter 4, but we’ll look at them in more depth now.
-New Rustaceans commonly get stuck on strings for a combination of three
-reasons: Rust’s propensity for exposing possible errors, strings being a more
-complicated data structure than many programmers give them credit for, and
-UTF-8. These factors combine in a way that can seem difficult when you’re
-coming from other programming languages.
+Ja vam introduïr els strings al capítol 4. Ara els veurem amb més profunditat.
+Els nous *Rustaceans* solen trobar dificultats en l'ús dels strins, per les
+següents raons: la propensió de Rust a exposar possibles errors, el fet que els
+strings són una estructura de dades més complexa que el que molts programadors
+creuen, i UTF-8. Aquests tres factors es combinen de manera que poden fer
+difícil d'entrada l'ús dels strings si vens d'un altre llenguatge de
+programació.
 
-We discuss strings in the context of collections because strings are
-implemented as a collection of bytes, plus some methods to provide useful
-functionality when those bytes are interpreted as text. In this section, we’ll
-talk about the operations on `String` that every collection type has, such as
-creating, updating, and reading. We’ll also discuss the ways in which `String`
-is different from the other collections, namely how indexing into a `String` is
-complicated by the differences between how people and computers interpret
-`String` data.
+Veiem els strings dins del context de les col·leccions perquè els strings estan
+implementats com a col·leccions de bytes als que s'afegeixen mètodes que
+afegeixen functionalitats per interpretar aquests bytes com a text. A aquesta
+secció parlarem d'operacions sobre `String` que també disposen qualsevol altra
+col·lecció, com ara crear, modificar i llegir. També discutirem les maneres en
+les que els `String` són diferents d'altres col·leccions. És a dir, com aquests
+són més complexos degut a la diferència en com són interpretats per part de les
+persones i per part dels ordinadors.
 
 ### What Is a String?
 

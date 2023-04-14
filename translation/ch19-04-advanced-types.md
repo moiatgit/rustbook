@@ -1,4 +1,4 @@
-## 〜 Advanced Types
+## Advanced Types
 
 The Rust type system has some features that we’ve so far mentioned but haven’t
 yet discussed. We’ll start by discussing newtypes in general as we examine why

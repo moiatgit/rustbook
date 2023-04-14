@@ -1,4 +1,4 @@
-# 〜 An I/O Project: Building a Command Line Program
+# An I/O Project: Building a Command Line Program
 
 This chapter is a recap of the many skills you’ve learned so far and an
 exploration of a few more standard library features. We’ll build a command line
